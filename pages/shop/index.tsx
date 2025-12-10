@@ -14,6 +14,7 @@ import { useWishList } from "@/context/WishListContext";
 import { useCategories } from "@/context/CategoriesContext";
 import { useIntentions } from "@/context/IntentionsContext";
 import ProductCardSkeleton from "@/components/ProductCardSkeleton";
+import ShopSEO from "@/components/ShopSEO";
 
 
 export default function Shop() {
@@ -151,8 +152,11 @@ export default function Shop() {
 
 
     return (
+        <>
+        <ShopSEO/>
         <div className="max-w-[1280px] mx-auto px-2 md:px-10 py-2 md:py-5">
             {/* Page title */}
+            <h1 className="text-center text-gray-700 text-2xl  text-bold">Shop Healing Crystals Online <br/> <span className="text-xl"> Natural Stones, Bracelets & Reiki Products</span></h1>
             <div className="my-2 mb-5 flex">
                 <ArrowLeft onClick={() => router.back()} className='text-gray-400 cursor-pointer' />
                 <p className="text-md text-gray-400 flex mt-0.5 gap-1">
@@ -340,5 +344,6 @@ export default function Shop() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

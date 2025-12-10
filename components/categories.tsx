@@ -4,13 +4,120 @@ import { useCategories } from '@/context/CategoriesContext';
 import { slugConvert } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
+import logo from '@/public/logo.png';
 
 export default function CategoriesPage() {
 
 
     const { categories }: any = useCategories();
 
+
+      // Dynamic OG Image Logic (first category image or fallback)
+      const dynamicOgImage =
+    categories?.data?.[0]?.image ||
+    "https://omsritara.in/assets/images/og-category.jpg";
+
     return (
+        <>
+         <Head>
+        <title>Healing Crystals & Spiritual Products by Category | Om SriTara</title>
+
+        <meta
+          name="description"
+          content="Shop authentic healing crystals, rings, pendants, malas, yanthirams, angel tools, pyramids & spiritual statues at Om SriTara. All products are cleansed, spiritually energized & Reiki charged for divine healing."
+        />
+
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Om SriTara" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://omsritara.in/categories" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Healing Crystals & Spiritual Products by Category | Om SriTara"
+        />
+        <meta
+          property="og:description"
+          content="Explore healing crystals, malas, yanthirams, angel tools, pyramids & spiritual statues – all Reiki charged & spiritually energized for divine healing."
+        />
+        <meta property="og:url" content="https://omsritara.in/categories" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={dynamicOgImage} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Healing Crystals & Spiritual Products by Category | Om SriTara"
+        />
+        <meta
+          name="twitter:description"
+          content="Shop Reiki charged healing crystals, malas, yanthirams, angel tools, pyramids & spiritual statues for divine healing & protection."
+        />
+        <meta name="twitter:image" content={dynamicOgImage} />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Healing Crystals & Spiritual Products by Category | Om SriTara",
+              url: "https://omsritara.in/categories",
+              description:
+                "Shop authentic healing crystals, rings, pendants, malas, yanthirams, angel tools, pyramids & spiritual statues at Om SriTara. All products are cleansed, spiritually energized & Reiki charged for divine healing.",
+              inLanguage: "en-IN",
+              isPartOf: {
+                "@type": "Website",
+                name: "Om SriTara",
+                url: "https://omsritara.in",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "Om SriTara",
+                url: "https://omsritara.in",
+                logo: {
+                  "@type": "ImageObject",
+                  url:  `https://omsritara.in/${logo.src}`,
+                },
+              },
+              image: dynamicOgImage,
+              breadcrumb: {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://omsritara.in",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Categories",
+                    item: "https://omsritara.in/categories",
+                  },
+                ],
+              },
+              mainEntity: [
+                {
+                  "@type": "ItemList",
+                  name: "Product Categories",
+                  itemListElement: categories?.data?.map((item: any) => ({
+                    "@type": "Thing",
+                    name: item?.name,
+                  })),
+                },
+              ],
+            }),
+          }}
+        />
+      </Head>
+   
         <div className="bg-white">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-12">
@@ -55,5 +162,6 @@ export default function CategoriesPage() {
                 </div>
             </div>
         </div>
+             </>
     );
 }
