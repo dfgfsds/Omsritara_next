@@ -142,6 +142,11 @@ export default function Shop() {
         };
     });
 
+    const firstProductImage =
+  products?.data?.[0]?.image_urls?.[0] ||
+  "https://omsritara.in/assets/images/og-category.jpg";
+
+
     function slugConvert(name: string) {
         return name
             .toLowerCase()
@@ -153,7 +158,7 @@ export default function Shop() {
 
     return (
         <>
-        <ShopSEO/>
+      <ShopSEO ogImage={firstProductImage} />
         <div className="max-w-[1280px] mx-auto px-2 md:px-10 py-2 md:py-5">
             {/* Page title */}
             <h1 className="text-center text-gray-700 text-2xl  text-bold">Shop Healing Crystals Online <br/> <span className="text-xl"> Natural Stones, Bracelets & Reiki Products</span></h1>
