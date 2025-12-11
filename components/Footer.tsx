@@ -22,7 +22,7 @@ const Footer = () => {
                 <div>
                     <h3 className="font-semibold mb-4 uppercase">Company</h3>
                     <ul className="space-y-2">
-                        <li><Link href="/aboutUs" className="hover:text-white transition-colors"> Our Story</Link></li>
+                        <li><Link href="/about" className="hover:text-white transition-colors"> Our Story</Link></li>
                         <li><Link href="/blog" className="hover:text-white transition-colors"> Blogs</Link></li>
                         <li><Link href="/shipping-policy" className="hover:text-white transition-colors">Shipping Policy</Link></li>
                     </ul>
