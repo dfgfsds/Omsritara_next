@@ -27,11 +27,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <>
             {/* ✅ SEO and Favicon */}
             <Head>
-                <title>Buy Healing Crystals Online in India - Omsritara</title>
+                {/* <title>Buy Healing Crystals Online in India - Omsritara</title>
                 <meta
                     name="description"
                     content="Shop healing crystals, Reiki crystal products & raw stones online in India. Omsritara – your trusted healing crystals shop online."
-                />
+                /> */}
                 <link rel="icon" href="/favicon.ico" />
                 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
                 <meta

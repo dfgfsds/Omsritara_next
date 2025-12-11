@@ -18,61 +18,52 @@ const AboutSection: React.FC = () => {
                 {/* Content Section */}
                 <div className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed text-justify md:text-center">
                     <p>
-                        Om Sritara is India’s trusted healing crystals shop online — a gift from
-                        the divine to help every seeker find their way. Each piece is ethically
-                        sourced, handpicked, and charged with healing vibes to guide your
-                        spiritual journey.
+                    Om Sritara is India’s trusted healing crystals shop online, Energized healing crystals as a gift from the divine to help every seeker find their way. All of these are ethically sourced, handpicked, and charged with healing vibes to help you.
                     </p>
 
                     <p>
-                        Whether your path seeks unconditional love, abundant prosperity, strong
-                        protection, or deep inner peace — our Reiki crystal collection is your
-                        perfect companion. Experience the natural charm of Mother Earth through
-                        raw stones and gemstones crafted into timeless jewelry.
+                     It doesn’t matter what nature your journey is: ⁠Unconditional love, abundance money overflow, strong protection, or deep inner peace. Our Reiki crystal products online collection is the perfect companion to strengthen your heartfelt intentions and bring you into vibrational harmony. Om Sritara welcomes you to experience the raw and rugged charm of Mother Earth through natural stones or the beauty of gemstones in jewelry and thereby connect with the timeless wisdom of nature to expedite your spiritual evolution.
                     </p>
 
                     <p>
-                        Shop freely, heal through nature’s law, and awaken the power within you.
-                        The energy that transforms your life could very well be{" "}
-                        <span className="font-semibold text-[#a5291b]">Om Sritara</span> — the
-                        finest online crystal shop in India.
+                    Shop uninterruptedly, heal by nature’s law, and become aware of the power that lies within you. The energy that changes your life could very well be Om ‍‌‍‍‌‍‌‍‍‌Sritara. - The best online crystal shop in India.
+
                     </p>
                 </div>
             </div>
 
-{/* 
-            <div className="max-w-5xl mx-auto text-center space-y-6 mt-4">
-                <h2 className="text-xl md:text-2xl font-extrabold text-gray-900">
-                    Buy Healing Crystals Online – Trusted, Tested & Energized
-                </h2>
 
-                <p className="text-base md:text-md leading-relaxed text-gray-700">
-                    When you buy raw crystals online from <span className="font-semibold text-[#991b1b]">Om Sritara</span>, you’re not just buying a stone,
-                    you’re bringing home a piece of Earth’s divine energy. Every crystal is:
-                </p>
+           <section className="max-w-5xl mx-auto px-4 text-gray-800 py-10">
 
-                <ul className="text-left max-w-2xl mx-auto list-disc list-inside space-y-1 text-gray-700">
-                    <li>100% natural and ethically sourced</li>
-                    <li>Cleansed and charged before shipping</li>
-                    <li>Packed with intention and care</li>
-                    <li>Energized using healing techniques</li>
-                </ul>
+    <h2 className="text-3xl font-bold text-center text-rose-700 mb-6">
+      Buy Healing Crystals Online <br/> <span className='text-xl text-gray-800 '> Trusted, Tested & Energized</span>
+    </h2>
 
-                <p className="text-base md:text-md leading-relaxed text-gray-700">
-                    At <span className="font-semibold text-[#991b1b]">Om Sritara</span>, all our products are personally charged and energized by
-                    <span className="font-semibold"> Guru Matha</span>, a renowned Reiki Master. Each crystal undergoes a sacred three-day
-                    energizing process, ensuring it carries pure, positive vibrations before reaching you.
-                </p>
+    <p className="text-lg leading-relaxed mb-4">
+      When you buy raw crystals online from Om Sritara, you’re not just buying a stone, you’re bringing home a piece of Earth’s divine energy. Every crystal is:
+    </p>
 
-                <p className="text-base md:text-md leading-relaxed text-gray-700">
-                    This careful spiritual process enhances the crystal’s natural energy, helping you experience deeper healing,
-                    balance, and harmony in your daily life.
-                </p>
+    <ul className="list-disc pl-6 space-y-2 text-base mb-6">
+      <li>100% natural and ethically sourced</li>
+      <li>Cleansed and charged before shipping</li>
+      <li>Packed with intention and care</li>
+      <li>Energized using healing techniques</li>
+    </ul>
 
-                <p className="text-base md:text-md font-medium leading-relaxed text-gray-800">
-                    Our mission is to deliver genuine, high-vibration crystals that truly support your spiritual and emotional healing journey.
-                </p>
-            </div> */}
+    <div className="bg-rose-50 border border-rose-100 rounded-lg p-5 mb-6">
+      <p className="leading-relaxed">
+       At Om Sritara, all our products are personally charged and energized by Guru Matha, a renowned Reiki Master. Each crystal undergoes a sacred three-day energizing process, ensuring it carries pure, positive vibrations before reaching you.
+      </p>
+      <p className="leading-relaxed mt-3">
+        This careful spiritual process enhances the crystal’s natural energy, helping you experience deeper healing, balance, and harmony in your daily life.
+      </p>
+    </div>
+
+    <p className="text-base leading-relaxed font-medium">
+      Our mission is to deliver genuine, high-vibration crystals that truly support your spiritual and emotional healing journey.
+    </p>
+
+  </section>
 
             <div className="w-full max-w-3xl mx-auto my-8 px-4">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">

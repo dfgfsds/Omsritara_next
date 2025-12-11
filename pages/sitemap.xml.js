@@ -37,7 +37,7 @@ export async function getServerSideProps({ res }) {
 <priority>0.60</priority>
 </url>
 <url>
-<loc>https://omsritara.in/aboutUs</loc>
+<loc>https://omsritara.in/about</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
