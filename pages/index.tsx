@@ -11,11 +11,11 @@ import axios from "axios";
 import FAQSection from "@/components/FAQ";
 import Head from "next/head";
 
+
 export default function Home({ blogs }: { blogs: any[] }) {
 
   return (
     <>
-
       <Head>
         <title>Buy Healing Crystals Online in India - Omsritara</title>
         <meta
@@ -31,6 +31,8 @@ export default function Home({ blogs }: { blogs: any[] }) {
         <NewArrivals />
         <Bracelets />
         <AboutSection />
+        {/* <BrandStorySection/> */}
+       
         <BlogSection blogs={blogs} />
         <Certificates />
         <Testimonials />
