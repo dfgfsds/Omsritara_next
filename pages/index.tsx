@@ -9,21 +9,35 @@ import Testimonials from "@/components/Testimonials";
 import { baseUrl } from "@/api-endpoints/ApiUrls";
 import axios from "axios";
 import FAQSection from "@/components/FAQ";
+import Head from "next/head";
 
 export default function Home({ blogs }: { blogs: any[] }) {
 
   return (
-    <div>
-      <HeroSection />
-      <FeaturedCategories />
-      <NewArrivals />
-      <Bracelets />
-      <AboutSection />
-      <BlogSection blogs={blogs} />
-      <Certificates />
-      <Testimonials />
-      <FAQSection />
-    </div>
+    <>
+
+      <Head>
+        <title>Buy Healing Crystals Online in India - Omsritara</title>
+        <meta
+          name="description"
+          content="Shop healing crystals, Reiki crystal products & raw stones online in India. Omsritara – your trusted healing crystals shop online."
+        />
+
+      </Head>
+      <div>
+
+        <HeroSection />
+        <FeaturedCategories />
+        <NewArrivals />
+        <Bracelets />
+        <AboutSection />
+        <BlogSection blogs={blogs} />
+        <Certificates />
+        <Testimonials />
+        <FAQSection />
+      </div>
+    </>
+
   );
 }
 
