@@ -1,5 +1,5 @@
-export const baseUrl = 'https://ecomapi.ftdigitalsolutions.org';  // live API
-// export const baseUrl = 'https://test-ecomapi.justvy.in'; // test API
+// export const baseUrl = 'https://ecomapi.ftdigitalsolutions.org';  // live API
+export const baseUrl = 'https://test-ecomapi.justvy.in'; // test API
 // const baseUrl ='http://82.29.161.36'
 
 const cartCreate = `${baseUrl}/api/carts/`;
@@ -7,7 +7,7 @@ const createUsers = `${baseUrl}/create_users/`;
 const addresses = `${baseUrl}/addresses/`;
 const cartItem = `${baseUrl}/api/cart_items/`;
 const cartItems = `${baseUrl}/api/cart_items/carts`;
-const cartItemsUpdate = `${baseUrl}/cart-item/update/`;
+const cartItemsUpdate = `${baseUrl}/cart-item/update/`; 
 const product = `${baseUrl}/api/products/`;
 const categories = `${baseUrl}/categories-with-subcategories/vendor`;
 const signIn = `${baseUrl}/user_login/`;
