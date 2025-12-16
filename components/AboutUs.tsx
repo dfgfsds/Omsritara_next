@@ -33,10 +33,10 @@ const AboutUs = () => {
           content="Explore Om Sri Tara — a holistic healing sanctuary offering Reiki courses, energy healing, spiritual guidance, and energized crystals."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.omsritara.com/about" />
+        <meta property="og:url" content="https://www.omsritara.in/about" />
         <meta
           property="og:image"
-         content={`https://www.omsritara.com/${logo.src}`} 
+         content={`https://www.omsritara.in/${logo.src}`} 
         />
 
         {/* Twitter Card */}
@@ -51,11 +51,11 @@ const AboutUs = () => {
         />
         <meta
           name="twitter:image"
-          content={`https://www.omsritara.com/${logo.src}`} 
+          content={`https://www.omsritara.in/${logo.src}`} 
         />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://www.omsritara.com/about" />
+        <link rel="canonical" href="https://www.omsritara.in/about" />
 
         {/* Structured Data (JSON-LD) */}
         <script
@@ -65,8 +65,8 @@ const AboutUs = () => {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Om Sri Tara",
-              "url": "https://www.omsritara.com",
-              "logo": `https://www.omsritara.com/${logo.src}`,
+              "url": "https://www.omsritara.in",
+              "logo": `https://www.omsritara.in/${logo.src}`,
               "description":
                 "Om Sri Tara is a spiritual healing sanctuary offering Reiki courses, energy healing, spiritual guidance, and energized crystals.",
               "founder": {
