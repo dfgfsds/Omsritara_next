@@ -12,152 +12,152 @@ export async function getServerSideProps({ res }) {
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-      <loc>https://omsritara.in/</loc>
+      <loc>https://www.omsritara.in/</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <priority>1.0</priority>
     </url>
     <url>
-<loc>https://omsritara.in/wishlist</loc>
+<loc>https://www.omsritara.in/wishlist</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.60</priority>
 </url>
 <url>
-<loc>https://omsritara.in/shop</loc>
+<loc>https://www.omsritara.in/shop</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/blog</loc>
+<loc>https://www.omsritara.in/blog</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/contactUs</loc>
+<loc>https://www.omsritara.in/contactUs</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.60</priority>
 </url>
 <url>
-<loc>https://omsritara.in/about</loc>
+<loc>https://www.omsritara.in/about</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories</loc>
+<loc>https://www.omsritara.in/categories</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/blog/what-happens-to-your-body-after-reiki?</loc>
+<loc>https://www.omsritara.in/blog/what-happens-to-your-body-after-reiki?</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/blog/the-benefits-of-visiting-a-free-reiki-healing-center---om-sri-tara</loc>
+<loc>https://www.omsritara.in/blog/the-benefits-of-visiting-a-free-reiki-healing-center---om-sri-tara</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/blog/rose-bracelets</loc>
+<loc>https://www.omsritara.in/blog/rose-bracelets</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/bracelet</loc>
+<loc>https://www.omsritara.in/categories/bracelet</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/mala</loc>
+<loc>https://www.omsritara.in/categories/mala</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/spiritual-statues</loc>
+<loc>https://www.omsritara.in/categories/spiritual-statues</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/rings</loc>
+<loc>https://www.omsritara.in/categories/rings</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/shipping-policy</loc>
+<loc>https://www.omsritara.in/shipping-policy</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.60</priority>
 </url>
 <url>
-<loc>https://omsritara.in/refund-policy</loc>
+<loc>https://www.omsritara.in/refund-policy</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.60</priority>
 </url>
 <url>
-<loc>https://omsritara.in/terms-conditions</loc>
+<loc>https://www.omsritara.in/terms-conditions</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.60</priority>
 </url>
 <url>
-<loc>https://omsritara.in/privacy-policy</loc>
+<loc>https://www.omsritara.in/privacy-policy</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.60</priority>
 </url>
 <url>
-<loc>https://omsritara.in/cancellation-policy</loc>
+<loc>https://www.omsritara.in/cancellation-policy</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.60</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/earrings</loc>
+<loc>https://www.omsritara.in/categories/earrings</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/pendants</loc>
+<loc>https://www.omsritara.in/categories/pendants</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/pendulums</loc>
+<loc>https://www.omsritara.in/categories/pendulums</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/healing-stones</loc>
+<loc>https://www.omsritara.in/categories/healing-stones</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/coins-and-cubes</loc>
+<loc>https://www.omsritara.in/categories/coins-and-cubes</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/sangu</loc>
+<loc>https://www.omsritara.in/categories/sangu</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/angels</loc>
+<loc>https://www.omsritara.in/categories/angels</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/pyramid</loc>
+<loc>https://www.omsritara.in/categories/pyramid</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/crystal-bowls-and-plates</loc>
+<loc>https://www.omsritara.in/categories/crystal-bowls-and-plates</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/yanthirams-and-chakra</loc>
+<loc>https://www.omsritara.in/categories/yanthirams-and-chakra</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://omsritara.in/categories/healing-sticks-and-towers</loc>
+<loc>https://www.omsritara.in/categories/healing-sticks-and-towers</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <priority>0.80</priority>
 </url>

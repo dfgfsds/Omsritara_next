@@ -22,7 +22,7 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
       />
 
       {/* Canonical */}
-      <link rel="canonical" href="https://omsritara.in/shop/" />
+      <link rel="canonical" href="https://www.omsritara.in/shop/" />
 
       {/* Open Graph */}
       <meta
@@ -33,7 +33,7 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
         property="og:description"
         content="Discover healing crystals and natural crystal stones at the best online crystal shop in India. Pure, energized stones for your spiritual journey."
       />
-      <meta property="og:url" content="https://omsritara.in/shop/" />
+      <meta property="og:url" content="https://www.omsritara.in/shop/" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={finalOgImage} />
 
@@ -58,7 +58,7 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
             "@type": "Organization",
             name: "Om Sritara",
             url: "https://omsritara.in",
-            logo: `https://omsritara.in/${logo.src}`,
+            logo: `https://www.omsritara.in/${logo.src}`,
             sameAs: [
               "https://www.facebook.com/omsritarafoundation/",
               "https://www.youtube.com/channel/UCxXJOgXcbckwNby5kEFkBjA",
@@ -74,10 +74,10 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "Om Sritara",
-            url: "https://omsritara.in/",
+            url: "https://www.omsritara.in/",
             potentialAction: {
               "@type": "SearchAction",
-              target: "https://omsritara.in/?s={search_term}",
+              target: "https://www.omsritara.in/?s={search_term}",
               "query-input": "required name=search_term",
             },
           }),
@@ -95,13 +95,13 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://omsritara.in/",
+                item: "https://www.omsritara.in/",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Shop",
-                item: "https://omsritara.in/shop/",
+                item: "https://www.omsritara.in/shop/",
               },
             ],
           }),

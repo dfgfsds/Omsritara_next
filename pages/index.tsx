@@ -12,17 +12,114 @@ import FAQSection from "@/components/FAQ";
 import Head from "next/head";
 
 
+
 export default function Home({ blogs }: { blogs: any[] }) {
 
   return (
     <>
-      <Head>
+          <Head>
+        {/* Primary Meta */}
         <title>Buy Healing Crystals Online in India - Omsritara</title>
         <meta
           name="description"
           content="Shop healing crystals, Reiki crystal products & raw stones online in India. Omsritara – your trusted healing crystals shop online."
         />
+        <meta
+          name="keywords"
+          content="healing crystals india, buy crystals online, reiki crystal products, raw stones india, crystal shop online, chakra stones, Omsritara, natural gemstones"
+        />
+        <meta name="robots" content="index, follow" />
 
+        {/* Canonical */}
+        <link rel="canonical" href="https://www.omsritara.in/" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.omsritara.in/" />
+        <meta
+          property="og:title"
+          content="Buy Healing Crystals Online in India - Omsritara"
+        />
+        <meta
+          property="og:description"
+          content="Shop healing crystals, Reiki crystal products & raw stones online in India. Omsritara – your trusted healing crystals shop online."
+        />
+        <meta
+          property="og:image"
+          content="https://www.omsritara.in/banner5.jpg"
+        />
+        <meta property="og:site_name" content="Omsritara" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.omsritara.in/" />
+        <meta
+          name="twitter:title"
+          content="Buy Healing Crystals Online in India - Omsritara"
+        />
+        <meta
+          name="twitter:description"
+          content="Shop healing crystals, Reiki crystal products & raw stones online in India. Omsritara – your trusted healing crystals shop online."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.omsritara.in/banner5.jpg"
+        />
+
+        {/* Geo */}
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="India" />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.omsritara.in/#organization",
+                  name: "Omsritara",
+                  url: "https://www.omsritara.in/",
+                  logo: "https://www.omsritara.in/logo.png",
+                  description:
+                    "Shop healing crystals, Reiki crystal products & raw stones online in India. Omsritara – your trusted healing crystals shop online.",
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    telephone: "+91-8989052020",
+                    contactType: "customer service",
+                    areaServed: "IN",
+                    availableLanguage: ["en", "ta", "hi"],
+                  },
+                  sameAs: [
+                    "https://www.facebook.com/omsritarafoundation/",
+                    "https://www.instagram.com/omsritara/",
+                    "https://www.youtube.com/channel/UCxXJOgXcbckwNby5kEFkBjA",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.omsritara.in/#website",
+                  url: "https://www.omsritara.in/",
+                  name: "Omsritara - Buy Healing Crystals Online",
+                  description:
+                    "Your trusted source for authentic healing crystals and Reiki products in India.",
+                  publisher: {
+                    "@id": "https://www.omsritara.in/#organization",
+                  },
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target:
+                      "https://www.omsritara.in/?s={search_term_string}",
+                    "query-input": "required name=search_term_string",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
       </Head>
       <div>
 
