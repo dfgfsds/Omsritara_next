@@ -32,7 +32,7 @@ export default function CategoriesPage() {
         <meta name="author" content="Om SriTara" />
 
         {/* Canonical */}
-        <link rel="canonical" href="https://omsritara.in/categories" />
+        <link rel="canonical" href="https://www.omsritara.in/categories" />
 
         {/* Open Graph */}
         <meta
@@ -43,7 +43,7 @@ export default function CategoriesPage() {
           property="og:description"
           content="Explore healing crystals, malas, yanthirams, angel tools, pyramids & spiritual statues – all Reiki charged & spiritually energized for divine healing."
         />
-        <meta property="og:url" content="https://omsritara.in/categories" />
+        <meta property="og:url" content="https://www.omsritara.in/categories" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={dynamicOgImage} />
 
@@ -67,7 +67,7 @@ export default function CategoriesPage() {
               "@context": "https://schema.org",
               "@type": "WebPage",
               name: "Healing Crystals & Spiritual Products by Category | Om SriTara",
-              url: "https://omsritara.in/categories",
+              url: "https://www.omsritara.in/categories",
               description:
                 "Shop authentic healing crystals, rings, pendants, malas, yanthirams, angel tools, pyramids & spiritual statues at Om SriTara. All products are cleansed, spiritually energized & Reiki charged for divine healing.",
               inLanguage: "en-IN",
@@ -82,7 +82,7 @@ export default function CategoriesPage() {
                 url: "https://omsritara.in",
                 logo: {
                   "@type": "ImageObject",
-                  url:  `https://omsritara.in/${logo.src}`,
+                  url:  `https://www.omsritara.in/${logo.src}`,
                 },
               },
               image: dynamicOgImage,
@@ -99,7 +99,7 @@ export default function CategoriesPage() {
                     "@type": "ListItem",
                     position: 2,
                     name: "Categories",
-                    item: "https://omsritara.in/categories",
+                    item: "https://www.omsritara.in/categories",
                   },
                 ],
               },
