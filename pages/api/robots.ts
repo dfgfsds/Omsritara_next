@@ -9,7 +9,7 @@ Disallow: /cart
 Disallow: /profile
 Disallow: /wishlist
 
-Sitemap: https://omsritara.in/sitemap.xml
+Sitemap: https://www.omsritara.in/sitemap.xml
 `);
     res.end();
 }
