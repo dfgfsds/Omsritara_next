@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "in.omsritara.app",
+      "sha256_cert_fingerprints": [
+        "41:A9:34:4C:7D:0E:7D:FA:49:6F:51:73:F4:9D:B4:F8:B6:82:10:47:D4:D8:E8:05:F8:ED:DF:E2:0D:19:CE:0D"
+      ]
+    }
+  }
+]
