@@ -1,10 +1,11 @@
 "use client";
 import { usePolicy } from "@/context/PolicyContext";
+import Head from "next/head";
 
-function ShippingPolicy(){
-   const { policy,isLoading }: any = usePolicy();
+function ShippingPolicy() {
+  const { policy, isLoading }: any = usePolicy();
 
-   if (isLoading) {
+  if (isLoading) {
     // Show skeleton loader when loading
     return (
       <div className="bg-white p-5 shadow-md rounded-lg lg:p-20 animate-pulse">
@@ -21,15 +22,33 @@ function ShippingPolicy(){
     );
   }
 
-    return (
-        <div className="bg-white p-5 lg:p-20 shadow-md rounded-lg">
-          <h1 className="text-3xl font-bold mb-4 text-gray-800">Shipping Policy</h1>
-          {/* <p className="text-gray-600">
+  return (
+    <>
+      <Head>
+        {/* SEO Meta Tags */}
+        <title>Shipping Policy | Om Sritara – Delivery Information India</title>
+        <meta
+          name="description"
+          content="Check Om Sritara’s shipping policy for delivery timelines, courier partners and shipping charges across India."
+        />
+
+        {/* Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://www.omsritara.in/shipping-policy"
+        />
+      </Head>
+
+
+      <div className="bg-white p-5 lg:p-20 shadow-md rounded-lg">
+        <h2 className="text-3xl font-bold mb-4 text-gray-800">Shipping Policy</h2>
+        {/* <p className="text-gray-600">
         {policy?.data?.shipping_policy}
         </p> */}
-            <div className="text-gray-600" dangerouslySetInnerHTML={{ __html: policy?.data?.shipping_policy }} />
-        </div>
-      );
+        <div className="text-gray-600" dangerouslySetInnerHTML={{ __html: policy?.data?.shipping_policy }} />
+      </div>
+    </>
+  );
 }
 
 export default ShippingPolicy;

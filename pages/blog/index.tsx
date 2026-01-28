@@ -1,9 +1,32 @@
+import Head from "next/head";
 import { baseUrl } from "@/api-endpoints/ApiUrls";
 import axios from "axios";
 import BlogAllPages from "@/components/BlogAllPages";
 
 export default function BlogPage({ blogs }: { blogs: any[] }) {
-    return <BlogAllPages blogs={blogs} />;
+    return (
+        <>
+            <Head>
+                {/* SEO Meta Tags */}
+                <title>
+                    Spiritual Blog | Healing, Astrology & Divine Insights – Om Sritara
+                </title>
+
+                <meta
+                    name="description"
+                    content="Read Om Sritara’s spiritual blog for insights on healing crystals, astrology, mantras, divine practices and positive living."
+                />
+
+                {/* Canonical URL */}
+                <link
+                    rel="canonical"
+                    href="https://www.omsritara.in/blog"
+                />
+            </Head>
+
+            <BlogAllPages blogs={blogs} />;
+        </>
+    )
 }
 
 // SSR function

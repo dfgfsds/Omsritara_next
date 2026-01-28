@@ -17,7 +17,8 @@ export default function Home({ blogs }: { blogs: any[] }) {
 
   return (
     <>
-          <Head>
+          
+        <Head>
         {/* Primary Meta */}
         <title>Buy Healing Crystals Online in India - Omsritara</title>
         <meta
