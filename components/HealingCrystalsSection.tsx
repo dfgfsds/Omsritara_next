@@ -19,17 +19,13 @@ export default function HealingCrystalsSection() {
 
         {/* Header */}
         <div className="text-center mb-14">
-       
 
-          <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-[#a5291b] leading-tight">
-            Buy Healing Crystals Online
-            <span className="block text-3xl mt-2 text-gray-700 ">
-              Trusted, Tested & Energized
-            </span>
-          </h2>
+          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-[#a5291b] leading-tight">Buy Healing Crystals Online</h1>
+          <h2 className="block text-3xl mt-2 text-gray-700 " >
+            Trusted, Tested & Energized </h2>
 
           <p className="max-w-2xl mx-auto mt-4 text-gray-700 text-base sm:text-lg">
-            When you buy raw crystals online from Om Sritara, you’re not just buying a stone — 
+            When you buy raw crystals online from Om Sritara, you’re not just buying a stone —
             you’re bringing home a piece of Earth’s divine energy.
           </p>
         </div>
@@ -40,7 +36,7 @@ export default function HealingCrystalsSection() {
           {/* Left Side */}
           <div>
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
-              Every crystal we offer goes through a sacred preparation process, 
+              Every crystal we offer goes through a sacred preparation process,
               ensuring it reaches you with pure, positive, and powerful vibrations.
             </p>
 
@@ -90,12 +86,12 @@ export default function HealingCrystalsSection() {
           <div className="bg-white/70 backdrop-blur-xl border border-white shadow-2xl rounded-2xl p-4 sm:p-10 md:p-12">
 
             <h3 className="text-2xl font-semibold text-[#a5291b] mb-5">
-               Sacred 3-Day Energizing Process
+              Sacred 3-Day Energizing Process
             </h3>
 
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-5">
               At Om Sritara, all our products are personally charged and energized by<span className="font-semibold text-[#a5291b]"> Guru Matha</span>, a renowned Reiki Master. Each crystal undergoes a sacred three-day energizing process, ensuring it carries pure, positive vibrations before reaching you.
-          
+
             </p>
 
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-5">

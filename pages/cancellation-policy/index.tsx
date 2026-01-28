@@ -1,5 +1,6 @@
 "use client";
 import { usePolicy } from "@/context/PolicyContext";
+import Head from "next/head";
 
 function CancellationPolicy() {
   const { policy, isLoading }: any = usePolicy();
@@ -22,13 +23,31 @@ function CancellationPolicy() {
   }
 
   return (
-    <div className="bg-white p-5 lg:p-20 shadow-md rounded-lg">
-      <h1 className="text-3xl font-bold mb-4 text-gray-800">Cancellation Policy</h1>
-      {/* <p className="text-gray-600">
+    <>
+
+    <Head>
+        {/* SEO Meta Tags */}
+        <title>Cancellation Policy | Om Sritara – Order Cancellation</title>
+        <meta
+          name="description"
+          content="Understand Om Sritara’s cancellation policy for spiritual products. Learn how and when orders can be cancelled."
+        />
+
+        {/* Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://www.omsritara.in/cancellation-policy"
+        />
+      </Head>
+
+      <div className="bg-white p-5 lg:p-20 shadow-md rounded-lg">
+        <h2 className="text-3xl font-bold mb-4 text-gray-800">Cancellation Policy</h2>
+        {/* <p className="text-gray-600">
         {policy?.data?.refund_and_cancellation_policy}
         </p> */}
-      <div className="text-gray-600" dangerouslySetInnerHTML={{ __html: policy?.data?.refund_and_cancellation_policy }} />
-    </div>
+        <div className="text-gray-600" dangerouslySetInnerHTML={{ __html: policy?.data?.refund_and_cancellation_policy }} />
+      </div>
+    </>
   );
 }
 
