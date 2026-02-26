@@ -1,103 +1,93 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { useRouter } from 'next/router';
-import axios from 'axios';
-import { baseUrl } from '@/api-endpoints/ApiUrls';
-import { useVendor } from '@/context/VendorContext';
+"use client";
 
-export default function HeroSection() {
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Image from "next/image";
+
+export default function HeroSection({ banners }: { banners: any[] }) {
   const router = useRouter();
-  const { vendorId } = useVendor();
-  const [banners, setBanners] = useState<any[]>([]);
-  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [current, setCurrent] = useState(0);
 
-  // Fetch banners
-  const bannerGetApi = async () => {
-    try {
-      const res = await axios.get(`${baseUrl}/banners/?vendorId=63`);
-      if (res.data?.banners) {
-        setBanners(res.data.banners);
-      } else {
-        console.warn('Unexpected API response:', res.data);
-      }
-    } catch (error) {
-      console.log('Error fetching banners:', error);
-    }
-  };
-
-  useEffect(() => {
-    bannerGetApi();
-  }, []);
-
-  // Detect mobile view
+  /* -------- Detect mobile -------- */
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  if (isMobile === null) return null;
-
-  // Filter banners based on type
-  const filteredBanners = banners.filter(banner =>
-    isMobile ? banner.type === 'Mobile View' : banner.type === 'Web View'
+  /* -------- Filter banners -------- */
+  const filteredBanners = banners.filter((b) =>
+    isMobile ? b.type === "Mobile View" : b.type === "Web View"
   );
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 800,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    pauseOnHover: false,
-    appendDots: (dots: React.ReactNode) => (
-      <div style={{ marginTop: '20px', textAlign: 'center' }}>
-        <ul className="flex justify-center space-x-2">{dots}</ul>
-      </div>
-    ),
-    customPaging: () => (
-      <div className="dot w-2 h-2 bg-gray-300 rounded-full transition-all duration-300" />
-    ),
-  };
+  /* -------- Auto slide -------- */
+  useEffect(() => {
+    if (!filteredBanners.length) return;
+    const timer = setInterval(() => {
+      setCurrent((prev) =>
+        prev === filteredBanners.length - 1 ? 0 : prev + 1
+      );
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [filteredBanners.length]);
 
   const handleBannerClick = (banner: any) => {
-    const url = banner?.target_url;
-    if (!url) return;
-
-    // Check if the URL is external (starts with http:// or https://)
-    if (url.startsWith("http://") || url.startsWith("https://")) {
-      // open in new tab
-      window.open(url, "_blank");
-    } else {
-      // internal route → same tab navigation
-      router.push(url);
-    }
+    if (!banner?.target_url) return;
+    banner.target_url.startsWith("http")
+      ? window.open(banner.target_url, "_blank")
+      : router.push(banner.target_url);
   };
 
+  if (!filteredBanners.length) {
+    return (
+      <div className="md:h-[70vh] bg-gray-200 animate-pulse rounded-lg" />
+    );
+  }
+
   return (
-    <div className="z-10 md:h-[70vh] rounded-lg md:px-10 md:py-4">
-      <Slider {...settings}>
+    <div className="relative md:h-[70vh] overflow-hidden rounded-lg md:px-10 md:py-4">
+
+      <div
+        className="flex transition-transform duration-700 ease-in-out h-full"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
         {filteredBanners.map((banner, index) => (
           <div
             key={banner.id}
+            className="flex-shrink-0 px-2"
+            style={{ width: '100%' }}
+
             onClick={() => handleBannerClick(banner)}
-            className="cursor-pointer"
           >
-            <img
-              className="md:rounded-lg md:object-cover w-full h-[70vh] md:h-auto"
+            <Image
               src={banner.image_url}
               alt={banner.title || 'banner'}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              width={1920}
+              height={1080}
+
+              className={`md:rounded-lg md:object-cover w-full h-[70vh] md:h-auto cursor-pointer
+                ${current === index ? 'scale-100' : 'scale-90 opacity-80'}
+              `}
             />
           </div>
         ))}
-      </Slider>
+      </div>
+
+      {/* Dots */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex gap-2">
+        {filteredBanners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`h-2 rounded-full transition-all
+              ${current === index ? "bg-[#a5291b] w-4" : "bg-gray-300 w-2"}
+            `}
+          />
+        ))}
+      </div>
     </div>
   );
 }

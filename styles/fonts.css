@@ -3,6 +3,7 @@
   src: url('/font/quicksand/Quicksand_Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url('/font/quicksand/Quicksand_Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,20 +19,21 @@
   src: url('/font/quicksand/Quicksand_Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Recta';
-  src: url('/font/Recta/fonnts.com-Recta-Regular.ttf') format('opentype');
-  font-weight: 700;
+  src: url('/font/Recta/fonnts.com-Recta-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/font/Poppins-Regular.ttf') format('opentype');
-  /* font-weight: 700; */
+  src: url('/font/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
-
-/* Add other variants if needed (Oblique, Dash, etc.) */

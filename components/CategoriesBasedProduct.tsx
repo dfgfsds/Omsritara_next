@@ -45,13 +45,13 @@ export default function CategoriesBasedProduct() {
         setCartId(storedCartId);
         setUserName(storedUserName);
     }, []);
-    
-useEffect(() => {
-  if (id && /^\d+$/.test(id.toString())) {
-    // id is all numbers → redirect
-    router.replace("/categories"); // 👈 change this to your desired page
-  }
-}, [id, router]);
+
+    useEffect(() => {
+        if (id && /^\d+$/.test(id.toString())) {
+            // id is all numbers → redirect
+            router.replace("/categories"); // 👈 change this to your desired page
+        }
+    }, [id, router]);
 
 
     // Find the category name by ID
@@ -111,9 +111,11 @@ useEffect(() => {
                     <span>
                         Home</span><span className='cursor-pointer flex' onClick={() => router.back()}>/ {categoryName}</span>  <span className='text-[#a5291b]'>/ Shop</span></div>
             </div>
-            <img
+            <Image
                 src={category?.banner_image ?? img.src}
                 alt="banner image"
+                width={1200}
+                height={320}
                 className="w-full h-32 md:h-80 px-2 md:m-2 rounded-md"
             />
             <h1 className='m-2 font-bold text-2xl text-center text-[#a5291b]'>

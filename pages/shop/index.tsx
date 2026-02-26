@@ -143,8 +143,8 @@ export default function Shop() {
     });
 
     const firstProductImage =
-  products?.data?.[0]?.image_urls?.[0] ||
-  "https://omsritara.in/assets/images/og-category.jpg";
+        products?.data?.[0]?.image_urls?.[0] ||
+        "https://omsritara.in/assets/images/og-category.jpg";
 
 
     function slugConvert(name: string) {
@@ -158,197 +158,197 @@ export default function Shop() {
 
     return (
         <>
-      <ShopSEO ogImage={firstProductImage} />
-        <div className="max-w-[1280px] mx-auto px-2 md:px-10 py-2 md:py-5">
-            {/* Page title */}
-            <h1 className="text-center text-gray-700 text-2xl  text-bold">Shop Healing Crystals Online <br/> <span className="text-xl"> Natural Stones, Bracelets & Reiki Products</span></h1>
-            <div className="my-2 mb-5 flex">
-                <ArrowLeft onClick={() => router.back()} className='text-gray-400 cursor-pointer' />
-                <p className="text-md text-gray-400 flex mt-0.5 gap-1">
-                    <span className='cursor-pointer flex' onClick={() => router.back()} >
-                        Home</span> / Shop</p>
+            <ShopSEO ogImage={firstProductImage} />
+            <div className="max-w-[1280px] mx-auto px-2 md:px-10 py-2 md:py-5">
+                {/* Page title */}
+                <h1 className="text-center text-gray-700 text-2xl  text-bold">Shop Healing Crystals Online <br /> <span className="text-xl"> Natural Stones, Bracelets & Reiki Products</span></h1>
+                <div className="my-2 mb-5 flex">
+                    <ArrowLeft onClick={() => router.back()} className='text-gray-400 cursor-pointer' />
+                    <p className="text-md text-gray-400 flex mt-0.5 gap-1">
+                        <span className='cursor-pointer flex' onClick={() => router.back()} >
+                            Home</span> / Shop</p>
 
-            </div>
+                </div>
 
-            {/* Filter toggle on mobile */}
-            <div className="md:hidden mb-6">
-                <button
-                    onClick={() => setShowFilters(!showFilters)}
-                    className="px-4 py-2 border rounded text-sm"
-                >
-                    {showFilters ? "Hide Filters" : "Show Filters"}
-                </button>
-            </div>
+                {/* Filter toggle on mobile */}
+                <div className="md:hidden mb-6">
+                    <button
+                        onClick={() => setShowFilters(!showFilters)}
+                        className="px-4 py-2 border rounded text-sm"
+                    >
+                        {showFilters ? "Hide Filters" : "Show Filters"}
+                    </button>
+                </div>
 
-            {/* Grid layout */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-                {/* Sidebar Filter (collapsible on mobile) */}
-                <aside className={`${showFilters ? 'block' : 'hidden'} md:block space-y-6`}>
+                {/* Grid layout */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+                    {/* Sidebar Filter (collapsible on mobile) */}
+                    <aside className={`${showFilters ? 'block' : 'hidden'} md:block space-y-6`}>
 
-                    {/* Size */}
-                    <div>
-                        <h3 className="font-semibold mb-2">Category</h3>
-                        <div className="space-y-2 text-sm text-gray-600">
-                            {categories?.data?.map((category: any) => (
-                                <label key={category?.id} className="block">
+                        {/* Size */}
+                        <div>
+                            <h3 className="font-semibold mb-2">Category</h3>
+                            <div className="space-y-2 text-sm text-gray-600">
+                                {categories?.data?.map((category: any) => (
+                                    <label key={category?.id} className="block">
+                                        <input
+                                            type="checkbox"
+                                            className="mr-2"
+                                            checked={selectedCategory === category.id}
+                                            onChange={() => handleCheckboxChange(category.id)}
+                                        />
+                                        {category?.name}
+                                    </label>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Availability */}
+                        <div>
+                            <h3 className="font-semibold mb-2">Availability</h3>
+                            <div className="space-y-2 text-sm text-gray-600">
+                                <label className="block">
                                     <input
                                         type="checkbox"
                                         className="mr-2"
-                                        checked={selectedCategory === category.id}
-                                        onChange={() => handleCheckboxChange(category.id)}
+                                        checked={showInStock}
+                                        onChange={() => setShowInStock(!showInStock)}
                                     />
-                                    {category?.name}
+                                    In stock
                                 </label>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Availability */}
-                    <div>
-                        <h3 className="font-semibold mb-2">Availability</h3>
-                        <div className="space-y-2 text-sm text-gray-600">
-                            <label className="block">
-                                <input
-                                    type="checkbox"
-                                    className="mr-2"
-                                    checked={showInStock}
-                                    onChange={() => setShowInStock(!showInStock)}
-                                />
-                                In stock
-                            </label>
-                            <label className="block">
-                                <input
-                                    type="checkbox"
-                                    className="mr-2"
-                                    checked={showOutOfStock}
-                                    onChange={() => setShowOutOfStock(!showOutOfStock)}
-                                />
-                                Out of stock
-                            </label>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold mb-2">Intension</h3>
-                        <div className="space-y-2 text-sm text-gray-600">
-                            {intentions?.map((category: any) => (
-                                <label key={category?.name} className="block">
+                                <label className="block">
                                     <input
                                         type="checkbox"
                                         className="mr-2"
-                                        checked={selectedIntension === category.name}
-                                        onChange={() => handleCheckboxChangeIntension(category.name)}
+                                        checked={showOutOfStock}
+                                        onChange={() => setShowOutOfStock(!showOutOfStock)}
                                     />
-                                    {category?.name}
+                                    Out of stock
                                 </label>
-                            ))}
+                            </div>
                         </div>
-                    </div>
-
-                    {/* Clear Button */}
-                    <button className="mt-4 px-4 py-1 bg-black text-white text-sm rounded"
-                        onClick={() => {
-                            setShowInStock(false);
-                            setShowOutOfStock(false);
-                            setSelectedCategory('');
-                            setSearchQuery('');
-                            setSelectedIntension('');
-                        }}
-                    >Clear all</button>
-                </aside>
-
-                {/* Product Section */}
-                <div className="md:col-span-3" ref={topRef}>
-                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 bg-gray-100 p-2 rounded-lg">
-                        {/* Search Input */}
-                        <div className="w-full sm:w-1/2">
-                            <input
-                                type="text"
-                                placeholder="Search products..."
-                                className="w-full border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-200"
-                                value={searchQuery}
-                                onChange={(e) => handleSearch(e.target.value)}
-                            />
+                        <div>
+                            <h3 className="font-semibold mb-2">Intension</h3>
+                            <div className="space-y-2 text-sm text-gray-600">
+                                {intentions?.map((category: any) => (
+                                    <label key={category?.name} className="block">
+                                        <input
+                                            type="checkbox"
+                                            className="mr-2"
+                                            checked={selectedIntension === category.name}
+                                            onChange={() => handleCheckboxChangeIntension(category.name)}
+                                        />
+                                        {category?.name}
+                                    </label>
+                                ))}
+                            </div>
                         </div>
 
-                        {/* Sort Dropdown */}
-                        <div className="w-full sm:w-auto">
-                            <select
-                                className="w-full sm:w-auto bg-white border rounded px-4 py-2 text-sm"
-                                value={sortOption}
-                                onChange={(e) => setSortOption(e.target.value)}
-                            >
-                                <option value="newest">Sort By</option>
-                                <option value="price-low">Price: Low to High</option>
-                                <option value="price-high">Price: High to Low</option>
-                            </select>
-                        </div>
-                    </div>
+                        {/* Clear Button */}
+                        <button className="mt-4 px-4 py-1 bg-black text-white text-sm rounded"
+                            onClick={() => {
+                                setShowInStock(false);
+                                setShowOutOfStock(false);
+                                setSelectedCategory('');
+                                setSearchQuery('');
+                                setSelectedIntension('');
+                            }}
+                        >Clear all</button>
+                    </aside>
 
-                    {/* Product Grid */}
-                    {isLoading ? (
-                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-                            {[...Array(6)].map((_, idx) => (
-                                <div key={idx} className="px-2">
-                                    <ProductCardSkeleton />
-                                </div>
-                            ))}
-                        </div>
-                    ) : finalProductData?.length ? (
-                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-                            {finalProductData.map((product, idx) => (
-                                <div
-                                    key={idx}
-                                    onClick={() => router.push(`/shop/${slugConvert(product?.name)}`)}
+                    {/* Product Section */}
+                    <div className="md:col-span-3" ref={topRef}>
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 bg-gray-100 p-2 rounded-lg">
+                            {/* Search Input */}
+                            <div className="w-full sm:w-1/2">
+                                <input
+                                    type="text"
+                                    placeholder="Search products..."
+                                    className="w-full border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-200"
+                                    value={searchQuery}
+                                    onChange={(e) => handleSearch(e.target.value)}
+                                />
+                            </div>
+
+                            {/* Sort Dropdown */}
+                            <div className="w-full sm:w-auto">
+                                <select
+                                    className="w-full sm:w-auto bg-white border rounded px-4 py-2 text-sm"
+                                    value={sortOption}
+                                    onChange={(e) => setSortOption(e.target.value)}
                                 >
-                                    <ProductCard
-                                        image={product?.image_urls[0] || ''}
-                                        hoverImage={product?.image_urls[1] || ''}
-                                        title={product?.name}
-                                        price={product?.price}
-                                        onAddToCart={() => alert(`Add to cart: ${product?.name}`)}
-                                        onView={() => router.push(`/shop/${slugConvert(product?.name)}`)}
-                                        onWishlist={() => alert(`Wishlist: ${product?.name}`)}
-                                        product={product}
-                                    />
-                                </div>
-                            ))}
+                                    <option value="newest">Sort By</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                </select>
+                            </div>
                         </div>
-                    ) : (
-                        <div className="flex flex-col items-center justify-center text-center py-20 text-gray-500">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-16 w-16 mb-4 text-gray-400"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth={1.5}
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M9 13h6m2 9H7a2 2 0 01-2-2V5a2 2 0 012-2h5l2 2h5a2 2 0 012 2v13a2 2 0 01-2 2z"
-                                />
-                            </svg>
-                            <h3 className="text-lg font-semibold">No Products Found</h3>
-                            <p className="text-sm mt-1">Try adjusting your filters or search term.</p>
-                        </div>
-                    )}
 
-                    {totalPages > 1 && (
-                        <div className="flex justify-center mt-6">
-                            <Pagination
-                                currentPage={currentPage}
-                                totalPages={totalPages}
-                                onPageChange={(page) => {
-                                    setCurrentPage(page);
-                                    topRef.current?.scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            />
-                        </div>
-                    )}
+                        {/* Product Grid */}
+                        {isLoading ? (
+                            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                                {[...Array(6)].map((_, idx) => (
+                                    <div key={idx} className="px-2">
+                                        <ProductCardSkeleton />
+                                    </div>
+                                ))}
+                            </div>
+                        ) : finalProductData?.length ? (
+                            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                                {finalProductData.map((product, idx) => (
+                                    <div
+                                        key={idx}
+                                        onClick={() => router.push(`/shop/${slugConvert(product?.name)}`)}
+                                    >
+                                        <ProductCard
+                                            image={product?.image_urls[0] || ''}
+                                            hoverImage={product?.image_urls[1] || ''}
+                                            title={product?.name}
+                                            price={product?.price}
+                                            onAddToCart={() => alert(`Add to cart: ${product?.name}`)}
+                                            onView={() => router.push(`/shop/${slugConvert(product?.name)}`)}
+                                            onWishlist={() => alert(`Wishlist: ${product?.name}`)}
+                                            product={product}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="flex flex-col items-center justify-center text-center py-20 text-gray-500">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-16 w-16 mb-4 text-gray-400"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={1.5}
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M9 13h6m2 9H7a2 2 0 01-2-2V5a2 2 0 012-2h5l2 2h5a2 2 0 012 2v13a2 2 0 01-2 2z"
+                                    />
+                                </svg>
+                                <h3 className="text-lg font-semibold">No Products Found</h3>
+                                <p className="text-sm mt-1">Try adjusting your filters or search term.</p>
+                            </div>
+                        )}
+
+                        {totalPages > 1 && (
+                            <div className="flex justify-center mt-6">
+                                <Pagination
+                                    currentPage={currentPage}
+                                    totalPages={totalPages}
+                                    onPageChange={(page) => {
+                                        setCurrentPage(page);
+                                        topRef.current?.scrollIntoView({ behavior: 'smooth' });
+                                    }}
+                                />
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
-        </div>
         </>
     );
 }

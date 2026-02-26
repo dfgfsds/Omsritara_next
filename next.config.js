@@ -4,11 +4,13 @@ const nextConfig = {
     images: {
         unoptimized: true,
         domains: [
+
             "www.reikicrystalproducts.com",
             "ecomapi.ftdigitalsolutions.org",
             "cdn.shopify.com",
             "semantic-ui.com",
             "cdn-icons-png.flaticon.com",
+
         ],
     },
     async rewrites() {

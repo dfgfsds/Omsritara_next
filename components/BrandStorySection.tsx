@@ -1,6 +1,7 @@
 "use client";
 
 import { Heart, Star, Gift } from "lucide-react";
+import Image from "next/image";
 
 export default function BrandStorySection() {
   return (
@@ -9,7 +10,7 @@ export default function BrandStorySection() {
       {/* Floating Magical Orbs */}
       <div className="absolute top-0 left-8 w-56 h-56 md:w-72 md:h-72 bg-[#a5291b]/20 rounded-full blur-3xl animate-pulse-slow"></div>
       <div className="absolute bottom-10 right-6 w-72 h-72 md:w-96 md:h-96 bg-[#a5291b]/20 rounded-full blur-3xl animate-pulse-slow"></div>
-      
+
       {/* Floating sparkles */}
       <div className="absolute top-20 right-1/4 w-6 h-6 bg-[#a5291b]/40 rounded-full animate-bounce-slow"></div>
       <div className="absolute bottom-32 left-1/3 w-4 h-4 bg-[#a5291b]/40 rounded-full animate-bounce-slow"></div>
@@ -35,10 +36,16 @@ export default function BrandStorySection() {
           <div className="relative flex justify-center">
             <div className="absolute -top-12 -left-12 w-28 h-28 md:w-40 md:h-40 bg-[#a5291b]/30 rounded-full blur-2xl"></div>
             <div className="absolute top-10 right-0 w-32 h-32 md:w-48 md:h-48 bg-[#a5291b]/30 rounded-full blur-2xl"></div>
-            <img
+
+            <Image
               src="/images/crystal-cluster.png"
               alt="Healing Crystals"
+              width={500}
+              height={500}
+              sizes="(max-width: 768px) 100vw, 500px"
               className="relative rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+
+              priority={false}
             />
           </div>
 

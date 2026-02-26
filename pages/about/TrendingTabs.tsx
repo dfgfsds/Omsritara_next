@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import TabsData from "./TabsData.json";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 
@@ -29,7 +30,7 @@ export default function TrendingTabs() {
         { id: "videos", label: "Videos" },
         // { id: "customers", label: "Happy Customers" },
     ];
-// a5291b
+    // a5291b
     const getItemsForPage = (items: any[]) => {
         const start = (page - 1) * itemsPerPage;
         return items.slice(start, start + itemsPerPage);
@@ -46,7 +47,7 @@ export default function TrendingTabs() {
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-12">
-   <h3 className="text-2xl font-semibold text-[#a5291b] mb-4">Our Gallery</h3>
+            <h3 className="text-2xl font-semibold text-[#a5291b] mb-4">Our Gallery</h3>
             {/* Tabs */}
             <div className="overflow-x-auto scrollbar-hide mb-6">
                 <div className="flex gap-4 md:gap-6 border-b border-gray-200 px-2 md:px-0">
@@ -93,9 +94,11 @@ export default function TrendingTabs() {
                                     </div>
                                 </div>
                             ) : (
-                                <img
+                                <Image
                                     src={item.src}
                                     alt={`${activeTab} ${item.id}`}
+                                    width={400}
+                                    height={300}
                                     className="w-full md:h-48 sm:h-60 lg:h-full object-cover"
                                 />
                             )}
