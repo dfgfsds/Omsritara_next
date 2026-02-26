@@ -314,10 +314,12 @@ function OrderSingleView() {
                                                                 {review?.image_urls?.length > 0 && (
                                                                     <div className="flex gap-2 mt-2">
                                                                         {review.image_urls.map((img: string, idx: number) => (
-                                                                            <img
+                                                                            <Image
                                                                                 key={idx}
                                                                                 src={img}
                                                                                 alt="review"
+                                                                                width={64}
+                                                                                height={64}
                                                                                 className="w-16 h-16 object-cover rounded border"
                                                                             />
                                                                         ))}
@@ -464,10 +466,12 @@ function OrderSingleView() {
                             {/* Image Previews */}
                             <div className="flex gap-2 flex-wrap mt-3">
                                 {imagePreviews.map((url, idx) => (
-                                    <img
+                                    <Image
                                         key={idx}
                                         src={url}
                                         alt={`preview-${idx}`}
+                                        width={96}
+                                        height={96}
                                         className="w-24 h-24 object-cover rounded-lg border shadow-sm"
                                     />
                                 ))}

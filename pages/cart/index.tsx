@@ -13,6 +13,7 @@ import { useProducts } from '@/context/ProductsContext';
 import CartItem from '@/components/cart/CartItem';
 import CartSummary from '@/components/cart/CartSummary';
 import { useState } from 'react';
+import Script from 'next/script';
 
 export default function CartPage() {
   // For demo purposes, we'll use the first 3 products as cart items
@@ -61,6 +62,10 @@ export default function CartPage() {
 
   return (
     <div className="bg-white">
+      <Script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        strategy="afterInteractive"
+      />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Your Cart</h1>
         {matchingProductsArray?.length === 0 ? (

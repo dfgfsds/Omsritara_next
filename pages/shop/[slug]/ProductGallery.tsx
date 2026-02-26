@@ -2,6 +2,7 @@
 
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 
 export default function ProductGallery({ images = [], name }: { images: string[]; name: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -51,10 +52,12 @@ export default function ProductGallery({ images = [], name }: { images: string[]
           onTouchEnd={handleTouchEnd}
         >
           <div className=''></div>
-          <img
+          <Image
             src={activeImage || 'https://semantic-ui.com/images/wireframe/image.png'}
             alt={name}
+            fill
             className="h-full w-full object-cover transition-all duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
 
           {/* Arrows */}
@@ -82,9 +85,11 @@ export default function ProductGallery({ images = [], name }: { images: string[]
                 }`}
               onClick={() => setActiveIndex(idx)}
             >
-              <img
+              <Image
                 src={img}
                 alt={`${name} - ${idx + 1}`}
+                width={150}
+                height={150}
                 className="h-full w-full object-cover"
               />
             </button>

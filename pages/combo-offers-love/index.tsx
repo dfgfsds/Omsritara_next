@@ -9,9 +9,7 @@ import { useVendor } from "@/context/VendorContext";
 import { deleteCartitemsApi, postCartitemApi, postNewCartitemWithQtyApi, updateCartitemsApi } from "@/api-endpoints/CartsApi";
 import { InvalidateQueryFilters, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import Script from "next/script";
 import { CheckCircle, Sparkles } from "lucide-react";
 import Head from "next/head";
@@ -276,37 +274,30 @@ export default function ComboOffers() {
                             >
 
                                 {/* 🖼️ Image Section */}
+                                {/* 🖼️ Image Section */}
                                 <div className="w-full md:w-1/3 relative flex-shrink-0 aspect-[4/3] sm:aspect-square">
                                     {product?.image_urls?.length > 1 ? (
-                                        <Slider
-                                            dots={false}
-                                            infinite={true}
-                                            speed={500}
-                                            slidesToShow={1}
-                                            slidesToScroll={1}
-                                            arrows={false}
-                                            autoplay={true}
-                                            autoplaySpeed={2500}
-                                            className="h-full"
-                                        >
-                                            {product.image_urls.map((img: string, index: number) => (
-                                                <div key={index} className="relative w-full h-full aspect-square">
-                                                    <Image
-                                                        src={img}
-                                                        alt={`${product.name}-${index}`}
-                                                        fill
-                                                        className="object-cover"
-                                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                                    />
-                                                </div>
-                                            ))}
-                                        </Slider>
+                                        <div className="combo-slider">
+                                            <div className="combo-slider-track">
+                                                {product.image_urls.map((img: string, index: number) => (
+                                                    <div key={index} className="combo-slide">
+                                                        <Image
+                                                            src={img}
+                                                            alt={`${product.name}-${index}`}
+                                                            fill
+                                                            className="object-cover"
+                                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                                        />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
                                     ) : (
                                         <Image
                                             src={product?.image_urls?.[0]}
                                             alt={product.name}
                                             fill
-                                            className="object-cover rounded-t-lg sm:rounded-none"
+                                            className="object-cover"
                                             sizes="(max-width: 768px) 90vw, 33vw"
                                         />
                                     )}
