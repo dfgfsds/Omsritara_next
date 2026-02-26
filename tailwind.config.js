@@ -8,9 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        quicksand: ['Quicksand', 'sans-serif'],
+        quicksand: ['var(--font-quicksand)', 'sans-serif'],
       },
-      
     },
   },
   plugins: [],
