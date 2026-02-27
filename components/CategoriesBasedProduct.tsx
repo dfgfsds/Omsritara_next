@@ -118,15 +118,10 @@ export default function CategoriesBasedProduct() {
                 height={320}
                 className="w-full h-32 md:h-80 px-2 md:m-2 rounded-md"
             />
-            <h1 className='m-2 font-bold text-2xl text-center text-[#a5291b]'>
-                {categoryName}
-            </h1>
-            <div className='m-2'>
-                <div className='quill-content' dangerouslySetInnerHTML={{ __html: category?.description2 }} />
-            </div>
-            <h1 className="text-3xl font-bold  text-[#a5291b] mb-6 mt-6 text-center">
+         
+            <h2 className="text-3xl font-bold  text-[#a5291b] mb-6 mt-6 text-center">
                 {categoryName} Products
-            </h1>
+            </h2>
             {isLoading ? (
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
                     {[...Array(6)].map((_, idx) => (
@@ -174,6 +169,13 @@ export default function CategoriesBasedProduct() {
             {signInmodal && (
                 <LoginModal open={signInmodal} handleClose={() => setSignInModal(false)} vendorId={vendorId} />
             )}
+
+               <h2 className='m-2 font-bold text-2xl text-center text-[#a5291b]'>
+                {categoryName}
+            </h2>
+            <div className='m-2'>
+                <div className='quill-content' dangerouslySetInnerHTML={{ __html: category?.description2 }} />
+            </div>
         </div>
     );
 }
