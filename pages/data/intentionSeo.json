@@ -1,0 +1,307 @@
+{
+    "main": {
+        "title": "Shop by Intention - Healing Crystals by Purpose | Om Sritara",
+        "description": "Discover crystals by intention including love, peace, protection, confidence & more. Reiki-energized healing stones available online across India.",
+        "keywords": "Healing Crystals, Shop by Intention, Reiki Crystals India, Crystal Purpose",
+        "url": "https://www.omsritara.in/shopByIntention",
+        "image": "https://www.omsritara.in/images/shop-by-intention.jpg",
+        "ogTitle": "Shop by Intention - Healing Crystals by Purpose | Om Sritara",
+        "ogDescription": "Discover crystals by intention including love, peace, protection, confidence & more. Reiki-energized healing stones available online across India.",
+        "ogImage": "https://www.omsritara.in/images/shop-by-intention.jpg",
+        "ogImageAlt": "Healing crystals by intention at Om Sritara",
+        "twitterTitle": "Shop by Intention - Healing Crystals by Purpose | Om Sritara",
+        "twitterDescription": "Explore healing crystals by love, protection, peace, money & spiritual growth. Shop online India.",
+        "twitterImage": "https://www.omsritara.in/images/shop-by-intention.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Shop Healing Crystals by Intention",
+            "url": "https://www.omsritara.in/shopByIntention",
+            "description": "Shop Reiki-energized healing crystals by intention including love, peace, protection, confidence, money and spiritual growth.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "Om Sritara",
+                "url": "https://www.omsritara.in/"
+            },
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.omsritara.in/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Shop by Intention",
+                        "item": "https://www.omsritara.in/shopByIntention"
+                    }
+                ]
+            }
+        }
+    },
+    "Love": {
+        "title": "Love Healing Crystals for Attraction | Om Sritara",
+        "description": "Shop love healing crystals for attraction, relationships, and emotional harmony. Reiki-energized gemstones available in Chennai with India-wide delivery.",
+        "keywords": "Love Healing Crystals, Attraction Crystals, Relationship Crystals, Rose Quartz India, Love Gemstones Chennai, Reiki Love Stones, Emotional Healing Crystals, Om Sritara.",
+        "url": "https://www.omsritara.in/shopByIntention/love",
+        "image": "https://www.omsritara.in/images/love-crystals.jpg",
+        "ogTitle": "Love Healing Crystals for Attraction | Om Sritara",
+        "ogDescription": "Shop love healing crystals for attraction, relationships & emotional harmony. Reiki gemstones available across India.",
+        "ogImage": "https://www.omsritara.in/images/love-crystals.jpg",
+        "ogImageAlt": "Love healing crystals for attraction by Om Sritara",
+        "twitterTitle": "Love Healing Crystals for Attraction | Om Sritara",
+        "twitterDescription": "Buy love crystals for relationships and emotional harmony. Reiki gemstones online India.",
+        "twitterImage": "https://www.omsritara.in/images/love-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Love Healing Crystals",
+            "url": "https://www.omsritara.in/shopByIntention/love",
+            "description": "Shop love healing crystals for attraction and emotional harmony.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "Om Sritara",
+                "url": "https://www.omsritara.in/"
+            }
+        }
+    },
+    "Spiritual": {
+        "title": "Spiritual Healing Crystals & Energy Tools | Om Sritara",
+        "description": "Explore spiritual healing crystals, malas, yantras, and energy tools for meditation and growth. Authentic Reiki crystals with delivery across India.",
+        "keywords": "Spiritual Healing Crystals, Meditation Crystals, Malas and Yantras, Energy Tools India, Reiki Spiritual Stones, Chakra Crystals Chennai, Om Sritara.",
+        "url": "https://www.omsritara.in/shopByIntention/spiritual",
+        "image": "https://www.omsritara.in/images/spiritual-crystals.jpg",
+        "ogTitle": "Spiritual Healing Crystals & Energy Tools | Om Sritara",
+        "ogDescription": "Explore spiritual healing crystals, malas and yantras for meditation and growth.",
+        "ogImage": "https://www.omsritara.in/images/spiritual-crystals.jpg",
+        "ogImageAlt": "Spiritual healing crystals and energy tools by Om Sritara",
+        "twitterTitle": "Spiritual Healing Crystals & Energy Tools | Om Sritara",
+        "twitterDescription": "Shop spiritual healing crystals for meditation and growth. Authentic Reiki stones India.",
+        "twitterImage": "https://www.omsritara.in/images/spiritual-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Spiritual Healing Crystals",
+            "url": "https://www.omsritara.in/shopByIntention/spiritual",
+            "description": "Explore spiritual healing crystals and energy tools for meditation and growth."
+        }
+    },
+    "Education": {
+        "title": "Crystals for Education & Focus | Om Sritara",
+        "description": "Buy healing crystals for education, memory, focus, and concentration. Reiki-energized study stones with secure online delivery in India.",
+        "keywords": "Crystals for Education, Study Crystals India, Focus and Memory Stones, Concentration Crystals, Reiki Study Stones, Student Crystals Chennai, Om Sritara.",
+        "url": "https://www.omsritara.in/shopByIntention/education",
+        "image": "https://www.omsritara.in/images/education-crystals.jpg",
+        "ogTitle": "Crystals for Education & Focus | Om Sritara",
+        "ogDescription": "Buy crystals for focus, memory and concentration. Reiki study stones available online India.",
+        "ogImage": "https://www.omsritara.in/images/education-crystals.jpg",
+        "ogImageAlt": "Education and focus crystals by Om Sritara",
+        "twitterTitle": "Crystals for Education & Focus | Om Sritara",
+        "twitterDescription": "Shop healing crystals for education, memory and concentration.",
+        "twitterImage": "https://www.omsritara.in/images/education-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Crystals for Education & Focus",
+            "url": "https://www.omsritara.in/shopByIntention/education",
+            "description": "Buy healing crystals for education, focus and concentration."
+        }
+    },
+    "Peace": {
+        "title": "Crystals for Peace & Calm Energy | Om Sritara",
+        "description": "Shop calming healing crystals for peace, stress relief, and emotional balance. Authentic Reiki stones available online across India.",
+        "keywords": "Peace Crystals, Calm Energy Stones, Stress Relief Crystals, Emotional Balance Stones, Reiki Calming Crystals, Healing Stones India, Om Sritara",
+        "url": "https://www.omsritara.in/shopByIntention/peace",
+        "image": "https://www.omsritara.in/images/peace-crystals.jpg",
+        "ogTitle": "Crystals for Peace & Calm Energy | Om Sritara",
+        "ogDescription": "Shop calming healing crystals for peace, stress relief and emotional balance. Reiki-energized stones available across India.",
+        "ogImage": "https://www.omsritara.in/images/peace-crystals.jpg",
+        "ogImageAlt": "Calming peace and stress relief crystals by Om Sritara",
+        "twitterTitle": "Crystals for Peace & Calm Energy | Om Sritara",
+        "twitterDescription": "Buy calming crystals for stress relief and emotional balance. Reiki stones online India.",
+        "twitterImage": "https://www.omsritara.in/images/peace-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Crystals for Peace & Calm Energy",
+            "url": "https://www.omsritara.in/shopByIntention/peace",
+            "description": "Shop calming healing crystals for peace, stress relief and emotional balance.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "Om Sritara",
+                "url": "https://www.omsritara.in/"
+            }
+        }
+    },
+    "Confidence": {
+        "title": "Crystals for Confidence & Inner Strength | Om Sritara",
+        "description": "Discover healing crystals for confidence, courage, and self-belief. Reiki-energized gemstones with Chennai store access and India delivery.",
+        "keywords": "Confidence Crystals, Courage Stones, Self Belief Gemstones, Inner Strength Crystals, Reiki Confidence Stones India, Om Sritara Chennai.",
+        "url": "https://www.omsritara.in/shopByIntention/confidence",
+        "image": "https://www.omsritara.in/images/confidence-crystals.jpg",
+        "ogTitle": "Crystals for Confidence & Inner Strength | Om Sritara",
+        "ogDescription": "Discover healing crystals for confidence, courage and self-belief. Reiki gemstones with India-wide delivery.",
+        "ogImage": "https://www.omsritara.in/images/confidence-crystals.jpg",
+        "ogImageAlt": "Confidence and courage healing crystals by Om Sritara",
+        "twitterTitle": "Crystals for Confidence & Inner Strength | Om Sritara",
+        "twitterDescription": "Shop confidence crystals for courage and self-belief. Authentic Reiki gemstones online India.",
+        "twitterImage": "https://www.omsritara.in/images/confidence-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Crystals for Confidence & Inner Strength",
+            "url": "https://www.omsritara.in/shopByIntention/confidence",
+            "description": "Discover healing crystals for confidence, courage and inner strength."
+        }
+    },
+    "Money": {
+        "title": "Money & Abundance Crystals | Om Sritara",
+        "description": "Shop money and abundance crystals for wealth, prosperity, and success. Authentic Reiki-energized gemstones with delivery across India.",
+        "keywords": "Money Crystals, Abundance Stones, Wealth Crystals India, Prosperity Gemstones, Reiki Money Stones Chennai, Success Crystals, Om Sritara.",
+        "url": "https://www.omsritara.in/shopByIntention/money",
+        "image": "https://www.omsritara.in/images/money-crystals.jpg",
+        "ogTitle": "Money & Abundance Crystals | Om Sritara",
+        "ogDescription": "Shop money and abundance crystals for wealth, prosperity and success. Reiki-energized gemstones available across India.",
+        "ogImage": "https://www.omsritara.in/images/money-crystals.jpg",
+        "ogImageAlt": "Money and abundance crystals for prosperity by Om Sritara",
+        "twitterTitle": "Money & Abundance Crystals | Om Sritara",
+        "twitterDescription": "Buy abundance crystals for wealth and prosperity. Reiki gemstones online India.",
+        "twitterImage": "https://www.omsritara.in/images/money-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Money & Abundance Crystals",
+            "url": "https://www.omsritara.in/shopByIntention/money",
+            "description": "Shop money and abundance crystals for wealth, prosperity and financial success."
+        }
+    },
+    "Business Growth": {
+        "title": "Crystals for Business Growth & Success | Om Sritara",
+        "description": "Explore crystals for business growth, career success, and financial stability. Reiki-charged stones available online across India.",
+        "keywords": "Business Growth Crystals, Career Success Stones, Financial Stability Crystals, Prosperity Crystals India, Reiki Business Stones, Om Sritara.",
+        "url": "https://www.omsritara.in/shopByIntention/business-growth",
+        "image": "https://www.omsritara.in/images/business-growth-crystals.jpg",
+        "ogTitle": "Crystals for Business Growth & Success | Om Sritara",
+        "ogDescription": "Explore crystals for business growth, career success and financial stability. Reiki-charged stones available online India.",
+        "ogImage": "https://www.omsritara.in/images/business-growth-crystals.jpg",
+        "ogImageAlt": "Business growth and career success crystals by Om Sritara",
+        "twitterTitle": "Crystals for Business Growth & Success | Om Sritara",
+        "twitterDescription": "Shop crystals for business success and career growth. Reiki stones online India.",
+        "twitterImage": "https://www.omsritara.in/images/business-growth-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Crystals for Business Growth & Success",
+            "url": "https://www.omsritara.in/shopByIntention/business-growth",
+            "description": "Explore crystals for business growth, career success and financial stability."
+        }
+    },
+    "Healing": {
+        "title": "Healing Crystals for Energy Balance | Om Sritara",
+        "description": "Shop healing crystals for chakra balance, positivity, and energy alignment. Authentic Reiki-energized gemstones with India-wide shipping.",
+        "keywords": "Healing Crystals India, Chakra Balance Stones, Energy Alignment Crystals, Reiki Healing Stones Chennai, Positive Energy Gemstones, Om Sritara.",
+        "url": "https://www.omsritara.in/shopByIntention/healing",
+        "image": "https://www.omsritara.in/images/healing-crystals.jpg",
+        "ogTitle": "Healing Crystals for Energy Balance | Om Sritara",
+        "ogDescription": "Shop healing crystals for chakra balance, positivity and energy alignment. Authentic Reiki gemstones with India-wide shipping.",
+        "ogImage": "https://www.omsritara.in/images/healing-crystals.jpg",
+        "ogImageAlt": "Healing crystals for chakra balance by Om Sritara",
+        "twitterTitle": "Healing Crystals for Energy Balance | Om Sritara",
+        "twitterDescription": "Buy healing crystals for energy balance and positivity. Reiki stones online India.",
+        "twitterImage": "https://www.omsritara.in/images/healing-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Healing Crystals for Energy Balance",
+            "url": "https://www.omsritara.in/shopByIntention/healing",
+            "description": "Shop healing crystals for chakra balance and positive energy alignment."
+        }
+    },
+    "Health": {
+        "title": "Crystals for Health & Wellness | Om Sritara",
+        "description": "Discover healing crystals for health, vitality, and wellness support. Reiki-energized stones available in Chennai with online delivery.",
+        "keywords": "Health Crystals, Wellness Stones India, Vitality Gemstones, Reiki Health Crystals Chennai, Energy Healing Stones, Om Sritara",
+        "url": "https://www.omsritara.in/shopByIntention/health",
+        "image": "https://www.omsritara.in/images/health-crystals.jpg",
+        "ogTitle": "Crystals for Health & Wellness | Om Sritara",
+        "ogDescription": "Discover healing crystals for health, vitality and wellness support. Reiki-energized stones available across India.",
+        "ogImage": "https://www.omsritara.in/images/health-crystals.jpg",
+        "ogImageAlt": "Health and wellness healing crystals by Om Sritara",
+        "twitterTitle": "Crystals for Health & Wellness | Om Sritara",
+        "twitterDescription": "Shop wellness crystals for vitality and health support. Reiki stones online India.",
+        "twitterImage": "https://www.omsritara.in/images/health-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Crystals for Health & Wellness",
+            "url": "https://www.omsritara.in/shopByIntention/health",
+            "description": "Discover healing crystals for vitality and wellness support."
+        }
+    },
+    "Clarity": {
+        "title": "Crystals for Mental Clarity & Focus | Om Sritara",
+        "description": "Shop clarity crystals for decision-making, focus, and emotional balance. Authentic Reiki gemstones with secure shipping across India.",
+        "keywords": "Clarity Crystals, Mental Focus Stones, Decision Making Crystals, Emotional Balance Gemstones, Reiki Clarity Stones India, Om Sritara",
+        "url": "https://www.omsritara.in/shopByIntention/clarity",
+        "image": "https://www.omsritara.in/images/clarity-crystals.jpg",
+        "ogTitle": "Crystals for Mental Clarity & Focus | Om Sritara",
+        "ogDescription": "Shop clarity crystals for focus, decision-making and emotional balance. Reiki gemstones delivered across India.",
+        "ogImage": "https://www.omsritara.in/images/clarity-crystals.jpg",
+        "ogImageAlt": "Mental clarity and focus crystals by Om Sritara",
+        "twitterTitle": "Crystals for Mental Clarity & Focus | Om Sritara",
+        "twitterDescription": "Buy clarity crystals for decision-making and focus. Reiki stones online India.",
+        "twitterImage": "https://www.omsritara.in/images/clarity-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Crystals for Mental Clarity & Focus",
+            "url": "https://www.omsritara.in/shopByIntention/clarity",
+            "description": "Shop clarity crystals for focus, decision-making and emotional balance."
+        }
+    },
+    "Protection": {
+        "title": "Protection Crystals for Negative Energy | Om Sritara",
+        "description": "Buy protection crystals for shielding from negative energy and stress. Reiki-energized gemstones with Chennai store access and India delivery.",
+        "keywords": "Protection Crystals, Negative Energy Shield Stones, Black Tourmaline India, Reiki Protection Gemstones, Spiritual Protection Crystals Chennai, Om Sritara.",
+        "url": "https://www.omsritara.in/shopByIntention/protection",
+        "image": "https://www.omsritara.in/images/protection-crystals.jpg",
+        "ogTitle": "Protection Crystals for Negative Energy | Om Sritara",
+        "ogDescription": "Buy protection crystals for shielding from negative energy and stress. Reiki gemstones available across India.",
+        "ogImage": "https://www.omsritara.in/images/protection-crystals.jpg",
+        "ogImageAlt": "Protection crystals for negative energy by Om Sritara",
+        "twitterTitle": "Protection Crystals for Negative Energy | Om Sritara",
+        "twitterDescription": "Shop protection crystals for shielding from negativity. Reiki stones online India.",
+        "twitterImage": "https://www.omsritara.in/images/protection-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Protection Crystals",
+            "url": "https://www.omsritara.in/shopByIntention/protection",
+            "description": "Buy protection crystals for shielding from negative energy."
+        }
+    },
+    "Feng Shui": {
+        "title": "Feng Shui Crystals for Home & Office | Om Sritara",
+        "description": "Explore Feng Shui crystals for harmony, wealth, and positive energy at home or office. Authentic Reiki stones delivered across India.",
+        "keywords": "Feng Shui Crystals, Home Energy Stones, Office Prosperity Crystals, Vastu Crystals India, Reiki Feng Shui Stones Chennai, Om Sritara",
+        "url": "https://www.omsritara.in/shopByIntention/feng-shui",
+        "image": "https://www.omsritara.in/images/feng-shui-crystals.jpg",
+        "ogTitle": "Feng Shui Crystals for Home & Office | Om Sritara",
+        "ogDescription": "Explore Feng Shui crystals for harmony, prosperity and positive energy at home or office. Authentic Reiki stones with India delivery.",
+        "ogImage": "https://www.omsritara.in/images/feng-shui-crystals.jpg",
+        "ogImageAlt": "Feng Shui crystals for home and office energy by Om Sritara",
+        "twitterTitle": "Feng Shui Crystals for Home & Office | Om Sritara",
+        "twitterDescription": "Shop Feng Shui crystals for harmony and prosperity. Reiki stones online India.",
+        "twitterImage": "https://www.omsritara.in/images/feng-shui-crystals.jpg",
+        "schema": {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Feng Shui Crystals",
+            "url": "https://www.omsritara.in/shopByIntention/feng-shui",
+            "description": "Explore Feng Shui crystals for harmony and positive energy."
+        }
+    }
+}
