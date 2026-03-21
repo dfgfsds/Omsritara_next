@@ -14,6 +14,7 @@ export default function HomeSeo() {
                     content="Xz1YaaLs5InPzC2s0xVI4jx05V0RE-jVCXceaqJePtg"
                 />
 
+                <meta name="p:domain_verify" content="827644200a1c51d4939f6948a6cd13e2" />
 
             </Head>
             {/* Google Tag Manager */}
