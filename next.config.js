@@ -25,6 +25,16 @@ const nextConfig = {
             },
         ];
     },
+
+    async redirects() {
+        return [
+            {
+                source: "/shopByIntention/[name]",
+                destination: "/shopByIntention",
+                permanent: true,
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;
