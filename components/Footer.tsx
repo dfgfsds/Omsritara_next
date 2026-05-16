@@ -100,16 +100,16 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-300 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
-                <p>© 2025 OMSRITARA</p>
+                <p>© {new Date().getFullYear()} OMSRITARA</p>
                 <p>
                     Powered by{' '}
                     <a
                         href="https://www.ftdigitalsolutions.in/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-purple-700 hover:underline"
+                        className="text-purple-100 hover:underline"
                     >
-                        FT Digital Solutions (Agency).
+                        FT Digital Solutions.
                     </a>
                 </p>
             </div>
