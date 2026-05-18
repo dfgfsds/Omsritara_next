@@ -77,7 +77,7 @@ const Footer = () => {
                 <div>
                     <h3 className="font-semibold mb-4 uppercase">Newsletter</h3>
                     <p className="mb-4">
-                        Om Sritara is an authentic online crystal shop offering natural healing stones, Reiki products, and spiritual accessories. Buy raw crystals online and bring positive energy, prosperity, and peace into your life.
+                        Om Sri Tara is a trusted spiritual and healing platform operated under Anant Bavati Pvt Ltd, offering authentic healing crystals, Reiki products, spiritual tools, and holistic wellness solutions. Explore energized crystals, sacred healing practices, and divine guidance designed to bring positivity, protection, abundance, and inner peace into your life.
                     </p>
                     {/* Social Icons */}
                     <span className='flex gap-3'>
@@ -100,9 +100,9 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-300 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
-                <p>© {new Date().getFullYear()} OMSRITARA</p>
+                <p>© {new Date().getFullYear()} Anant Bavati Pvt Ltd | Om Sri Tara. All rights reserved.</p>
                 <p>
-                    Powered by{' '}
+                    Developed by{' '}
                     <a
                         href="https://www.ftdigitalsolutions.in/"
                         target="_blank"
