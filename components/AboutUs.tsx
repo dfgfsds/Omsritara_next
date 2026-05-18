@@ -36,7 +36,7 @@ const AboutUs = () => {
         <meta property="og:url" content="https://www.omsritara.in/about" />
         <meta
           property="og:image"
-         content={`https://www.omsritara.in/${logo.src}`} 
+          content={`https://www.omsritara.in/${logo.src}`}
         />
 
         {/* Twitter Card */}
@@ -51,7 +51,7 @@ const AboutUs = () => {
         />
         <meta
           name="twitter:image"
-          content={`https://www.omsritara.in/${logo.src}`} 
+          content={`https://www.omsritara.in/${logo.src}`}
         />
 
         {/* Canonical URL */}
@@ -103,87 +103,104 @@ const AboutUs = () => {
 
       <section className="py-12 px-4 md:px-12 lg:px-24 bg-white text-gray-800">
         <div className="max-w-5xl mx-auto">
+
           {/* Title */}
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#a5291b]">
             Who We Are
           </h2>
 
-          {/* Description */}
+          {/* Intro */}
           <p className="mb-6 text-lg leading-relaxed">
-            <b>Om Sri Tara </b>is more than just a center; it is a sacred sanctuary dedicated to spiritual learning, energy healing, and holistic transformation. Founded under the divine grace of Guru Matha, we serve as a bridge between ancient wisdom and modern living.
-          </p>
-          <p className="mb-6 text-lg leading-relaxed">
-            Rooted in the timeless traditions of Reiki and multidimensional healing, we provide a supportive space for seekers to awaken their consciousness, align their energy, and empower their inner being. Whether you are seeking clarity, protection, or abundance, Om Sri Tara offers the spiritual tools needed to navigate your life’s unique path.
-
+            At <b>Om Sri Tara</b>, we are dedicated to guiding individuals toward spiritual awakening, emotional healing, and inner transformation through sacred energy practices and ancient wisdom. Operating under Anant Bavati Pvt Ltd, Om Sri Tara serves as a trusted spiritual sanctuary where traditional healing sciences are thoughtfully integrated into modern life.
           </p>
 
-          <h3 className="text-2xl font-semibold text-[#a5291b] mb-4">Our Guiding Light: Guru Matha</h3>
           <p className="mb-6 text-lg leading-relaxed">
-            Our foundation is built upon the spiritual strength and intuitive guidance of Guru Matha, a powerful Ambal Upasaki and a gifted spiritual guide. As a renowned Reiki Master, Guru Matha's approach is deeply personal. She believes that healing is not merely a method but a sacred journey toward discovering your divine self.
-          </p>
-          <p className="mb-6 text-lg leading-relaxed">
-            At Om Sri Tara, we invoke the benevolent presence of the Goddess Green Tara, Kwan Yin, Isis, and Fortuna, channeling their grace into every teaching, every healing session, and every transformation we guide.
-
-
+            Founded with the divine guidance of Guru Matha, our mission is to help seekers reconnect with their higher consciousness, restore energetic balance, and experience true spiritual growth. We provide authentic healing services, spiritual counseling, Reiki training, crystal healing solutions, and multidimensional therapies that empower individuals to live with clarity, peace, and purpose.
           </p>
 
+          {/* Spiritual Foundation */}
+          <h3 className="text-2xl font-semibold text-[#a5291b] mb-4">
+            Our Spiritual Foundation
+          </h3>
+
+          <p className="mb-6 text-lg leading-relaxed">
+            Om Sri Tara is deeply rooted in sacred healing traditions inspired by divine feminine energies including Green Tara, Kwan Yin, Isis, and Fortuna. Every healing session, spiritual practice, and course we offer is designed to nurture emotional well-being, energetic protection, abundance, and soul alignment.
+          </p>
+
+          <p className="mb-6 text-lg leading-relaxed">
+            Under the intuitive leadership of Guru Matha — a respected Ambal Upasaki, Reiki Master, and spiritual healer — we continue to guide individuals through transformative spiritual journeys with compassion, authenticity, and divine wisdom.
+          </p>
 
           {/* Mission */}
-          <h3 className="text-2xl font-semibold text-[#a5291b] mb-4">Our Mission</h3>
-          <p className="mb-10 text-lg leading-relaxed">
-            To awaken divine spiritual consciousness in every soul. We guide seekers through personal transformation and energetic alignment using authentic healing methods, ancient wisdom, and the compassionate grace of the sacred feminine. We exist to serve as a vessel of light, helping you rise above life’s limitations through the power of sacred energy work.
+          <h3 className="text-2xl font-semibold text-[#a5291b] mb-4">
+            Our Mission
+          </h3>
 
+          <p className="mb-10 text-lg leading-relaxed">
+            Our mission is to awaken spiritual consciousness and support personal transformation through powerful healing modalities, sacred teachings, and energy alignment practices. We strive to create a positive impact by helping individuals overcome emotional, spiritual, and energetic blockages through holistic healing methods.
           </p>
 
           {/* Vision */}
-          <h3 className="text-2xl font-semibold text-[#a5291b] mb-4">Our Vision</h3>
-          <p className="text-lg leading-relaxed">
-            To become a globally trusted spiritual sanctuary where timeless practices such as Reiki, Akashic Records, Angelic Healing, Numerology, and Shamanism are lovingly integrated into modern lives. We envision a world where every individual finds healing, peace, protection, and their true soul purpose.
+          <h3 className="text-2xl font-semibold text-[#a5291b] mb-4">
+            Our Vision
+          </h3>
 
+          <p className="text-lg leading-relaxed mb-10">
+            Our vision is to become a globally recognized spiritual and healing center where ancient spiritual sciences are made accessible to everyone seeking peace, healing, protection, and self-discovery. We aim to inspire individuals to embrace their spiritual path and unlock their highest potential.
           </p>
 
-
-
-          <h3 className="text-2xl font-semibold text-[#a5291b] my-4">Spiritual Courses & Modalities</h3>
+          {/* Services */}
+          <h3 className="text-2xl font-semibold text-[#a5291b] my-4">
+            Our Spiritual Services & Courses
+          </h3>
 
           <p className="text-lg leading-relaxed mb-4">
-            We offer a wide spectrum of spiritual courses designed to help you evolve. Our curriculum includes:
+            We offer a wide range of spiritual healing services and certified training programs, including:
           </p>
 
-          <ul className="list-disc pl-6 space-y-2 text-base mb-6">
-            <li>Reiki Healing & Training</li>
-            <li>Akashic Records Access</li>
+          <ul className="list-disc pl-6 space-y-2 text-base mb-8">
+            <li>Reiki Healing & Reiki Training</li>
+            <li>Akashic Records Reading</li>
             <li>Angelic Healing Therapy</li>
-            <li>Numerology & Shamanism</li>
-            <li>Divine Guidance & Counseling</li>
+            <li>Numerology Consultation</li>
+            <li>Shamanic Healing Practices</li>
+            <li>Divine Guidance & Spiritual Counseling</li>
+            <li>Healing Crystals & Energy Tools</li>
           </ul>
 
-
+          {/* Crystals */}
           <section className="max-w-5xl mx-auto px-4 text-gray-800 py-2">
 
             <h1 className="text-2xl font-semibold text-start text-[#a5291b] my-4">
-              Buy Healing Crystals Online <br /> <span className='text-xl text-gray-800 mt-2'> Trusted, Tested & Energized</span>
+              Energized Healing Crystals
             </h1>
 
             <p className="text-lg leading-relaxed mb-4">
-              At Om Sri Tara, we believe that crystals are pieces of Earth’s divine energy. When you buy raw crystals online from us, you are bringing home a powerful tool for balance and harmony.
-
+              At Om Sri Tara, we provide natural, ethically sourced, and spiritually energized healing crystals designed to support emotional balance, positivity, and energetic harmony. Every crystal undergoes a sacred cleansing and energizing process before reaching you.
             </p>
-            <h3 className="text-2xl font-semibold text-[#a5291b] my-4">Why Choose Our Crystals?</h3>
 
+            <h3 className="text-2xl font-semibold text-[#a5291b] my-4">
+              Why Choose Our Crystals?
+            </h3>
 
-            <p className="text-lg leading-relaxed mb-4"> Unlike standard marketplaces, we ensure that every stone you receive is vibrating with high-frequency energy.</p>
             <ul className="list-disc pl-6 space-y-2 text-base mb-6">
-              <li>100% natural and ethically sourced</li>
-              <li>Cleansed and charged before shipping</li>
-              <li>Packed with intention and care</li>
-              <li>Energized using healing techniques</li>
+              <li>100% Natural & Ethically Sourced</li>
+              <li>Cleansed and Charged with Positive Energy</li>
+              <li>Energized through Sacred Rituals</li>
+              <li>Carefully Packed with Spiritual Intention</li>
+              <li>Personally Blessed & Energized by Guru Matha</li>
             </ul>
 
-            <p className="text-lg leading-relaxed mb-4">The "Om Sri Tara" Promise: Trusted, Tested & Energized What sets us apart is our sacred energizing process. All our products are personally charged and energized by Guru Matha. Before reaching your hands, each crystal undergoes a sacred three-day energizing ritual, ensuring it carries pure, positive vibrations to support your spiritual and emotional healing journey.</p>
+            {/* Promise */}
+            <h3 className="text-2xl font-semibold text-[#a5291b] my-4">
+              The Om Sri Tara Promise
+            </h3>
+
+            <p className="text-lg leading-relaxed mb-4">
+              What makes Om Sri Tara unique is our commitment to authenticity, spiritual integrity, and personalized healing. Every product and service is offered with divine intention, ensuring that each individual receives genuine guidance, positive energy, and holistic support on their spiritual journey.
+            </p>
+
           </section>
-
-
 
         </div>
       </section>
