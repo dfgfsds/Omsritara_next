@@ -77,7 +77,7 @@ const Footer = () => {
                 <div>
                     <h3 className="font-semibold mb-4 uppercase">Newsletter</h3>
                     <p className="mb-4">
-                        Om Sri Tara is a trusted spiritual and healing platform operated under Anant Bavati Pvt Ltd, offering authentic healing crystals, Reiki products, spiritual tools, and holistic wellness solutions. Explore energized crystals, sacred healing practices, and divine guidance designed to bring positivity, protection, abundance, and inner peace into your life.
+                        Om Sri Tara is a trusted spiritual and healing platform operated under Anandat Bhavati Private Limited, offering authentic healing crystals, Reiki products, spiritual tools, and holistic wellness solutions. Explore energized crystals, sacred healing practices, and divine guidance designed to bring positivity, protection, abundance, and inner peace into your life.
                     </p>
                     {/* Social Icons */}
                     <span className='flex gap-3'>
@@ -100,7 +100,7 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-300 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
-                <p>© {new Date().getFullYear()} Anant Bavati Pvt Ltd | Om Sri Tara. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Anandat Bhavati Private Limited | Om Sri Tara. All rights reserved.</p>
                 <p>
                     Developed by{' '}
                     <a
