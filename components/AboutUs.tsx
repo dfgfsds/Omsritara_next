@@ -111,7 +111,7 @@ const AboutUs = () => {
 
           {/* Intro */}
           <p className="mb-6 text-lg leading-relaxed">
-            At <b>Om Sri Tara</b>, we are dedicated to guiding individuals toward spiritual awakening, emotional healing, and inner transformation through sacred energy practices and ancient wisdom. Operating under Anant Bavati Pvt Ltd, Om Sri Tara serves as a trusted spiritual sanctuary where traditional healing sciences are thoughtfully integrated into modern life.
+            At <b>Om Sri Tara</b>, we are dedicated to guiding individuals toward spiritual awakening, emotional healing, and inner transformation through sacred energy practices and ancient wisdom. Operating under Anandat Bhavati Private Limited, Om Sri Tara serves as a trusted spiritual sanctuary where traditional healing sciences are thoughtfully integrated into modern life.
           </p>
 
           <p className="mb-6 text-lg leading-relaxed">
