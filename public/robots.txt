@@ -1,0 +1,152 @@
+# =========================================
+# ROBOTS.TXT - OM SRI TARA
+# SEO + AEO + GEO Optimized
+# https://www.omsritara.in
+# =========================================
+
+User-agent: *
+Allow: /
+
+# =========================================
+# ALLOW IMPORTANT NEXT.JS ASSETS
+# =========================================
+
+Disallow: /_next/
+Allow: /_next/static/
+Allow: /_next/image/
+
+# =========================================
+# IMPORTANT SEO PAGES
+# =========================================
+
+Allow: /shop
+Allow: /categories
+Allow: /about
+Allow: /contact-us
+Allow: /blog
+
+# =========================================
+# CATEGORY PAGES
+# =========================================
+
+Allow: /categories/bracelet
+Allow: /categories/mala
+Allow: /categories/spiritual-statues
+Allow: /categories/rings
+Allow: /categories/earrings
+Allow: /categories/pendants
+Allow: /categories/pendulums
+Allow: /categories/healing-stones
+Allow: /categories/coins-and-cubes
+Allow: /categories/sangu
+Allow: /categories/angels
+Allow: /categories/pyramid
+Allow: /categories/crystal-bowls-and-plates
+Allow: /categories/yanthirams-and-chakra
+Allow: /categories/healing-sticks-and-towers
+
+# =========================================
+# CUSTOMER ACCOUNT PAGES
+# =========================================
+
+Disallow: /cart
+Disallow: /profile
+Disallow: /wishlist
+Disallow: /checkout
+Disallow: /login
+Disallow: /signup
+
+# =========================================
+# API & SYSTEM FILES
+# =========================================
+
+Disallow: /api/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /tmp/
+Disallow: /backup/
+
+# =========================================
+# ADMIN AREA
+# =========================================
+
+Disallow: /admin
+Disallow: /administrator
+Disallow: /backend
+
+# =========================================
+# SEARCH & FILTER PARAMETERS
+# =========================================
+
+Disallow: /search
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?price=
+Disallow: /*?page=
+Disallow: /*?category=
+Disallow: /*?query=
+Disallow: /*?tag=
+
+# =========================================
+# LEGAL PAGES
+# =========================================
+
+Allow: /privacy-policy
+Allow: /refund-policy
+Allow: /shipping-policy
+Allow: /cancellation-policy
+Allow: /terms-conditions
+
+# =========================================
+# AI CRAWLERS (AEO + GEO)
+# =========================================
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# =========================================
+# LOCAL BUSINESS INFORMATION
+# =========================================
+
+# Business Name: OM SRI TARA
+# Address: 46, Giri Rd, Satyamurthy Nagar
+# T. Nagar, Chennai
+# Tamil Nadu - 600017, India
+# Phone: +91-89890-52020
+# Email: info@omsritara.com
+
+# =========================================
+# HOST & XML SITEMAP
+# =========================================
+
+Host: https://www.omsritara.in
+
+Sitemap: https://www.omsritara.in/sitemap.xml

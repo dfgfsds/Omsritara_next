@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import Head from 'next/head';
 
 const ContactUs = () => {
@@ -18,7 +18,7 @@ const ContactUs = () => {
                 {/* Canonical URL */}
                 <link
                     rel="canonical"
-                    href="https://www.omsritara.in/contactUs"
+                    href="https://www.omsritara.in/contact-us"
                 />
             </Head>
 
@@ -47,10 +47,14 @@ const ContactUs = () => {
                                 <div className="flex items-start gap-3 text-sm text-gray-700">
                                     <Phone className="text-indigo-600 mt-1" />
                                     <div>
-                                        <p className="text-gray-400">+91 89890-52020</p>
-                                        <p>Monday to Saturday</p>
-                                        <p>10 am – 6:30 pm (Chennai)</p>
+                                        <a href="tel:+918989052020" className="text-gray-400 hover:text-purple-700 transition-colors">+91 89890-52020</a>
+                                        <p className="mt-2">Monday to Saturday</p>
+                                        <p>10 am – 6:30 pm (Chennai)</p>
                                     </div>
+                                </div>
+                                <div className="flex items-start gap-3 text-sm text-gray-700 mt-4">
+                                    <Mail className="text-indigo-600 mt-1" />
+                                    <a href="mailto:info@omsritara.com" className="text-gray-400 hover:text-purple-700 transition-colors">info@omsritara.com</a>
                                 </div>
                             </div>
 
@@ -59,12 +63,12 @@ const ContactUs = () => {
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                                     STORE LOCATOR
                                 </h3>
-                                <p className="text-sm text-gray-700">
+                                <a href="https://maps.app.goo.gl/BBbFX45PUgf757ua8" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-purple-700 transition-colors inline-block">
                                     OMSRITARA <br />
                                     46, Giri Rd, Satyamurthy Nagar,<br />
                                     T. Nagar, Chennai,<br />
                                     Tamil Nadu 600017
-                                </p>
+                                </a>
                             </div>
                         </div>
 

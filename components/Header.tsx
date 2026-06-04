@@ -379,8 +379,8 @@ const Header: React.FC = () => {
                         </Link>
 
                         <Link
-                            href="/contactUs"
-                            className={`nav-item relative ${isActive("/contactUs") ? "underline" : ""}`}
+                            href="/contact-us"
+                            className={`nav-item relative ${isActive("/contact-us") ? "underline" : ""}`}
                         >
                             Contact&nbsp;Us
                         </Link>
@@ -486,9 +486,9 @@ const Header: React.FC = () => {
                                 </Link>
 
                                 <Link
-                                    href="/contactUs"
+                                    href="/contact-us"
                                     onClick={closeMobileMenu}
-                                    className={` ${isActive("/contactUs") ? "underline" : ""}`}
+                                    className={` ${isActive("/contact-us") ? "underline" : ""}`}
                                 >
                                     Contact Us
                                 </Link>
