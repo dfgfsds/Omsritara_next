@@ -65,10 +65,12 @@ const Footer = () => {
                         </li>
                         <li>
                             <span className="block font-medium mt-2">ADDRESS:</span>
-                            OMSRITARA<br />
-                            46, Giri Rd, Satyamurthy Nagar,<br />
-                            T. Nagar, Chennai,<br />
-                            Tamil Nadu 600017
+                            <a href="https://maps.app.goo.gl/BBbFX45PUgf757ua8" target="_blank" rel="noopener noreferrer" className="text-purple-700 hover:text-white transition-colors">
+                                OMSRITARA<br />
+                                46, Giri Rd, Satyamurthy Nagar,<br />
+                                T. Nagar, Chennai,<br />
+                                Tamil Nadu 600017
+                            </a>
                         </li>
                     </ul>
                 </div>
