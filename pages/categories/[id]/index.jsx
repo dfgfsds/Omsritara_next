@@ -95,7 +95,7 @@ export default function CategoriesProduct() {
                 }}
             />
         </Head>
-
+        {category.pageTitle && <h1 className="text-3xl font-bold text-center mt-2">{category.pageTitle}</h1>}
         <CategoriesBasedProduct />;
     </>
 

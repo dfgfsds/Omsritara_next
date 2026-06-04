@@ -4,7 +4,7 @@ import { useProducts } from '@/context/ProductsContext';
 import { useCategories } from '@/context/CategoriesContext';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Heart, SearchCheck } from 'lucide-react';
+import { ArrowLeft, Heading1, Heart, SearchCheck } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { deleteCartitemsApi, postCartitemApi, updateCartitemsApi } from '@/api-endpoints/CartsApi';
 import { InvalidateQueryFilters, useQueryClient } from '@tanstack/react-query';
@@ -104,7 +104,7 @@ export default function CategoriesBasedProduct() {
 
 
     return (
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-10" ref={topRef}>
+        <div className="max-w-6xl mx-auto px-2 md:px-4 pt-4 pb-10" ref={topRef}>
             <div className="my-2 mb-5 flex">
                 <ArrowLeft onClick={() => router.back()} className='text-gray-400 cursor-pointer' />
                 <div className="text-md text-gray-400 flex mt-0.5 gap-1">
@@ -118,7 +118,7 @@ export default function CategoriesBasedProduct() {
                 height={320}
                 className="w-full h-32 md:h-80 px-2 md:m-2 rounded-md"
             />
-         
+
             <h2 className="text-3xl font-bold  text-[#a5291b] mb-6 mt-6 text-center">
                 {categoryName} Products
             </h2>
@@ -170,7 +170,7 @@ export default function CategoriesBasedProduct() {
                 <LoginModal open={signInmodal} handleClose={() => setSignInModal(false)} vendorId={vendorId} />
             )}
 
-               <h2 className='m-2 font-bold text-2xl text-center text-[#a5291b]'>
+            <h2 className='m-2 font-bold text-2xl text-center text-[#a5291b]'>
                 {categoryName}
             </h2>
             <div className='m-2'>
