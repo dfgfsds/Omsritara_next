@@ -40,11 +40,12 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
         <div className="max-w-4xl mx-auto py-12 px-4">
             {/* ✅ Dynamic SEO Meta Tags */}
             <Head>
-                <title>{`${blog.title} | Omsritara`}</title>
+                <title>{`${blog.title} | Om Sritara Blog`}</title>
                 <meta
                     name="description"
                     content={blog.description?.slice(0, 160) || blog.content.slice(0, 160)}
                 />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
                 <meta property="og:title" content={blog.title} />
                 <meta
                     property="og:description"
@@ -53,6 +54,38 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
                 <meta property="og:image" content={blog.banner_url} />
                 <meta property="og:type" content="article" />
                 <meta property="og:site_name" content="omsritara" />
+                <link rel="canonical" href={`https://www.omsritara.in/blog/${router.query.title}`} />
+                <link rel="image_src" href={blog.banner_url} />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "BlogPosting",
+                            "headline": blog.title,
+                            "description": blog.description || blog.content.slice(0, 160),
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": `https://www.omsritara.in/blog/${router.query.title}`
+                            },
+                            "author": {
+                                "@type": "Organization",
+                                "name": "Om Sritara"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Om Sritara",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://www.omsritara.in/logo.png"
+                                }
+                            },
+                            "image": blog.banner_url,
+                            "url": `https://www.omsritara.in/blog/${router.query.title}`,
+                            "datePublished": blog.created_at
+                        })
+                    }}
+                />
             </Head>
 
             {/* ✅ Back Button */}
