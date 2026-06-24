@@ -68,7 +68,7 @@ const Footer = () => {
                            Tamil: <a href="tel:+917092372555" className="text-white">+91 91 7092372555</a>
                         </li>
                         <li>
-                            <span className="block font-medium mt-2">ADDRESS:</span>
+                            <span className="block font-medium mt-2">ADDRESS: </span>
                             <a href="https://maps.app.goo.gl/BBbFX45PUgf757ua8" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-700 transition-colors">
                                 OMSRITARA<br />
                                 46, Giri Rd, Satyamurthy Nagar,<br />
