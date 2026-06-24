@@ -65,7 +65,7 @@ const Footer = () => {
                            English: <a href="tel:+917092973555" className="text-white">+91 7092973555</a>
                         </li>
                          <li>
-                           Tamil: <a href="tel:+917092372555" className="text-white">+91 91 7092372555</a>
+                           Tamil: <a href="tel:+917092372555" className="text-white">+91 7092372555</a>
                         </li>
                         <li>
                             <span className="block font-medium mt-2">ADDRESS: </span>
