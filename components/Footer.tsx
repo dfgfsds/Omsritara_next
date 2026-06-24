@@ -58,14 +58,18 @@ const Footer = () => {
                     <h3 className="font-semibold mb-4 uppercase">Where to Contact Us</h3>
                     <ul className="space-y-2">
                         <li>
-                            <a href="mailto:info@omsritara.com" className="text-purple-700">info@omsritara.com</a>
+                            <a href="mailto:info@omsritara.com" className="text-white">info@omsritara.com</a>
                         </li>
                         <li>
-                            Ph No: <a href="tel:+918989052020" className="text-purple-700">+91-89890-52020</a>
+                            <span className="block text-white font-medium mt-2">Mobile Number:</span>
+                           English: <a href="tel:+917092973555" className="text-white">+91 7092973555</a>
+                        </li>
+                         <li>
+                           Tamil: <a href="tel:+917092372555" className="text-white">+91 91 7092372555</a>
                         </li>
                         <li>
                             <span className="block font-medium mt-2">ADDRESS:</span>
-                            <a href="https://maps.app.goo.gl/BBbFX45PUgf757ua8" target="_blank" rel="noopener noreferrer" className="text-purple-700 hover:text-white transition-colors">
+                            <a href="https://maps.app.goo.gl/BBbFX45PUgf757ua8" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-700 transition-colors">
                                 OMSRITARA<br />
                                 46, Giri Rd, Satyamurthy Nagar,<br />
                                 T. Nagar, Chennai,<br />
