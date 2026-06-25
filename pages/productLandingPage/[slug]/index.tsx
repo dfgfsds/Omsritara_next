@@ -243,7 +243,7 @@ export default function ProductLandingPage() {
             if (paymentAPi) {
                 const { payment_order_id, final_price } = paymentAPi.data;
                 const options = {
-                    key: "rzp_live_7SFblkbZy82Xwv",
+                    key: "rzp_live_SrDYpI6FjlNsln",
                     amount: final_price * 100,
                     currency: "INR",
                     name: "OMSRITARA",
