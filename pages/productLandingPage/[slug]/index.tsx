@@ -22,6 +22,7 @@ import { getDeliveryChargeApi, patchUserSelectAddressAPi, postCreateUserAPi } fr
 import { useForm } from 'react-hook-form';
 import addresses, { baseUrl } from "../../../api-endpoints/ApiUrls"
 import Head from 'next/head';
+import Script from 'next/script';
 
 export default function ProductLandingPage() {
     const router = useRouter();
@@ -270,7 +271,12 @@ export default function ProductLandingPage() {
                 razor.open();
             }
         } catch (error: any) {
-            setErrorMessage(error?.response?.data?.error || "Failed to initiate payment. Please try again.");
+            // setErrorMessage(error?.response?.data?.error || "Failed to initiate payment. Please try again.");
+            setErrorMessage(
+                error?.response?.data?.error ||
+                error?.message ||
+                "Failed to initiate payment"
+            );  
         } finally {
             setLoading(false);
         }
@@ -389,6 +395,10 @@ export default function ProductLandingPage() {
                     }}
                 />
             </Head>
+            <Script
+                src="https://checkout.razorpay.com/v1/checkout.js"
+                strategy="afterInteractive"
+            />
 
             {/* Fallback noscript pixel */}
             <noscript>
