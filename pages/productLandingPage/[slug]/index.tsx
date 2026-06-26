@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
-import { Heart, ShoppingCart, Eye, ArrowLeft, Minus, Plus, ShoppingBasket, ArrowBigRight, ArrowBigRightDash, ArrowRight } from 'lucide-react';
+import { Heart, ShoppingCart, Eye, ArrowLeft, Minus, Plus, ShoppingBasket, ArrowBigRight, ArrowBigRightDash, ArrowRight, Trash2Icon } from 'lucide-react';
 import { InvalidateQueryFilters, useQuery, useQueryClient } from '@tanstack/react-query';
 import { getProductApi, getProductVariantCartItemUpdate } from '@/api-endpoints/products';
 import { useProducts } from '@/context/ProductsContext';
@@ -22,6 +22,8 @@ import { getDeliveryChargeApi, patchUserSelectAddressAPi, postCreateUserAPi } fr
 import { useForm } from 'react-hook-form';
 import addresses, { baseUrl } from "../../../api-endpoints/ApiUrls"
 import Head from 'next/head';
+import Script from 'next/script';
+import CartItem from '@/components/cart/CartItem';
 
 export default function ProductLandingPage() {
     const router = useRouter();
@@ -43,7 +45,7 @@ export default function ProductLandingPage() {
     const [DeliveryChargeValue, setDeliveryChargeValue] = useState<any>();
     const [selectedAddressId, setSelectedAddressId] = useState<string>();
     const [loading, setLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState<any>();
+    const [errorMessage, setErrorMessage] = useState<any>("");
     const [paymentSuccess, setPaymentSuccess] = useState(false);
     const [userId, setUserId] = useState<any>(null);
     const [cartId, setCartId] = useState<string | null>(null);
@@ -52,6 +54,7 @@ export default function ProductLandingPage() {
     const [userExists, setUserExists] = useState<any>(null); // null initially
     const [registeringUserData, setRegisteringUserData] = useState<any>(null); // to hold values from address form
     const [isAddingNewAddress, setIsAddingNewAddress] = useState(false);
+    const { cartItem }: any = useCartItem();
 
     const inputClass = "w-full border border-gray-300 px-4 py-1 rounded";
 
@@ -83,9 +86,6 @@ export default function ProductLandingPage() {
         fetchAddressByPincode();
     }, [pincode, setValue]);
 
-    console.log(slug, "slug");
-
-
     function slugConvert(name: string) {
         return name
             .toLowerCase()
@@ -94,6 +94,7 @@ export default function ProductLandingPage() {
             .replace(/[^\w-]+/g, '');     // Remove non-word characters except hyphens
     }
     const productDetails = products?.data?.find((item: any) => slugConvert(item.name) === slug);
+
 
     const handleAddCart = async (id: any, qty: any) => {
         const payload = {
@@ -117,7 +118,6 @@ export default function ProductLandingPage() {
 
         }
     }
-
 
     const handleMobileSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -153,6 +153,7 @@ export default function ProductLandingPage() {
                 setMobileModal(false);
                 setShowAddressModal(true);
                 fetchCartAndDeliveryCharge();
+                await handleCouponSubmit({ preventDefault: () => { } });
                 // optionally store or redirect or call next step
             } else {
                 // toast.error('No user found!');
@@ -243,7 +244,7 @@ export default function ProductLandingPage() {
             if (paymentAPi) {
                 const { payment_order_id, final_price } = paymentAPi.data;
                 const options = {
-                    key: "rzp_live_7SFblkbZy82Xwv",
+                    key: "rzp_live_SrDYpI6FjlNsln",
                     amount: final_price * 100,
                     currency: "INR",
                     name: "OMSRITARA",
@@ -270,7 +271,12 @@ export default function ProductLandingPage() {
                 razor.open();
             }
         } catch (error: any) {
-            setErrorMessage(error?.response?.data?.error || "Failed to initiate payment. Please try again.");
+            // setErrorMessage(error?.response?.data?.error || "Failed to initiate payment. Please try again.");
+            setErrorMessage(
+                error?.response?.data?.error ||
+                error?.message ||
+                "Failed to initiate payment"
+            );
         } finally {
             setLoading(false);
         }
@@ -278,6 +284,20 @@ export default function ProductLandingPage() {
 
     const relatedProducts = products?.data?.filter((product: any) => product?.category === productDetails?.category)
         ?.slice(0, 4)
+
+    const matchingProductsArray = cartItem?.data?.map((item: any, index: number) => {
+        const matchingProduct = products?.data?.find(
+            (product: any) => product.id === item.product
+        );
+
+        return {
+            Aid: index,
+            cartId: item?.id,
+            cartQty: item?.quantity,
+            ...matchingProduct,
+        };
+    });
+
 
     const onSubmit = async (formData: any) => {
         try {
@@ -355,6 +375,35 @@ export default function ProductLandingPage() {
         }
     };
 
+    const handleUpdateCart = async (id: any, type: any, qty: any) => {
+        try {
+            if (qty === 1) {
+                const updateApi = await deleteCartitemsApi(`${id}`);
+                if (updateApi) {
+                    toast.success("Product removed!");
+                    queryClient.invalidateQueries(["getCartitemsData"] as InvalidateQueryFilters);
+                }
+            } else {
+                const response = await updateCartitemsApi(`${id}/${type}/`);
+                if (response) {
+                    toast.success("Product updated in cart!");
+                    queryClient.invalidateQueries(["getCartitemsData"] as InvalidateQueryFilters);
+                }
+            }
+        } catch (error) { }
+    };
+
+    const handleRemoveItem = async (id: any) => {
+        try {
+            const updateApi = await deleteCartitemsApi(`${id}`);
+            if (updateApi) {
+                toast.success("Product removed!");
+                queryClient.invalidateQueries(["getCartitemsData"] as InvalidateQueryFilters);
+            }
+        } catch (error: any) { }
+    };
+
+
     // useEffect(() => {
     //     handleCouponSubmit({ preventDefault: () => { } });
     // }, [userId, vendorId])
@@ -388,8 +437,12 @@ export default function ProductLandingPage() {
             `,
                     }}
                 />
-            </Head>
 
+            </Head>
+            <Script
+                src="https://checkout.razorpay.com/v1/checkout.js"
+                strategy="afterInteractive"
+            />
             {/* Fallback noscript pixel */}
             <noscript>
                 <img
@@ -995,7 +1048,133 @@ export default function ProductLandingPage() {
                                     + Add New Address
                                 </button>
 
-                                {DeliveryChargeValue && (
+                                {/* Add cart product details here */}
+
+                                {/* <div className="space-y-6 mt-4">
+                                    <h3 className="text-xl font-semibold border-b pb-2">Products Details</h3>
+                                    {[...matchingProductsArray || []]
+                                        ?.map((item: any) => ({
+                                            ...item,
+                                            sortName: (item?.name || "").toLowerCase(),
+                                        }))
+                                        ?.sort((a: any, b: any) => a?.sortName?.localeCompare(b?.sortName))
+                                        ?.map((product: any, index: any) => (
+                                            <CartItem
+                                                key={product.id}
+                                                product={product}
+                                                quantity={index + 1}
+                                                selectedProduct={selectedProducts[product.id] || ""}
+                                                onSelectProduct={handleSelectProduct}
+                                            />
+                                        ))}
+                                </div> */}
+                                {matchingProductsArray?.map((product: any) => (
+                                    <div
+                                        key={product?.id}
+                                        className="flex flex-col sm:flex-row gap-4 p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200"
+                                    >
+                                        {/* Product Image */}
+                                        <div className="w-full sm:w-28 h-28 bg-gray-50 rounded-lg overflow-hidden flex-shrink-0 border">
+                                            <Image
+                                                src={
+                                                    product?.image_urls?.[0] ||
+                                                    product?.product_variant_image_urls?.[0] ||
+                                                    "https://semantic-ui.com/images/wireframe/image.png"
+                                                }
+                                                alt={product?.name}
+                                                width={120}
+                                                height={120}
+                                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                            />
+                                        </div>
+
+                                        {/* Product Content */}
+                                        <div className="flex-1 flex flex-col justify-between">
+                                            {/* Top Section */}
+                                            <div className="flex justify-between items-start">
+                                                <div>
+                                                    <h3 className="text-lg font-semibold text-gray-900">
+                                                        {product?.name}
+                                                    </h3>
+
+                                                    <p className="text-sm text-gray-500 mt-2">
+                                                        Unit Price
+                                                    </p>
+
+                                                    <p className="text-base font-bold text-primary">
+                                                        {convertPrice(Number(product?.price))}
+                                                    </p>
+                                                </div>
+
+                                                {/* Remove Button */}
+                                                {/* Uncomment if needed */}
+                                                {/*
+        <button
+          onClick={() => handleRemoveItem(product?.cartId)}
+          className="p-2 rounded-lg hover:bg-red-50 transition"
+        >
+          <Trash2Icon className="h-5 w-5 text-gray-500 hover:text-red-500" />
+        </button>
+        */}
+                                            </div>
+
+                                            {/* Bottom Section */}
+                                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-4">
+                                                {/* Quantity Controller */}
+                                                <div className="flex items-center border border-gray-200 rounded-lg overflow-hidden">
+                                                    <button
+                                                        className="w-10 h-10 flex items-center justify-center hover:bg-gray-100 transition"
+                                                        onClick={() =>
+                                                            handleUpdateCart(
+                                                                product?.cartId,
+                                                                "decrease",
+                                                                product?.cartQty
+                                                            )
+                                                        }
+                                                    // disabled={product?.cartQty <= 1}
+
+                                                    >
+                                                        <Minus className="h-4 w-4" />
+                                                    </button>
+
+                                                    <div className="w-12 text-center font-semibold text-gray-800 border-x">
+                                                        {product?.cartQty}
+                                                    </div>
+
+                                                    <button
+                                                        className="w-10 h-10 flex items-center justify-center hover:bg-gray-100 transition"
+                                                        onClick={() =>
+                                                            handleUpdateCart(
+                                                                product?.cartId,
+                                                                "increase",
+                                                                ""
+                                                            )
+                                                        }
+                                                    >
+                                                        <Plus className="h-4 w-4" />
+                                                    </button>
+                                                </div>
+
+                                                {/* Price Details */}
+                                                <div className="text-right">
+                                                    <p className="text-sm text-gray-500">
+                                                        {convertPrice(Number(product?.price))} ×{" "}
+                                                        {product?.cartQty}
+                                                    </p>
+
+                                                    <p className="text-xl mt-2 font-bold text-[#a5291b]">
+                                                        {convertPrice(
+                                                            Number(product?.price) * product?.cartQty
+                                                        )}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+
+
+                                {/* {DeliveryChargeValue && (
                                     <div className="bg-white rounded-md shadow p-4 mt-4 space-y-2">
                                         <h3 className="text-xl font-semibold border-b pb-2">Payment Details</h3>
                                         <div className="flex justify-between text-gray-700">
@@ -1011,7 +1190,7 @@ export default function ProductLandingPage() {
                                             <span className="font-medium text-black">₹{DeliveryChargeValue.final_price_including_delivery}</span>
                                         </div>
                                     </div>
-                                )}
+                                )} */}
 
                                 <button className="w-full mt-10 p-2 flex gap-2 justify-center bg-[#a5291b] cursor-pointer hover:bg-red-700 text-white font-bold" onClick={handleCheckout}>Proceed to Checkout</button>
                                 <span className='text-red-500 p-2'>{errorMessage}</span>
