@@ -47,7 +47,7 @@ const ContactUs = () => {
                                 <div className="flex items-start gap-3 text-sm text-gray-700">
                                     <Phone className="text-indigo-600 mt-1" />
                                     <div>
-                                        <a href="tel:+918989052020" className="text-gray-400 hover:text-purple-700 transition-colors">+91 89890-52020</a>
+                                        <a href="tel:+91 7092973555" className="text-gray-400 hover:text-purple-700 transition-colors">+91 7092973555</a>
                                         <p className="mt-2">Monday to Saturday</p>
                                         <p>10 am – 6:30 pm (Chennai)</p>
                                     </div>

@@ -23,7 +23,10 @@ import { useForm } from 'react-hook-form';
 import addresses, { baseUrl } from "../../../api-endpoints/ApiUrls"
 import Head from 'next/head';
 import Script from 'next/script';
+<<<<<<< HEAD
 import CartItem from '@/components/cart/CartItem';
+=======
+>>>>>>> 37016a2dd61ba60d1cd420d866d644a4b7889acd
 
 export default function ProductLandingPage() {
     const router = useRouter();
@@ -276,7 +279,11 @@ export default function ProductLandingPage() {
                 error?.response?.data?.error ||
                 error?.message ||
                 "Failed to initiate payment"
+<<<<<<< HEAD
             );
+=======
+            );  
+>>>>>>> 37016a2dd61ba60d1cd420d866d644a4b7889acd
         } finally {
             setLoading(false);
         }

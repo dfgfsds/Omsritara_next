@@ -8,7 +8,7 @@ interface FloatingCallButtonProps {
 }
 
 export default function FloatingCallButton({
-    phoneNumber = "+918989052020",
+    phoneNumber = "+91 7092973555",
 }: FloatingCallButtonProps) {
     return (
         <Link
