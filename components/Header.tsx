@@ -391,12 +391,12 @@ const Header: React.FC = () => {
                         >
                             About&nbsp;Us
                         </Link>
-                        {/* <Link
+                        <Link
                             href="/courses"
                             className={`nav-item relative ${isActive("/courses") ? "underline" : ""}`}
                         >
                             Courses
-                        </Link> */}
+                        </Link>
                     </div>
                 </div>
 
@@ -506,13 +506,13 @@ const Header: React.FC = () => {
                                 >
                                     About Us
                                 </Link>
-                                {/* <Link
+                                <Link
                                     href="/courses"
                                     onClick={closeMobileMenu}
                                     className={`relative pb-1 ${isActive("/courses") ? "underline" : ""}`}
                                 >
                                     Courses
-                                </Link> */}
+                                </Link>
 
                                 <Link
                                     href="/cart"

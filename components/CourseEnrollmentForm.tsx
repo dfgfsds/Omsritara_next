@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { X, CheckCircle } from 'lucide-react';
-import { COURSES_DATA } from '@/pages/courses';
 import axios from 'axios';
 import { postCourseLead } from '@/api-endpoints/course';
+import { COURSES_DATA } from '@/data/courses';
 
 interface CourseEnrollmentFormProps {
     isOpen: boolean;
