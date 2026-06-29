@@ -40,7 +40,7 @@ const wishlist = `${baseUrl}/api/wishlist/`;
 const sendSmsOtpUser = `${baseUrl}/send-sms-opt-user/`;
 const otpVerify = `${baseUrl}/verify-sms-opt-return-user/`;
 const reviews = `${baseUrl}/reviews/`;
-const courseLeadPost = `https://api.ftdigitalsolutions.in/omsritara/course-lead/create`;
+const courseLeadPost = `https://api.ftdigitalsolutions.in/omsritara/course-lead/`;
 
 export default {
   cartCreate,
