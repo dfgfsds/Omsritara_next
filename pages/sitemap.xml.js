@@ -1,10 +1,10 @@
 // pages/sitemap.xml.js
 export default function Sitemap() {
-    return null; // Next.js won't render anything here
+  return null; // Next.js won't render anything here
 }
 
 export async function getServerSideProps({ res }) {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset 
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -164,9 +164,9 @@ export async function getServerSideProps({ res }) {
 
   </urlset>`;
 
-    res.setHeader("Content-Type", "text/xml");
-    res.write(sitemap);
-    res.end();
+  res.setHeader("Content-Type", "text/xml");
+  res.write(sitemap);
+  res.end();
 
-    return { props: {} };
+  return { props: {} };
 }
