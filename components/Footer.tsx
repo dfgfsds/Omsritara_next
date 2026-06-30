@@ -62,10 +62,10 @@ const Footer = () => {
                         </li>
                         <li>
                             <span className="block text-white font-medium mt-2">Mobile Number:</span>
-                           English: <a href="tel:+917092973555" className="text-white">+91 7092973555</a>
+                            English: <a href="tel:+917092973555" className="text-white">+91 7092973555</a>
                         </li>
-                         <li>
-                           Tamil: <a href="tel:+917092372555" className="text-white">+91 7092372555</a>
+                        <li>
+                            Tamil: <a href="tel:+917092372555" className="text-white">+91 7092372555</a>
                         </li>
                         <li>
                             <span className="block font-medium mt-2">ADDRESS: </span>
@@ -81,12 +81,10 @@ const Footer = () => {
 
                 {/* NEWSLETTER */}
                 <div>
-                    <h3 className="font-semibold mb-4 uppercase">Newsletter</h3>
-                    <p className="mb-4">
-                        Om Sri Tara is a trusted spiritual and healing platform operated under Anandat Bhavati Private Limited, offering authentic healing crystals, Reiki products, spiritual tools, and holistic wellness solutions. Explore energized crystals, sacred healing practices, and divine guidance designed to bring positivity, protection, abundance, and inner peace into your life.
-                    </p>
+                    <h3 className="font-semibold mb-4 uppercase">Social Links</h3>
                     {/* Social Icons */}
-                    <span className='flex gap-3'>
+                    <span className="block font-medium mt-2 ">Tamil: </span>
+                    <span className='flex gap-3 mt-1' >
 
                         <a href="https://www.facebook.com/omsritarafoundation/" target='_blank' className="bg-slate-100 p-2 hover:scale-110 transition-transform rounded-full text-[#000] ">
                             <Facebook size={16} />
@@ -98,6 +96,22 @@ const Footer = () => {
                             <Youtube size={16} />
                         </a>
                         <a href="https://www.instagram.com/omsritara/" target='_blank' className="bg-slate-100 p-2 rounded-full text-[#000] hover:scale-110 transition-transform">
+                            <Instagram size={16} />
+                        </a>
+                    </span>
+                      <span className="block font-medium mt-2">English: </span>
+                    <span className='flex gap-3 mt-1'>
+
+                        <a href="https://www.facebook.com/omsritaraenglish" target='_blank' className="bg-slate-100 p-2 hover:scale-110 transition-transform rounded-full text-[#000] ">
+                            <Facebook size={16} />
+                        </a>
+                        <a href="https://www.linkedin.com/company/omsritara-satsang/about/" target='_blank' className="bg-slate-100 p-2 rounded-full text-[#000] hover:scale-110 transition-transform">
+                            <Linkedin size={16} />
+                        </a>
+                        <a href="https://www.youtube.com/@OmsritaraSatsang" target='_blank' className="bg-slate-100 p-2 rounded-full text-[#000] hover:scale-110 transition-transform">
+                            <Youtube size={16} />
+                        </a>
+                        <a href="https://www.instagram.com/om_sritara_satsang" target='_blank' className="bg-slate-100 p-2 rounded-full text-[#000] hover:scale-110 transition-transform">
                             <Instagram size={16} />
                         </a>
                     </span>
