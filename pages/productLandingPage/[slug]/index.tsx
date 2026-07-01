@@ -803,6 +803,166 @@ export default function ProductLandingPage() {
                     )
                 }
 
+                {/* bronzite bracelet content */}
+                {productDetails?.id === 18533 && (
+                    <section className="mt-10 overflow-hidden rounded-3xl border border-[#e8c3bf] bg-gradient-to-br from-[#fdf3f2] via-white to-[#f8e7e5]">
+
+                        {/* Hero */}
+                        <div className="relative px-6 py-10 lg:px-12 lg:py-16">
+                            <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-[#a5291b]/10 blur-3xl" />
+                            <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-[#a5291b]/10 blur-3xl" />
+
+                            <div className="relative text-center max-w-4xl mx-auto">
+                                <span className="inline-flex items-center rounded-full bg-[#a5291b]/10 px-4 py-2 text-sm font-semibold text-[#a5291b] border border-[#e8c3bf]">
+                                    🌟 Grand Launch Exclusive Offer
+                                </span>
+
+                                <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight text-gray-900">
+                                    Premium
+                                    <span className="bg-gradient-to-r from-[#a5291b] to-[#7f1f14] bg-clip-text text-transparent">
+                                        {" "}Bronzite Bracelet
+                                    </span>
+                                </h2>
+
+                                <p className="mt-5 text-gray-600 text-lg leading-relaxed">
+                                    Protect your energy, strengthen your confidence, and stay grounded
+                                    with the powerful vibrations of Natural Bronzite Crystal.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Benefits */}
+                        <div className="px-6 lg:px-12 pb-10">
+                            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+                                <div className="group rounded-2xl border border-[#e8c3bf] bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#a5291b] hover:shadow-xl">
+                                    <div className="text-4xl mb-4">🛡</div>
+                                    <h4 className="font-bold text-lg mb-2 text-[#a5291b]">
+                                        Energy Protection
+                                    </h4>
+                                    <p className="text-gray-600">
+                                        Shields you from negativity and unwanted energies.
+                                    </p>
+                                </div>
+
+                                <div className="group rounded-2xl border border-[#e8c3bf] bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#a5291b] hover:shadow-xl">
+                                    <div className="text-4xl mb-4">🌍</div>
+                                    <h4 className="font-bold text-lg mb-2 text-[#a5291b]">
+                                        Grounding & Balance
+                                    </h4>
+                                    <p className="text-gray-600">
+                                        Promotes emotional stability and inner peace.
+                                    </p>
+                                </div>
+
+                                <div className="group rounded-2xl border border-[#e8c3bf] bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#a5291b] hover:shadow-xl">
+                                    <div className="text-4xl mb-4">🦁</div>
+                                    <h4 className="font-bold text-lg mb-2 text-[#a5291b]">
+                                        Confidence Booster
+                                    </h4>
+                                    <p className="text-gray-600">
+                                        Enhances courage, confidence, and willpower.
+                                    </p>
+                                </div>
+
+                                <div className="group rounded-2xl border border-[#e8c3bf] bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#a5291b] hover:shadow-xl">
+                                    <div className="text-4xl mb-4">🚀</div>
+                                    <h4 className="font-bold text-lg mb-2 text-[#a5291b]">
+                                        Success Energy
+                                    </h4>
+                                    <p className="text-gray-600">
+                                        Improves focus and decision-making abilities.
+                                    </p>
+                                </div>
+
+                                <div className="group rounded-2xl border border-[#e8c3bf] bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#a5291b] hover:shadow-xl">
+                                    <div className="text-4xl mb-4">✨</div>
+                                    <h4 className="font-bold text-lg mb-2 text-[#a5291b]">
+                                        Positive Vibrations
+                                    </h4>
+                                    <p className="text-gray-600">
+                                        Attracts positive energy and spiritual support.
+                                    </p>
+                                </div>
+
+                                <div className="group rounded-2xl bg-gradient-to-r from-[#7f1f14] to-[#a5291b] p-6 text-white shadow-lg">
+                                    <div className="text-4xl mb-4">💎</div>
+                                    <h4 className="font-bold text-lg mb-2">
+                                        100% Natural Crystal
+                                    </h4>
+                                    <p>
+                                        Spiritually cleansed & energized before dispatch.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {/* Why Choose */}
+                        <div className="bg-white/70 backdrop-blur-sm px-6 py-10 lg:px-12">
+                            <div className="max-w-4xl mx-auto">
+                                <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#a5291b]">
+                                    Why Choose Bronzite?
+                                </h3>
+
+                                <div className="rounded-3xl border border-[#e8c3bf] bg-gradient-to-r from-[#fdf3f2] to-[#f8e7e5] p-8">
+                                    <p className="text-lg text-gray-700 leading-8">
+                                        Unlike ordinary crystal bracelets, Bronzite combines
+                                        <span className="font-bold text-[#a5291b]">
+                                            {" "}Protection + Grounding + Confidence + Action Energy
+                                        </span>
+                                        {" "}into one powerful crystal.
+                                    </p>
+
+                                    <p className="mt-5 text-gray-700 leading-8">
+                                        It helps you remain calm during difficult situations,
+                                        overcome fear and self-doubt, and move confidently toward
+                                        your goals.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Trust Badges */}
+                        <div className="px-6 py-10 lg:px-12">
+                            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                                {[
+                                    "100% Genuine Natural Crystal",
+                                    "Premium Quality Craftsmanship",
+                                    "Spiritually Cleansed & Energized",
+                                    "Secure Payments",
+                                    "Fast Shipping Across India",
+                                    "WhatsApp Customer Support",
+                                ].map((item) => (
+                                    <div
+                                        key={item}
+                                        className="rounded-xl border border-[#e8c3bf] bg-white p-4 text-center font-medium shadow-sm hover:border-[#a5291b] transition-all"
+                                    >
+                                        ✔️ {item}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* CTA */}
+                        <div className="bg-gradient-to-r from-[#7f1f14] via-[#a5291b] to-[#7f1f14] px-6 py-12 text-center text-white">
+                            <h3 className="text-3xl font-bold">
+                                🛡 Protect Your Energy Today
+                            </h3>
+
+                            <p className="mt-4 text-lg opacity-95">
+                                Experience Confidence • Protection • Grounding • Success
+                            </p>
+
+                            <div className="mt-6 inline-flex rounded-full bg-white px-6 py-3 font-bold text-[#a5291b] shadow-lg">
+                                Limited-Time Offer • Limited Stock Available
+                            </div>
+                        </div>
+
+                    </section>
+                )}
+
+
                 {mobileModal && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 z-[60] flex items-center justify-center px-4">
                         <div className="bg-white w-full max-w-md p-6 rounded shadow-lg relative">
