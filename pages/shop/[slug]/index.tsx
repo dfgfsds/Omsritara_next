@@ -143,7 +143,7 @@ export default function SingleProductView({
     return (
         <>
             <Head>
-                <title>{productDetails?.name} | Om Sri Tara</title>
+                <title>{productDetails?.name} | Om Sritara</title>
                 <meta name="description" content={productDetails?.description_2 || productDetails?.name} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
@@ -255,7 +255,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         name: productDetails?.name,
         image: productDetails?.image_urls || [],
         description: productDetails?.description_2 || productDetails?.name,
-        brand: { "@type": "Brand", name: "Om Sri Tara" },
+        brand: { "@type": "Brand", name: "Om Sritara" },
         offers: {
             "@type": "Offer",
             priceCurrency: "INR",

@@ -35,9 +35,9 @@ const ContactUs = () => {
                                     ABOUT
                                 </h3>
                                 <div className="flex items-start gap-3 text-sm text-gray-700">
-                                    Welcome to Om Sri Tara
+                                    Welcome to Om Sritara
                                     Where Thoughtful Home Decor Meets Everyday Living
-                                    At Om Sri Tara, we specialize in elegant, calming home decor designed to bring beauty, comfort, and harmony into your living space. Our carefully curated pieces are crafted to help create a peaceful environment where you can truly feel at home. Explore our collection to find decor that reflects your style and adds a touch of serenity to your everyday life.
+                                    At Om Sritara, we specialize in elegant, calming home decor designed to bring beauty, comfort, and harmony into your living space. Our carefully curated pieces are crafted to help create a peaceful environment where you can truly feel at home. Explore our collection to find decor that reflects your style and adds a touch of serenity to your everyday life.
                                 </div>
                             </div>
                             <div>
@@ -64,7 +64,7 @@ const ContactUs = () => {
                                     STORE LOCATOR
                                 </h3>
                                 <a href="https://maps.app.goo.gl/BBbFX45PUgf757ua8" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-purple-700 transition-colors inline-block">
-                                    OMSRITARA <br />
+                                    Om Sritara <br />
                                     46, Giri Rd, Satyamurthy Nagar,<br />
                                     T. Nagar, Chennai,<br />
                                     Tamil Nadu 600017
