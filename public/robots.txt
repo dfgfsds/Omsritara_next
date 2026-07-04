@@ -1,5 +1,5 @@
 # =========================================
-# ROBOTS.TXT - OM SRI TARA
+# ROBOTS.TXT - Om Sritara
 # SEO + AEO + GEO Optimized
 # https://www.omsritara.in
 # =========================================
@@ -136,7 +136,7 @@ Allow: /
 # LOCAL BUSINESS INFORMATION
 # =========================================
 
-# Business Name: OM SRI TARA
+# Business Name: Om Sritara
 # Address: 46, Giri Rd, Satyamurthy Nagar
 # T. Nagar, Chennai
 # Tamil Nadu - 600017, India

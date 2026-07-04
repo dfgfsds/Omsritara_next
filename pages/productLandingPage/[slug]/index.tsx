@@ -688,7 +688,7 @@ export default function ProductLandingPage() {
                             {/* Hero Section */}
                             <section className="bg-gradient-to-r from-yellow-100 to-orange-100 py-16 px-6 text-center">
                                 <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                                    Welcome to Om Sri Tara – Your Path to Divine Energy Begins Here
+                                    Welcome to Om Sritara – Your Path to Divine Energy Begins Here
                                 </h1>
                                 <p className="text-lg max-w-2xl mx-auto text-gray-700">
                                     Discover crystals, energy tools, and divine healing products to attract abundance and align your energy.
