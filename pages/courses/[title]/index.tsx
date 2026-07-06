@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -37,22 +37,32 @@ const CourseDetailPage: React.FC<CourseDetailPageProps> = ({ course }) => {
             course.id
         );
 
-const relatedCourses = useMemo(() => {
-    const available = COURSES_DATA.filter(
-        (c) => c.id !== course.id
-    );
+    const relatedCourses = useMemo(() => {
+        const available = COURSES_DATA.filter(
+            (c) => c.id !== course.id
+        );
 
-    const startIndex =
-        course.id
-            .split('')
-            .reduce((acc, char) => acc + char.charCodeAt(0), 0) %
-        available.length;
+        const startIndex =
+            course.id
+                .split('')
+                .reduce((acc, char) => acc + char.charCodeAt(0), 0) %
+            available.length;
 
-    return [
-        ...available.slice(startIndex),
-        ...available.slice(0, startIndex),
-    ].slice(0, 3);
-}, [course.id]);
+        return [
+            ...available.slice(startIndex),
+            ...available.slice(0, startIndex),
+        ].slice(0, 3);
+    }, [course.id]);
+
+    useEffect(() => {
+        if (course?.id === 'kwan-yin-healing-course') {
+            const timer = setTimeout(() => {
+                setIsModalOpen(true);
+            }, 5000); // 5 seconds
+
+            return () => clearTimeout(timer);
+        }
+    }, [course]);
 
     return (
         <>
@@ -179,48 +189,122 @@ const relatedCourses = useMemo(() => {
                 <p className="text-md md:text-xl text-gray-600 mb-8 leading-relaxed">
                     {courseContent?.description}
                 </p>
+                {course?.id === 'kwan-yin-healing-course' && (
+                    <div className="relative overflow-hidden rounded-2xl border border-pink-200 bg-gradient-to-r from-pink-50 via-white to-purple-50 p-6 mb-8 shadow-lg">
+
+                        {/* Animated Background */}
+                        <div className="absolute inset-0 opacity-10">
+                            <div className="absolute top-4 left-4 h-20 w-20 rounded-full bg-pink-400 animate-pulse"></div>
+                            <div className="absolute bottom-4 right-4 h-24 w-24 rounded-full bg-purple-400 animate-bounce"></div>
+                        </div>
+
+                        <div className="relative z-10">
+                            <div className="inline-flex items-center gap-2 rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600 mb-4 animate-pulse">
+                                🎉 FREE LIVE WEBINAR
+                            </div>
+
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                {language === "en"
+                                    ? "Free Kwan Yin Healing Webinar"
+                                    : "இலவச குவான் யின் ஹீலிங் வெபினார்"}
+                            </h3>
+
+                            <p className="text-gray-700 mb-4 leading-relaxed">
+                                {language === "en"
+                                    ? "Join our exclusive FREE online webinar and discover the powerful healing energies of Kwan Yin. Learn how compassion, forgiveness, and divine healing can transform your emotional, mental, and spiritual well-being."
+                                    : "இலவச ஆன்லைன் வெபினாரில் கலந்து கொண்டு குவான் யின் ஹீலிங்கின் சக்திவாய்ந்த ஆற்றல்களை அறிந்து கொள்ளுங்கள். கருணை, மன்னிப்பு மற்றும் தெய்வீக குணப்படுத்துதல் உங்கள் மனம், உணர்வுகள் மற்றும் ஆன்மீக வாழ்வில் எவ்வாறு மாற்றத்தை ஏற்படுத்துகிறது என்பதை கற்றுக்கொள்ளுங்கள்."}
+                            </p>
+
+                            <div className="flex flex-wrap items-center gap-4 mb-5">
+                                <div className="rounded-lg bg-white px-4 py-2 shadow-sm border">
+                                    📅 <span className="font-semibold">09 July 2026</span>
+                                </div>
+
+                                <div className="rounded-lg bg-white px-4 py-2 shadow-sm border">
+                                    🌐 <span className="font-semibold">
+                                        {language === "en" ? "Online Webinar" : "ஆன்லைன் வெபினார்"}
+                                    </span>
+                                </div>
+
+                                <div className="rounded-lg bg-white px-4 py-2 shadow-sm border">
+                                    💯 <span className="font-semibold">
+                                        {language === "en" ? "Free Registration" : "இலவச பதிவு"}
+                                    </span>
+                                </div>
+                            </div>
+                            <div className='mx-auto text-center'>
+                                <button
+                                    onClick={() => setIsModalOpen(true)}
+                                    className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                                >
+                                    {language === "en" ? "Enroll Now" : "இப்போது பதிவு செய்யுங்கள்"}
+
+                                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                                        →
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                )}
                 <hr className="my-8" />
+
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                    <div className="bg-white border rounded-lg p-4">
-                        <p className="text-sm text-gray-500">{language === 'en' ? 'Duration' : 'காலம்'}</p>
-                        <p className="font-semibold">{courseContent?.duration}</p>
-                    </div>
-                    <div className="bg-white border rounded-lg p-4">
-                        <p className="text-sm text-gray-500">{language === 'en' ? 'Mode' : 'பயிற்சி முறை'}</p>
-                        <p className="font-semibold">{courseContent?.mode}</p>
-                    </div>
-                    <div className="bg-white border rounded-lg p-4">
-                        <p className="text-sm text-gray-500">{language === 'en' ? 'Language' : 'மொழிகள்'}</p>
-                        <p className="font-semibold">{courseContent?.language}</p>
-                    </div>
+                    {courseContent?.duration && (
+                        <div className="bg-white border rounded-lg p-4">
+                            <p className="text-sm text-gray-500">{language === 'en' ? 'Duration' : 'காலம்'}</p>
+                            <p className="font-semibold">{courseContent?.duration}</p>
+                        </div>
+                    )}
+                    {courseContent?.mode && (
+                        <div className="bg-white border rounded-lg p-4">
+                            <p className="text-sm text-gray-500">{language === 'en' ? 'Mode' : 'பயிற்சி முறை'}</p>
+                            <p className="font-semibold">{courseContent?.mode}</p>
+                        </div>
+                    )}
+                    {courseContent?.language && (
+                        <div className="bg-white border rounded-lg p-4">
+                            <p className="text-sm text-gray-500">{language === 'en' ? 'Language' : 'மொழிகள்'}</p>
+                            <p className="font-semibold">{courseContent?.language}</p>
+                        </div>
+                    )}
                     {courseContent?.eligibility && (
                         <div className="bg-white border rounded-lg p-4">
                             <p className="text-sm text-gray-500">{language === 'en' ? 'Eligibility' : 'சார்பு'}</p>
                             <p className="font-semibold">{courseContent?.eligibility}</p>
                         </div>
                     )}
-                    <div className="bg-white border rounded-lg p-4">
-                        <p className="text-sm text-gray-500">{language === 'en' ? 'Format' : 'பயிற்சி வடிவம்'}</p>
-                        <p className="font-semibold">{courseContent?.format}</p>
-                    </div>
-                    <div className="bg-white border rounded-lg p-4">
-                        <p className="text-sm text-gray-500">{language === 'en' ? 'Certification' : 'சான்றிதழ்'}</p>
-                        <p className="font-semibold text-green-600">
-                            {courseContent?.certification}
-                        </p>
-                    </div>
-                    <div className="bg-white border rounded-lg p-4">
-                        <p className="text-sm text-gray-500">{language === 'en' ? 'Original Price' : 'அசல் விலை'}</p>
-                        <p className="font-semibold line-through text-gray-400">
-                            {courseContent?.original_price}
-                        </p>
-                    </div>
-                    <div className="bg-white border rounded-lg p-4">
-                        <p className="text-sm text-gray-500">{language === 'en' ? 'Offer Price' : 'சலுகை விலை'}</p>
-                        <p className="font-bold text-[#a5291b] text-xl">
-                            {courseContent?.offer_price}
-                        </p>
-                    </div>
+                    {courseContent?.format && (
+                        <div className="bg-white border rounded-lg p-4">
+                            <p className="text-sm text-gray-500">{language === 'en' ? 'Format' : 'பயிற்சி வடிவம்'}</p>
+                            <p className="font-semibold">{courseContent?.format}</p>
+                        </div>
+                    )}
+                    {courseContent?.certification && (
+                        <div className="bg-white border rounded-lg p-4">
+                            <p className="text-sm text-gray-500">{language === 'en' ? 'Certification' : 'சான்றிதழ்'}</p>
+                            <p className="font-semibold text-green-600">
+                                {courseContent?.certification}
+                            </p>
+                        </div>
+                    )}
+                    {courseContent?.original_price && (
+                        <div className="bg-white border rounded-lg p-4">
+                            <p className="text-sm text-gray-500">{language === 'en' ? 'Original Price' : 'அசல் விலை'}</p>
+                            <p className="font-semibold line-through text-gray-400">
+                                {courseContent?.original_price}
+                            </p>
+                        </div>
+                    )}
+                    {courseContent?.offer_price && (
+                        <div className="bg-white border rounded-lg p-4">
+                            <p className="text-sm text-gray-500">{language === 'en' ? 'Offer Price' : 'சலுகை விலை'}</p>
+                            <p className="font-bold text-[#a5291b] text-xl">
+                                {courseContent?.offer_price}
+                            </p>
+                        </div>
+                    )}
                 </div>
                 <hr className="my-8" />
                 <div className="mb-12">

@@ -26,7 +26,7 @@ export const generateCourseSchema = (course: any) => ({
     courseMode: ["Online", "Offline"],
     offers: {
         "@type": "Offer",
-        price: course.en.offer_price.replace(/[₹,]/g, ""),
+        price: course?.en?.offer_price?.replace(/[₹,]/g, ""),
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",
     },
