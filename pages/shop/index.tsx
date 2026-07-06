@@ -161,7 +161,7 @@ export default function Shop() {
             <ShopSEO ogImage={firstProductImage} />
             <div className="max-w-[1280px] mx-auto px-2 md:px-10 py-2 md:py-5">
                 {/* Page title */}
-                <h1 className="text-center text-gray-700 text-2xl  text-bold">Shop Healing Crystals Online <br /> <span className="text-xl"> Natural Stones, Bracelets & Reiki Products</span></h1>
+                <h1 className="text-center text-gray-700 text-2xl  text-bold">Buy Spiritually Energized Healing Crystals & Spiritual Products Online | Om Sritara</h1>
                 <div className="my-2 mb-5 flex">
                     <ArrowLeft onClick={() => router.back()} className='text-gray-400 cursor-pointer' />
                     <p className="text-md text-gray-400 flex mt-0.5 gap-1">
@@ -348,6 +348,8 @@ export default function Shop() {
                         )}
                     </div>
                 </div>
+                <h2>Discover authentic healing crystals, crystal jewellery, Reiki tools, Rudraksha malas, pendulums, yantras and spiritual products at Om Sritara. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching you. Shop online across India or visit our spiritual center in Chennai for trusted spiritual products, healing services, and Reiki certification courses.</h2>
+
             </div>
         </>
     );
