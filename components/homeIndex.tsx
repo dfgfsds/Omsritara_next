@@ -474,7 +474,7 @@ export default function HomeIndex() {
                 />
                 <meta
                     name="keywords"
-                    content="healing crystals india, buy crystals online, reiki crystal products, raw stones india, crystal shop online, chakra stones, Omsritara, natural gemstones"
+                    content="Om Sritara, Healing Crystals, Reiki Course, Reiki Training, Spiritual Healing, Crystal Healing, Guru Matha, Chakra Healing, Akashic Records, Holistic Wellness, Meditation, Reiki Certification, Crystal Bracelets, Crystal Rings, Spiritual Products Chennai, Online Spiritual Courses"
                 />
                 <meta name="robots" content="index, follow" />
                 {/* Author: Om Sritara */}
