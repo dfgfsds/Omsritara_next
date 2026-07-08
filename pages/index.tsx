@@ -1,5 +1,3 @@
-
-
 import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
 import Certificates from "@/components/Certificates";
@@ -22,10 +20,8 @@ export default function Home({
 }) {
   return (
     <>
-
       <HomeIndex />
       <HeroSection banners={banners} />
-
       <FeaturedCategories />
       <NewArrivals />
       {/* <Bracelets /> */}
