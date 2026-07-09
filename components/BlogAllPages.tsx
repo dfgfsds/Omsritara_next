@@ -9,9 +9,12 @@ const BlogAllPages: React.FC<{ blogs: any[] }> = ({ blogs }) => {
     return (
         <section className="py-6 px-4 bg-white">
             <div className="max-w-7xl mx-auto container">
-                <h2 className="text-3xl font-extrabold text-center mb-10">
-                    Our Blogs
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-6 sm:mb-10 px-2">
+                    Spiritual Healing, Reiki & Healing Crystal Blog | Om Sritara
                 </h2>
+                <p className="text-sm sm:text-base text-center text-gray-600 mb-6 sm:mb-10 px-2 leading-relaxed">
+                    Explore simple, practical articles on Spiritual Healing, Reiki, Healing Crystals, Meditation, Chakra Healing, and Holistic Wellness. Learn from expert insights, discover spiritually energized products personally energized by Guru Matha, and deepen your spiritual journey with Om Sritara.
+                </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                     {blogs?.map((post, idx) => {
