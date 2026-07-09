@@ -671,13 +671,11 @@ export default function CategoriesPage() {
       <div className="bg-white">
         <div className="container mx-auto px-4 py-12">
           <div className="mb-10 text-center sm:mb-12">
-            <h1 className="mt-3 mb-4 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
+            <h1 className="mt-3 mb-4 text-xl font-bold leading-tight sm:text-2xl md:text-3xl lg:text-4xl">
               Explore Spiritually Energized Healing Crystals & Spiritual Product Categories | Om Sritara
             </h1>
 
-            <p className="mx-auto max-w-6xl text-sm leading-7 text-muted-foreground sm:text-base md:text-lg lg:text-xl">
-              Browse Om Sritara's complete collection of spiritually energized healing crystals, crystal bracelets, rings, pendants, Rudraksha malas, pendulums, yantras, pyramids, Reiki tools, spiritual statues, and holistic wellness products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized and blessed by Guru Matha before reaching you. Find the perfect spiritual product category to support your healing, protection, abundance, meditation, and spiritual growth.
-            </p>
+
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -714,6 +712,9 @@ export default function CategoriesPage() {
             ))}
           </div>
         </div>
+        <p className="mx-auto mb-4 max-w-6xl text-sm leading-7 text-muted-foreground sm:text-base md:text-md lg:text-lg">
+          Browse Om Sritara's complete collection of spiritually energized healing crystals, crystal bracelets, rings, pendants, Rudraksha malas, pendulums, yantras, pyramids, Reiki tools, spiritual statues, and holistic wellness products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized and blessed by Guru Matha before reaching you. Find the perfect spiritual product category to support your healing, protection, abundance, meditation, and spiritual growth.
+        </p>
       </div>
     </>
   );
