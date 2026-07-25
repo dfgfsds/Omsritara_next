@@ -962,6 +962,204 @@ export default function ProductLandingPage() {
                     </section>
                 )}
 
+                {/* 7 Chakra Buddha Bracelet content */}
+                {productDetails?.id === 19792 && (
+                    <section className="mt-10 overflow-hidden rounded-3xl border border-gray-200 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+                        {/* Hero */}
+                        <div className="relative px-6 py-10 lg:px-12 lg:py-16">
+                            <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-purple-200/50 blur-3xl" />
+                            <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-indigo-200/50 blur-3xl" />
+
+                            <div className="relative text-center max-w-4xl mx-auto">
+                                <span className="inline-flex items-center rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-800 border border-indigo-200">
+                                    ✨ Spiritual Alignment & Healing
+                                </span>
+
+                                <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight text-gray-900">
+                                    7 Chakra
+                                    <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                                        {" "}Buddha Bracelet
+                                    </span>
+                                </h2>
+
+                                <p className="mt-5 text-gray-600 text-lg leading-relaxed">
+                                    Experience harmony, protection, and spiritual upliftment. A powerful healing accessory designed to balance all seven chakras, infused with sacred Buddha energy.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Features */}
+                        <div className="px-6 lg:px-12 pb-10">
+                            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+                                <div className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-purple-300 hover:shadow-xl">
+                                    <div className="text-4xl mb-4">🌈</div>
+                                    <h4 className="font-bold text-lg mb-2 text-purple-700">Chakra-Balancing Stones</h4>
+                                    <p className="text-gray-600">Each bead corresponds to one of the seven chakras for complete energy alignment.</p>
+                                </div>
+                                <div className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-purple-300 hover:shadow-xl">
+                                    <div className="text-4xl mb-4">🧘</div>
+                                    <h4 className="font-bold text-lg mb-2 text-purple-700">Buddha Symbol</h4>
+                                    <p className="text-gray-600">Represents peace, enlightenment, and spiritual guidance.</p>
+                                </div>
+                                <div className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-purple-300 hover:shadow-xl">
+                                    <div className="text-4xl mb-4">🌟</div>
+                                    <h4 className="font-bold text-lg mb-2 text-purple-700">Holistic Energy Support</h4>
+                                    <p className="text-gray-600">Encourages mental clarity, emotional balance, and spiritual awareness.</p>
+                                </div>
+                                <div className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-purple-300 hover:shadow-xl">
+                                    <div className="text-4xl mb-4">💫</div>
+                                    <h4 className="font-bold text-lg mb-2 text-purple-700">Versatile Daily Wear</h4>
+                                    <p className="text-gray-600">A meaningful and stylish bracelet suitable for meditation, work, and everyday harmony.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Spiritual & Healing Benefits */}
+                        <div className="bg-white/70 backdrop-blur-sm px-6 py-10 lg:px-12">
+                            <div className="max-w-5xl mx-auto">
+                                <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-indigo-900">
+                                    Spiritual & Healing Benefits
+                                </h3>
+                                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                                    {[
+                                        "Aligns and energizes all seven chakras.",
+                                        "Enhances peace, mindfulness, and emotional clarity.",
+                                        "Provides protection from negative influences.",
+                                        "Supports meditation, grounding, and spiritual growth.",
+                                        "Encourages confidence, healing, and balanced energy flow."
+                                    ].map((benefit, idx) => (
+                                        <div key={idx} className="flex items-start gap-3 rounded-xl bg-gradient-to-r from-purple-50 to-indigo-50 p-4 border border-purple-100">
+                                            <div className="text-purple-600 mt-1">✔️</div>
+                                            <p className="text-gray-700">{benefit}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Details */}
+                        <div className="px-6 py-10 lg:px-12 bg-gray-50/50">
+                            <div className="max-w-4xl mx-auto rounded-3xl border border-indigo-100 bg-white p-8 shadow-sm">
+                                <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">Bracelet Details</h3>
+                                <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+                                    <div>
+                                        <h4 className="font-semibold text-indigo-900 mb-2">💎 Stones Included</h4>
+                                        <p>Amber, Red Onyx Jade, Green Aventurine, Jasper, Buddha Bead, Amethyst, Sodalite, Lapis Lazuli.</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-indigo-900 mb-2">🎨 Colour</h4>
+                                        <p>Multi-Coloured</p>
+                                    </div>
+                                    <div className="md:col-span-2">
+                                        <h4 className="font-semibold text-indigo-900 mb-2">🎯 Purpose</h4>
+                                        <p>Chakra Balancing, Healing, Protection, and Spiritual Alignment.</p>
+                                    </div>
+                                </div>
+                                <div className="mt-8 text-center">
+                                    <span className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-900 font-medium border border-amber-200">
+                                        🙏 Divinely energized by Guru Matha
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )}
+
+                {/* Rose Quartz Oval Tumble Mala content */}
+                {productDetails?.id === 18270 && (
+                    <section className="mt-10 overflow-hidden rounded-3xl border border-rose-200 bg-gradient-to-br from-rose-50 via-white to-pink-50">
+                        {/* Hero */}
+                        <div className="relative px-6 py-10 lg:px-12 lg:py-16">
+                            <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-pink-200/50 blur-3xl" />
+                            <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-rose-200/50 blur-3xl" />
+
+                            <div className="relative text-center max-w-4xl mx-auto">
+                                <span className="inline-flex items-center rounded-full bg-rose-100 px-4 py-2 text-sm font-semibold text-rose-800 border border-rose-200">
+                                    💖 Unconditional Love & Healing
+                                </span>
+
+                                <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight text-gray-900">
+                                    Rose Quartz Oval
+                                    <span className="bg-gradient-to-r from-pink-500 to-rose-600 bg-clip-text text-transparent">
+                                        {" "}Tumble Mala
+                                    </span>
+                                </h2>
+
+                                <p className="mt-5 text-gray-600 text-lg leading-relaxed">
+                                    A beautiful expression of unconditional love and gentle healing energy for the heart and emotions.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Features */}
+                        <div className="px-6 lg:px-12 pb-10">
+                            <div className="grid gap-5 md:grid-cols-3">
+                                <div className="group rounded-2xl border border-rose-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-pink-300 hover:shadow-xl text-center">
+                                    <div className="text-4xl mb-4">📿</div>
+                                    <h4 className="font-bold text-lg mb-2 text-rose-700">Soft Pink Beads</h4>
+                                    <p className="text-gray-600">Soft pink, oval-shaped tumble beads.</p>
+                                </div>
+                                <div className="group rounded-2xl border border-rose-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-pink-300 hover:shadow-xl text-center">
+                                    <div className="text-4xl mb-4">❤️</div>
+                                    <h4 className="font-bold text-lg mb-2 text-rose-700">Self-Love</h4>
+                                    <p className="text-gray-600">Promotes self-love and deep compassion.</p>
+                                </div>
+                                <div className="group rounded-2xl border border-rose-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-pink-300 hover:shadow-xl text-center">
+                                    <div className="text-4xl mb-4">🧘‍♀️</div>
+                                    <h4 className="font-bold text-lg mb-2 text-rose-700">Heart Healing</h4>
+                                    <p className="text-gray-600">Ideal for heart-healing meditations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Spiritual & Healing Benefits */}
+                        <div className="bg-white/70 backdrop-blur-sm px-6 py-10 lg:px-12">
+                            <div className="max-w-5xl mx-auto">
+                                <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-rose-900">
+                                    Healing Benefits
+                                </h3>
+                                <div className="grid gap-4 md:grid-cols-3">
+                                    {[
+                                        "Opens the Heart Chakra to love.",
+                                        "Heals emotional wounds and trauma.",
+                                        "Encourages forgiveness and empathy."
+                                    ].map((benefit, idx) => (
+                                        <div key={idx} className="flex flex-col items-center text-center gap-3 rounded-xl bg-gradient-to-r from-rose-50 to-pink-50 p-6 border border-pink-100">
+                                            <div className="text-pink-500 text-2xl">✨</div>
+                                            <p className="text-gray-700 font-medium">{benefit}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Details */}
+                        <div className="px-6 py-10 lg:px-12 bg-gray-50/50">
+                            <div className="max-w-4xl mx-auto rounded-3xl border border-rose-100 bg-white p-8 shadow-sm">
+                                <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">Mala Details</h3>
+                                <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+                                    <div>
+                                        <h4 className="font-semibold text-rose-900 mb-2">💎 Stone</h4>
+                                        <p>Rose Quartz</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-rose-900 mb-2">🌈 Chakra</h4>
+                                        <p>Heart Chakra</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-rose-900 mb-2">🎯 Purpose</h4>
+                                        <p>Love, Compassion, Healing</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-rose-900 mb-2">✨ Vibe</h4>
+                                        <p>Soft, Loving, Nurturing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )}
+
 
                 {mobileModal && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 z-[60] flex items-center justify-center px-4">
