@@ -19,8 +19,7 @@ import 'quill/dist/quill.snow.css';
 import { ReviewItemProvider } from "@/context/ReviewsUserContext";
 import { ReviewProductsProvider } from "@/context/ReviewsContext";
 import HomeSeo from "@/components/homeseohead";
-
-
+import AppDownloadPopup from "@/components/AppDownloadPopup";
 
 export default function App({ Component, pageProps }: AppProps) {
     const [queryClient] = useState(() => new QueryClient());
@@ -46,6 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
                                                             <Layout>
                                                                 <Toaster position="top-right" reverseOrder={false} />
                                                                 <Component {...pageProps} />
+                                                                <AppDownloadPopup />
                                                             </Layout>
                                                         </ReviewProductsProvider>
                                                     </ReviewItemProvider>

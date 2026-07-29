@@ -99,7 +99,7 @@ const Footer = () => {
                             <Instagram size={16} />
                         </a>
                     </span>
-                      <span className="block font-medium mt-2">English: </span>
+                    <span className="block font-medium mt-2">English: </span>
                     <span className='flex gap-3 mt-1'>
 
                         <a href="https://www.facebook.com/omsritaraenglish" target='_blank' className="bg-slate-100 p-2 hover:scale-110 transition-transform rounded-full text-[#000] ">
@@ -115,6 +115,11 @@ const Footer = () => {
                             <Instagram size={16} />
                         </a>
                     </span>
+                    
+                    <h3 className="font-semibold mt-8 mb-4 uppercase">Download App</h3>
+                    <a href="https://play.google.com/store/apps/details?id=in.omsritara.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="inline-block hover:scale-105 transition-transform">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 w-auto" />
+                    </a>
                 </div>
             </div>
 
