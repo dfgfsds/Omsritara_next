@@ -2,13 +2,14 @@
 # ROBOTS.TXT - Om Sritara
 # SEO + AEO + GEO Optimized
 # https://www.omsritara.in
+# Last Updated: 2026-08-01
 # =========================================
 
 User-agent: *
 Allow: /
 
 # =========================================
-# ALLOW IMPORTANT NEXT.JS ASSETS
+# NEXT.JS ASSETS
 # =========================================
 
 Disallow: /_next/
@@ -19,11 +20,21 @@ Allow: /_next/image/
 # IMPORTANT SEO PAGES
 # =========================================
 
-Allow: /shop
-Allow: /categories
+Allow: /
 Allow: /about
 Allow: /contact-us
+Allow: /shop
+Allow: /categories
+Allow: /shopByIntention
+Allow: /courses
 Allow: /blog
+
+# =========================================
+# MULTILINGUAL CONNECT HUB
+# =========================================
+
+Allow: /connect/en
+Allow: /connect/ta
 
 # =========================================
 # CATEGORY PAGES
@@ -46,34 +57,39 @@ Allow: /categories/yanthirams-and-chakra
 Allow: /categories/healing-sticks-and-towers
 
 # =========================================
+# LEGAL PAGES
+# =========================================
+
+Allow: /privacy-policy
+Allow: /refund-policy
+Allow: /shipping-policy
+Allow: /cancellation-policy
+Allow: /terms-conditions
+
+# =========================================
 # CUSTOMER ACCOUNT PAGES
 # =========================================
 
 Disallow: /cart
-Disallow: /profile
-Disallow: /wishlist
 Disallow: /checkout
+Disallow: /wishlist
+Disallow: /profile
 Disallow: /login
 Disallow: /signup
 
 # =========================================
-# API & SYSTEM FILES
+# ADMIN & SYSTEM
 # =========================================
 
+Disallow: /admin
+Disallow: /administrator
+Disallow: /backend
 Disallow: /api/
 Disallow: /.git/
 Disallow: /.env
 Disallow: /node_modules/
 Disallow: /tmp/
 Disallow: /backup/
-
-# =========================================
-# ADMIN AREA
-# =========================================
-
-Disallow: /admin
-Disallow: /administrator
-Disallow: /backend
 
 # =========================================
 # SEARCH & FILTER PARAMETERS
@@ -89,17 +105,7 @@ Disallow: /*?query=
 Disallow: /*?tag=
 
 # =========================================
-# LEGAL PAGES
-# =========================================
-
-Allow: /privacy-policy
-Allow: /refund-policy
-Allow: /shipping-policy
-Allow: /cancellation-policy
-Allow: /terms-conditions
-
-# =========================================
-# AI CRAWLERS (AEO + GEO)
+# AI CRAWLERS (SEO + AEO + GEO)
 # =========================================
 
 User-agent: GPTBot
@@ -133,14 +139,15 @@ User-agent: Bytespider
 Allow: /
 
 # =========================================
-# LOCAL BUSINESS INFORMATION
+# BUSINESS INFORMATION
 # =========================================
 
-# Business Name: Om Sritara
-# Address: 46, Giri Rd, Satyamurthy Nagar
-# T. Nagar, Chennai
+# Business Name: OmSritara
+# Address: 46, Giri Rd, Satyamurthy Nagar,
+# T. Nagar, Chennai,
 # Tamil Nadu - 600017, India
-# Phone: +91-89890-52020
+# Tamil Support: +91 7092372555
+# English Support: +91 7092973555
 # Email: info@omsritara.com
 
 # =========================================
@@ -150,3 +157,4 @@ Allow: /
 Host: https://www.omsritara.in
 
 Sitemap: https://www.omsritara.in/sitemap.xml
+
