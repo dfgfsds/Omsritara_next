@@ -15,7 +15,7 @@ import { CheckCircle, Sparkles } from "lucide-react";
 import Head from "next/head";
 
 
-export default function ComboOffers() {
+export default function ComboOffersMoney() {
     const { products, isLoading }: any = useProducts();
     const { convertPrice } = useCurrency();
     const [signInmodal, setSignInModal] = useState<boolean>(false);
@@ -111,21 +111,9 @@ export default function ComboOffers() {
 
     // ✅ Define only the products you want, in desired order
     const comboProductOrder: Record<number, number> = {
-        19638: 1,
-        19645: 2,
-        19646: 3,
-        19642: 4,
-        19647: 5,
-        19643: 6,
-        19644: 7,
-        19639: 8,
-        19640: 9,
-        19641: 10,
-        19636: 11,
-        19637: 12,
-        19633: 13,
-        19634: 14,
-        19635: 15,
+        19647: 2,
+        19645: 1,
+        19634: 3,
     };
 
     // ✅ Filter only matching products and sort by the given position
@@ -258,30 +246,30 @@ export default function ComboOffers() {
 
 
             </Head>
-            <div className="p-4 sm:p-6 bg-gradient-to-b from-red-50 via-white to-orange-50 min-h-screen">
+            <div className="p-4 sm:p-6 bg-gradient-to-b from-amber-100 via-white to-amber-50 min-h-screen">
 
                 <div className=" text-center py-6 px-6 md:px-16">
                     <div className="max-w-4xl mx-auto">
                         {/* Heading */}
-                        <h1 className="text-3xl md:text-5xl font-bold text-red-800 mb-4">
-                            Welcome to <span className="text-red-600">Om Sritara</span>
+                        <h1 className="text-3xl md:text-5xl font-bold text-amber-800 mb-4">
+                            Welcome to <span className="text-amber-600">Om Sritara</span>
                         </h1>
 
                         {/* Subheading */}
                         <p className="text-lg md:text-xl text-gray-700 mb-6">
-                            Your Path to <span className="text-red-700 font-semibold">Divine Energy</span> Begins Here
+                            Your Path to <span className="text-amber-700 font-semibold">Divine Energy</span> Begins Here
                         </p>
 
                         {/* Description */}
                         <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                            Discover <span className="font-medium text-red-700">crystals, energy tools,</span>
-                            and <span className="font-medium text-red-700">divine healing products</span> to attract abundance,
+                            Discover <span className="font-medium text-amber-700">crystals, energy tools,</span>
+                            and <span className="font-medium text-amber-700">divine healing products</span> to attract abundance,
                             balance your aura, and align your energy with the cosmic power.
                         </p>
 
                         {/* Decorative Divider */}
                         <div className="mt-10 flex justify-center">
-                            <div className="h-1 w-24 bg-red-500 rounded-full animate-pulse"></div>
+                            <div className="h-1 w-24 bg-amber-400 rounded-full animate-pulse"></div>
                         </div>
                         {/* <h2 className="text-2xl font-bold mb-6 text-center">Explore your Combo Offers!</h2> */}
                     </div>
@@ -438,69 +426,48 @@ export default function ComboOffers() {
                     )}
                 </div>
 
-                <section className="bg-gradient-to-b from-orange-50 via-white to-red-50 py-20 px-6 md:px-16">
+                <section className="bg-gradient-to-b from-amber-50 via-white to-amber-100 py-20 px-6 md:px-16">
                     <div className="max-w-6xl mx-auto text-center">
-                        {/* About Om Sritara */}
-                        <div className="mb-20">
-                            <h2 className="text-3xl md:text-5xl font-bold text-red-800 mb-6 transition-all duration-500">
-                                About <span className="text-red-600">Om Sritara</span>
-                            </h2>
-                            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-red-50 max-w-4xl mx-auto text-left relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-8 opacity-10">
-                                    <Sparkles size={120} className="text-red-500" />
-                                </div>
-                                <p className="text-gray-700 text-lg leading-relaxed mb-6 relative z-10">
-                                    <span className="font-semibold text-red-800">Om Sritara</span> is a sanctuary for spiritual seekers, providing authentic, ethically-sourced healing crystals, spiritual tools, and energetic guidance. Born from a profound dedication to holistic well-being, we bridge ancient wisdom with modern living.
-                                </p>
-                                <p className="text-gray-700 text-lg leading-relaxed relative z-10">
-                                    Whether you are looking to attract abundance, heal emotional wounds, or protect your aura, our hand-selected products are spiritually cleansed, energized with powerful mantras, and curated specifically to support your soul's journey. We don't just sell products; we offer <span className="font-semibold text-red-700">transformative energy</span>.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Why Choose Om Sritara Header */}
-                        <h2 className="text-3xl md:text-5xl font-bold text-red-800 mb-6 transition-all duration-500">
-                            Why Choose <span className="text-red-600">Om Sritara</span>
+                        {/* Header */}
+                        <h2 className="text-3xl md:text-5xl font-bold text-amber-800 mb-4 transition-all duration-500">
+                            Why Choose <span className="text-amber-600">Om Sritara</span>
                         </h2>
 
-                        <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-12">
-                            Join a thriving spiritual community trusted by thousands across the globe. 
-                            Every Om Sritara product is treated as a sacred tool—handled with utmost respect, cleansed of stagnant energies, and activated with powerful intentions before it reaches your hands.
+                        <p className="text-gray-600 max-w-3xl mx-auto mb-10">
+                            Join our growing spiritual family trusted by thousands across India.
+                            Every Om Sritara product is created with care, intention, and mindful
+                            energy preparation.
                         </p>
 
                         {/* Features */}
-                        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+                        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
                             {features.map((item, i) => (
                                 <div
                                     key={i}
-                                    className="flex items-start bg-white shadow-md rounded-2xl p-5 border border-red-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                                    className="flex items-start bg-white shadow-md rounded-2xl p-5 border border-amber-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                                 >
-                                    <CheckCircle className="text-red-500 mt-1 mr-3 flex-shrink-0" size={22} />
-                                    <p className="text-gray-700 text-sm font-medium">{item}</p>
+                                    <CheckCircle className="text-amber-500 mt-1 mr-3 flex-shrink-0" size={22} />
+                                    <p className="text-gray-700 text-sm">{item}</p>
                                 </div>
                             ))}
                         </div>
 
-                        {/* Mission / Promise */}
-                        <div className="bg-gradient-to-r from-red-600 to-orange-500 rounded-2xl p-8 shadow-lg text-white mb-20 max-w-4xl mx-auto">
-                            <h4 className="text-2xl font-bold mb-3 flex items-center justify-center gap-2">
-                                <Sparkles className="text-white" size={24} /> Our Promise to You
-                            </h4>
-                            <p className="text-red-50 text-lg font-medium max-w-2xl mx-auto">
-                                To guide you towards energy balance, unwavering positivity, and mindful living through authentic spiritual tools you can trust.
-                            </p>
-                        </div>
+                        {/* Mission */}
+                        <p className="text-gray-700 mb-16 text-lg font-medium">
+                            Our mission is to support energy balance, positivity, and mindful
+                            living in everyday life.
+                        </p>
 
                         {/* Benefits */}
                         <div className="mb-16">
-                            <h3 className="text-2xl font-semibold text-red-700 mb-4 flex justify-center items-center gap-2">
-                                <Sparkles className="text-red-500" /> Benefits of These Energy Kits
+                            <h3 className="text-2xl font-semibold text-amber-700 mb-4 flex justify-center items-center gap-2">
+                                <Sparkles className="text-amber-500" /> Benefits of These Energy Kits
                             </h3>
                             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                                 {benefits.map((item, i) => (
                                     <div
                                         key={i}
-                                        className="bg-white border border-red-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                                        className="bg-white border border-amber-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                                     >
                                         <p className="text-gray-700 text-sm">{item}</p>
                                     </div>
@@ -508,6 +475,43 @@ export default function ComboOffers() {
                             </div>
                         </div>
 
+                        {/* Perfect For */}
+                        <div className="mb-20">
+                            <h3 className="text-2xl font-semibold text-amber-700 mb-4">
+                                Perfect For:
+                            </h3>
+                            <div className="flex flex-wrap justify-center gap-3">
+                                {perfectFor.map((item, i) => (
+                                    <span
+                                        key={i}
+                                        className="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium border border-amber-200 hover:bg-amber-200 hover:-translate-y-0.5 transition-all duration-300"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Grand Launch Offer */}
+                        <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white p-10 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl">
+                            <h3 className="text-2xl font-bold mb-6">
+                                🎁 Grand Launch Exclusive Offer
+                            </h3>
+                            <div className="grid sm:grid-cols-3 gap-6 mb-6">
+                                {kits.map((kit, i) => (
+                                    <div
+                                        key={i}
+                                        className="bg-white text-amber-800 rounded-2xl shadow-md p-6 border border-amber-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                                    >
+                                        <p className="font-semibold text-lg mb-1">{kit.name}</p>
+                                        <p className="text-amber-600 font-bold text-xl">{kit.price}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="text-white/90 max-w-2xl mx-auto mb-6">
+                                Each box is energized for 3 days by <span className="font-bold ">Guru Matha Tara</span> with divine intention and spiritual blessings.
+                            </p>
+                        </div>
 
                         {/* Footer Note */}
                         <p className="text-gray-700 mt-12 text-sm italic">

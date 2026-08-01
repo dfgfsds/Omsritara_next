@@ -13,6 +13,8 @@ export async function getServerSideProps({ res }) {
     { loc: "/shop", priority: "0.90", changefreq: "daily" },
     { loc: "/categories", priority: "0.90", changefreq: "weekly" },
     { loc: "/shopByIntention", priority: "0.90", changefreq: "weekly" },
+    { loc: "/connect/en", priority: "0.90", changefreq: "weekly" },
+    { loc: "/connect/ta", priority: "0.90", changefreq: "weekly" },
     { loc: "/contact-us", priority: "0.80", changefreq: "monthly" },
     { loc: "/blog", priority: "0.90", changefreq: "daily" },
     { loc: "/about", priority: "0.80", changefreq: "monthly" },
