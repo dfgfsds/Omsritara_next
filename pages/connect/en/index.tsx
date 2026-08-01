@@ -6,7 +6,7 @@ import { SiGooglemaps } from 'react-icons/si';
 import { CgWebsite } from 'react-icons/cg';
 import { FaRegStar, FaRegClock, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
-import { metadata } from './metadata';
+import { metadata } from '@/components/seo/connect/en';
 
 export default function ConnectEnglishPage() {
   const jsonLdOrganization = {
@@ -165,7 +165,7 @@ export default function ConnectEnglishPage() {
         <meta property="og:title" content={metadata.openGraph?.title as string} />
         <meta property="og:description" content={metadata.openGraph?.description as string} />
         <meta property="og:url" content={metadata.openGraph?.url as string} />
-        
+
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrganization) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdLocalBusiness) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
@@ -231,7 +231,7 @@ export default function ConnectEnglishPage() {
                 Tamil Nadu, India
               </address>
             </div>
-            
+
             <div className="bg-white p-8 rounded-2xl shadow-md border-t-4 border-orange-400">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center"><FaRegClock className="mr-3 text-orange-500" /> Business Hours</h3>
               <ul className="space-y-3">
@@ -252,7 +252,7 @@ export default function ConnectEnglishPage() {
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-16 text-center border-2 border-orange-100">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center justify-center"><FaRegStar className="mr-3 text-yellow-500" /> Leave a Google Review</h2>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Your feedback inspires us to continue helping individuals on their spiritual journey. If you&apos;ve attended a Reiki class, purchased healing crystals, joined a workshop, or experienced one of our healing sessions, we&apos;d love to hear about your experience.<br/><br/>
+              Your feedback inspires us to continue helping individuals on their spiritual journey. If you&apos;ve attended a Reiki class, purchased healing crystals, joined a workshop, or experienced one of our healing sessions, we&apos;d love to hear about your experience.<br /><br />
               Your review helps others discover trusted Reiki training, crystal healing, meditation guidance, and holistic wellness services.
             </p>
             <Link href="https://g.page/r/CQWQubtyKAUEEBM/review" target="_blank" rel="noopener noreferrer" className="inline-block bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-orange-700 transition-colors">
@@ -290,7 +290,7 @@ export default function ConnectEnglishPage() {
           <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-3xl p-10 text-white text-center shadow-xl">
             <h2 className="text-3xl font-bold mb-4">Begin Your Spiritual Journey Today</h2>
             <p className="text-orange-100 mb-8 max-w-2xl mx-auto text-lg">
-              Follow Om Sritara English across our official social media channels and become part of our growing global spiritual community.<br/><br/>
+              Follow Om Sritara English across our official social media channels and become part of our growing global spiritual community.<br /><br />
               Stay informed with Reiki courses, crystal healing insights, meditation guidance, spiritual workshops, holistic wellness resources, healing products, and inspirational teachings.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

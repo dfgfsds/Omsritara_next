@@ -228,7 +228,7 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
         });
         if (deliveryResponse) {
           setDeliveryChargeValue(deliveryResponse?.data);
-          setAddressError(null)
+          setAddressError('')
         }
       }
     } catch (error: any) {

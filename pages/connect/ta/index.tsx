@@ -5,7 +5,7 @@ import { SiGooglemaps } from 'react-icons/si';
 import { CgWebsite } from 'react-icons/cg';
 import { FaRegStar, FaRegClock, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
-export { metadata } from './metadata';
+import { metadata } from '@/components/seo/connect/ta';
 
 export default function ConnectTamilPage() {
   const jsonLdOrganization = {
