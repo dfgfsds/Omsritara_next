@@ -473,6 +473,13 @@ const Header: React.FC = () => {
                                     onClick={closeMobileMenu}
                                     className={`relative pb-1 ${pathname === "/combo-offers" ? "underline" : ""}`}
                                 >
+                                    Combo Offers
+                                </Link>
+                                <Link
+                                    href="/combo-offers-money"
+                                    onClick={closeMobileMenu}
+                                    className={`relative pb-1 ${pathname === "/combo-offers" ? "underline" : ""}`}
+                                >
                                     Money Combo
                                 </Link>
 
