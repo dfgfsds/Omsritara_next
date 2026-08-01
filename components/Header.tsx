@@ -63,7 +63,8 @@ const Header: React.FC = () => {
     const { categories, isLoading } = useCategories();
     const { intentions, isIntentionsLoading }: any = useIntentions();
     const offersPage = [
-        { name: "Money Combo", url: '/combo-offers' },
+        { name: "Combo Offers", url: '/combo-offers' },
+        { name: "Money Combo", url: '/combo-offers-money' },
         { name: "Relationship Combo", url: '/combo-offers-love' },
     ];
     useEffect(() => {
@@ -371,12 +372,12 @@ const Header: React.FC = () => {
                             Offers
                         </Link> */}
 
-                        <Link
+                        {/* <Link
                             href="/blog"
                             className={`nav-item relative ${isActive("/blog") ? "underline" : ""}`}
                         >
                             Blog
-                        </Link>
+                        </Link> */}
 
                         <Link
                             href="/contact-us"
@@ -472,6 +473,13 @@ const Header: React.FC = () => {
                                     onClick={closeMobileMenu}
                                     className={`relative pb-1 ${pathname === "/combo-offers" ? "underline" : ""}`}
                                 >
+                                    Combo Offers
+                                </Link>
+                                <Link
+                                    href="/combo-offers-money"
+                                    onClick={closeMobileMenu}
+                                    className={`relative pb-1 ${pathname === "/combo-offers" ? "underline" : ""}`}
+                                >
                                     Money Combo
                                 </Link>
 
@@ -483,13 +491,13 @@ const Header: React.FC = () => {
                                     Relationship Combo
                                 </Link>
 
-                                <Link
+                                {/* <Link
                                     href="/blog"
                                     onClick={closeMobileMenu}
                                     className={`relative pb-1 ${isActive("/blog") ? "underline" : ""}`}
                                 >
                                     Blog
-                                </Link>
+                                </Link> */}
 
                                 <Link
                                     href="/contact-us"

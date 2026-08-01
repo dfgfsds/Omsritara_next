@@ -29,8 +29,13 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: "/shopByIntention/[name]",
+                source: "/shopByIntention/:name",
                 destination: "/shopByIntention",
+                permanent: true,
+            },
+            {
+                source: "/connect",
+                destination: "/connect/ta",
                 permanent: true,
             },
         ];
