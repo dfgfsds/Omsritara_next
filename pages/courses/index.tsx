@@ -507,7 +507,7 @@ export default function CoursesPage() {
           <div className="flex justify-between items-start mb-6">
             <div>
               <p className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                {language === 'en' ? 'Our Courses' : 'எங்கள் பாடநெறிகள்'}
+                {language === 'en' ? 'Our Academy Courses' : 'எங்கள் அகாடமி பாடநெறிகள்'}
               </p>
               <h1 className="text-2xl md:text-3xl  text-gray-800 mb-2">
                 {language === 'en' ? 'Online & Offline Spiritual Healing Courses with Certification | Reiki, Lama Fera, Akashic Records & More' : 'ஆன்லைன் & ஆஃப்லைன் சான்றிதழ் ஆன்மீக ஹீலிங் பயிற்சிகள் | ரெய்கி, லாமா ஃபெரா, ஆகாஷிக் ரெக்கார்ட்ஸ் மற்றும் பல'}
