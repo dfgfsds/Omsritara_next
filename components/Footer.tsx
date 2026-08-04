@@ -24,7 +24,10 @@ const Footer = () => {
                     <ul className="space-y-2">
                         <li><Link href="/about" className="hover:text-white transition-colors"> Our Story</Link></li>
                         <li><Link href="/blog" className="hover:text-white transition-colors"> Blogs</Link></li>
+                        <li><Link href="/courses" className="hover:text-white transition-colors">Academy</Link></li>
                         <li><Link href="/shipping-policy" className="hover:text-white transition-colors">Shipping Policy</Link></li>
+                        <li><Link href="/connect/ta" className="hover:text-white transition-colors">Social media (Tamil)</Link></li>
+                        <li><Link href="/connect/en" className="hover:text-white transition-colors">Social media (English)</Link></li>
                     </ul>
                 </div>
 
@@ -115,7 +118,7 @@ const Footer = () => {
                             <Instagram size={16} />
                         </a>
                     </span>
-                    
+
                     <h3 className="font-semibold mt-8 mb-4 uppercase">Download App</h3>
                     <a href="https://play.google.com/store/apps/details?id=in.omsritara.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="inline-block hover:scale-105 transition-transform">
                         <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 w-auto" />
