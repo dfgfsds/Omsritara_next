@@ -1,0 +1,866 @@
+{
+  "ruby-manik": {
+    "title": "Ruby (Manik)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Ruby (Manik). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "ruby-manik-stone",
+        "name": "Ruby (Manik)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Ruby (Manik) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "yellow-sapphire-pukhraj": {
+    "title": "Yellow Sapphire (Pukhraj)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Yellow Sapphire (Pukhraj). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "yellow-sapphire-pukhraj-stone",
+        "name": "Yellow Sapphire (Pukhraj)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Yellow Sapphire (Pukhraj) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "blue-sapphire-neelam": {
+    "title": "Blue Sapphire (Neelam)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Blue Sapphire (Neelam). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "blue-sapphire-neelam-stone",
+        "name": "Blue Sapphire (Neelam)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Blue Sapphire (Neelam) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "emerald-panna": {
+    "title": "Emerald (Panna)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Emerald (Panna). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "emerald-panna-stone",
+        "name": "Emerald (Panna)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Emerald (Panna) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "natural-diamond": {
+    "title": "Natural Diamond",
+    "origin": "",
+    "about": "Explore our exclusive collection of Natural Diamond. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "natural-diamond-stone",
+        "name": "Natural Diamond",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Natural Diamond is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "white-sapphire": {
+    "title": "White Sapphire",
+    "origin": "",
+    "about": "Explore our exclusive collection of White Sapphire. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "white-sapphire-stone",
+        "name": "White Sapphire",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful White Sapphire is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "pitambari": {
+    "title": "Pitambari",
+    "origin": "",
+    "about": "Explore our exclusive collection of Pitambari. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "pitambari-stone",
+        "name": "Pitambari",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Pitambari is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "red-coral-moonga": {
+    "title": "Red Coral (Moonga)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Red Coral (Moonga). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "red-coral-moonga-stone",
+        "name": "Red Coral (Moonga)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Red Coral (Moonga) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "pearl-moti": {
+    "title": "Pearl (Moti)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Pearl (Moti). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "pearl-moti-stone",
+        "name": "Pearl (Moti)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Pearl (Moti) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "opal-doodhiya-patthar": {
+    "title": "Opal (Doodhiya Patthar)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Opal (Doodhiya Patthar). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "opal-doodhiya-patthar-stone",
+        "name": "Opal (Doodhiya Patthar)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Opal (Doodhiya Patthar) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "hessonite-gomed": {
+    "title": "Hessonite (Gomed)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Hessonite (Gomed). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "hessonite-gomed-stone",
+        "name": "Hessonite (Gomed)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Hessonite (Gomed) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "cats-eye-lehsunia": {
+    "title": "Cats Eye (Lehsunia)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Cats Eye (Lehsunia). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "cats-eye-lehsunia-stone",
+        "name": "Cats Eye (Lehsunia)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Cats Eye (Lehsunia) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "natural-zircon": {
+    "title": "Natural Zircon",
+    "origin": "",
+    "about": "Explore our exclusive collection of Natural Zircon. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "natural-zircon-stone",
+        "name": "Natural Zircon",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Natural Zircon is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "turquoise-irani-firoza": {
+    "title": "Turquoise (Irani Firoza)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Turquoise (Irani Firoza). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "turquoise-irani-firoza-stone",
+        "name": "Turquoise (Irani Firoza)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Turquoise (Irani Firoza) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "natural-alexandrite": {
+    "title": "Natural Alexandrite",
+    "origin": "",
+    "about": "Explore our exclusive collection of Natural Alexandrite. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "natural-alexandrite-stone",
+        "name": "Natural Alexandrite",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Natural Alexandrite is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "purple-sapphire": {
+    "title": "Purple Sapphire",
+    "origin": "",
+    "about": "Explore our exclusive collection of Purple Sapphire. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "purple-sapphire-stone",
+        "name": "Purple Sapphire",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Purple Sapphire is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "natural-pink-sapphire": {
+    "title": "Natural Pink Sapphire",
+    "origin": "",
+    "about": "Explore our exclusive collection of Natural Pink Sapphire. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "natural-pink-sapphire-stone",
+        "name": "Natural Pink Sapphire",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Natural Pink Sapphire is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "white-coral": {
+    "title": "White Coral",
+    "origin": "",
+    "about": "Explore our exclusive collection of White Coral. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "white-coral-stone",
+        "name": "White Coral",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful White Coral is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "natural-spinel-stone": {
+    "title": "Natural Spinel Stone",
+    "origin": "",
+    "about": "Explore our exclusive collection of Natural Spinel Stone. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "natural-spinel-stone-stone",
+        "name": "Natural Spinel Stone",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Natural Spinel Stone is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "padparadscha": {
+    "title": "Padparadscha",
+    "origin": "",
+    "about": "Explore our exclusive collection of Padparadscha. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "padparadscha-stone",
+        "name": "Padparadscha",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Padparadscha is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "sulemani-red-hakik": {
+    "title": "Sulemani Red Hakik",
+    "origin": "",
+    "about": "Explore our exclusive collection of Sulemani Red Hakik. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "sulemani-red-hakik-stone",
+        "name": "Sulemani Red Hakik",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Sulemani Red Hakik is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "iolite-neeli": {
+    "title": "Iolite (Neeli)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Iolite (Neeli). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "iolite-neeli-stone",
+        "name": "Iolite (Neeli)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Iolite (Neeli) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "sulemani-black-hakik": {
+    "title": "Sulemani Black Hakik",
+    "origin": "",
+    "about": "Explore our exclusive collection of Sulemani Black Hakik. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "sulemani-black-hakik-stone",
+        "name": "Sulemani Black Hakik",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Sulemani Black Hakik is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "amethyst-jamunia": {
+    "title": "Amethyst (Jamunia)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Amethyst (Jamunia). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "amethyst-jamunia-stone",
+        "name": "Amethyst (Jamunia)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Amethyst (Jamunia) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "moon-stone": {
+    "title": "Moon Stone",
+    "origin": "",
+    "about": "Explore our exclusive collection of Moon Stone. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "moon-stone-stone",
+        "name": "Moon Stone",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Moon Stone is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "peridot": {
+    "title": "Peridot",
+    "origin": "",
+    "about": "Explore our exclusive collection of Peridot. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "peridot-stone",
+        "name": "Peridot",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Peridot is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "citrine-sunela": {
+    "title": "Citrine (Sunela)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Citrine (Sunela). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "citrine-sunela-stone",
+        "name": "Citrine (Sunela)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Citrine (Sunela) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "blue-topaz": {
+    "title": "Blue Topaz",
+    "origin": "",
+    "about": "Explore our exclusive collection of Blue Topaz. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "blue-topaz-stone",
+        "name": "Blue Topaz",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Blue Topaz is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "white-topaz": {
+    "title": "White Topaz",
+    "origin": "",
+    "about": "Explore our exclusive collection of White Topaz. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "white-topaz-stone",
+        "name": "White Topaz",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful White Topaz is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "yellow-topaz": {
+    "title": "Yellow Topaz",
+    "origin": "",
+    "about": "Explore our exclusive collection of Yellow Topaz. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "yellow-topaz-stone",
+        "name": "Yellow Topaz",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Yellow Topaz is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "pink-sapphire": {
+    "title": "Pink Sapphire",
+    "origin": "",
+    "about": "Explore our exclusive collection of Pink Sapphire. This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "pink-sapphire-stone",
+        "name": "Pink Sapphire",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Pink Sapphire is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  },
+  "bi-color-sapphire-pitambari": {
+    "title": "Bi-Color Sapphire (Pitambari)",
+    "origin": "",
+    "about": "Explore our exclusive collection of Bi-Color Sapphire (Pitambari). This precious gemstone is known for its incredible properties, spiritual significance, and positive benefits. It has been carefully selected and energized by our experts to bring you harmony and prosperity.",
+    "aboutList": [],
+    "stones": [
+      {
+        "id": "bi-color-sapphire-pitambari-stone",
+        "name": "Bi-Color Sapphire (Pitambari)",
+        "subtitle": "Premium Gemstone",
+        "description": "This beautiful Bi-Color Sapphire (Pitambari) is a premium gemstone carefully selected by our experts. It is known to enhance positivity, clarity, and overall well-being. Perfect for rings, pendants, or keeping as a loose gemstone for astrological benefits.",
+        "benefits": [
+          "Positivity",
+          "Clarity",
+          "Prosperity",
+          "Spiritual Growth",
+          "Inner Peace"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/default.png"
+      }
+    ]
+  }
+}

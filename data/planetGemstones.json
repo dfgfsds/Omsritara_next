@@ -1,0 +1,715 @@
+{
+  "sun": {
+    "title": "Sun Gemstones",
+    "origin": "",
+    "about": "The Sun, known as Surya in Vedic astrology, represents vitality, confidence, individuality, leadership, recognition, and inner strength. Sun-associated gemstones are traditionally chosen to support qualities connected with self-expression, courage, purpose, and personal presence. Different gemstones may be considered depending on an individual's birth details, horoscope, Rashi, Nakshatra, and planetary influences. Each stone has its own colour, character, and traditional significance. A personalized consultation can help determine which gemstone is most appropriate for an individual.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Associated with Sun-like qualities"
+      },
+      {
+        "name": "Note",
+        "desc": "Ruby (Manik) has the strongest traditional astrological association with the Sun. The suitability of any gemstone should be considered based on individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "ruby",
+        "name": "Ruby (Manik)",
+        "subtitle": "Principal Gemstone of the Sun",
+        "description": "Ruby, traditionally known as Manik or Manikya, is the principal gemstone associated with the Sun in Vedic astrology. Its vibrant red colour and natural brilliance have long been connected symbolically with confidence, leadership, vitality, individuality, and personal strength.",
+        "benefits": [
+          "Leadership",
+          "Confidence",
+          "Vitality",
+          "Recognition",
+          "Self-Expression",
+          "Personal Strength"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/ruby.png"
+      },
+      {
+        "id": "sunstone",
+        "name": "Sunstone",
+        "subtitle": "The Stone of Optimism & Vitality",
+        "description": "Sunstone is admired for its warm golden, orange, and reddish tones and its attractive natural shimmer. In traditional crystal practices, it is associated with optimism, confidence, motivation, vitality, and positive self-expression.",
+        "benefits": [
+          "Confidence",
+          "Motivation",
+          "Leadership",
+          "Positive Energy",
+          "Self-Expression",
+          "Personal Growth"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/sunstone.png"
+      },
+      {
+        "id": "red-spinel",
+        "name": "Red Spinel",
+        "subtitle": "The Stone of Courage & Strength",
+        "description": "Red Spinel is a naturally occurring gemstone with rich red tones and a brilliant appearance. While it is not as traditionally established as Ruby for the Sun in Vedic astrology, Red Spinel is sometimes considered an alternative or associated stone because of its colour and symbolic connection with vitality, courage, confidence, and strength.",
+        "benefits": [
+          "Courage",
+          "Confidence",
+          "Vitality",
+          "Motivation",
+          "Leadership",
+          "Personal Strength"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/red_spinel.png"
+      }
+    ]
+  },
+  "moon-chandra": {
+    "title": "Moon (Chandra) Gemstones",
+    "origin": "",
+    "about": "The Moon, known as Chandra in Vedic astrology, is traditionally associated with the mind, emotions, intuition, calmness, sensitivity, nurturing qualities, and inner peace. Moon-associated gemstones are valued for their soft colours, soothing appearance, and symbolic connection with lunar energy. Pearl (Moti) is traditionally regarded as the principal gemstone of the Moon. Moonstone, White Agate, and White Coral may also be considered in certain spiritual and gemstone traditions. The right gemstone may vary according to an individual's Birth Details, Rashi, Nakshatra, and planetary influences.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Associated with lunar qualities in some traditions"
+      },
+      {
+        "name": "Note",
+        "desc": "Pearl (Moti) has the strongest traditional Vedic astrological association with the Moon. The suitability of Moonstone, White Agate, or White Coral should be considered according to individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "pearl",
+        "name": "Pearl (Moti)",
+        "subtitle": "Principal Gemstone of the Moon",
+        "description": "Pearl, traditionally known as Moti, is the principal gemstone associated with the Moon in Vedic astrology. Its natural lustre and soft white appearance have long been symbolically connected with calmness, emotional balance, intuition, nurturing energy, and inner harmony.",
+        "benefits": [
+          "Emotional Balance",
+          "Calmness",
+          "Intuition",
+          "Inner Peace",
+          "Relationships",
+          "Positive Energy"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/pearl.png"
+      },
+      {
+        "id": "moonstone",
+        "name": "Moonstone",
+        "subtitle": "The Stone of Intuition",
+        "description": "Moonstone is admired for its milky appearance and characteristic luminous sheen. In traditional crystal practices, it is associated with intuition, emotional awareness, calmness, feminine energy, and spiritual reflection.",
+        "benefits": [
+          "Intuition",
+          "Emotional Balance",
+          "Calmness",
+          "Inner Peace",
+          "Spiritual Growth",
+          "Self-Awareness"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/moonstone.png"
+      },
+      {
+        "id": "white-agate",
+        "name": "White Agate",
+        "subtitle": "The Stone of Harmony",
+        "description": "White Agate is valued for its soft, elegant appearance and natural patterns. In traditional crystal practices, it is associated with harmony, emotional balance, calmness, stability, and a peaceful mindset.",
+        "benefits": [
+          "Emotional Balance",
+          "Calmness",
+          "Harmony",
+          "Stability",
+          "Positive Energy",
+          "Spiritual Growth"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/white_agate.png"
+      },
+      {
+        "id": "white-coral",
+        "name": "White Coral",
+        "subtitle": "The Stone of Purity",
+        "description": "White Coral is an organic gemstone material traditionally valued for its smooth appearance and soft white colour. In some gemstone and spiritual traditions, White Coral is associated with purity, peace, emotional balance, and spiritual awareness.",
+        "benefits": [
+          "Calmness",
+          "Emotional Balance",
+          "Purity",
+          "Spiritual Growth",
+          "Positive Energy",
+          "Inner Harmony"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/white_coral.png"
+      }
+    ]
+  },
+  "mars-mangal": {
+    "title": "Mars (Mangal) Gemstones",
+    "origin": "",
+    "about": "Mars, known as Mangal in Vedic astrology, is traditionally associated with courage, determination, physical energy, action, confidence, and initiative. Mars-associated gemstones are valued for their vibrant red and orange colours and their symbolic connection with strength and motivation. Red Coral (Moonga) is traditionally regarded as the principal gemstone associated with Mars. Carnelian and Red Jasper are also appreciated in crystal and spiritual traditions for qualities such as courage, grounding, vitality, and determination. The appropriate gemstone may vary according to an individual's Birth Details, Rashi, Nakshatra, and planetary influences.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Mars-like qualities"
+      },
+      {
+        "name": "Note",
+        "desc": "Red Coral (Moonga) has the strongest traditional Vedic astrological association with Mars. Carnelian and Red Jasper are better presented as associated or alternative stones rather than direct astrological equivalents. Gemstone suitability should be considered according to individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "red-coral",
+        "name": "Red Coral (Moonga)",
+        "subtitle": "Principal Gemstone of Mars",
+        "description": "Red Coral, traditionally known as Moonga, is the principal gemstone associated with Mars in Vedic astrology. Its natural red colour and organic origin give it a distinctive appearance, while traditional gemstone practices associate it with courage, confidence, determination, initiative, and personal strength.",
+        "benefits": [
+          "Courage",
+          "Confidence",
+          "Determination",
+          "Initiative",
+          "Leadership",
+          "Personal Strength"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/red_coral.png"
+      },
+      {
+        "id": "carnelian",
+        "name": "Carnelian",
+        "subtitle": "The Stone of Motivation",
+        "description": "Carnelian is a warm orange to reddish-orange variety of chalcedony, admired for its vibrant colour and natural translucency. In traditional crystal practices, Carnelian is associated with motivation, courage, creativity, confidence, and taking purposeful action.",
+        "benefits": [
+          "Motivation",
+          "Courage",
+          "Confidence",
+          "Creativity",
+          "Determination",
+          "Positive Energy"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/carnelian.png"
+      },
+      {
+        "id": "red-jasper",
+        "name": "Red Jasper",
+        "subtitle": "The Stone of Grounding",
+        "description": "Red Jasper is a naturally occurring opaque gemstone known for its earthy red colour and distinctive natural patterns. In traditional crystal practices, it is associated with grounding, stability, courage, determination, and emotional balance.",
+        "benefits": [
+          "Grounding",
+          "Courage",
+          "Stability",
+          "Determination",
+          "Emotional Balance",
+          "Protection"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/red_jasper.png"
+      }
+    ]
+  },
+  "mercury": {
+    "title": "Mercury (Budha) Gemstones",
+    "origin": "",
+    "about": "Mercury, known as Budha in Vedic astrology, is traditionally associated with communication, intellect, learning, and adaptability. Mercury-associated gemstones are valued for their clarity and vibrant green hues.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Mercury-like qualities"
+      },
+      {
+        "name": "Note",
+        "desc": "Emerald (Panna) has the strongest traditional Vedic astrological association with Mercury. Green Tourmaline and Peridot are better presented as associated or alternative stones rather than direct astrological equivalents. Gemstone suitability should be considered according to individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "emerald",
+        "name": "Emerald (Panna)",
+        "subtitle": "Principal Gemstone of Mercury",
+        "description": "Emerald, traditionally known as Panna, is the principal gemstone associated with Mercury in Vedic astrology. Its rich green colour and natural brilliance have long been admired, while traditional gemstone practices associate it with communication, intellect, learning, clarity, and confidence in self-expression.",
+        "benefits": [
+          "Communication",
+          "Intelligence",
+          "Learning",
+          "Mental Clarity",
+          "Business",
+          "Self-Expression"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/emerald.png"
+      },
+      {
+        "id": "green-tourmaline",
+        "name": "Green Tourmaline",
+        "subtitle": "The Stone of Creativity",
+        "description": "Green Tourmaline is admired for its beautiful range of natural green shades and distinctive crystalline appearance. In traditional crystal practices, it is associated with emotional balance, creativity, clarity, positive communication, and personal growth.",
+        "benefits": [
+          "Creativity",
+          "Communication",
+          "Emotional Balance",
+          "Clarity",
+          "Personal Growth",
+          "Positive Energy"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/green_tourmaline.png"
+      },
+      {
+        "id": "peridot",
+        "name": "Peridot",
+        "subtitle": "The Stone of Renewal",
+        "description": "Peridot is a naturally occurring gemstone known for its fresh green to yellowish-green colour and bright appearance. In traditional crystal practices, it is associated with positivity, clarity, emotional balance, confidence, and renewal.",
+        "benefits": [
+          "Clarity",
+          "Confidence",
+          "Emotional Balance",
+          "Positive Energy",
+          "Personal Growth",
+          "Relationships"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/peridot.png"
+      }
+    ]
+  },
+  "jupiter-guru": {
+    "title": "Jupiter (Guru) Gemstones",
+    "origin": "",
+    "about": "Jupiter, known as Guru or Brihaspati in Vedic astrology, is traditionally associated with wisdom, knowledge, learning, prosperity, guidance, spirituality, and personal growth. Jupiter-associated gemstones are valued for their warm yellow and golden tones and their symbolic connection with knowledge and abundance. Yellow Sapphire (Pukhraj) is traditionally regarded as the principal gemstone associated with Jupiter. Yellow Tourmaline and Lapis Lazuli may also be considered in broader gemstone and spiritual traditions for qualities associated with wisdom, clarity, confidence, and spiritual development. The appropriate gemstone may vary according to an individual's Birth Details, Rashi, Nakshatra, and planetary influences.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Associated with wisdom and spiritual qualities"
+      },
+      {
+        "name": "Note",
+        "desc": "Yellow Sapphire (Pukhraj) has the strongest traditional Vedic astrological association with Jupiter. Yellow Tourmaline and Lapis Lazuli are better presented as associated or alternative stones rather than direct astrological equivalents. Gemstone suitability should be considered according to individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "yellow-sapphire",
+        "name": "Yellow Sapphire (Pukhraj)",
+        "subtitle": "Principal Gemstone of Jupiter",
+        "description": "Yellow Sapphire, traditionally known as Pukhraj, is the principal gemstone associated with Jupiter in Vedic astrology. Its bright yellow to golden colour and natural brilliance have long been admired, while traditional gemstone practices associate it with wisdom, knowledge, prosperity, confidence, learning, and spiritual growth.",
+        "benefits": [
+          "Wisdom",
+          "Knowledge",
+          "Prosperity",
+          "Learning",
+          "Confidence",
+          "Spiritual Growth"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/yellow_sapphire.png"
+      },
+      {
+        "id": "yellow-tourmaline",
+        "name": "Yellow Tourmaline",
+        "subtitle": "The Stone of Optimism",
+        "description": "Yellow Tourmaline is a naturally occurring variety of Tourmaline admired for its warm yellow to golden shades. In gemstone and crystal traditions, it is associated with confidence, optimism, creativity, personal growth, and positive energy.",
+        "benefits": [
+          "Confidence",
+          "Optimism",
+          "Personal Growth",
+          "Creativity",
+          "Positive Energy",
+          "Clarity"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/yellow_tourmaline.png"
+      },
+      {
+        "id": "lapis-lazuli-jupiter",
+        "name": "Lapis Lazuli",
+        "subtitle": "The Stone of Inner Truth",
+        "description": "Lapis Lazuli is a deep blue gemstone traditionally valued for its rich colour and natural golden inclusions. In spiritual and crystal traditions, it is associated with wisdom, self-awareness, inner truth, learning, communication, and spiritual reflection.",
+        "benefits": [
+          "Wisdom",
+          "Knowledge",
+          "Self-Awareness",
+          "Spiritual Growth",
+          "Clarity",
+          "Inner Reflection"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/lapis_lazuli.png"
+      }
+    ]
+  },
+  "venus-shukra": {
+    "title": "Venus (Shukra) Gemstones",
+    "origin": "",
+    "about": "Venus, known as Shukra in Vedic astrology, is traditionally associated with love, relationships, beauty, creativity, luxury, harmony, refinement, and appreciation of art. Venus-associated gemstones are admired for their brilliant appearance and are symbolically connected with elegance, attraction, harmony, and creative expression. White Sapphire is traditionally regarded as the principal gemstone associated with Venus. Opal and Colorless Zircon are also valued for their beauty and are considered associated or alternative stones in various gemstone traditions. The appropriate gemstone may vary according to an individual's Birth Details, Rashi, Nakshatra, and planetary influences.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Venus-associated qualities"
+      },
+      {
+        "name": "Note",
+        "desc": "White Sapphire has a strong traditional association with Venus in Vedic gemstone practices. Opal and Colorless Zircon are better presented as associated or alternative stones rather than direct astrological equivalents. Gemstone suitability should be considered according to individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "white-sapphire",
+        "name": "White Sapphire",
+        "subtitle": "Principal Gemstone of Venus",
+        "description": "White Sapphire is a naturally occurring colourless variety of Sapphire known for its clarity, brilliance, and elegant appearance. In traditional Vedic gemstone practices, it is associated with Venus and symbolically represents harmony, refinement, creativity, relationships, and appreciation of beauty.",
+        "benefits": [
+          "Love & Relationships",
+          "Harmony",
+          "Creativity",
+          "Beauty",
+          "Confidence",
+          "Prosperity"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/white_sapphire.png"
+      },
+      {
+        "id": "opal",
+        "name": "Opal",
+        "subtitle": "The Stone of Emotional Expression",
+        "description": "Opal is admired for its distinctive play-of-colour, which can display beautiful flashes of multiple colours depending on the stone and lighting. In traditional gemstone and spiritual practices, Opal is associated with creativity, emotional expression, relationships, beauty, and positive self-expression.",
+        "benefits": [
+          "Love & Relationships",
+          "Creativity",
+          "Emotional Expression",
+          "Beauty",
+          "Harmony",
+          "Self-Expression"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/opal.png"
+      },
+      {
+        "id": "colorless-zircon",
+        "name": "Colorless Zircon",
+        "subtitle": "The Stone of Elegance",
+        "description": "Colorless Zircon is a naturally occurring gemstone known for its brilliance, transparency, and attractive sparkle. It is sometimes considered an alternative Venus-associated gemstone and is valued symbolically for elegance, confidence, harmony, and appreciation of beauty.",
+        "benefits": [
+          "Elegance",
+          "Confidence",
+          "Harmony",
+          "Relationships",
+          "Creativity",
+          "Positive Energy"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/colorless_zircon.png"
+      }
+    ]
+  },
+  "saturn-shani": {
+    "title": "Saturn (Shani) Gemstones",
+    "origin": "",
+    "about": "Saturn, known as Shani in Vedic astrology, is traditionally associated with discipline, patience, responsibility, perseverance, structure, and long-term growth. Saturn-associated gemstones are often valued for their deep blue and violet shades and their symbolic connection with stability, focus, and inner strength. Blue Sapphire (Neelam) is traditionally regarded as the principal gemstone associated with Saturn. Lapis Lazuli and Amethyst are also appreciated in spiritual and crystal traditions for qualities such as grounding, clarity, reflection, and emotional balance. The appropriate gemstone may vary according to an individual's Birth Details, Rashi, Nakshatra, and planetary influences.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Saturn-associated qualities"
+      },
+      {
+        "name": "Note",
+        "desc": "Blue Sapphire (Neelam) has the strongest traditional Vedic astrological association with Saturn. Lapis Lazuli and Amethyst are better presented as associated or alternative stones rather than direct astrological equivalents. Gemstone suitability should be considered according to individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "blue-sapphire",
+        "name": "Blue Sapphire (Neelam)",
+        "subtitle": "Principal Gemstone of Saturn",
+        "description": "Blue Sapphire, traditionally known as Neelam, is the principal gemstone associated with Saturn in Vedic astrology. Its deep blue colour and exceptional brilliance have made it one of the most significant gemstones in traditional astrological practices, where it is symbolically associated with discipline, focus, responsibility, perseverance, and stability.",
+        "benefits": [
+          "Discipline",
+          "Focus",
+          "Responsibility",
+          "Perseverance",
+          "Stability",
+          "Inner Strength"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/blue_sapphire.png"
+      },
+      {
+        "id": "lapis-lazuli-saturn",
+        "name": "Lapis Lazuli",
+        "subtitle": "The Stone of Wisdom",
+        "description": "Lapis Lazuli is a deep blue gemstone admired for its rich colour and distinctive natural golden inclusions. In spiritual and crystal traditions, it is associated with wisdom, self-awareness, clarity, inner reflection, and spiritual growth.",
+        "benefits": [
+          "Wisdom",
+          "Clarity",
+          "Self-Awareness",
+          "Spiritual Growth",
+          "Inner Reflection",
+          "Emotional Balance"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/lapis_lazuli.png"
+      },
+      {
+        "id": "amethyst",
+        "name": "Amethyst",
+        "subtitle": "The Stone of Calmness",
+        "description": "Amethyst is a violet to purple variety of quartz valued for its distinctive colour and natural clarity. In traditional crystal practices, it is associated with calmness, focus, spiritual awareness, inner reflection, and emotional balance.",
+        "benefits": [
+          "Focus",
+          "Calmness",
+          "Emotional Balance",
+          "Spiritual Growth",
+          "Inner Reflection",
+          "Clarity"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/amethyst.png"
+      }
+    ]
+  },
+  "rahu": {
+    "title": "Rahu Gemstones",
+    "origin": "",
+    "about": "Rahu is traditionally regarded as a shadow planet in Vedic astrology and is associated with ambition, worldly experiences, unconventional thinking, transformation, desire, and new opportunities. Rahu-associated gemstones are often valued for their distinctive colours and symbolic connection with determination, adaptability, and navigating change. Hessonite Garnet (Gomed) is traditionally regarded as the principal gemstone associated with Rahu. Orange Zircon and Spessartite Garnet may be presented as associated or alternative stones in broader gemstone and spiritual traditions. The appropriate gemstone may vary according to an individual's Birth Details, Rashi, Nakshatra, and planetary influences.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Rahu-associated qualities"
+      },
+      {
+        "name": "Note",
+        "desc": "Hessonite Garnet (Gomed) has the strongest traditional Vedic astrological association with Rahu. Orange Zircon and Spessartite Garnet are better presented as associated or alternative stones rather than direct astrological equivalents. Gemstone suitability should be considered according to individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "hessonite",
+        "name": "Hessonite Garnet (Gomed)",
+        "subtitle": "Principal Gemstone of Rahu",
+        "description": "Hessonite Garnet, traditionally known as Gomed, is the principal gemstone associated with Rahu in Vedic astrology. It is known for its distinctive honey, golden-orange, and reddish-brown shades and is traditionally associated with clarity, confidence, focus, determination, and navigating periods of change.",
+        "benefits": [
+          "Focus",
+          "Confidence",
+          "Determination",
+          "Adaptability",
+          "Clarity",
+          "Personal Growth"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/hessonite.png"
+      },
+      {
+        "id": "orange-zircon",
+        "name": "Orange Zircon",
+        "subtitle": "The Stone of Creativity",
+        "description": "Orange Zircon is a naturally occurring gemstone admired for its warm orange to golden-orange colour and brilliant appearance. In gemstone and spiritual traditions, it can be associated symbolically with confidence, creativity, motivation, positive energy, and personal expression.",
+        "benefits": [
+          "Confidence",
+          "Creativity",
+          "Motivation",
+          "Positive Energy",
+          "Self-Expression",
+          "Personal Growth"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/orange_zircon.png"
+      },
+      {
+        "id": "spessartite",
+        "name": "Spessartite Garnet",
+        "subtitle": "The Stone of Motivation",
+        "description": "Spessartite Garnet is a vibrant orange to reddish-orange variety of Garnet known for its warm colour and natural brilliance. In crystal and gemstone traditions, it is associated with creativity, confidence, motivation, courage, and an energetic approach to personal growth.",
+        "benefits": [
+          "Motivation",
+          "Confidence",
+          "Creativity",
+          "Courage",
+          "Positive Energy",
+          "Personal Growth"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/spessartite_garnet.png"
+      }
+    ]
+  },
+  "ketu": {
+    "title": "Ketu Gemstones",
+    "origin": "",
+    "about": "Ketu is traditionally regarded as a shadow planet in Vedic astrology and is associated with spirituality, intuition, detachment, introspection, and inner transformation. Ketu-associated gemstones are often valued for their distinctive appearance and symbolic connection with spiritual awareness, focus, and self-discovery. Cat's Eye (Lehsunia) is traditionally regarded as the principal gemstone associated with Ketu. Tiger's Eye and Quartz Cat's Eye may be presented as associated or alternative stones in broader gemstone and spiritual traditions. The appropriate gemstone may vary according to an individual's Birth Details, Rashi, Nakshatra, and planetary influences.",
+    "aboutList": [
+      {
+        "name": "Traditional Association",
+        "desc": "Ketu-associated qualities"
+      },
+      {
+        "name": "Note",
+        "desc": "Cat's Eye (Lehsunia) has the strongest traditional Vedic astrological association with Ketu. Tiger's Eye and Quartz Cat's Eye are better presented as associated or alternative stones rather than direct astrological equivalents. Gemstone suitability should be considered according to individual astrological factors."
+      }
+    ],
+    "stones": [
+      {
+        "id": "cats-eye",
+        "name": "Cat's Eye (Lehsunia)",
+        "subtitle": "Principal Gemstone of Ketu",
+        "description": "Cat's Eye, traditionally known as Lehsunia or Vaidurya, is the principal gemstone associated with Ketu in Vedic astrology. Its distinctive chatoyant band creates a striking eye-like effect across the surface of the stone. In traditional gemstone practices, it is symbolically associated with intuition, spiritual awareness, focus, protection, and introspection.",
+        "benefits": [
+          "Intuition",
+          "Spiritual Growth",
+          "Focus",
+          "Protection",
+          "Self-Awareness",
+          "Inner Reflection"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/cats_eye.png"
+      },
+      {
+        "id": "tigers-eye",
+        "name": "Tiger's Eye",
+        "subtitle": "The Stone of Courage",
+        "description": "Tiger's Eye is a golden-brown gemstone known for its distinctive silky chatoyancy and bands of light. In traditional crystal practices, it is associated with courage, grounding, confidence, focus, and balanced decision-making.",
+        "benefits": [
+          "Courage",
+          "Confidence",
+          "Focus",
+          "Grounding",
+          "Protection",
+          "Emotional Balance"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/tigers_eye.png"
+      },
+      {
+        "id": "quartz-cats-eye",
+        "name": "Quartz Cat's Eye",
+        "subtitle": "The Stone of Clarity",
+        "description": "Quartz Cat's Eye is a variety of quartz displaying a characteristic cat's-eye effect caused by aligned internal inclusions. Its distinctive appearance makes it a popular gemstone for spiritual and decorative purposes, while crystal traditions associate it with focus, intuition, clarity, and inner awareness.",
+        "benefits": [
+          "Intuition",
+          "Focus",
+          "Clarity",
+          "Self-Awareness",
+          "Spiritual Growth",
+          "Inner Reflection"
+        ],
+        "formats": [
+          "Loose Gemstone",
+          "Ring",
+          "Pendant"
+        ],
+        "image": "/images/gemstones/quartz_cats_eye.png"
+      }
+    ]
+  }
+}
