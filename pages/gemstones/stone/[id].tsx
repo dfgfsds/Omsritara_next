@@ -530,7 +530,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
             >
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent opacity-0 group-active:opacity-100 transition-opacity"></div>
-                
+
                 <div className="relative z-10 flex flex-col items-center gap-3">
                     <div className="bg-gradient-to-br from-[#d4af37] to-[#b8860b] p-1.5 rounded-full shadow-inner relative">
                         <MessageSquare size={14} className="text-white relative z-10" />
@@ -563,8 +563,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const id = params?.id as string;
 
-    let foundStone = null;
-    let foundMonth = null;
+    let foundStone: any = null;
+    let foundMonth: any = null;
 
     Object.entries(allCategoriesData).forEach(([month, data]: [string, any]) => {
         const stone = data.stones.find((s: Stone) => s.id === id);
