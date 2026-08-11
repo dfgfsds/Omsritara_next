@@ -38,10 +38,19 @@ type MonthData = {
 interface BirthstonePageProps {
     monthData: MonthData;
     month: string;
+    redirectUrl?: string;
 }
 
-export default function BirthstonePage({ monthData, month }: BirthstonePageProps) {
+export default function BirthstonePage({ monthData, month, redirectUrl }: BirthstonePageProps) {
     const router = useRouter();
+
+    React.useEffect(() => {
+        if (redirectUrl) {
+            router.replace(redirectUrl);
+        }
+    }, [redirectUrl, router]);
+
+    if (redirectUrl) return null;
 
     if (!monthData) return <div className="text-center py-20 text-2xl font-bold">Month not found</div>;
 
@@ -266,20 +275,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         };
     }
 
-    // Redirect to the first stone's full data page
-    if (monthData.stones && monthData.stones.length > 0) {
-        return {
-            redirect: {
-                destination: `/gemstones/stone/${monthData.stones[0].id}`,
-                permanent: false,
-            }
-        };
+    // Pass redirectUrl if there is only 1 stone to avoid category page with 1 item
+    let redirectUrl: string | null = null;
+    if (monthData.stones && monthData.stones.length === 1) {
+        redirectUrl = `/gemstones/stone/${monthData.stones[0].id}`;
     }
 
     return {
         props: {
             monthData,
-            month: monthKey
+            month: monthKey,
+            ...(redirectUrl && { redirectUrl })
         }
     };
 };
