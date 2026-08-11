@@ -15,7 +15,7 @@
     ],
     "stones": [
       {
-        "id": "ruby",
+        "id": "sun1",
         "name": "Ruby (Manik)",
         "subtitle": "Principal Gemstone of the Sun",
         "description": "Ruby, traditionally known as Manik or Manikya, is the principal gemstone associated with the Sun in Vedic astrology. Its vibrant red colour and natural brilliance have long been connected symbolically with confidence, leadership, vitality, individuality, and personal strength.",
@@ -32,7 +32,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/ruby.png"
+        "image": "/img/planet/Sun Gemstones/1.webp",
+        "images": [
+          "/img/planet/Sun Gemstones/1.webp",
+          "/img/planet/Sun Gemstones/2.webp",
+          "/img/planet/Sun Gemstones/3.webp",
+          "/img/planet/Sun Gemstones/4.webp"
+        ],
+        "video": "/img/planet-video/Sun Gemstone.mp4"
       },
       {
         "id": "sunstone",
@@ -92,7 +99,7 @@
     ],
     "stones": [
       {
-        "id": "pearl",
+        "id": "moon-chandra-1",
         "name": "Pearl (Moti)",
         "subtitle": "Principal Gemstone of the Moon",
         "description": "Pearl, traditionally known as Moti, is the principal gemstone associated with the Moon in Vedic astrology. Its natural lustre and soft white appearance have long been symbolically connected with calmness, emotional balance, intuition, nurturing energy, and inner harmony.",
@@ -109,7 +116,15 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/pearl.png"
+        "image": "/img/planet/Moon (Chandra) Gemstones/1.webp",
+        "images": [
+          "/img/planet/Moon (Chandra) Gemstones/1.webp",
+          "/img/planet/Moon (Chandra) Gemstones/2.webp",
+          "/img/planet/Moon (Chandra) Gemstones/3.webp",
+          "/img/planet/Moon (Chandra) Gemstones/4.webp",
+          "/img/planet/Moon (Chandra) Gemstones/5.webp"
+        ],
+        "video": "/img/planet-video/Moon (Chandra) Gemstones.mp4"
       },
       {
         "id": "moonstone",
@@ -123,13 +138,7 @@
           "Inner Peace",
           "Spiritual Growth",
           "Self-Awareness"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/moonstone.png"
+        ]
       },
       {
         "id": "white-agate",
@@ -143,13 +152,7 @@
           "Stability",
           "Positive Energy",
           "Spiritual Growth"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/white_agate.png"
+        ]
       },
       {
         "id": "white-coral",
@@ -163,13 +166,7 @@
           "Spiritual Growth",
           "Positive Energy",
           "Inner Harmony"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/white_coral.png"
+        ]
       }
     ]
   },
@@ -189,7 +186,7 @@
     ],
     "stones": [
       {
-        "id": "red-coral",
+        "id": "mars-mangal-1",
         "name": "Red Coral (Moonga)",
         "subtitle": "Principal Gemstone of Mars",
         "description": "Red Coral, traditionally known as Moonga, is the principal gemstone associated with Mars in Vedic astrology. Its natural red colour and organic origin give it a distinctive appearance, while traditional gemstone practices associate it with courage, confidence, determination, initiative, and personal strength.",
@@ -206,7 +203,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/red_coral.png"
+        "image": "/img/planet/mars-gemstones/1.webp",
+        "images": [
+          "/img/planet/mars-gemstones/1.webp",
+          "/img/planet/mars-gemstones/2.webp",
+          "/img/planet/mars-gemstones/3.webp",
+          "/img/planet/mars-gemstones/4.webp"
+        ],
+        "video": "/img/planet-video/Mars (Mangal) Gemstones.mp4"
       },
       {
         "id": "carnelian",
@@ -220,13 +224,7 @@
           "Creativity",
           "Determination",
           "Positive Energy"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/carnelian.png"
+        ]
       },
       {
         "id": "red-jasper",
@@ -240,13 +238,7 @@
           "Determination",
           "Emotional Balance",
           "Protection"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/red_jasper.png"
+        ]
       }
     ]
   },
@@ -266,7 +258,7 @@
     ],
     "stones": [
       {
-        "id": "emerald",
+        "id": "emerald-panna",
         "name": "Emerald (Panna)",
         "subtitle": "Principal Gemstone of Mercury",
         "description": "Emerald, traditionally known as Panna, is the principal gemstone associated with Mercury in Vedic astrology. Its rich green colour and natural brilliance have long been admired, while traditional gemstone practices associate it with communication, intellect, learning, clarity, and confidence in self-expression.",
@@ -283,7 +275,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/emerald.png"
+        "image": "/img/planet/Mercury Gemstones /1.webp",
+        "images": [
+          "/img/planet/Mercury Gemstones/1.webp",
+          "/img/planet/Mercury Gemstones/2.webp",
+          "/img/planet/Mercury Gemstones/3.webp",
+          "/img/planet/Mercury Gemstones/4.webp"
+        ],
+        "video": "/img/planet-video/Mercury Gemstones.mp4"
       },
       {
         "id": "green-tourmaline",
@@ -297,13 +296,7 @@
           "Clarity",
           "Personal Growth",
           "Positive Energy"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/green_tourmaline.png"
+        ]
       },
       {
         "id": "peridot",
@@ -317,13 +310,7 @@
           "Positive Energy",
           "Personal Growth",
           "Relationships"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/peridot.png"
+        ]
       }
     ]
   },
@@ -343,7 +330,7 @@
     ],
     "stones": [
       {
-        "id": "yellow-sapphire",
+        "id": "jupiter-guru-1",
         "name": "Yellow Sapphire (Pukhraj)",
         "subtitle": "Principal Gemstone of Jupiter",
         "description": "Yellow Sapphire, traditionally known as Pukhraj, is the principal gemstone associated with Jupiter in Vedic astrology. Its bright yellow to golden colour and natural brilliance have long been admired, while traditional gemstone practices associate it with wisdom, knowledge, prosperity, confidence, learning, and spiritual growth.",
@@ -360,7 +347,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/yellow_sapphire.png"
+        "image": "/img/planet/Jupiter (Guru) Gemstones/1.webp",
+        "images": [
+          "/img/planet/Jupiter (Guru) Gemstones/1.webp",
+          "/img/planet/Jupiter (Guru) Gemstones/4.webp",
+          "/img/planet/Jupiter (Guru) Gemstones/3.webp",
+          "/img/planet/Jupiter (Guru) Gemstones/2.webp"
+        ],
+        "video": "/img/planet-video/Jupiter (Guru) Gemstones.mp4"
       },
       {
         "id": "yellow-tourmaline",
@@ -374,13 +368,7 @@
           "Creativity",
           "Positive Energy",
           "Clarity"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/yellow_tourmaline.png"
+        ]
       },
       {
         "id": "lapis-lazuli-jupiter",
@@ -394,13 +382,7 @@
           "Spiritual Growth",
           "Clarity",
           "Inner Reflection"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/lapis_lazuli.png"
+        ]
       }
     ]
   },
@@ -420,7 +402,7 @@
     ],
     "stones": [
       {
-        "id": "white-sapphire",
+        "id": "venus-shukra-stones",
         "name": "White Sapphire",
         "subtitle": "Principal Gemstone of Venus",
         "description": "White Sapphire is a naturally occurring colourless variety of Sapphire known for its clarity, brilliance, and elegant appearance. In traditional Vedic gemstone practices, it is associated with Venus and symbolically represents harmony, refinement, creativity, relationships, and appreciation of beauty.",
@@ -437,7 +419,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/white_sapphire.png"
+        "image": "/img/planet/Venus (Shukra) Gemstones/1.webp",
+        "images": [
+          "/img/planet/Venus (Shukra) Gemstones/1.webp",
+          "/img/planet/Venus (Shukra) Gemstones/2.webp",
+          "/img/planet/Venus (Shukra) Gemstones/3.webp",
+          "/img/planet/Venus (Shukra) Gemstones/4.webp"
+        ],
+        "video": "/img/planet-video/Venus (Shukra) Gemstones.mp4"
       },
       {
         "id": "opal",
@@ -451,13 +440,7 @@
           "Beauty",
           "Harmony",
           "Self-Expression"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/opal.png"
+        ]
       },
       {
         "id": "colorless-zircon",
@@ -471,13 +454,7 @@
           "Relationships",
           "Creativity",
           "Positive Energy"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/colorless_zircon.png"
+        ]
       }
     ]
   },
@@ -497,7 +474,7 @@
     ],
     "stones": [
       {
-        "id": "blue-sapphire",
+        "id": "saturn-shani-1",
         "name": "Blue Sapphire (Neelam)",
         "subtitle": "Principal Gemstone of Saturn",
         "description": "Blue Sapphire, traditionally known as Neelam, is the principal gemstone associated with Saturn in Vedic astrology. Its deep blue colour and exceptional brilliance have made it one of the most significant gemstones in traditional astrological practices, where it is symbolically associated with discipline, focus, responsibility, perseverance, and stability.",
@@ -514,7 +491,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/blue_sapphire.png"
+        "image": "/img/planet/Saturn (Shani) Gemstones/1.webp",
+        "images": [
+          "/img/planet/Saturn (Shani) Gemstones/1.webp",
+          "/img/planet/Saturn (Shani) Gemstones/2.webp",
+          "/img/planet/Saturn (Shani) Gemstones/3.webp",
+          "/img/planet/Saturn (Shani) Gemstones/4.webp"
+        ],
+        "video": "/img/planet-video/Saturn (Shani) Gemstones.mp4"
       },
       {
         "id": "lapis-lazuli-saturn",
@@ -528,13 +512,7 @@
           "Spiritual Growth",
           "Inner Reflection",
           "Emotional Balance"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/lapis_lazuli.png"
+        ]
       },
       {
         "id": "amethyst",
@@ -548,13 +526,7 @@
           "Spiritual Growth",
           "Inner Reflection",
           "Clarity"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/amethyst.png"
+        ]
       }
     ]
   },
@@ -591,7 +563,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/hessonite.png"
+        "image": "/img/planet/Rahu Gemstones/1.webp",
+        "images": [
+          "/img/planet/Rahu Gemstones/1.webp",
+          "/img/planet/Rahu Gemstones/2.webp",
+          "/img/planet/Rahu Gemstones/3.webp",
+          "/img/planet/Rahu Gemstones/4.webp"
+        ],
+        "video": "/img/planet-video/Rahu Gemstones.mp4"
       },
       {
         "id": "orange-zircon",
@@ -605,13 +584,7 @@
           "Positive Energy",
           "Self-Expression",
           "Personal Growth"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/orange_zircon.png"
+        ]
       },
       {
         "id": "spessartite",
@@ -625,13 +598,7 @@
           "Courage",
           "Positive Energy",
           "Personal Growth"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/spessartite_garnet.png"
+        ]
       }
     ]
   },
@@ -668,7 +635,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/cats_eye.png"
+        "image": "/img/planet/Ketu Gemstones/1.webp",
+        "images": [
+          "/img/planet/Ketu Gemstones/1.webp",
+          "/img/planet/Ketu Gemstones/2.webp",
+          "/img/planet/Ketu Gemstones/3.webp",
+          "/img/planet/Ketu Gemstones/4.webp"
+        ],
+        "video": "/img/planet-video/Ketu Gemstones.mp4"
       },
       {
         "id": "tigers-eye",
@@ -682,13 +656,7 @@
           "Grounding",
           "Protection",
           "Emotional Balance"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/tigers_eye.png"
+        ]
       },
       {
         "id": "quartz-cats-eye",
@@ -702,13 +670,7 @@
           "Self-Awareness",
           "Spiritual Growth",
           "Inner Reflection"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/quartz_cats_eye.png"
+        ]
       }
     ]
   }

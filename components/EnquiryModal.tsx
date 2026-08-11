@@ -46,7 +46,7 @@ export default function EnquiryModal({ isOpen, onClose, stone, currentFormat, se
         e.preventDefault();
         setLoading(true);
         setError(null);
-        
+
         try {
             const response = await fetch("https://api.ftdigitalsolutions.in/omsritara/gemz/", {
                 method: "POST",
@@ -58,22 +58,22 @@ export default function EnquiryModal({ isOpen, onClose, stone, currentFormat, se
 
             const contentType = response.headers.get("content-type");
             let data: any = {};
-            
+
             if (contentType && contentType.indexOf("application/json") !== -1) {
                 data = await response.json();
             } else {
                 const text = await response.text();
                 try {
                     data = JSON.parse(text);
-                } catch(e) {
+                } catch (e) {
                     data = { message: text || "An unexpected error occurred." };
                 }
             }
-            
+
             if (!response.ok || data.status === 'error' || data.error) {
                 throw new Error(data.message || data.error || data.msg || "Something went wrong. Please try again.");
             }
-            
+
             setSuccess(true);
         } catch (err: any) {
             setError(err.message || "Failed to submit enquiry.");
@@ -117,7 +117,7 @@ export default function EnquiryModal({ isOpen, onClose, stone, currentFormat, se
                             <p className="text-center text-gray-600 mb-8 text-sm font-medium px-4">
                                 Thank you for your interest. Our gemstone experts will contact you shortly.
                             </p>
-                            <button 
+                            <button
                                 onClick={onClose}
                                 className="px-8 py-3 rounded-xl bg-gray-900 text-white font-bold text-sm shadow-md hover:bg-gray-800 hover:-translate-y-0.5 transition-all"
                             >
@@ -160,7 +160,7 @@ export default function EnquiryModal({ isOpen, onClose, stone, currentFormat, se
                                         <span className="font-medium">{error}</span>
                                     </div>
                                 )}
-                                
+
                                 {/* Inputs with elegant styling */}
                                 <div className="relative group">
                                     <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 ml-1 group-focus-within:text-[#8B0000] transition-colors">Full Name</label>

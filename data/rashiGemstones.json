@@ -20,7 +20,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Mesham/1.webp",
+        "images": [
+          "/img/Raasi/Mesham/1.webp",
+          "/img/Raasi/Mesham/2.webp",
+          "/img/Raasi/Mesham/3.webp",
+          "/img/Raasi/Mesham/4.webp"
+        ],
+        "video": "/img/raasi-video/MESHAM.mp4"
       },
       {
         "id": "carnelian-mesham",
@@ -31,13 +38,7 @@
           "Boosts motivation and self-confidence.",
           "Encourages creativity and clear communication.",
           "Promotes emotional balance and positive thinking."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "red-jasper-mesham",
@@ -48,13 +49,7 @@
           "Promotes stability, patience, and emotional resilience.",
           "Improves focus, discipline, and concentration.",
           "Enhances endurance and inner strength during challenges."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -79,7 +74,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Rishabam/1.webp",
+        "images": [
+          "/img/Raasi/Rishabam/1.webp",
+          "/img/Raasi/Rishabam/4.webp",
+          "/img/Raasi/Rishabam/3.webp",
+          "/img/Raasi/Rishabam/2.webp"
+        ],
+        "video": "/img/raasi-video/RISHABAM.mp4"
       },
       {
         "id": "white-sapphire-rishabam",
@@ -90,13 +92,7 @@
           "Promotes prosperity and career growth.",
           "Encourages peace, emotional balance, and harmonious relationships.",
           "Improves confidence, wisdom, and decision-making."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "opal-rishabam",
@@ -107,13 +103,7 @@
           "Enhances creativity, imagination, and artistic expression.",
           "Strengthens love, emotional well-being, and family harmony.",
           "Attracts prosperity, confidence, and positive opportunities."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -138,7 +128,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Mithunam/1.webp",
+        "images": [
+          "/img/Raasi/Mithunam/1.webp",
+          "/img/Raasi/Mithunam/2.webp",
+          "/img/Raasi/Mithunam/4.webp",
+          "/img/Raasi/Mithunam/3.webp"
+        ],
+        "video": "/img/raasi-video/MITHUNAM.mp4"
       },
       {
         "id": "green-onyx-mithunam",
@@ -149,13 +146,7 @@
           "Improves focus, confidence, and self-expression.",
           "Promotes emotional balance and logical thinking.",
           "Encourages better communication and positive decision-making."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "peridot-mithunam",
@@ -166,13 +157,7 @@
           "Attracts prosperity, abundance, and positive energy.",
           "Enhances creativity, confidence, and mental clarity.",
           "Supports emotional healing and personal growth."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -197,7 +182,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Kadagam/1.webp",
+        "images": [
+          "/img/Raasi/Kadagam/1.webp",
+          "/img/Raasi/Kadagam/2.webp",
+          "/img/Raasi/Kadagam/3.webp",
+          "/img/Raasi/Kadagam/4.webp"
+        ],
+        "video": "/img/raasi-video/KADAGAM.mp4"
       },
       {
         "id": "moonstone-kadagam",
@@ -208,13 +200,7 @@
           "Strengthens intuition and emotional balance.",
           "Encourages calmness, patience, and peaceful relationships.",
           "Supports creativity, restful sleep, and spiritual awareness."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "white-opal-kadagam",
@@ -225,13 +211,7 @@
           "Promotes emotional healing and positive thinking.",
           "Enhances creativity, confidence, and self-expression.",
           "Encourages harmonious relationships and personal growth."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -256,7 +236,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Simmam/1.webp",
+        "images": [
+          "/img/Raasi/Simmam/1.webp",
+          "/img/Raasi/Simmam/2.webp",
+          "/img/Raasi/Simmam/3.webp",
+          "/img/Raasi/Simmam/4.webp"
+        ],
+        "video": "/img/raasi-video/SINMAM.mp4"
       },
       {
         "id": "red-spinel-simmam",
@@ -267,13 +254,7 @@
           "Boosts confidence, resilience, and self-belief.",
           "Encourages leadership, motivation, and determination.",
           "Promotes emotional balance and positive thinking."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "red-garnet-simmam",
@@ -284,13 +265,7 @@
           "Increases energy, vitality, and endurance.",
           "Strengthens courage, commitment, and perseverance.",
           "Supports confidence, career growth, and emotional stability."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -315,7 +290,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Kanni/1.webp",
+        "images": [
+          "/img/Raasi/Kanni/1.webp",
+          "/img/Raasi/Kanni/2.webp",
+          "/img/Raasi/Kanni/3.webp",
+          "/img/Raasi/Kanni/4.webp"
+        ],
+        "video": "/img/raasi-video/KANNI.mp4"
       },
       {
         "id": "green-jade-kanni",
@@ -326,13 +308,7 @@
           "Promotes wisdom, patience, and balanced decisions.",
           "Attracts prosperity and financial stability.",
           "Encourages emotional calmness and inner peace."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "peridot-kanni",
@@ -343,13 +319,7 @@
           "Enhances confidence, focus, and mental clarity.",
           "Encourages creativity, optimism, and positive thinking.",
           "Attracts prosperity while supporting emotional healing."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -374,7 +344,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Thulam/1.webp",
+        "images": [
+          "/img/Raasi/Thulam/1.webp",
+          "/img/Raasi/Thulam/2.webp",
+          "/img/Raasi/Thulam/3.webp",
+          "/img/Raasi/Thulam/4.webp"
+        ],
+        "video": "/img/raasi-video/THULAM.mp4"
       },
       {
         "id": "white-sapphire-thulam",
@@ -385,13 +362,7 @@
           "Promotes prosperity, success, and good fortune.",
           "Encourages harmonious relationships and emotional balance.",
           "Improves confidence, clarity, and wise decision-making."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "opal-thulam",
@@ -402,13 +373,7 @@
           "Enhances creativity, imagination, and self-expression.",
           "Attracts love, happiness, and harmonious relationships.",
           "Promotes emotional healing, optimism, and prosperity."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -433,7 +398,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Viruchigam/1.webp",
+        "images": [
+          "/img/Raasi/Viruchigam/1.webp",
+          "/img/Raasi/Viruchigam/2.webp",
+          "/img/Raasi/Viruchigam/3.webp",
+          "/img/Raasi/Viruchigam/4.webp"
+        ],
+        "video": "/img/raasi-video/VIRICHIGAM.mp4"
       },
       {
         "id": "carnelian-viruchigam",
@@ -444,13 +416,7 @@
           "Boosts confidence, motivation, and optimism.",
           "Encourages creativity, communication, and self-expression.",
           "Promotes emotional balance and determination."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "bloodstone-viruchigam",
@@ -461,13 +427,7 @@
           "Enhances courage, endurance, and resilience.",
           "Improves focus, discipline, and balanced decision-making.",
           "Encourages confidence, emotional stability, and positive energy."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -492,7 +452,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Dhanusu/1.webp",
+        "images": [
+          "/img/Raasi/Dhanusu/1.webp",
+          "/img/Raasi/Dhanusu/3.webp",
+          "/img/Raasi/Dhanusu/2.webp",
+          "/img/Raasi/Dhanusu/4.webp"
+        ],
+        "video": "/img/raasi-video/DHANUSU.mp4"
       },
       {
         "id": "yellow-topaz-dhanusu",
@@ -503,13 +470,7 @@
           "Promotes confidence, optimism, and mental clarity.",
           "Attracts prosperity and professional success.",
           "Encourages creativity, focus, and positive thinking."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "citrine-dhanusu",
@@ -520,13 +481,7 @@
           "Attracts abundance, wealth, and new opportunities.",
           "Enhances confidence, creativity, and motivation.",
           "Promotes positivity, emotional balance, and career growth."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -551,7 +506,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Magaram/1.webp",
+        "images": [
+          "/img/Raasi/Magaram/1.webp",
+          "/img/Raasi/Magaram/2.webp",
+          "/img/Raasi/Magaram/3.webp",
+          "/img/Raasi/Magaram/4.webp"
+        ],
+        "video": "/img/raasi-video/MAGARAM.mp4"
       },
       {
         "id": "amethyst-magaram",
@@ -562,13 +524,7 @@
           "Promotes inner peace, patience, and emotional stability.",
           "Improves concentration, clarity, and wise decision-making.",
           "Reduces stress while encouraging discipline and positive habits."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "lapis-lazuli-magaram",
@@ -579,13 +535,7 @@
           "Enhances wisdom, confidence, and intellectual clarity.",
           "Improves communication and balanced decision-making.",
           "Encourages self-awareness, discipline, and emotional strength."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -610,7 +560,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/kumbam/1.webp",
+        "images": [
+          "/img/Raasi/kumbam/1.webp",
+          "/img/Raasi/kumbam/2.webp",
+          "/img/Raasi/kumbam/3.webp",
+          "/img/Raasi/kumbam/4.webp"
+        ],
+        "video": "/img/raasi-video/kumbam-raasi.mp4"
       },
       {
         "id": "amethyst-kumbam",
@@ -621,13 +578,7 @@
           "Promotes calmness, patience, and emotional stability.",
           "Improves concentration, clarity, and wise decision-making.",
           "Encourages self-discipline, resilience, and positive thinking."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "iolite-kumbam",
@@ -638,13 +589,7 @@
           "Enhances mental clarity, focus, and intuition.",
           "Strengthens confidence, discipline, and independent thinking.",
           "Encourages emotional balance, perseverance, and self-discovery."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   },
@@ -669,7 +614,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/gemstones/default.png"
+        "image": "/img/Raasi/Meenam/1.webp",
+        "images": [
+          "/img/Raasi/Meenam/1.webp",
+          "/img/Raasi/Meenam/2.webp",
+          "/img/Raasi/Meenam/3.webp",
+          "/img/Raasi/Meenam/4.webp"
+        ],
+        "video": "/img/raasi-video/MEENAM.mp4"
       },
       {
         "id": "citrine-meenam",
@@ -680,13 +632,7 @@
           "Attracts prosperity, abundance, and business success.",
           "Boosts confidence, creativity, and motivation.",
           "Promotes positivity, emotional well-being, and personal growth."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       },
       {
         "id": "yellow-topaz-meenam",
@@ -697,13 +643,7 @@
           "Enhances wisdom, focus, and mental clarity.",
           "Encourages confidence, optimism, and positive thinking.",
           "Supports prosperity, career success, and personal development."
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/gemstones/default.png"
+        ]
       }
     ]
   }

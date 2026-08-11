@@ -37,16 +37,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/img/birthstones/June-Birthstones/1.webp",
+        "image": "/img/birthstones/January-Birthstones/1.webp",
         "images": [
-          "/img/birthstones/June-Birthstones/1.webp",
-          "/img/birthstones/June-Birthstones/2.webp",
-          "/img/birthstones/June-Birthstones/3.webp",
-          "/img/birthstones/June-Birthstones/4.webp",
-          "/img/birthstones/June-Birthstones/5.webp",
-          "/img/birthstones/June-Birthstones/6.webp",
-          "/img/birthstones/June-Birthstones/7.webp"
-        ]
+          "/img/birthstones/January-Birthstones/1.webp",
+          "/img/birthstones/January-Birthstones/2.webp",
+          "/img/birthstones/January-Birthstones/3.webp",
+          "/img/birthstones/January-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/JAN.mp4"
       },
       {
         "id": "rose-quartz",
@@ -61,13 +59,7 @@
           "Self-Love",
           "Positive Relationships",
           "Calmness"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/rose_quartz.png"
+        ]
       },
       {
         "id": "red-jasper",
@@ -82,13 +74,7 @@
           "Focus",
           "Determination",
           "Positive Energy"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/red_jasper.png"
+        ]
       }
     ]
   },
@@ -130,7 +116,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/amethyst.png"
+        "image": "/img/birthstones/February-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/February-Birthstones/1.webp",
+          "/img/birthstones/February-Birthstones/2.webp",
+          "/img/birthstones/February-Birthstones/3.webp",
+          "/img/birthstones/February-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/FEB.mp4"
       },
       {
         "id": "clear-quartz",
@@ -145,13 +138,7 @@
           "Concentration",
           "Spiritual Awareness",
           "Motivation"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/clear_quartz.png"
+        ]
       },
       {
         "id": "fluorite",
@@ -166,13 +153,7 @@
           "Decision Making",
           "Confidence",
           "Positive Thinking"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/fluorite.png"
+        ]
       }
     ]
   },
@@ -214,7 +195,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/aquamarine.png"
+        "image": "/img/birthstones/March-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/March-Birthstones/1.webp",
+          "/img/birthstones/March-Birthstones/2.webp",
+          "/img/birthstones/March-Birthstones/3.webp",
+          "/img/birthstones/March-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/MAR.mp4"
       },
       {
         "id": "bloodstone",
@@ -229,13 +217,7 @@
           "Determination",
           "Confidence",
           "Resilience"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/bloodstone.png"
+        ]
       },
       {
         "id": "amazonite",
@@ -250,13 +232,7 @@
           "Positive Communication",
           "Optimism",
           "Inner Peace"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/amazonite.png"
+        ]
       }
     ]
   },
@@ -298,7 +274,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/diamond.png"
+        "image": "/img/birthstones/April-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/April-Birthstones/1.webp",
+          "/img/birthstones/April-Birthstones/2.webp",
+          "/img/birthstones/April-Birthstones/3.webp",
+          "/img/birthstones/April-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/APR.mp4"
       },
       {
         "id": "white-sapphire",
@@ -313,13 +296,7 @@
           "Confidence",
           "Positive Thinking",
           "Spiritual Growth"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/white_sapphire.png"
+        ]
       },
       {
         "id": "clear-quartz-april",
@@ -334,13 +311,7 @@
           "Emotional Well-being",
           "Spiritual Growth",
           "Motivation"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/clear_quartz.png"
+        ]
       }
     ]
   },
@@ -382,7 +353,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/emerald.png"
+        "image": "/img/birthstones/May-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/May-Birthstones/1.webp",
+          "/img/birthstones/May-Birthstones/2.webp",
+          "/img/birthstones/May-Birthstones/3.webp",
+          "/img/birthstones/May-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/MAY.mp4"
       },
       {
         "id": "green-aventurine",
@@ -397,13 +375,7 @@
           "Motivation",
           "Success",
           "Positive Energy"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/green_aventurine.png"
+        ]
       },
       {
         "id": "jade",
@@ -423,8 +395,7 @@
           "Loose Gemstone",
           "Ring",
           "Pendant"
-        ],
-        "image": "/images/birthstones/jade.png"
+        ]
       }
     ]
   },
@@ -466,7 +437,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/pearl.png"
+        "image": "/img/birthstones/June-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/June-Birthstones/1.webp",
+          "/img/birthstones/June-Birthstones/2.webp",
+          "/img/birthstones/June-Birthstones/3.webp",
+          "/img/birthstones/June-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/JUN.mp4"
       },
       {
         "id": "moonstone",
@@ -481,13 +459,7 @@
           "Confidence",
           "Inner Balance",
           "Calmness"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/moonstone.png"
+        ]
       },
       {
         "id": "alexandrite",
@@ -502,13 +474,7 @@
           "Adaptability",
           "Personal Growth",
           "Good Fortune"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/alexandrite.png"
+        ]
       }
     ]
   },
@@ -550,7 +516,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/ruby.png"
+        "image": "/img/birthstones/July-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/July-Birthstones/1.webp",
+          "/img/birthstones/July-Birthstones/2.webp",
+          "/img/birthstones/July-Birthstones/3.webp",
+          "/img/birthstones/July-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/JUL.mp4"
       },
       {
         "id": "carnelian",
@@ -565,13 +538,7 @@
           "Enthusiasm",
           "Success",
           "Positive Thinking"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/carnelian.png"
+        ]
       },
       {
         "id": "red-spinel",
@@ -586,13 +553,7 @@
           "Inner Strength",
           "Positive Energy",
           "Personal Growth"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/red_spinel.png"
+        ]
       }
     ]
   },
@@ -634,7 +595,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/peridot.png"
+        "image": "/img/birthstones/August-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/August-Birthstones/1.webp",
+          "/img/birthstones/August-Birthstones/2.webp",
+          "/img/birthstones/August-Birthstones/3.webp",
+          "/img/birthstones/August-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/AUG.mp4"
       },
       {
         "id": "sardonyx",
@@ -649,13 +617,7 @@
           "Confidence",
           "Determination",
           "Positive Thinking"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/sardonyx.png"
+        ]
       },
       {
         "id": "spinel",
@@ -670,13 +632,7 @@
           "Motivation",
           "Personal Growth",
           "Positive Energy"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/spinel.png"
+        ]
       }
     ]
   },
@@ -718,7 +674,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/blue_sapphire.png"
+        "image": "/img/birthstones/September-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/September-Birthstones/1.webp",
+          "/img/birthstones/September-Birthstones/2.webp",
+          "/img/birthstones/September-Birthstones/3.webp",
+          "/img/birthstones/September-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/SEP.mp4"
       },
       {
         "id": "lapis-lazuli",
@@ -733,13 +696,7 @@
           "Confidence",
           "Spiritual Awareness",
           "Emotional Balance"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/lapis_lazuli.png"
+        ]
       },
       {
         "id": "sodalite",
@@ -754,13 +711,7 @@
           "Focus",
           "Communication",
           "Positive Thinking"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/sodalite.png"
+        ]
       }
     ]
   },
@@ -802,7 +753,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/opal.png"
+        "image": "/img/birthstones/October-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/October-Birthstones/1.webp",
+          "/img/birthstones/October-Birthstones/2.webp",
+          "/img/birthstones/October-Birthstones/3.webp",
+          "/img/birthstones/October-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/OCT.mp4"
       },
       {
         "id": "tourmaline",
@@ -817,13 +775,7 @@
           "Inner Strength",
           "Resilience",
           "Positive Energy"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/tourmaline.png"
+        ]
       },
       {
         "id": "pink-tourmaline",
@@ -838,13 +790,7 @@
           "Harmony",
           "Inner Peace",
           "Positive Relationships"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/pink_tourmaline.png"
+        ]
       }
     ]
   },
@@ -886,7 +832,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/yellow_topaz.png"
+        "image": "/img/birthstones/November-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/November-Birthstones/1.webp",
+          "/img/birthstones/November-Birthstones/2.webp",
+          "/img/birthstones/November-Birthstones/3.webp",
+          "/img/birthstones/November-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/NOV.mp4"
       },
       {
         "id": "citrine",
@@ -901,13 +854,7 @@
           "Motivation",
           "Success",
           "Positive Thinking"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/citrine.png"
+        ]
       },
       {
         "id": "golden-tiger-eye",
@@ -922,13 +869,7 @@
           "Confidence",
           "Resilience",
           "Emotional Balance"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/golden_tiger_eye.png"
+        ]
       }
     ]
   },
@@ -970,7 +911,14 @@
           "Ring",
           "Pendant"
         ],
-        "image": "/images/birthstones/turquoise.png"
+        "image": "/img/birthstones/December-Birthstones/1.webp",
+        "images": [
+          "/img/birthstones/December-Birthstones/1.webp",
+          "/img/birthstones/December-Birthstones/2.webp",
+          "/img/birthstones/December-Birthstones/3.webp",
+          "/img/birthstones/December-Birthstones/4.webp"
+        ],
+        "video": "/img/birthstone-video/DEC.mp4"
       },
       {
         "id": "blue-topaz",
@@ -985,13 +933,7 @@
           "Self-Expression",
           "Emotional Balance",
           "Positive Thinking"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/blue_topaz.png"
+        ]
       },
       {
         "id": "tanzanite",
@@ -1006,13 +948,7 @@
           "Inner Wisdom",
           "Confidence",
           "Positive Energy"
-        ],
-        "formats": [
-          "Loose Gemstone",
-          "Ring",
-          "Pendant"
-        ],
-        "image": "/images/birthstones/tanzanite.png"
+        ]
       }
     ]
   }
