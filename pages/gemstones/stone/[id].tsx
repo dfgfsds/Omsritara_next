@@ -240,7 +240,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                             <div className="mb-8">
                                 <h3 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-widest">Traditionally Associated Benefits</h3>
                                 <div className="flex flex-wrap gap-2">
-                                    {stone?.benefits?.map(b => (
+                                    {stone.benefits?.map(b => (
                                         <span key={b} className="text-sm bg-gray-100 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-lg font-medium">{b}</span>
                                     ))}
                                 </div>
@@ -265,7 +265,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                                             <div className="mb-8">
                                                 <h3 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-widest">Traditionally Associated Benefits</h3>
                                                 <div className="flex flex-wrap gap-2">
-                                                    {otherStone?.benefits?.map(b => (
+                                                    {otherStone.benefits?.map(b => (
                                                         <span key={b} className="text-sm bg-gray-100 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-lg font-medium">{b}</span>
                                                     ))}
                                                 </div>
@@ -287,7 +287,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                             <div className="mb-6">
                                 <h3 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-widest">Available Formats</h3>
                                 <div className="flex flex-wrap gap-3">
-                                    {stone?.formats?.map(f => {
+                                    {stone.formats?.map(f => {
                                         const isSelected = currentFormat === f;
                                         return (
                                             <button
@@ -387,7 +387,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                                 </div>
                             </div>
 
-                            {monthData.about && (
+                            {monthData?.about && (
                                 <p className="mb-12 text-[#5a6a7c] text-lg md:text-xl leading-relaxed text-center md:text-justify font-light tracking-wide">
                                     {monthData.about}
                                 </p>
@@ -395,7 +395,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
 
                             {monthData.aboutList && monthData.aboutList.length > 0 && (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-14">
-                                    {monthData.aboutList?.map((item: any, index: number) => (
+                                    {monthData?.aboutList?.map((item: any, index: number) => (
                                         <div key={index} className="flex items-start gap-5 group">
                                             <div className="flex-shrink-0 mt-1.5 flex items-center justify-center">
                                                 <svg className="w-5 h-5 text-[#d4af37] transform transition-transform group-hover:scale-125 group-hover:rotate-180 duration-500" fill="currentColor" viewBox="0 0 24 24">
@@ -530,7 +530,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
             >
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent opacity-0 group-active:opacity-100 transition-opacity"></div>
-
+                
                 <div className="relative z-10 flex flex-col items-center gap-3">
                     <div className="bg-gradient-to-br from-[#d4af37] to-[#b8860b] p-1.5 rounded-full shadow-inner relative">
                         <MessageSquare size={14} className="text-white relative z-10" />
@@ -563,8 +563,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const id = params?.id as string;
 
-    let foundStone: any = null;
-    let foundMonth: any = null;
+    let foundStone: Stone | null = null;
+    let foundMonth: string | null = null;
 
     Object.entries(allCategoriesData).forEach(([month, data]: [string, any]) => {
         const stone = data.stones.find((s: Stone) => s.id === id);

@@ -90,7 +90,7 @@ export default function BirthstonePage({ monthData, month, redirectUrl }: Births
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {monthData.stones.map((stone) => (
+                    {monthData.stones?.map((stone) => (
                         <div key={stone.id} className="group bg-white rounded-[2rem] p-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col">
                             {/* Image Container */}
                             <div className="relative bg-[#e4e6e7] rounded-[1.5rem] p-6 h-[320px] flex items-center justify-center overflow-hidden">
@@ -167,7 +167,7 @@ export default function BirthstonePage({ monthData, month, redirectUrl }: Births
 
                             {monthData.aboutList && monthData.aboutList.length > 0 && (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-14">
-                                    {monthData.aboutList.map((item: any, index: number) => (
+                                    {monthData.aboutList?.map((item: any, index: number) => (
                                         <div key={index} className="flex items-start gap-5 group">
                                             <div className="flex-shrink-0 mt-1.5 flex items-center justify-center">
                                                 <svg className="w-5 h-5 text-[#d4af37] transform transition-transform group-hover:scale-125 group-hover:rotate-180 duration-500" fill="currentColor" viewBox="0 0 24 24">
@@ -236,23 +236,23 @@ export default function BirthstonePage({ monthData, month, redirectUrl }: Births
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const basePaths = Object.keys(allCategoriesData).map((category) => ({
+    const basePaths = Object.keys(allCategoriesData)?.map((category) => ({
         params: { month: category },
     }));
 
-    const suffixPathsBirthstones = Object.keys(birthstonesData).map((month) => ({
+    const suffixPathsBirthstones = Object.keys(birthstonesData)?.map((month) => ({
         params: { month: `${month}-birthstone` },
     }));
 
-    const suffixPathsPlanets = Object.keys(planetGemstonesData).map((planet) => ({
+    const suffixPathsPlanets = Object.keys(planetGemstonesData)?.map((planet) => ({
         params: { month: `${planet}-gemstones` },
     }));
 
-    const exactPathsOther = Object.keys(otherGemstonesData).map((slug) => ({
+    const exactPathsOther = Object.keys(otherGemstonesData)?.map((slug) => ({
         params: { month: slug },
     }));
 
-    const exactPathsRashi = Object.keys(rashiGemstonesData).map((slug) => ({
+    const exactPathsRashi = Object.keys(rashiGemstonesData)?.map((slug) => ({
         params: { month: slug },
     }));
 
@@ -275,9 +275,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         };
     }
 
-    // Pass redirectUrl if there is only 1 stone to avoid category page with 1 item
+    // Next.js throws a build error if getStaticProps returns 'redirect' while getStaticPaths has fallback: false.
+    // To preserve the redirection logic without breaking the build, we pass the redirectUrl to the client.
     let redirectUrl: string | null = null;
-    if (monthData.stones && monthData.stones.length === 1) {
+    if (monthData.stones && monthData.stones.length > 0) {
         redirectUrl = `/gemstones/stone/${monthData.stones[0].id}`;
     }
 
