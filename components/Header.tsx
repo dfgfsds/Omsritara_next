@@ -8,7 +8,8 @@ import {
     Heart,
     ChevronDown,
     Calendar,
-    Sparkles
+    Sparkles,
+    Phone
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -49,18 +50,18 @@ const gemstonesData = [
             "Sun Gemstones", "Moon (Chandra) Gemstones", "Mars (Mangal) Gemstones", "Mercury Gemstones", "Jupiter (Guru) Gemstones", "Venus (Shukra) Gemstones", "Saturn (Shani) Gemstones", "Rahu Gemstones", "Ketu Gemstones"
         ]
     },
-    {
-        title: "Precious Gemstones",
-        items: [
-            "Sulemani Red Hakik", "Iolite (Neeli)", "Sulemani Black Hakik", "Amethyst (Jamunia)", "Moon Stone", "Peridot", "Citrine (Sunela)", "Blue Topaz", "White Topaz", "Yellow Topaz"
-        ]
-    },
-    {
-        title: "Semi-Precious Gemstones",
-        items: [
-            "Pink Sapphire", "Purple Sapphire", "Blue Sapphire (Neelam)", "White Sapphire", "Bi-Color Sapphire (Pitambari)", "Padparadscha"
-        ]
-    },
+    // {
+    //     title: "Precious Gemstones",
+    //     items: [
+    //         "Sulemani Red Hakik", "Iolite (Neeli)", "Sulemani Black Hakik", "Amethyst (Jamunia)", "Moon Stone", "Peridot", "Citrine (Sunela)", "Blue Topaz", "White Topaz", "Yellow Topaz"
+    //     ]
+    // },
+    // {
+    //     title: "Semi-Precious Gemstones",
+    //     items: [
+    //         "Pink Sapphire", "Purple Sapphire", "Blue Sapphire (Neelam)", "White Sapphire", "Bi-Color Sapphire (Pitambari)", "Padparadscha"
+    //     ]
+    // },
 
     {
         title: "Birthstones",
@@ -152,9 +153,8 @@ const Header: React.FC = () => {
         setUser(null);
     };
 
-    // Helper for active style
     const isActive = (path: string) => {
-        if (path === "/") return pathname === "/"; // ✅ only active for exact match
+        if (path === "/") return pathname === "/";
         return pathname.startsWith(path);
     };
 
@@ -355,9 +355,9 @@ const Header: React.FC = () => {
                             </button>
 
                             {isGemstonesOpen && (
-                                <div className="absolute top-[calc(100%-1rem)] left-0 w-full z-[60] px-10">
-                                    <div className="bg-white border text-black rounded-md shadow-2xl text-sm p-8 max-h-[75vh] overflow-y-auto no-scrollbar relative cursor-default w-full">
-                                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
+                                <div className="absolute top-[calc(100%-1rem)] left-0 w-full z-[60] px-10 flex justify-center">
+                                    <div className="bg-white border text-black rounded-md shadow-2xl text-sm p-8 max-h-[75vh] overflow-y-auto no-scrollbar relative cursor-default w-full max-w-5xl">
+                                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-8">
                                             {gemstonesData.map((section) => (
                                                 <div key={section.title} className="flex flex-col">
                                                     <h3 className="font-bold text-[#a5291b] mb-3 border-b border-gray-200 pb-1 text-base">{section.title}</h3>
@@ -403,14 +403,14 @@ const Header: React.FC = () => {
                                                         Connect with certified astrologers & gemologists for highly personalized gemstone remedies and life guidance.
                                                     </p>
 
-                                                    <Link
-                                                        href="/consultation"
+                                                    <a
+                                                        href="tel:+917092973555"
                                                         onClick={() => setIsGemstonesOpen(false)}
                                                         className="relative overflow-hidden z-10 bg-white text-[#a5291b] border-2 border-[#a5291b] text-center py-2.5 px-4 rounded-xl font-bold text-sm shadow-sm group-hover:bg-[#a5291b] group-hover:text-white transform transition-all duration-300 hover:-translate-y-1 mt-auto flex items-center justify-center gap-2 w-full"
                                                     >
-                                                        <Calendar className="w-4 h-4" />
-                                                        <span>Book Now</span>
-                                                    </Link>
+                                                        <Phone className="w-4 h-4" />
+                                                        <span>Call Now</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -638,14 +638,14 @@ const Header: React.FC = () => {
                                                         Connect with certified astrologers for personalized gemstone remedies.
                                                     </p>
 
-                                                    <Link
-                                                        href="/consultation"
+                                                    <a
+                                                        href="tel:+918989052020"
                                                         className="relative overflow-hidden bg-white text-[#a5291b] border-2 border-[#a5291b] flex items-center justify-center gap-2 py-2 px-4 rounded-lg text-sm font-bold transition-all hover:bg-[#a5291b] hover:text-white"
                                                         onClick={closeMobileMenu}
                                                     >
-                                                        <Calendar className="w-4 h-4" />
-                                                        Book Now
-                                                    </Link>
+                                                        <Phone className="w-4 h-4" />
+                                                        Call Now
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

@@ -117,7 +117,7 @@ export default function BirthstonePage({ monthData, month }: BirthstonePageProps
                                     {/* Button */}
                                     <button
                                         onClick={() => router.push(`/gemstones/stone/${stone.id}`)}
-                                        className="w-full py-4 bg-red-800 text-white font-bold rounded-2xl hover:bg-[#0a192f] transition-colors duration-300 flex items-center justify-center gap-2 text-[13px] uppercase tracking-wider shadow-md">
+                                        className="w-full py-4 bg-gradient-to-r from-[#8B0000] via-[#8B0000] to-[#B8860B] bg-[length:200%_auto] hover:bg-right transition-all duration-500 text-white font-bold rounded-2xl flex items-center justify-center gap-2 text-[13px] uppercase tracking-wider shadow-md hover:shadow-lg hover:-translate-y-0.5">
                                         Enquiry Now
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                                     </button>
@@ -263,6 +263,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     if (!monthData) {
         return {
             notFound: true,
+        };
+    }
+
+    // Redirect to the first stone's full data page
+    if (monthData.stones && monthData.stones.length > 0) {
+        return {
+            redirect: {
+                destination: `/gemstones/stone/${monthData.stones[0].id}`,
+                permanent: false,
+            }
         };
     }
 

@@ -143,7 +143,7 @@ export default function SingleProductView({
     return (
         <>
             <Head>
-                <title>{productDetails?.name} | Om Sri Tara</title>
+                <title>{`${productDetails?.name} | Om Sri Tara`}</title>
                 <meta name="description" content={productDetails?.description_2 || productDetails?.name} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
