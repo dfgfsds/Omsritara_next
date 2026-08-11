@@ -157,7 +157,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                                     )}
 
                                     <div ref={scrollRef} className="flex gap-3 w-full justify-start overflow-x-auto pb-2 no-scrollbar px-1 scroll-smooth">
-                                        {galleryImages.map((imgSrc, idx) => (
+                                        {galleryImages?.map((imgSrc, idx) => (
                                             <button
                                                 key={idx}
                                                 onClick={() => {
@@ -240,7 +240,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                             <div className="mb-8">
                                 <h3 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-widest">Traditionally Associated Benefits</h3>
                                 <div className="flex flex-wrap gap-2">
-                                    {stone.benefits.map(b => (
+                                    {stone?.benefits?.map(b => (
                                         <span key={b} className="text-sm bg-gray-100 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-lg font-medium">{b}</span>
                                     ))}
                                 </div>
@@ -249,7 +249,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                             {/* Other Stones in the Category */}
                             {monthData?.stones && monthData.stones.filter(s => s.id !== stone.id).length > 0 && (
                                 <div className="flex flex-col">
-                                    {monthData.stones.filter(s => s.id !== stone.id).map(otherStone => (
+                                    {monthData.stones.filter(s => s.id !== stone.id)?.map(otherStone => (
                                         <div key={otherStone.id} className="pt-10 mt-10 border-t border-gray-100">
 
                                             <div className="mb-6 border-b border-gray-100 pb-6">
@@ -265,7 +265,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                                             <div className="mb-8">
                                                 <h3 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-widest">Traditionally Associated Benefits</h3>
                                                 <div className="flex flex-wrap gap-2">
-                                                    {otherStone.benefits.map(b => (
+                                                    {otherStone?.benefits?.map(b => (
                                                         <span key={b} className="text-sm bg-gray-100 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-lg font-medium">{b}</span>
                                                     ))}
                                                 </div>
@@ -287,7 +287,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                             <div className="mb-6">
                                 <h3 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-widest">Available Formats</h3>
                                 <div className="flex flex-wrap gap-3">
-                                    {stone.formats.map(f => {
+                                    {stone?.formats?.map(f => {
                                         const isSelected = currentFormat === f;
                                         return (
                                             <button
@@ -332,7 +332,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                                             { id: "Silver", name: "Silver", img: "/images/metals/silver.png" },
 
                                             { id: "Gold", name: "Gold", img: "/images/metals/gold.png" },
-                                        ].map((metal) => {
+                                        ]?.map((metal) => {
                                             const isSelected = selectedMetal === metal.id;
                                             return (
                                                 <button
@@ -395,7 +395,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
 
                             {monthData.aboutList && monthData.aboutList.length > 0 && (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-14">
-                                    {monthData.aboutList.map((item: any, index: number) => (
+                                    {monthData.aboutList?.map((item: any, index: number) => (
                                         <div key={index} className="flex items-start gap-5 group">
                                             <div className="flex-shrink-0 mt-1.5 flex items-center justify-center">
                                                 <svg className="w-5 h-5 text-[#d4af37] transform transition-transform group-hover:scale-125 group-hover:rotate-180 duration-500" fill="currentColor" viewBox="0 0 24 24">
