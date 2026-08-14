@@ -16,6 +16,8 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useQuery } from '@tanstack/react-query';
 import SearchBar from './SearchBar';
+import axios from 'axios';
+import { baseUrl } from '@/api-endpoints/ApiUrls';
 import logo from '@/public/logo.png';
 
 import { useProducts } from '@/context/ProductsContext';
@@ -147,7 +149,20 @@ const Header: React.FC = () => {
     const router = useRouter();
     const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
-    const logout = () => {
+    const logout = async () => {
+        try {
+            const userId = localStorage.getItem('userId');
+            if (userId && vendorId) {
+                await axios.post(`${baseUrl}/device/logout/`, {
+                    vendor_id: vendorId,
+                    device_id: 'BP4A.251205.006',
+                    user_id: parseInt(userId, 10)
+                });
+            }
+        } catch (error) {
+            console.error('Logout API error:', error);
+        }
+
         ['userId', 'userName', 'email', 'cartId'].forEach((k) =>
             localStorage.removeItem(k)
         );

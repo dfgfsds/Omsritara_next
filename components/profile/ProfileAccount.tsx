@@ -7,6 +7,8 @@ import { useVendor } from '@/context/VendorContext';
 import { InvalidateQueryFilters, useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
 import { Loader } from 'lucide-react';
+import axios from 'axios';
+import { baseUrl } from '@/api-endpoints/ApiUrls';
 
 export default function ProfileAccount() {
   const { user }: any = useUser();
@@ -50,7 +52,19 @@ export default function ProfileAccount() {
     }
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      const userId = localStorage.getItem('userId');
+      if (userId && vendorId) {
+        await axios.post(`${baseUrl}/device/logout/`, {
+          vendor_id: vendorId,
+          device_id: 'BP4A.251205.006',
+          user_id: parseInt(userId, 10)
+        });
+      }
+    } catch (error) {
+      console.error('Logout API error:', error);
+    }
     if (typeof window !== 'undefined') {
       localStorage.clear();
     }
