@@ -10,6 +10,9 @@ import toast from 'react-hot-toast';
 import Link from 'next/link';
 import { postSendSmsOtpUserApi, postVerifySmsOtpApi } from '@/api-endpoints/authendication';
 import { baseUrl } from '@/api-endpoints/ApiUrls';
+import { auth, googleProvider } from '@/lib/firebase';
+import { signInWithPopup } from 'firebase/auth';
+import { FcGoogle } from 'react-icons/fc';
 
 interface FormData {
   email?: string;
@@ -68,7 +71,7 @@ function LoginModal({ open, handleClose, vendorId }: any) {
       }
     } catch (err: any) {
       setLoading(false);
-      setError(err?.response?.data?.error || 'Failed to send OTP');
+      setError(err?.response?.data?.message || 'Failed to send OTP');
     }
   };
 
@@ -140,6 +143,37 @@ function LoginModal({ open, handleClose, vendorId }: any) {
       }
     } catch (err: any) {
       setError(err?.response?.data?.message || 'Login failed');
+    }
+  };
+
+  // ✅ GOOGLE SSO FLOW
+  const handleGoogleLogin = async () => {
+    try {
+      setLoading(true);
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      const idToken = await user.getIdToken();
+
+      const response: any = await axios.post(`${baseUrl}/login-with-google/`, {
+        id_token: idToken,
+        vendor_id: vendorId,
+      });
+
+      if (response?.data?.user_id) {
+        toast.success('Google Login successful!');
+        localStorage.setItem('userId', response.data.user_id);
+
+        const updateApi = await getCartApi(`user/${response.data.user_id}`);
+        if (updateApi?.data?.[0]?.id) {
+          localStorage.setItem('cartId', updateApi.data[0].id);
+        }
+
+        handleClose();
+        window.location.reload();
+      }
+    } catch (err: any) {
+      setLoading(false);
+      setError(err?.response?.data?.error || err?.response?.data?.message || err?.message || 'Google Login failed');
     }
   };
 
@@ -329,6 +363,22 @@ function LoginModal({ open, handleClose, vendorId }: any) {
           >
             {isOtpMode ? (otpSent ? 'Verify OTP & Login' : 'Send OTP') : 'Sign in'}
             {loading && <Loader className="animate-spin" />}
+          </button>
+
+          <div className="flex items-center my-4">
+            <div className="flex-grow border-t border-gray-300"></div>
+            <span className="px-3 text-sm text-gray-500">OR</span>
+            <div className="flex-grow border-t border-gray-300"></div>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            disabled={loading}
+            className="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-md border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 transition-colors"
+          >
+            <FcGoogle className="w-5 h-5" />
+            Sign in with Google
           </button>
 
           {!isOtpMode && (
