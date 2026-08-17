@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import { Loader } from 'lucide-react';
 import axios from 'axios';
 import { baseUrl } from '@/api-endpoints/ApiUrls';
-
+import toast from 'react-hot-toast';
 export default function ProfileAccount() {
   const { user }: any = useUser();
   const { vendorId } = useVendor();
@@ -17,7 +17,7 @@ export default function ProfileAccount() {
   const [openModal, setOpenModal] = useState(false);
   const queryClient = useQueryClient();
   const router = useRouter();
-  const[loader,setLoader]=useState(false);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -30,24 +30,39 @@ export default function ProfileAccount() {
   }, [user]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
+    const { id, value } = e.target;
+    if (id === 'phone') {
+      const numericValue = value.replace(/\D/g, '');
+      if (numericValue.length <= 10) {
+        setFormData(prev => ({ ...prev, [id]: numericValue }));
+      }
+    } else {
+      setFormData(prev => ({ ...prev, [id]: value }));
+    }
   };
 
   const handleUpdate = async () => {
+    if (!formData.phone || formData.phone.length !== 10) {
+      toast.error('Please enter a valid 10-digit phone number');
+      return;
+    }
     setLoader(true);
     try {
       const updateApi = await updateUserAPi(`/${user?.data?.id}`, {
         ...formData,
-        updated_by: user?.data?.name ? user?.data?.name:'user',
+        updated_by: user?.data?.name ? user?.data?.name : 'user',
         role: 3,
+        contact_number: formData.phone,
         vendor: vendorId
       });
       if (updateApi) {
         queryClient.invalidateQueries(['gerUserData'] as InvalidateQueryFilters);
+        toast.success('Profile updated successfully!');
         setLoader(false)
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
+      toast.error(err?.response?.data?.message || err?.response?.data?.error || 'Failed to update profile');
       setLoader(false)
     }
   };
@@ -117,23 +132,26 @@ export default function ProfileAccount() {
               type="tel"
               value={formData?.phone}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-md p-2"
+              className={`w-full border rounded-md p-2 ${formData?.phone?.length > 0 && formData?.phone?.length !== 10 ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'}`}
             />
+            {formData?.phone?.length > 0 && formData?.phone?.length !== 10 && (
+              <p className="text-red-500 text-sm mt-1">Please enter a valid 10-digit phone number.</p>
+            )}
           </div>
         </div>
 
         <div className="flex justify-end mt-6">
           <button
             onClick={handleUpdate}
-            disabled={loader}
-            className="px-4 py-2 bg-[#a5291b] hover:bg-red-700 font-bold text-white rounded-md"
+            disabled={loader || !formData?.phone || formData?.phone?.length !== 10}
+            className={`px-4 py-2 font-bold text-white rounded-md ${loader || !formData?.phone || formData?.phone?.length !== 10 ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#a5291b] hover:bg-red-700'}`}
           >
             {loader ? (
               <div className='flex gap-2'>
-                <Loader/> Loading...
+                <Loader /> Loading...
               </div>
-            ):' Save Changes'}
-           
+            ) : ' Save Changes'}
+
           </button>
         </div>
       </div>

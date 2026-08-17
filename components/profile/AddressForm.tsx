@@ -3,7 +3,8 @@ import { useForm, Controller } from 'react-hook-form';
 import { Loader, X } from 'lucide-react';
 import { postAddressCreateApi, updateAddressApi } from '../../api-endpoints/CartsApi';
 import { InvalidateQueryFilters, useQueryClient } from '@tanstack/react-query';
-
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 interface AddressFormProps {
   openModal: boolean;
@@ -25,7 +26,7 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
     setUserName(storedUserName);
   }, []);
 
-  const { control, handleSubmit, setValue, reset, formState: { errors } } = useForm<any>({
+  const { control, handleSubmit, setValue, reset, watch, formState: { errors } } = useForm<any>({
     defaultValues: {
       customer_name: editData?.customer_name || '',
       address_line1: editData?.address_line1 || '',
@@ -55,6 +56,8 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
       setValue('email_address', editData?.email_address || '');
     }
   }, [editData, setValue]);
+
+  const postalCode = watch('postal_code');
 
   // Return null if the modal is not open
   if (!openModal) return null;
@@ -88,10 +91,12 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
           queryClient.invalidateQueries(['getAddressData'] as InvalidateQueryFilters);
           handleClose();
           setLoading(false);
+          toast.success('Address updated successfully');
         }
-      } catch (error) {
+      } catch (error: any) {
         console.error(error);
         setLoading(false);
+        toast.error(error?.response?.data?.message || 'Failed to update address');
       }
     } else {
       try {
@@ -100,13 +105,14 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
           queryClient.invalidateQueries(['postGoalType'] as InvalidateQueryFilters);
           handleClose();
           setLoading(false);
+          toast.success('Address added successfully');
         }
-      } catch (error) {
+      } catch (error: any) {
         console.error(error);
         setLoading(false);
+        toast.error(error?.response?.data?.message || error?.response?.data?.error || 'Failed to add address');
       }
     }
-
   };
 
   return (
@@ -233,6 +239,45 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
                 )}
               />
             </div>
+
+            <div>
+              <label htmlFor="postal_code" className="block text-sm font-medium text-black">Pin Code</label>
+              <Controller
+                control={control}
+                name="postal_code"
+                render={({ field }) => (
+                  <input
+                    {...field}
+                    type="text"
+                    id="postal_code"
+                    maxLength={6}
+                    required
+                    onChange={async (e) => {
+                      const val = e.target.value.replace(/\D/g, '').slice(0, 6);
+                      field.onChange(val);
+                      if (val.length === 6) {
+                        try {
+                          const res = await axios.get(`https://api.postalpincode.in/pincode/${val}`);
+                          if (res.data && res.data[0].Status === 'Success') {
+                            const postOffice = res.data[0].PostOffice[0];
+                            setValue('city', postOffice.District);
+                            setValue('state', postOffice.State);
+                            setValue('country', postOffice.Country);
+                          } else {
+                            toast.error('Invalid Pincode');
+                          }
+                        } catch (err) {
+                          toast.error('Failed to fetch pincode details');
+                        }
+                      }
+                    }}
+                    className="mt-1 block p-1 w-full border rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  />
+                )}
+              />
+            </div>
+
+
             <div>
               <label htmlFor="city" className="block text-sm font-medium text-black">City</label>
               <Controller
@@ -243,7 +288,8 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
                     {...field}
                     id="city"
                     required
-                    className="mt-1 block w-full p-1 border rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    readOnly
+                    className="mt-1 block w-full p-1 border rounded-md border-gray-300 bg-gray-100 cursor-not-allowed shadow-sm focus:border-blue-500 focus:ring-blue-500"
                   />
                 )}
               />
@@ -259,28 +305,13 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
                     {...field}
                     id="state"
                     required
-                    className="mt-1 block p-1 w-full border rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    readOnly
+                    className="mt-1 block p-1 w-full border rounded-md border-gray-300 bg-gray-100 cursor-not-allowed shadow-sm focus:border-blue-500 focus:ring-blue-500"
                   />
                 )}
               />
             </div>
-            <div>
-              <label htmlFor="postal_code" className="block text-sm font-medium text-black">Pin Code</label>
-              <Controller
-                control={control}
-                name="postal_code"
-                render={({ field }) => (
-                  <input
-                    {...field}
-                    type='number'
-                    id="postal_code"
-                    maxLength={6}
-                    required
-                    className="mt-1 block p-1 w-full border rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                  />
-                )}
-              />
-            </div>
+
             {/* </div>
 
           <div className="grid grid-cols-2 gap-4"> */}
@@ -294,7 +325,8 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
                     {...field}
                     id="country"
                     required
-                    className="mt-1 block p-1 w-full border rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    readOnly
+                    className="mt-1 block p-1 w-full border rounded-md border-gray-300 bg-gray-100 cursor-not-allowed shadow-sm focus:border-blue-500 focus:ring-blue-500"
                   />
                 )}
               />
@@ -326,8 +358,8 @@ export default function AddressForm({ openModal, handleClose, editData }: Addres
             </button>
             <button
               type="submit"
-              disabled={loading}
-              className="cursor-pointer px-4 py-2 bg-[#a5291b] hover:bg-red-700 text-white rounded-md text-sm font-medium  disabled:opacity-50 flex gap-2"
+              disabled={loading || postalCode?.length !== 6}
+              className={`px-4 py-2 text-white rounded-md text-sm font-medium flex gap-2 ${loading || postalCode?.length !== 6 ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#a5291b] hover:bg-red-700 cursor-pointer'}`}
             >
               Save {loading ? (<Loader className="animate-spin" size={20} />) : ''}
             </button>
