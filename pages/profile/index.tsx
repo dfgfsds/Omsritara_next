@@ -37,11 +37,10 @@ export default function ProfilePage() {
                   <button
                     key={tab.value}
                     onClick={() => setActiveTab(tab.value)}
-                    className={`px-1 pb-2 text-sm font-bold transition border-b-2 ${
-                      activeTab === tab.value
-                        ? 'border-[#a5291b] text-[#a5291b]'
-                        : 'border-transparent text-gray-600 hover:text-red-700'
-                    }`}
+                    className={`px-1 pb-2 text-sm font-bold transition border-b-2 ${activeTab === tab.value
+                      ? 'border-[#a5291b] text-[#a5291b]'
+                      : 'border-transparent text-gray-600 hover:text-red-700'
+                      }`}
                   >
                     {tab.label}
                   </button>
