@@ -31,6 +31,13 @@ export default function ForgotPasswordPage() {
     const storedId = localStorage.getItem('forgetuserId');
     setUserId(storedId);
   }, []);
+
+  useEffect(() => {
+    const loggedInUserId = localStorage.getItem('userId');
+    if (loggedInUserId) {
+      router.push('/profile');
+    }
+  }, [router]);
   useEffect(() => {
     if (showModal && timer > 0) {
       const countdown = setInterval(() => setTimer((t) => t - 1), 1000);

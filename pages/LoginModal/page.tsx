@@ -71,7 +71,14 @@ function LoginModal({ open, handleClose, vendorId }: any) {
       }
     } catch (err: any) {
       setLoading(false);
-      setError(err?.response?.data?.message || 'Failed to send OTP');
+      const errorMsg = err?.response?.data?.message || err?.response?.data?.error || 'Failed to send OTP';
+      setError(errorMsg);
+
+      if (errorMsg === "No account found with this phone number. Please try Google login or sign up.") {
+        setTimeout(() => {
+          handleGoogleLogin();
+        }, 3000);
+      }
     }
   };
 
@@ -107,16 +114,6 @@ function LoginModal({ open, handleClose, vendorId }: any) {
           window.location.reload();
         }
       }
-      // if (response?.data?.user_id) {
-      //   toast.success('Login successful!');
-      //   localStorage.setItem('userId', response.data.user_id);
-
-      //   const cartRes = await getCartApi(`user/${response.data.user_id}`);
-      //   localStorage.setItem('cartId', cartRes?.data[0]?.id);
-
-      //   handleClose();
-      //   window.location.reload();
-      // }
     } catch (err: any) {
       setLoading(false);
       setError(err?.response?.data?.error || 'Invalid OTP');
@@ -142,38 +139,82 @@ function LoginModal({ open, handleClose, vendorId }: any) {
         window.location.reload();
       }
     } catch (err: any) {
-      setError(err?.response?.data?.message || 'Login failed');
+      const errorMsg = err?.response?.data?.error || err?.response?.data?.message || 'Login failed';
+      setError(errorMsg);
+
+      if (errorMsg === "Password not available. Try logging in via OTP.") {
+        setTimeout(() => {
+          handleGoogleLogin();
+        }, 3000);
+      }
     }
   };
 
   // ✅ GOOGLE SSO FLOW
   const handleGoogleLogin = async () => {
+    setLoading(true);
+    setError('');
+
+    let isPopupResolved = false;
+
+    // Workaround for Firebase delay: reset loading when window regains focus
+    const handleFocus = () => {
+      window.removeEventListener('focus', handleFocus);
+      setTimeout(() => {
+        if (!isPopupResolved) {
+          setLoading(false);
+        }
+      }, 1500);
+    };
+    window.addEventListener('focus', handleFocus);
+
     try {
-      setLoading(true);
       const result = await signInWithPopup(auth, googleProvider);
-      const user = result.user;
-      const idToken = await user.getIdToken();
+      isPopupResolved = true;
+      window.removeEventListener('focus', handleFocus);
+      const idToken = await result.user.getIdToken();
 
       const response: any = await axios.post(`${baseUrl}/login-with-google/`, {
         id_token: idToken,
         vendor_id: vendorId,
       });
 
-      if (response?.data?.user_id) {
-        toast.success('Google Login successful!');
-        localStorage.setItem('userId', response.data.user_id);
+      if (response) {
+        const uid = response?.data?.user_id || response?.data?.user?.id || response?.data?.id;
+        if (uid) {
+          localStorage.setItem('userId', String(uid));
+        }
+        if (response?.data?.name || response?.data?.user?.name) {
+          localStorage.setItem('userName', response?.data?.name || response?.data?.user?.name);
+        }
+        if (response?.data?.email || response?.data?.user?.email) {
+          localStorage.setItem('email', response?.data?.email || response?.data?.user?.email);
+        }
 
-        const updateApi = await getCartApi(`user/${response.data.user_id}`);
-        if (updateApi?.data?.[0]?.id) {
-          localStorage.setItem('cartId', updateApi.data[0].id);
+        if (uid) {
+          try {
+            const updateApi = await getCartApi(`user/${uid}`);
+            if (updateApi?.data?.[0]?.id) {
+              localStorage.setItem('cartId', updateApi.data[0].id);
+            }
+          } catch (cartErr) {
+            console.error("Error syncing cart on google login:", cartErr);
+          }
         }
 
         handleClose();
-        window.location.reload();
+        window.location.href = '/profile';
       }
     } catch (err: any) {
+      console.error("Google login error:", err);
+      if (err?.code === 'auth/popup-closed-by-user' || err?.code === 'auth/cancelled-popup-request') {
+        // Silently handle popup close without showing error to the user
+        setError('');
+      } else {
+        setError(err?.response?.data?.error || err?.response?.data?.message || err?.message || 'Failed to sign in with Google');
+      }
+    } finally {
       setLoading(false);
-      setError(err?.response?.data?.error || err?.response?.data?.message || err?.message || 'Google Login failed');
     }
   };
 
@@ -345,7 +386,7 @@ function LoginModal({ open, handleClose, vendorId }: any) {
               </div>
 
               <div className="flex justify-end">
-                <Link href="/forgot-password" className="text-sm text-red-700 hover:underline">
+                <Link href="/forgot-password" onClick={handleClose} className="text-sm text-red-700 hover:underline">
                   Forgot Password?
                 </Link>
               </div>
@@ -384,7 +425,7 @@ function LoginModal({ open, handleClose, vendorId }: any) {
           {!isOtpMode && (
             <p className="text-sm text-center text-gray-600">
               Don't have an account?{' '}
-              <Link href="/register" className="text-red-700 font-medium hover:underline">
+              <Link href="/register" onClick={handleClose} className="text-red-700 font-medium hover:underline">
                 Register
               </Link>
             </p>

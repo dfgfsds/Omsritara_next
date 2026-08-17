@@ -45,7 +45,7 @@ export default function ProfileAddresses() {
   const handleSelectAddress = async (address: any) => {
     try {
       const updateApi = await patchUserSelectAddressAPi(`user/${userId}/address/${address?.id}`, {
-        updated_by: getUserName || "user", 
+        updated_by: getUserName || "user",
       });
       if (updateApi) {
         queryClient.invalidateQueries(['getAddressData'] as InvalidateQueryFilters);
