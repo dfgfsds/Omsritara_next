@@ -108,9 +108,9 @@ const Footer = () => {
                         <a href="https://www.facebook.com/omsritaraenglish" target='_blank' className="bg-slate-100 p-2 hover:scale-110 transition-transform rounded-full text-[#000] ">
                             <Facebook size={16} />
                         </a>
-                        <a href="https://www.linkedin.com/company/omsritara-satsang/about/" target='_blank' className="bg-slate-100 p-2 rounded-full text-[#000] hover:scale-110 transition-transform">
+                        {/* <a href="https://www.linkedin.com/company/omsritara-satsang/about/" target='_blank' className="bg-slate-100 p-2 rounded-full text-[#000] hover:scale-110 transition-transform">
                             <Linkedin size={16} />
-                        </a>
+                        </a> */}
                         <a href="https://www.youtube.com/@OmsritaraSatsang" target='_blank' className="bg-slate-100 p-2 rounded-full text-[#000] hover:scale-110 transition-transform">
                             <Youtube size={16} />
                         </a>
