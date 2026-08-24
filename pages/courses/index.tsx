@@ -504,7 +504,7 @@ export default function CoursesPage() {
       {/* Header Section */}
       <div className="bg-gradient-to-r from-red-50 to-red-100 py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-start mb-6">
+          <div className="flex flex-wrap justify-between items-start mb-6 gap-4">
             <div>
               <p className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
                 {language === 'en' ? 'Our Academy Courses' : 'எங்கள் அகாடமி பாடநெறிகள்'}
@@ -615,7 +615,7 @@ export default function CoursesPage() {
                   key={index}
                   className="bg-white border border-gray-200 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <p className="font-medium text-gray-700">{item}</p>
+                  <p className="font-medium text-gray-700 break-words">{item}</p>
                 </div>
               ))}
             </div>
@@ -649,7 +649,7 @@ export default function CoursesPage() {
                   key={index}
                   className="bg-white border border-gray-200 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <p className="font-medium text-gray-700">{item}</p>
+                  <p className="font-medium text-gray-700 break-words">{item}</p>
                 </div>
               ))}
             </div>
@@ -712,7 +712,7 @@ export default function CoursesPage() {
             ).map((item, index) => (
               <div
                 key={index}
-                className="bg-white border rounded-lg p-4 text-center shadow-sm"
+                className="bg-white border rounded-lg p-4 text-center shadow-sm break-words"
               >
                 {item}
               </div>
@@ -757,7 +757,7 @@ export default function CoursesPage() {
             ).map((item, index) => (
               <div
                 key={index}
-                className="bg-white border rounded-lg p-4 text-center shadow-sm"
+                className="bg-white border rounded-lg p-4 text-center shadow-sm break-words"
               >
                 {item}
               </div>
