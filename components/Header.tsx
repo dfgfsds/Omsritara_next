@@ -366,7 +366,7 @@ const Header: React.FC = () => {
                             onMouseLeave={() => setIsGemstonesOpen(false)}
                         >
                             <button
-                                onClick={() => { if (pathname !== "/gemstones") router.push("/gemstones"); }}
+                                onClick={() => { router.push("#"); }}
                                 className={`nav-item relative flex items-center gap-1 ${pathname.startsWith("/gemstones") ? "underline" : ""}`}
                                 type="button"
                             >
