@@ -1,4 +1,6 @@
 // pages/sitemap.xml.js
+import ApiUrls from "../api-endpoints/ApiUrls";
+import axios from "axios";
 
 export default function Sitemap() {
   return null;
@@ -32,23 +34,42 @@ export async function getServerSideProps({ res }) {
     { loc: "/privacy-policy", priority: "0.30", changefreq: "yearly" },
     { loc: "/cancellation-policy", priority: "0.30", changefreq: "yearly" },
 
-    // Categories
-    { loc: "/categories/bracelet", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/mala", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/spiritual-statues", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/rings", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/earrings", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/pendants", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/pendulums", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/healing-stones", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/coins-and-cubes", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/sangu", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/angels", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/pyramid", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/crystal-bowls-and-plates", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/yanthirams-and-chakra", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/healing-sticks-and-towers", priority: "0.80", changefreq: "weekly" },
-    { loc: "/categories/spiritual-cards", priority: "0.80", changefreq: "weekly" },
+    // Categories (Fetched dynamically)
+
+    // Gemstones
+    { loc: "/gemstones/mesham", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/rishabam", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/mithunam", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/kadagam", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/simmam", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/kanni", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/thulam", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/viruchigam", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/dhanusu", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/magaram", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/kumbam", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/meenam", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/sun-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/moon-chandra-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/mars-mangal-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/mercury-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/jupiter-guru-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/venus-shukra-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/saturn-shani-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/rahu-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/ketu-gemstones", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/january-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/february-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/march-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/april-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/may-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/june-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/july-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/august-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/september-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/october-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/november-birthstone", priority: "0.80", changefreq: "weekly" },
+    { loc: "/gemstones/december-birthstone", priority: "0.80", changefreq: "weekly" },
 
     // Shop By Intention
     { loc: "/shopByIntention/Love", priority: "0.80", changefreq: "weekly" },
@@ -64,162 +85,8 @@ export async function getServerSideProps({ res }) {
     { loc: "/shopByIntention/Protection", priority: "0.80", changefreq: "weekly" },
     { loc: "/shopByIntention/Feng%20Shui", priority: "0.80", changefreq: "weekly" },
 
-    // Blog Pages (SEO Team)
-    {
-      loc: "/blog/why-you-should-keep-a-rose-quartz-pyramid-in-your-living-space",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/amazonite-chip-bracelet-meaning-healing-properties-benefits",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/daily-rituals-with-a-clear-quartz-angel-to-attract-positivity",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/black-tourmaline-mala-a-powerful-tool-for-stress-relief",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/seven-chakra-pendant-for-stress-relief-and-emotional-balance",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/how-selenite-plate-balances-energy-and-promotes-mental-clarity",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/daily-rituals-with-carnelian-chip-mala-for-energy-balance",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/how-to-choose-genuine-dyed-sandstone-chip-mala-for-maximum-benefits",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/the-confidence-stone-how-a-carnelian-ring-uplifts-your-mood",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/why-om-sri-taras-amethyst-pendulum-is-perfect-for-energy-healing",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/manifesting-with-energy-how-to-use-a-7-chakra-pendulum-for-transformation",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/pyrite-bitcoin-a-fusion-of-crystal-energy-and-financial-symbolism",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/where-to-buy-genuine-ganesh-face-sangu-online-in-india",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/howlite-bracelet-for-sleep-can-it-help-you-rest-better",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/where-to-buy-a-genuine-money-magnet-bracelet-online",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/unlock-abundance-the-power-of-money-symbol-cards-in-manifestation",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/why-the-vishnu-chakra-is-essential-for-balancing-energies-in-your-space",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/top-reasons-to-keep-a-pyrite-plate-on-your-office-desk-for-focus-and-confidence",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/best-time-to-wear-your-7-chakra-bracelet-for-positive-energy",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/citrine-bracelet-styling-tips-wear-it-with-confidence-and-intention",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/can-a-green-aventurine-bracelet-really-attract-wealth-and-luck",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/cat-oval-pendant-for-wealth-luck-protection",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/top-reasons-to-add-an-aquamarine-mala-to-your-crystal-collection",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/unlocking-love-energy-through-relationship-healing-cards",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/how-to-use-the-switch-word-crystal-coin-for-wealth-and-prosperity",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/power-of-large-gomathi-chakra-vastu-balance-and-wealth-energy",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/door-mantra-card-a-simple-way-to-maintain-a-positive-aura-at-home",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/pyrite-lakshmi-plate-attract-wealth-and-divine-prosperity-daily",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/how-the-pointed-healing-stick-boosts-meditation-and-energy-healing",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/how-to-use-an-amethyst-angel-for-meditation-and-energy-cleansing",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
-    {
-      loc: "/blog/why-every-home-and-business-needs-a-lakshmi-yantram-frame",
-      priority: "0.70",
-      changefreq: "monthly",
-    },
+    // Blog Pages (Fetched dynamically)
+
     { loc: "/courses/reiki-level-1", priority: "0.80", changefreq: "monthly" },
     { loc: "/courses/reiki-level-2-3-4", priority: "0.80", changefreq: "monthly" },
     { loc: "/courses/lama-fera-healing", priority: "0.80", changefreq: "monthly" },
@@ -244,8 +111,71 @@ export async function getServerSideProps({ res }) {
     { loc: "/courses/hooponopono-course", priority: "0.80", changefreq: "monthly" },
     { loc: "/courses/quantum-healing-course", priority: "0.80", changefreq: "monthly" },
     { loc: "/courses/thanthrigam-course", priority: "0.80", changefreq: "monthly" },
-
   ];
+
+  let productUrls = [];
+  try {
+    const response = await axios.get(`${ApiUrls.product}?vendor_id=63`);
+    const products = response.data?.data || response.data || [];
+
+    // In case products is not an array, default to empty array
+    const productArray = Array.isArray(products) ? products : [];
+
+    productUrls = productArray.map((product) => {
+      const name = product.name || "";
+      const slug = name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]+/g, "");
+
+      return { loc: `/shop/${slug}`, priority: "0.80", changefreq: "weekly" };
+    });
+  } catch (error) {
+    console.error("Failed to fetch products for sitemap:", error.message);
+  }
+
+  let categoryUrls = [];
+  try {
+    const response = await axios.get(`${ApiUrls.categories}/63`);
+    const categories = response.data?.data || response.data || [];
+    const categoryArray = Array.isArray(categories) ? categories : [];
+
+    categoryUrls = categoryArray.map((category) => {
+      const name = category.name || "";
+      const slug = name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]+/g, "");
+
+      return { loc: `/categories/${slug}`, priority: "0.80", changefreq: "weekly" };
+    });
+  } catch (error) {
+    console.error("Failed to fetch categories for sitemap:", error.message);
+  }
+
+  let blogUrls = [];
+  try {
+    const response = await axios.get(`https://test-ecomapi.ftdigitalsolutions.org/blog/?vendor_id=63`);
+    const blogs = response.data?.blogs || [];
+    const blogArray = Array.isArray(blogs) ? blogs : [];
+
+    blogUrls = blogArray.map((blog) => {
+      const title = blog.title || "";
+      const slug = title
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]+/g, "");
+
+      return { loc: `/blog/${slug}`, priority: "0.70", changefreq: "monthly" };
+    });
+  } catch (error) {
+    console.error("Failed to fetch blogs for sitemap:", error.message);
+  }
+
+  const allUrls = [...urls, ...productUrls, ...categoryUrls, ...blogUrls];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
@@ -254,7 +184,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-${urls
+${allUrls
       .map(
         ({ loc, priority, changefreq }) => `
   <url>

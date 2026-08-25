@@ -29,6 +29,13 @@ export default function ProfileAccount() {
     }
   }, [user]);
 
+  useEffect(() => {
+    if (localStorage.getItem('showPhoneToast') === 'true') {
+      toast.error('Please update your mobile number to continue.', { duration: 5000 });
+      localStorage.removeItem('showPhoneToast');
+    }
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     if (id === 'phone') {
@@ -58,7 +65,8 @@ export default function ProfileAccount() {
       if (updateApi) {
         queryClient.invalidateQueries(['gerUserData'] as InvalidateQueryFilters);
         toast.success('Profile updated successfully!');
-        setLoader(false)
+        setLoader(false);
+        window.location.href = '/';
       }
     } catch (err: any) {
       console.error(err);
