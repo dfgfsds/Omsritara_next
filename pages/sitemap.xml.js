@@ -157,7 +157,7 @@ export async function getServerSideProps({ res }) {
 
   let blogUrls = [];
   try {
-    const response = await axios.get(`https://test-ecomapi.ftdigitalsolutions.org/blog/?vendor_id=63`);
+    const response = await axios.get(`${ApiUrls.baseUrl}/blog/?vendor_id=63`);
     const blogs = response.data?.blogs || [];
     const blogArray = Array.isArray(blogs) ? blogs : [];
 
