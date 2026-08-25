@@ -113,9 +113,15 @@ export async function getServerSideProps({ res }) {
     { loc: "/courses/thanthrigam-course", priority: "0.80", changefreq: "monthly" },
   ];
 
+  const apiHeaders = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+    'Referer': 'https://www.omsritara.in/',
+    'Origin': 'https://www.omsritara.in'
+  };
+
   let productUrls = [];
   try {
-    const response = await axios.get(`${ApiUrls.product}?vendor_id=63`);
+    const response = await axios.get(`${ApiUrls.product}?vendor_id=63`, { headers: apiHeaders });
     const products = response.data?.data || response.data || [];
 
     // In case products is not an array, default to empty array
@@ -137,7 +143,7 @@ export async function getServerSideProps({ res }) {
 
   let categoryUrls = [];
   try {
-    const response = await axios.get(`${ApiUrls.categories}/63`);
+    const response = await axios.get(`${ApiUrls.categories}/63`, { headers: apiHeaders });
     const categories = response.data?.data || response.data || [];
     const categoryArray = Array.isArray(categories) ? categories : [];
 
@@ -157,7 +163,7 @@ export async function getServerSideProps({ res }) {
 
   let blogUrls = [];
   try {
-    const response = await axios.get(`${ApiUrls.baseUrl}/blog/?vendor_id=63`);
+    const response = await axios.get(`${ApiUrls.baseUrl}/blog/?vendor_id=63`, { headers: apiHeaders });
     const blogs = response.data?.blogs || [];
     const blogArray = Array.isArray(blogs) ? blogs : [];
 
