@@ -8,7 +8,7 @@ import { Eye, EyeOff, Lock, Mail, Smartphone, KeyRound, X, Loader } from 'lucide
 import { getCartApi } from '@/api-endpoints/CartsApi';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
-import { postSendSmsOtpUserApi, postVerifySmsOtpApi } from '@/api-endpoints/authendication';
+import { postSendSmsOtpUserApi, postVerifySmsOtpApi, getUserAPi } from '@/api-endpoints/authendication';
 import { baseUrl } from '@/api-endpoints/ApiUrls';
 import { auth, googleProvider } from '@/lib/firebase';
 import { signInWithPopup } from 'firebase/auth';
@@ -191,7 +191,16 @@ function LoginModal({ open, handleClose, vendorId }: any) {
           localStorage.setItem('email', response?.data?.email || response?.data?.user?.email);
         }
 
+        let contactNumber = response?.data?.contact_number || response?.data?.user?.contact_number || response?.data?.phone || response?.data?.user?.phone;
+        
         if (uid) {
+          try {
+            const userRes = await getUserAPi(`${uid}`);
+            contactNumber = contactNumber || userRes?.data?.contact_number || userRes?.data?.phone;
+          } catch (e) {
+            console.error("Error fetching user details on google login:", e);
+          }
+
           try {
             const updateApi = await getCartApi(`user/${uid}`);
             if (updateApi?.data?.[0]?.id) {
@@ -203,7 +212,13 @@ function LoginModal({ open, handleClose, vendorId }: any) {
         }
 
         handleClose();
-        window.location.href = '/profile';
+        
+        if (contactNumber) {
+          window.location.href = '/';
+        } else {
+          localStorage.setItem('showPhoneToast', 'true');
+          window.location.href = '/profile?tab=account';
+        }
       }
     } catch (err: any) {
       console.error("Google login error:", err);
