@@ -43,32 +43,49 @@ const gemstonesData = [
     {
         title: "Rashi Navratna",
         items: [
-            "Mesham", "Rishabam", "Mithunam", "Kadagam", "Simmam", "Kanni", "Thulam", "Viruchigam", "Dhanusu", "Magaram", "Kumbam", "Meenam"
+            { name: "Mesham", icon: "/img/head-icon/raasi-icon/MESHAM.webp" },
+            { name: "Rishabam", icon: "/img/head-icon/raasi-icon/RISHABAM.webp" },
+            { name: "Mithunam", icon: "/img/head-icon/raasi-icon/MITHUNAM.webp" },
+            { name: "Kadagam", icon: "/img/head-icon/raasi-icon/KADAGAM.webp" },
+            { name: "Simmam", icon: "/img/head-icon/raasi-icon/SIMMAM.webp" },
+            { name: "Kanni", icon: "/img/head-icon/raasi-icon/KANNI.webp" },
+            { name: "Thulam", icon: "/img/head-icon/raasi-icon/THULAM.webp" },
+            { name: "Viruchigam", icon: "/img/head-icon/raasi-icon/VIRUCHIGAM.webp" },
+            { name: "Dhanusu", icon: "/img/head-icon/raasi-icon/DHANUSU.webp" },
+            { name: "Magaram", icon: "/img/head-icon/raasi-icon/MAGARAM.webp" },
+            { name: "Kumbam", icon: "/img/head-icon/raasi-icon/KUMBAM.webp" },
+            { name: "Meenam", icon: "/img/head-icon/raasi-icon/MEENAM.webp" }
         ]
     },
     {
         title: "Planet Gemstone",
         items: [
-            "Sun Gemstones", "Moon (Chandra) Gemstones", "Mars (Mangal) Gemstones", "Mercury Gemstones", "Jupiter (Guru) Gemstones", "Venus (Shukra) Gemstones", "Saturn (Shani) Gemstones", "Rahu Gemstones", "Ketu Gemstones"
+            { name: "Sun Gemstones", icon: "/img/head-icon/planet-gemstone-icon/SUN.webp" },
+            { name: "Moon (Chandra) Gemstones", icon: "/img/head-icon/planet-gemstone-icon/MOON.webp" },
+            { name: "Mars (Mangal) Gemstones", icon: "/img/head-icon/planet-gemstone-icon/MARS.webp" },
+            { name: "Mercury Gemstones", icon: "/img/head-icon/planet-gemstone-icon/MERCURY.webp" },
+            { name: "Jupiter (Guru) Gemstones", icon: "/img/head-icon/planet-gemstone-icon/JUPITER.webp" },
+            { name: "Venus (Shukra) Gemstones", icon: "/img/head-icon/planet-gemstone-icon/VENUS.webp" },
+            { name: "Saturn (Shani) Gemstones", icon: "/img/head-icon/planet-gemstone-icon/SATURN.webp" },
+            { name: "Rahu Gemstones", icon: "/img/head-icon/planet-gemstone-icon/rahu.webp" },
+            { name: "Ketu Gemstones", icon: "/img/head-icon/planet-gemstone-icon/KETU.webp" }
         ]
     },
-    // {
-    //     title: "Precious Gemstones",
-    //     items: [
-    //         "Sulemani Red Hakik", "Iolite (Neeli)", "Sulemani Black Hakik", "Amethyst (Jamunia)", "Moon Stone", "Peridot", "Citrine (Sunela)", "Blue Topaz", "White Topaz", "Yellow Topaz"
-    //     ]
-    // },
-    // {
-    //     title: "Semi-Precious Gemstones",
-    //     items: [
-    //         "Pink Sapphire", "Purple Sapphire", "Blue Sapphire (Neelam)", "White Sapphire", "Bi-Color Sapphire (Pitambari)", "Padparadscha"
-    //     ]
-    // },
-
     {
         title: "Birthstones",
         items: [
-            "January Birthstone", "February Birthstone", "March Birthstone", "April Birthstone", "May Birthstone", "June Birthstone", "July Birthstone", "August Birthstone", "September Birthstone", "October Birthstone", "November Birthstone", "December Birthstone"
+            { name: "January Birthstone", icon: "/img/head-icon/birthstones-icon/jan.webp" },
+            { name: "February Birthstone", icon: "/img/head-icon/birthstones-icon/feb.webp" },
+            { name: "March Birthstone", icon: "/img/head-icon/birthstones-icon/mar.webp" },
+            { name: "April Birthstone", icon: "/img/head-icon/birthstones-icon/apr.webp" },
+            { name: "May Birthstone", icon: "/img/head-icon/birthstones-icon/may.webp" },
+            { name: "June Birthstone", icon: "/img/head-icon/birthstones-icon/jun.webp" },
+            { name: "July Birthstone", icon: "/img/head-icon/birthstones-icon/july.webp" },
+            { name: "August Birthstone", icon: "/img/head-icon/birthstones-icon/aug.webp" },
+            { name: "September Birthstone", icon: "/img/head-icon/birthstones-icon/sep.webp" },
+            { name: "October Birthstone", icon: "/img/head-icon/birthstones-icon/oct.webp" },
+            { name: "November Birthstone", icon: "/img/head-icon/birthstones-icon/nov.webp" },
+            { name: "December Birthstone", icon: "/img/head-icon/birthstones-icon/dec.webp" }
         ]
     }
 ];
@@ -383,13 +400,14 @@ const Header: React.FC = () => {
                                                     <h3 className="font-bold text-[#a5291b] mb-3 border-b border-gray-200 pb-1 text-base">{section.title}</h3>
                                                     <ul className="flex flex-col gap-2">
                                                         {section.items.map((item) => (
-                                                            <li key={item}>
+                                                            <li key={item.name}>
                                                                 <Link
-                                                                    href={`/gemstones/${slugConvert(item)}`}
-                                                                    className="hover:text-[#a5291b] text-gray-700 hover:underline transition-colors duration-200"
+                                                                    href={`/gemstones/${slugConvert(item.name)}`}
+                                                                    className="hover:text-[#a5291b] text-gray-700 hover:underline transition-colors duration-200 flex items-center gap-2"
                                                                     onClick={() => setIsGemstonesOpen(false)}
                                                                 >
-                                                                    {item}
+                                                                    <Image src={item.icon} alt={item.name} width={20} height={20} className="object-contain" />
+                                                                    {item.name}
                                                                 </Link>
                                                             </li>
                                                         ))}
@@ -631,13 +649,14 @@ const Header: React.FC = () => {
                                                     <h3 className="font-bold text-[#a5291b] mb-2">{section.title}</h3>
                                                     <ul className="flex flex-col gap-2">
                                                         {section.items.map((item) => (
-                                                            <li key={item}>
+                                                            <li key={item.name}>
                                                                 <Link
-                                                                    href={`/gemstones/${slugConvert(item)}`}
-                                                                    className="text-sm text-gray-700 block py-0.5"
+                                                                    href={`/gemstones/${slugConvert(item.name)}`}
+                                                                    className="text-sm text-gray-700 flex items-center gap-2 py-0.5"
                                                                     onClick={closeMobileMenu}
                                                                 >
-                                                                    {item}
+                                                                    <Image src={item.icon} alt={item.name} width={20} height={20} className="object-contain" />
+                                                                    {item.name}
                                                                 </Link>
                                                             </li>
                                                         ))}
