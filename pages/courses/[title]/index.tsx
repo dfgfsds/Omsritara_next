@@ -305,7 +305,16 @@ const CourseDetailPage: React.FC<CourseDetailPageProps> = ({ course }) => {
                             </p>
                         </div>
                     )}
+
+
+
                 </div>
+                <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="bg-[#a5291b] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200"
+                >
+                    {language === 'en' ? 'Enroll Now' : 'இப்போது சேரவும்'}
+                </button>
                 <hr className="my-8" />
                 <div className="mb-12">
                     <h2 className="text-3xl font-bold text-gray-800 mb-6">
