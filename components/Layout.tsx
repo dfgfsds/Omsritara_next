@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import FloatingCallButton from "./FloatingCallButton";
+import FloatingAppQR from "./FloatingAppQR";
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -54,6 +55,7 @@ export default function Layout({ children }: LayoutProps) {
             <ScrollToTop />
             <FloatingCallButton />
             <FloatingWhatsApp />
+            <FloatingAppQR />
         </div>
     );
 }
