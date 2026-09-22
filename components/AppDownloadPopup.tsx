@@ -13,7 +13,7 @@ const AppDownloadPopup = () => {
         if (!hasSeenPopup) {
             const timer = setTimeout(() => {
                 setIsOpen(true);
-            }, 5000); // 5 seconds
+            }, 5000);
 
             return () => clearTimeout(timer);
         }
