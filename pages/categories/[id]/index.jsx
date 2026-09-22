@@ -54,6 +54,7 @@ export async function getStaticPaths() {
 
 export default function CategoriesProduct({ category }) {
     const url = `https://www.omsritara.in/categories/${category.slug}`;
+    const isRudraksha = category?.slug === "rudraksha";
 
     return (
         <>
@@ -120,7 +121,39 @@ export default function CategoriesProduct({ category }) {
                         }),
                     }}
                 />
+
+                {/* Meta Pixel Code for Rudraksha Category */}
+                {isRudraksha && (
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                                !function(f,b,e,v,n,t,s)
+                                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                                n.queue=[];t=b.createElement(e);t.async=!0;
+                                t.src=v;s=b.getElementsByTagName(e)[0];
+                                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                                'https://connect.facebook.net/en_US/fbevents.js');
+                                fbq('init', '1240531971583656');
+                                fbq('track', 'PageView');
+                            `,
+                        }}
+                    />
+                )}
             </Head>
+
+            {isRudraksha && (
+                <noscript>
+                    <img
+                        height="1"
+                        width="1"
+                        style={{ display: "none" }}
+                        src="https://www.facebook.com/tr?id=1240531971583656&ev=PageView&noscript=1"
+                        alt=""
+                    />
+                </noscript>
+            )}
 
             {category.pageTitle && (
                 <h1 className="text-3xl font-bold text-center mt-2">
