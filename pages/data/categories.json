@@ -184,5 +184,25 @@
         "seo_description": "Explore exclusive combo offers on healing crystals, crystal bracelets, pendants, and spiritual essentials. Save more with energized crystal combinations for healing, protection, prosperity, and positive energy.",
         "seo_keywords": "combo offers, healing crystal combo, crystal bracelet combo, spiritual gift sets, Reiki crystal combo, crystal healing products, energized crystals, healing crystal offers, Om Sritara combo deals, spiritual products India",
         "banner_image": "https://www.omsritara.in/banner2.jpg"
+    },
+    {
+        "name": "rudraksha",
+        "slug": "rudraksha",
+        "seo_title": "Original Rudraksha Beads, Malas & Bracelets Online | Om Sritara",
+        "seo_description": "Shop 100% original, spiritually energized Rudraksha beads, malas, and bracelets for spiritual protection, peace, and meditation. Certified authentic Rudraksha at Om Sritara.",
+        "seo_keywords": "original rudraksha, authentic rudraksha mala, 5 mukhi rudraksha, energized rudraksha beads, rudraksha bracelet online, spiritual rudraksha chennai, om sritara rudraksha",
+        "banner_image": "https://www.omsritara.in/banner2.jpg",
+        "category_image": "https://www.omsritara.in/banner2.jpg",
+        "pageTitle": "Original Rudraksha Beads, Malas & Bracelets Online",
+        "schema": {
+            "name": "Original Rudraksha Collection",
+            "description": "Explore 100% original, spiritually energized Rudraksha beads, malas, and bracelets for spiritual protection, peace, and meditation. Certified authentic Rudraksha at Om Sritara.",
+            "itemListName": "Rudraksha Collection",
+            "items": [
+                "Rudraksha Mala",
+                "Rudraksha Bracelet",
+                "5 Mukhi Rudraksha"
+            ]
+        }
     }
 ]
