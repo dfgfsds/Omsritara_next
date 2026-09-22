@@ -3,13 +3,33 @@ import CategoriesBasedProduct from "@/components/CategoriesBasedProduct";
 import categories from "../../../pages/data/categories.json";
 
 export async function getStaticProps({ params }) {
-    const category = categories.find(
+    let category = categories.find(
         (cat) => cat.slug === params.id
     );
 
     if (!category) {
-        return {
-            notFound: true,
+        const formattedTitle = params.id
+            ? params.id
+                .split("-")
+                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ")
+            : "Category";
+
+        category = {
+            name: params.id,
+            slug: params.id,
+            seo_title: `${formattedTitle} | Om Sritara`,
+            seo_description: `Explore authentic ${formattedTitle} collection at Om Sritara. Spiritually energized products with online delivery across India.`,
+            seo_keywords: `${formattedTitle}, spiritual products, Om Sritara`,
+            banner_image: "https://www.omsritara.in/banner2.jpg",
+            category_image: "https://www.omsritara.in/banner2.jpg",
+            pageTitle: formattedTitle,
+            schema: {
+                name: `${formattedTitle} Collection`,
+                description: `Explore authentic ${formattedTitle} collection at Om Sritara.`,
+                itemListName: `${formattedTitle} Collection`,
+                items: [formattedTitle],
+            },
         };
     }
 
@@ -17,6 +37,7 @@ export async function getStaticProps({ params }) {
         props: {
             category,
         },
+        revalidate: 60,
     };
 }
 
@@ -27,7 +48,7 @@ export async function getStaticPaths() {
                 id: cat.slug,
             },
         })),
-        fallback: false,
+        fallback: "blocking",
     };
 }
 
