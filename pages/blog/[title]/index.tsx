@@ -12,6 +12,16 @@ interface Blog {
     created_at: string;
     banner_url: string;
     content: string;
+    meta_title?: string;
+    meta_description?: string;
+    canonical_tag?: string;
+    robots_tag?: string;
+    url_description?: string;
+    og_tags?: string | any;
+    twitter_tags?: string | any;
+    image_src_tags?: string;
+    schema?: string | any;
+    url_slug?: string;
 }
 
 export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
@@ -38,35 +48,46 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
 
     return (
         <div className="max-w-4xl mx-auto py-12 px-4">
-            {/* ✅ Dynamic SEO Meta Tags */}
-            <Head>
-                <title>{`${blog.title} | Om Sritara Blog`}</title>
-                <meta
-                    name="description"
-                    content={blog.description?.slice(0, 160) || blog.content.slice(0, 160)}
-                />
-                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-                <meta property="og:title" content={blog.title} />
-                <meta
-                    property="og:description"
-                    content={blog.description?.slice(0, 160) || blog.content.slice(0, 160)}
-                />
-                <meta property="og:image" content={blog.banner_url} />
-                <meta property="og:type" content="article" />
-                <meta property="og:site_name" content="omsritara" />
-                <link rel="canonical" href={`https://www.omsritara.in/blog/${router.query.title}`} />
-                <link rel="image_src" href={blog.banner_url} />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
+        {/* ✅ Dynamic SEO Meta Tags */}
+        <Head>
+            <title>{blog.meta_title || `${blog.title} | Om Sritara Blog`}</title>
+            <meta
+                name="description"
+                content={blog.meta_description || blog.description?.slice(0, 160) || blog.content.slice(0, 160)}
+            />
+            <meta name="robots" content={blog.robots_tag || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+            {blog.url_description && <meta name="url_description" content={blog.url_description} />}
+            
+            <meta property="og:title" content={blog.meta_title || blog.title} />
+            <meta
+                property="og:description"
+                content={blog.meta_description || blog.description?.slice(0, 160) || blog.content.slice(0, 160)}
+            />
+            <meta property="og:image" content={blog.image_src_tags || blog.banner_url} />
+            <meta property="og:type" content="article" />
+            <meta property="og:site_name" content="omsritara" />
+
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={blog.meta_title || blog.title} />
+            <meta name="twitter:description" content={blog.meta_description || blog.description?.slice(0, 160) || blog.content.slice(0, 160)} />
+            <meta name="twitter:image" content={blog.image_src_tags || blog.banner_url} />
+
+            <link rel="canonical" href={blog.canonical_tag || `https://www.omsritara.in/blog/${blog.url_slug || router.query.title}`} />
+            <link rel="image_src" href={blog.image_src_tags || blog.banner_url} />
+            
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: blog.schema
+                        ? (typeof blog.schema === "string" ? blog.schema : JSON.stringify(blog.schema))
+                        : JSON.stringify({
                             "@context": "https://schema.org",
                             "@type": "BlogPosting",
                             "headline": blog.title,
                             "description": blog.description || blog.content.slice(0, 160),
                             "mainEntityOfPage": {
                                 "@type": "WebPage",
-                                "@id": `https://www.omsritara.in/blog/${router.query.title}`
+                                "@id": `https://www.omsritara.in/blog/${blog.url_slug || router.query.title}`
                             },
                             "author": {
                                 "@type": "Organization",
@@ -81,12 +102,12 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
                                 }
                             },
                             "image": blog.banner_url,
-                            "url": `https://www.omsritara.in/blog/${router.query.title}`,
+                            "url": `https://www.omsritara.in/blog/${blog.url_slug || router.query.title}`,
                             "datePublished": blog.created_at
                         })
-                    }}
-                />
-            </Head>
+                }}
+            />
+        </Head>
 
             {/* ✅ Back Button */}
             <button
@@ -147,7 +168,12 @@ export async function getServerSideProps(context: any) {
         );
 
         const blogs = res.data?.blogs || [];
-        const matched = blogs.find((item: Blog) => slugify(item.title) === title);
+        const matched = blogs.find((item: Blog) => {
+            if (item.url_slug) {
+                return item.url_slug === title;
+            }
+            return slugify(item.title) === title;
+        });
 
         return {
             props: {
