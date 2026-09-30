@@ -9,7 +9,7 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
         "@context": "https://schema.org",
         "@type": "Organization",
         "@id": "https://www.omsritara.in/#organization",
-        "name": "Om Sritara",
+        "name": "Omsritara",
         "legalName": "Anandat Bhavati Private Limited",
         "url": "https://www.omsritara.in/",
         "logo": {
@@ -20,7 +20,7 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
             "height": 512
         },
         "image": "https://www.omsritara.in/images/blog-banner.jpg",
-        "description": "Om Sritara is a trusted spiritual healing and holistic wellness organization offering Reiki certification courses, healing crystals, spiritually energized products, meditation, Akashic Records, crystal healing and authentic spiritual guidance under Guru Matha.",
+        "description": "Omsritara is a trusted spiritual healing and holistic wellness organization offering Reiki certification courses, healing crystals, spiritually energized products, meditation, Akashic Records, crystal healing and authentic spiritual guidance under Guru Matha.",
         "founder": {
             "@type": "Person",
             "name": "Guru Matha",
@@ -29,7 +29,7 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
         },
         "brand": {
             "@type": "Brand",
-            "name": "Om Sritara"
+            "name": "Omsritara"
         },
         "foundingLocation": {
             "@type": "Place",
@@ -89,8 +89,8 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
         "@type": "WebSite",
         "@id": "https://www.omsritara.in/#website",
         "url": "https://www.omsritara.in/",
-        "name": "Om Sritara",
-        "description": "Om Sritara is a trusted destination for authentic healing crystals, Reiki certification courses, spiritual healing services, holistic wellness education, spiritually energized products and expert spiritual guidance.",
+        "name": "Omsritara",
+        "description": "Omsritara is a trusted destination for authentic healing crystals, Reiki certification courses, spiritual healing services, holistic wellness education, spiritually energized products and expert spiritual guidance.",
         "publisher": {
             "@id": "https://www.omsritara.in/#organization"
         },
@@ -117,7 +117,7 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
             "Holistic Wellness",
             "Akashic Records",
             "Guru Matha",
-            "Om Sritara"
+            "Omsritara"
         ],
         "potentialAction": {
             "@type": "SearchAction",
@@ -137,9 +137,9 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
         "@type": "WebPage",
         "@id": "https://www.omsritara.in/blog#webpage",
         "url": "https://www.omsritara.in/blog",
-        "name": "Spiritual Healing, Reiki & Healing Crystal Blog | Om Sritara",
+        "name": "Spiritual Healing, Reiki & Healing Crystal Blog | Omsritara",
         "headline": "Spiritual Healing, Reiki & Healing Crystal Blog",
-        "description": "Explore expert articles on Reiki, healing crystals, meditation, chakra healing, Akashic Records, holistic wellness and spiritual growth. Learn practical knowledge from Om Sritara under the guidance of Guru Matha.",
+        "description": "Explore expert articles on Reiki, healing crystals, meditation, chakra healing, Akashic Records, holistic wellness and spiritual growth. Learn practical knowledge from Omsritara under the guidance of Guru Matha.",
         "isPartOf": {
             "@id": "https://www.omsritara.in/#website"
         },
@@ -203,9 +203,9 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
         "@type": "Blog",
         "@id": "https://www.omsritara.in/blog#blog",
         "url": "https://www.omsritara.in/blog",
-        "name": "Om Sritara Spiritual Healing Blog",
+        "name": "Omsritara Spiritual Healing Blog",
         "headline": "Spiritual Healing, Reiki & Healing Crystal Blog",
-        "description": "Discover expert articles on Reiki, healing crystals, meditation, chakra healing, Akashic Records, holistic wellness and spiritual growth. Explore authentic spiritual knowledge, practical guidance and spiritually energized products from Om Sritara.",
+        "description": "Discover expert articles on Reiki, healing crystals, meditation, chakra healing, Akashic Records, holistic wellness and spiritual growth. Explore authentic spiritual knowledge, practical guidance and spiritually energized products from Omsritara.",
         "publisher": {
             "@id": "https://www.omsritara.in/#organization"
         },
@@ -252,7 +252,7 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
             "Akashic Records",
             "Holistic Wellness",
             "Guru Matha",
-            "Om Sritara"
+            "Omsritara"
         ],
         "isPartOf": {
             "@id": "https://www.omsritara.in/#website"
@@ -282,9 +282,9 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
         "@type": "CollectionPage",
         "@id": "https://www.omsritara.in/blog#collectionpage",
         "url": "https://www.omsritara.in/blog",
-        "name": "Spiritual Healing Blog | Om Sritara",
+        "name": "Spiritual Healing Blog | Omsritara",
         "headline": "Spiritual Healing, Reiki & Healing Crystal Blog",
-        "description": "Browse the latest articles on Reiki, healing crystals, meditation, chakra healing, Akashic Records, holistic wellness and spiritual growth from Om Sritara.",
+        "description": "Browse the latest articles on Reiki, healing crystals, meditation, chakra healing, Akashic Records, holistic wellness and spiritual growth from Omsritara.",
         "isPartOf": {
             "@id": "https://www.omsritara.in/#website"
         },
@@ -370,7 +370,7 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
         "@id": "https://www.omsritara.in/#gurumatha",
         "name": "Guru Matha",
         "jobTitle": "Ambal Upasaki, Reiki Master & Spiritual Healer",
-        "description": "Guru Matha is the spiritual guide of Om Sritara, sharing authentic teachings on Reiki, meditation, crystal healing, holistic wellness and spiritual growth.",
+        "description": "Guru Matha is the spiritual guide of Omsritara, sharing authentic teachings on Reiki, meditation, crystal healing, holistic wellness and spiritual growth.",
         "worksFor": {
             "@id": "https://www.omsritara.in/#organization"
         },
@@ -404,22 +404,22 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                <title>Spiritual Healing Blog | Reiki & Healing Crystals | Om Sritara</title>
+                <title>Spiritual Healing Blog | Reiki & Healing Crystals | Omsritara</title>
 
-                <meta name="description" content="Read expert articles on Reiki, healing crystals, meditation, chakra healing, holistic wellness and spiritual growth. Learn practical insights from Om Sritara and discover spiritually energized products guided by Guru Matha." />
-                <meta name="keywords" content="Om Sritara, Spiritual Healing Blog, Reiki Blog, Healing Crystal Blog, Crystal Healing, Reiki Healing, Meditation Blog, Chakra Healing, Energy Healing, Holistic Wellness, Akashic Records, Spiritual Growth, Healing Stones, Spiritual Knowledge, Reiki Training, Healing Crystals India, Spiritual Products, Guru Matha, Wellness Blog" />
+                <meta name="description" content="Read expert articles on Reiki, healing crystals, meditation, chakra healing, holistic wellness and spiritual growth. Learn practical insights from Omsritara and discover spiritually energized products guided by Guru Matha." />
+                <meta name="keywords" content="Omsritara, Spiritual Healing Blog, Reiki Blog, Healing Crystal Blog, Crystal Healing, Reiki Healing, Meditation Blog, Chakra Healing, Energy Healing, Holistic Wellness, Akashic Records, Spiritual Growth, Healing Stones, Spiritual Knowledge, Reiki Training, Healing Crystals India, Spiritual Products, Guru Matha, Wellness Blog" />
                 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
                 <link rel="canonical" href="https://www.omsritara.in/blog" />
-                <meta name="author" content="Om Sritara" />
+                <meta name="author" content="Omsritara" />
                 <meta name="publisher" content="Anandat Bhavati Private Limited" />
-                <meta name="copyright" content="© 2026 Om Sritara" />
+                <meta name="copyright" content="© 2026 Omsritara" />
                 <meta httpEquiv="content-language" content="en-IN" />
                 <meta name="theme-color" content="#6B2E8F" />
                 <meta name="referrer" content="strict-origin-when-cross-origin" />
                 <meta name="format-detection" content="telephone=no" />
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="Om Sritara" />
+                <meta name="apple-mobile-web-app-title" content="Omsritara" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
                 <meta name="contact" content="info@omsritara.in" />
                 <meta name="reply-to" content="info@omsritara.in" />
@@ -427,20 +427,20 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
                 <meta name="geo.region" content="IN-TN" />
                 <meta name="geo.placename" content="Chennai, Tamil Nadu" />
                 <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Om Sritara" />
-                <meta property="og:title" content="Spiritual Healing Blog | Reiki & Healing Crystals | Om Sritara" />
-                <meta property="og:description" content="Explore expert articles on Reiki, healing crystals, meditation, chakra healing, energy healing and holistic wellness from Om Sritara." />
+                <meta property="og:site_name" content="Omsritara" />
+                <meta property="og:title" content="Spiritual Healing Blog | Reiki & Healing Crystals | Omsritara" />
+                <meta property="og:description" content="Explore expert articles on Reiki, healing crystals, meditation, chakra healing, energy healing and holistic wellness from Omsritara." />
                 <meta property="og:url" content="https://www.omsritara.in/blog" />
                 <meta property="og:image" content="https://www.omsritara.in/images/blog-banner.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:image:alt" content="Om Sritara Spiritual Healing Blog" />
+                <meta property="og:image:alt" content="Omsritara Spiritual Healing Blog" />
                 <meta property="og:locale" content="en_IN" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Spiritual Healing Blog | Reiki & Healing Crystals | Om Sritara" />
-                <meta name="twitter:description" content="Read practical articles on Reiki, healing crystals, meditation, chakra healing and holistic wellness from Om Sritara." />
+                <meta name="twitter:title" content="Spiritual Healing Blog | Reiki & Healing Crystals | Omsritara" />
+                <meta name="twitter:description" content="Read practical articles on Reiki, healing crystals, meditation, chakra healing and holistic wellness from Omsritara." />
                 <meta name="twitter:image" content="https://www.omsritara.in/images/blog-banner.jpg" />
-                <meta name="twitter:image:alt" content="Om Sritara Spiritual Healing Blog" />
+                <meta name="twitter:image:alt" content="Omsritara Spiritual Healing Blog" />
                 <meta name="twitter:site" content="@omsritara" />
 
                 {/* JSON-LD Structured Data */}

@@ -12,7 +12,7 @@ export default function ConnectEnglishPage() {
   const jsonLdOrganization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Om Sritara",
+    "name": "Omsritara",
     "url": "https://omsritara.in",
     "logo": "https://omsritara.in/logo.png",
     "email": "info@omsritara.com",
@@ -30,7 +30,7 @@ export default function ConnectEnglishPage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://omsritara.in/#organization",
-    "name": "Om Sritara",
+    "name": "Omsritara",
     "url": "https://omsritara.in",
     "logo": "https://omsritara.in/logo.png",
     "image": "https://omsritara.in/logo.png",
@@ -74,13 +74,13 @@ export default function ConnectEnglishPage() {
   const jsonLdWebPage = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Om Sritara English",
-    "description": "Official English Connect page for Om Sritara.",
+    "name": "Omsritara English",
+    "description": "Official English Connect page for Omsritara.",
     "url": "https://omsritara.in/connect/en",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "name": "Om Sritara",
+      "name": "Omsritara",
       "url": "https://omsritara.in"
     }
   };
@@ -101,28 +101,28 @@ export default function ConnectEnglishPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is Om Sritara English?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Om Sritara English is the English-language spiritual community of Om Sritara, offering Reiki healing, crystal healing, meditation guidance, certified Reiki courses, and holistic wellness education." }
+        "name": "What is Omsritara English?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Omsritara English is the English-language spiritual community of Omsritara, offering Reiki healing, crystal healing, meditation guidance, certified Reiki courses, and holistic wellness education." }
       },
       {
         "@type": "Question",
-        "name": "Where is Om Sritara located?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Om Sritara is located at 46, Giri Road, Satyamurthy Nagar, T. Nagar, Chennai, Tamil Nadu 600017." }
+        "name": "Where is Omsritara located?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Omsritara is located at 46, Giri Road, Satyamurthy Nagar, T. Nagar, Chennai, Tamil Nadu 600017." }
       },
       {
         "@type": "Question",
-        "name": "Does Om Sritara offer Reiki courses in English?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Om Sritara provides Reiki certification courses and spiritual training in English for beginners and advanced learners." }
+        "name": "Does Omsritara offer Reiki courses in English?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Omsritara provides Reiki certification courses and spiritual training in English for beginners and advanced learners." }
       },
       {
         "@type": "Question",
-        "name": "Can I contact Om Sritara through WhatsApp?",
+        "name": "Can I contact Omsritara through WhatsApp?",
         "acceptedAnswer": { "@type": "Answer", "text": "Yes. English support is available on WhatsApp at +91 7092973555 during business hours." }
       },
       {
         "@type": "Question",
-        "name": "What services does Om Sritara provide?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Om Sritara offers Reiki healing, crystal healing, chakra healing, meditation guidance, spiritual counselling, certified Reiki courses, healing crystals, and spiritually energized products." }
+        "name": "What services does Omsritara provide?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Omsritara offers Reiki healing, crystal healing, chakra healing, meditation guidance, spiritual counselling, certified Reiki courses, healing crystals, and spiritually energized products." }
       }
     ]
   };
@@ -130,7 +130,7 @@ export default function ConnectEnglishPage() {
   const jsonLdItemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Om Sritara Featured Services",
+    "name": "Omsritara Featured Services",
     "itemListElement": [
       { "@type": "Service", "position": 1, "name": "Reiki Healing" },
       { "@type": "Service", "position": 2, "name": "Crystal Healing" },
@@ -176,15 +176,15 @@ export default function ConnectEnglishPage() {
 
       <main className="min-h-screen bg-orange-50 font-sans text-gray-800">
         <header className="bg-white py-12 px-6 shadow-sm text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-700 mb-4 tracking-tight">Om Sritara English</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-orange-700 mb-4 tracking-tight">Omsritara English</h1>
           <p className="text-lg md:text-xl font-medium text-gray-600">Reiki Healing, Spiritual Courses & Crystal Healing</p>
         </header>
 
         <section className="max-w-4xl mx-auto py-12 px-6">
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-orange-200 pb-2 inline-block">Welcome to the official Om Sritara English Connect page</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-orange-200 pb-2 inline-block">Welcome to the official Omsritara English Connect page</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Whether you&apos;re looking for Reiki Healing, Crystal Healing, spiritual guidance, healing crystals, certified Reiki courses, meditation practices, or authentic spiritual products, this page connects you with all of Om Sritara&apos;s English platforms in one convenient place.
+              Whether you&apos;re looking for Reiki Healing, Crystal Healing, spiritual guidance, healing crystals, certified Reiki courses, meditation practices, or authentic spiritual products, this page connects you with all of Omsritara&apos;s English platforms in one convenient place.
             </p>
             <p className="text-gray-700 leading-relaxed">
               Join our growing global spiritual community to discover Reiki wisdom, holistic wellness, energy healing, meditation techniques, crystal knowledge, and spiritual education through videos, social media, WhatsApp support, and our spiritual centre in Chennai.
@@ -192,7 +192,7 @@ export default function ConnectEnglishPage() {
           </div>
 
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center text-orange-800 mb-8">Connect With Om Sritara English</h2>
+            <h2 className="text-3xl font-bold text-center text-orange-800 mb-8">Connect With Omsritara English</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {socialLinks.map((link) => (
                 <Link key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className={`flex flex-col items-center justify-center p-6 rounded-2xl transition-transform hover:-translate-y-2 hover:shadow-lg ${link.bg} ${link.name === 'Website' ? 'text-gray-800 hover:bg-gray-50' : 'text-white'}`}>
@@ -225,7 +225,7 @@ export default function ConnectEnglishPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center"><FaMapMarkerAlt className="mr-3 text-orange-500" /> Visit Our Centre</h3>
               <p className="text-gray-600 mb-4">Experience authentic spiritual healing and personalized guidance at our Chennai centre.</p>
               <address className="not-italic text-gray-800 font-medium leading-loose bg-orange-50 p-4 rounded-lg">
-                Om Sritara<br />
+                Omsritara<br />
                 46, Giri Road, Satyamurthy Nagar<br />
                 T. Nagar, Chennai – 600017<br />
                 Tamil Nadu, India
@@ -261,7 +261,7 @@ export default function ConnectEnglishPage() {
           </div>
 
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center text-orange-800 mb-8">Who Can Benefit From Om Sritara?</h2>
+            <h2 className="text-3xl font-bold text-center text-orange-800 mb-8">Who Can Benefit From Omsritara?</h2>
             <div className="bg-white p-8 rounded-2xl shadow-md">
               <p className="text-gray-700 font-medium mb-6">Our English community welcomes people interested in:</p>
               <div className="flex flex-wrap gap-3 mb-6">
@@ -270,7 +270,7 @@ export default function ConnectEnglishPage() {
                 ))}
               </div>
               <p className="text-gray-700">
-                Whether you&apos;re taking your first step into holistic wellness or expanding your spiritual practice, Om Sritara provides authentic guidance, internationally accessible learning resources, certified Reiki training, meditation techniques, and spiritually energized products to support your journey.
+                Whether you&apos;re taking your first step into holistic wellness or expanding your spiritual practice, Omsritara provides authentic guidance, internationally accessible learning resources, certified Reiki training, meditation techniques, and spiritually energized products to support your journey.
               </p>
             </div>
           </div>
@@ -290,7 +290,7 @@ export default function ConnectEnglishPage() {
           <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-3xl p-10 text-white text-center shadow-xl">
             <h2 className="text-3xl font-bold mb-4">Begin Your Spiritual Journey Today</h2>
             <p className="text-orange-100 mb-8 max-w-2xl mx-auto text-lg">
-              Follow Om Sritara English across our official social media channels and become part of our growing global spiritual community.<br /><br />
+              Follow Omsritara English across our official social media channels and become part of our growing global spiritual community.<br /><br />
               Stay informed with Reiki courses, crystal healing insights, meditation guidance, spiritual workshops, holistic wellness resources, healing products, and inspirational teachings.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

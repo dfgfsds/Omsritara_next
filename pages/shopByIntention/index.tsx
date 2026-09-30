@@ -8,7 +8,7 @@ export default function IntentionPage() {
         "@type": "CollectionPage",
         "@id": "https://www.omsritara.in/shopByIntention/#webpage",
         "url": "https://www.omsritara.in/shopByIntention",
-        "name": "Shop Spiritual Products by Intention | Om Sritara",
+        "name": "Shop Spiritual Products by Intention | Omsritara",
         "description": "Browse authentic spiritual products by intention including love, healing, protection, money, health, confidence, clarity, chakra healing, and spiritual growth.",
         "isPartOf": {
             "@id": "https://www.omsritara.in/#website"
@@ -169,25 +169,25 @@ export default function IntentionPage() {
     return (
         <>
             <Head>
-                <title>Shop Spiritual Products by Intention | Om Sritara</title>
+                <title>Shop Spiritual Products by Intention | Omsritara</title>
                 <meta
                     name="description"
-                    content="Shop spiritual products by intention including love, healing, protection, money, health, confidence, clarity, Feng Shui, and spiritual growth at Om Sritara."
+                    content="Shop spiritual products by intention including love, healing, protection, money, health, confidence, clarity, Feng Shui, and spiritual growth at Omsritara."
                 />
                 <meta
                     name="keywords"
-                    content="Shop by Intention, Spiritual Products by Intention, Healing Crystals, Healing Crystal Store, Love Crystal, Money Crystal, Protection Crystal, Business Growth Crystal, Health Crystals, Confidence Crystal, Peace Crystal, Chakra Healing, Reiki Products, Energy Healing, Crystal Bracelets, Healing Stones, Spiritual Store Chennai, Online Spiritual Shop, Holistic Wellness, Om Sritara"
+                    content="Shop by Intention, Spiritual Products by Intention, Healing Crystals, Healing Crystal Store, Love Crystal, Money Crystal, Protection Crystal, Business Growth Crystal, Health Crystals, Confidence Crystal, Peace Crystal, Chakra Healing, Reiki Products, Energy Healing, Crystal Bracelets, Healing Stones, Spiritual Store Chennai, Online Spiritual Shop, Holistic Wellness, Omsritara"
                 />
                 <link rel="canonical" href="https://www.omsritara.in/shopByIntention" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Shop Spiritual Products by Intention | Om Sritara" />
+                <meta property="og:title" content="Shop Spiritual Products by Intention | Omsritara" />
                 <meta property="og:description" content="Discover healing crystals and spiritual products for love, healing, protection, wealth, health, confidence, chakra balancing, and spiritual growth." />
                 <meta property="og:url" content="https://www.omsritara.in/shopByIntention" />
                 <meta property="og:image" content="https://www.omsritara.in/images/shop-by-intention-banner.jpg" />
-                <meta property="og:site_name" content="Om Sritara" />
+                <meta property="og:site_name" content="Omsritara" />
                 <meta property="og:locale" content="en_IN" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Shop Spiritual Products by Intention | Om Sritara" />
+                <meta name="twitter:title" content="Shop Spiritual Products by Intention | Omsritara" />
                 <meta name="twitter:description" content="Explore authentic healing crystals and spiritual products for love, healing, protection, prosperity, peace, and positive energy." />
                 <meta name="twitter:image" content="https://www.omsritara.in/images/shop-by-intention-banner.jpg" />
 

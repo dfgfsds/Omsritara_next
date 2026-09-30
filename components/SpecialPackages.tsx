@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import ProductCard from "./ProductCard";
 import ProductCardSkeleton from "./ProductCardSkeleton";
 
-/* ================== REUSABLE SCROLL SLIDER ================== */
+
 
 function ProductSlider({
     title,

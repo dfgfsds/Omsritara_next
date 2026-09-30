@@ -26,7 +26,7 @@ const faqSchema = {
       name: "What are the best spiritual healing certification courses available online?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Om Sritara offers Reiki, Lama Fera, Akashic Records, Chakra Healing, Numerology, Quantum Healing and many certified spiritual healing courses online and offline.",
+        text: "Omsritara offers Reiki, Lama Fera, Akashic Records, Chakra Healing, Numerology, Quantum Healing and many certified spiritual healing courses online and offline.",
       },
     },
     {
@@ -315,7 +315,7 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": "https://www.omsritara.in/#website",
   url: "https://www.omsritara.in/",
-  name: "Om Sritara",
+  name: "Omsritara",
   publisher: {
     "@id": "https://www.omsritara.in/#organization",
   },
@@ -325,15 +325,15 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://www.omsritara.in/#organization",
-  name: "Om Sritara",
+  name: "Omsritara",
   alternateName: [
-    "Om Sritara Foundation",
-    "Om Sritara Satsang",
+    "Omsritara Foundation",
+    "Omsritara Satsang",
   ],
   url: "https://www.omsritara.in/",
   logo: "https://www.omsritara.in/_next/static/media/logo.b7ef93ea.png",
   description:
-    "Om Sritara offers certified spiritual healing courses including Reiki, Lama Fera, Akashic Records, Quantum Healing, Chakra Healing, Numerology, Crystal Healing, and holistic wellness programs in Tamil and English.",
+    "Omsritara offers certified spiritual healing courses including Reiki, Lama Fera, Akashic Records, Quantum Healing, Chakra Healing, Numerology, Crystal Healing, and holistic wellness programs in Tamil and English.",
   sameAs: [
     "https://www.instagram.com/omsritara",
     "https://www.facebook.com/omsritarafoundation/",
@@ -351,7 +351,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://www.omsritara.in/#localbusiness",
-  name: "Om Sritara",
+  name: "Omsritara",
   url: "https://www.omsritara.in/",
   image: "https://www.omsritara.in/_next/static/media/logo.b7ef93ea.png",
   telephone: "+91-7092372555",
@@ -407,7 +407,7 @@ export default function CoursesPage() {
       <Head>
         <title>
           Online & Offline Spiritual Healing Courses with Certification | Reiki,
-          Lama Fera & More | Om Sritara
+          Lama Fera & More | Omsritara
         </title>
 
         <meta
@@ -461,7 +461,7 @@ export default function CoursesPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Online & Offline Spiritual Healing Courses with Certification | Om Sritara"
+          content="Online & Offline Spiritual Healing Courses with Certification | Omsritara"
         />
         <meta
           property="og:description"
@@ -469,7 +469,7 @@ export default function CoursesPage() {
         />
         <meta
           name="keywords"
-          content="Spiritual Healing Courses, Spiritual Courses India, Online Spiritual Healing Course, Offline Spiritual Healing Course, Spiritual Certification Course, Reiki Course, Usui Reiki Level 1, Reiki Master Course, Lama Fera Course, Akashic Records Course, Chakra Healing Course, Crystal Healing Course, Quantum Healing Course, Numerology Course, Tantra Course, Thanthrigam Course, Pendulum Dowsing Course, Ho'oponopono Course, Angel Reiki Course, Shamballa Reiki Course, Green Tara Course, Kwan Yin Healing Course, Amadeus Healing Course, Sujok Therapy Course, Egyptian Cartouche Course, Pancha Pakshi Course, Shamanism Course, Switch Words Course, Angel Codes Course, Angel and Archangel Course, Goddess Fortuna Course, Humkara with Haleem Course, Meditation Course, Energy Healing Course, Holistic Healing Course, Spiritual Wellness Course, Healing Certification, International Certification, Online Reiki Training, Tamil Spiritual Courses, English Spiritual Courses, Video Based Spiritual Course, Spiritual Learning Platform, Om Sritara Courses, Om Sritara Foundation, Chennai Spiritual Courses, Best Spiritual Healing Institute India"
+          content="Spiritual Healing Courses, Spiritual Courses India, Online Spiritual Healing Course, Offline Spiritual Healing Course, Spiritual Certification Course, Reiki Course, Usui Reiki Level 1, Reiki Master Course, Lama Fera Course, Akashic Records Course, Chakra Healing Course, Crystal Healing Course, Quantum Healing Course, Numerology Course, Tantra Course, Thanthrigam Course, Pendulum Dowsing Course, Ho'oponopono Course, Angel Reiki Course, Shamballa Reiki Course, Green Tara Course, Kwan Yin Healing Course, Amadeus Healing Course, Sujok Therapy Course, Egyptian Cartouche Course, Pancha Pakshi Course, Shamanism Course, Switch Words Course, Angel Codes Course, Angel and Archangel Course, Goddess Fortuna Course, Humkara with Haleem Course, Meditation Course, Energy Healing Course, Holistic Healing Course, Spiritual Wellness Course, Healing Certification, International Certification, Online Reiki Training, Tamil Spiritual Courses, English Spiritual Courses, Video Based Spiritual Course, Spiritual Learning Platform, Omsritara Courses, Omsritara Foundation, Chennai Spiritual Courses, Best Spiritual Healing Institute India"
         />
         <meta
           property="og:url"
@@ -479,7 +479,7 @@ export default function CoursesPage() {
           property="og:image"
           content="https://www.omsritara.in//img/courses/ReikiLevel1.webp"
         />
-        <meta property="og:site_name" content="Om Sritara" />
+        <meta property="og:site_name" content="Omsritara" />
         <meta property="og:locale" content="en_IN" />
 
         {/* Twitter Card */}
@@ -489,7 +489,7 @@ export default function CoursesPage() {
         />
         <meta
           name="twitter:title"
-          content="Online & Offline Spiritual Healing Courses | Om Sritara"
+          content="Online & Offline Spiritual Healing Courses | Omsritara"
         />
         <meta
           name="twitter:description"
@@ -594,7 +594,7 @@ export default function CoursesPage() {
               </h3>
 
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Om Sritara is a trusted spiritual learning platform offering:
+                Omsritara is a trusted spiritual learning platform offering:
               </p>
             </div>
 
@@ -628,7 +628,7 @@ export default function CoursesPage() {
               </h3>
 
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Om Sritara-வை நம்பகமான ஆன்மீகக் கல்வி வழங்கும் தளமாக அறிமுகப்படுத்துங்கள்:
+                Omsritara-வை நம்பகமான ஆன்மீகக் கல்வி வழங்கும் தளமாக அறிமுகப்படுத்துங்கள்:
               </p>
             </div>
 
@@ -657,13 +657,13 @@ export default function CoursesPage() {
         )}
       </div>
 
-      {/* Why Learn Spiritual Healing with Om Sritara */}
+      {/* Why Learn Spiritual Healing with Omsritara */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             {language === 'en'
-              ? 'Why Learn Spiritual Healing with Om Sritara?'
-              : 'Om Sritara-வில் ஆன்மீக ஹீலிங் ஏன் கற்க வேண்டும்?'}
+              ? 'Why Learn Spiritual Healing with Omsritara?'
+              : 'Omsritara-வில் ஆன்மீக ஹீலிங் ஏன் கற்க வேண்டும்?'}
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed">
@@ -721,13 +721,13 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* Why Choose Om Sritara */}
+      {/* Why Choose Omsritara */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
             {language === 'en'
-              ? 'Why Choose Om Sritara?'
-              : 'ஏன் Om Sritara-வை தேர்வு செய்ய வேண்டும்?'}
+              ? 'Why Choose Omsritara?'
+              : 'ஏன் Omsritara-வை தேர்வு செய்ய வேண்டும்?'}
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -784,7 +784,7 @@ export default function CoursesPage() {
                     <span className="group-open:rotate-180 transition-transform"><ChevronDown /></span>
                   </summary>
                   <p className="mt-4 text-gray-600">
-                    Om Sritara offers certified Reiki, Lama Fera, Akashic Records,
+                    Omsritara offers certified Reiki, Lama Fera, Akashic Records,
                     Chakra Healing, Numerology, Quantum Healing, Crystal Healing,
                     and many other spiritual healing courses available online and offline.
                   </p>
@@ -838,7 +838,7 @@ export default function CoursesPage() {
                     <span className="group-open:rotate-180 transition-transform"><ChevronDown /></span>
                   </summary>
                   <p className="mt-4 text-gray-600">
-                    Om Sritara-வில் ரெய்கி, லாமா ஃபெரா, ஆகாஷிக் ரெக்கார்ட்ஸ்,
+                    Omsritara-வில் ரெய்கி, லாமா ஃபெரா, ஆகாஷிக் ரெக்கார்ட்ஸ்,
                     சக்ரா ஹீலிங், எண்கணிதம், குவாண்டம் ஹீலிங், கிரிஸ்டல் ஹீலிங்
                     மற்றும் பல ஆன்மீக ஹீலிங் சான்றிதழ் பயிற்சிகள் ஆன்லைன் மற்றும்
                     ஆஃப்லைன் முறைகளில் வழங்கப்படுகின்றன.

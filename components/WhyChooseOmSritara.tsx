@@ -64,7 +64,7 @@ export default function WhyChooseOmSritara() {
             {/* Background Texture & Watermark */}
             <HexPattern />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-gray-50/50 font-serif whitespace-nowrap pointer-events-none z-0">
-                OM SRITARA
+                Omsritara
             </div>
 
             {/* Floating ambient glowing orbs */}
@@ -78,14 +78,14 @@ export default function WhyChooseOmSritara() {
                     <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-100 bg-white px-5 py-2 shadow-sm">
                         <Sparkles size={16} className="text-amber-500 animate-pulse" />
                         <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-800">
-                            The Om Sritara Difference
+                            The Omsritara Difference
                         </span>
                     </div>
 
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0a192f] font-serif mb-6 leading-tight">
                         Why Choose{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-orange-500 to-rose-500">
-                            Om Sritara?
+                            Omsritara?
                         </span>
                     </h2>
                 </div>
@@ -144,7 +144,7 @@ export default function WhyChooseOmSritara() {
                             </div>
 
                             <h4 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white leading-relaxed font-light">
-                                All Om Sritara gemstones are carefully selected, quality checked, and energized with the <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">divine blessings</span> of Guru Matha Sri Tara Amma before being recommended.
+                                All Omsritara gemstones are carefully selected, quality checked, and energized with the <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">divine blessings</span> of Guru Matha Sri Tara Amma before being recommended.
                             </h4>
                         </div>
                     </div>

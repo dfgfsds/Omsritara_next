@@ -9,34 +9,34 @@ const AboutUs = () => {
 
   const faqs = [
     {
-      question: "What spiritual healing services does Om Sritara offer?",
+      question: "What spiritual healing services does Omsritara offer?",
       answer:
-        "Om Sritara offers Reiki Healing, Akashic Records Reading, Angelic Healing Therapy, Divine Guidance, Spiritual Counseling, Numerology Consultation, Shamanic Healing, Chakra Balancing, Aura Cleansing, Quantum Healing, Crystal Healing, Meditation, Energy Healing and Multidimensional Healing. We provide online and offline healing sessions, certification courses and holistic wellness programs in Tamil and English."
+        "Omsritara offers Reiki Healing, Akashic Records Reading, Angelic Healing Therapy, Divine Guidance, Spiritual Counseling, Numerology Consultation, Shamanic Healing, Chakra Balancing, Aura Cleansing, Quantum Healing, Crystal Healing, Meditation, Energy Healing and Multidimensional Healing. We provide online and offline healing sessions, certification courses and holistic wellness programs in Tamil and English."
     },
     {
-      question: "Does Om Sritara offer online Reiki classes and certification courses?",
+      question: "Does Omsritara offer online Reiki classes and certification courses?",
       answer:
-        "Yes. Om Sritara offers online and offline Reiki certification courses in Tamil and English for beginners and advanced practitioners. Each course includes structured learning materials, practical guidance, certification and continuous support."
+        "Yes. Omsritara offers online and offline Reiki certification courses in Tamil and English for beginners and advanced practitioners. Each course includes structured learning materials, practical guidance, certification and continuous support."
     },
     {
-      question: "Are Om Sritara's products authentic and spiritually energized?",
+      question: "Are Omsritara's products authentic and spiritually energized?",
       answer:
         "Yes. Every product is carefully selected, ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching you."
     },
     {
-      question: "Who can join Om Sritara's spiritual courses?",
+      question: "Who can join Omsritara's spiritual courses?",
       answer:
         "Our courses are suitable for beginners, students, working professionals, yoga practitioners, Reiki healers, therapists, wellness coaches, meditation practitioners, spiritual seekers and anyone interested in personal transformation and spiritual growth."
     },
     {
-      question: "Who leads Om Sritara's spiritual teachings and healing programs?",
+      question: "Who leads Omsritara's spiritual teachings and healing programs?",
       answer:
-        "Om Sritara is guided by Guru Matha, a respected Ambal Upasaki, Reiki Master, Spiritual Healer and Divine Guide who leads healing sessions, counseling, certification courses and sacred healing practices."
+        "Omsritara is guided by Guru Matha, a respected Ambal Upasaki, Reiki Master, Spiritual Healer and Divine Guide who leads healing sessions, counseling, certification courses and sacred healing practices."
     },
     {
-      question: "Where is Om Sritara located, and do you provide services worldwide?",
+      question: "Where is Omsritara located, and do you provide services worldwide?",
       answer:
-        "Om Sritara is located in Chennai, Tamil Nadu, India. We provide offline spiritual healing sessions, Reiki training, counseling, certification courses and meditation classes at our Chennai centre, along with online services for students worldwide."
+        "Omsritara is located in Chennai, Tamil Nadu, India. We provide offline spiritual healing sessions, Reiki training, counseling, certification courses and meditation classes at our Chennai centre, along with online services for students worldwide."
     }
   ];
 
@@ -47,31 +47,31 @@ const AboutUs = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What spiritual healing services does Om Sritara offer?",
+        "name": "What spiritual healing services does Omsritara offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Om Sritara, operating under Anandat Bhavati Private Limited, offers Reiki Healing, Akashic Records Reading, Angelic Healing Therapy, Divine Guidance, Spiritual Counseling, Numerology Consultation, Shamanic Healing, Chakra Balancing, Aura Cleansing, Quantum Healing, Crystal Healing, Meditation, Energy Healing and Multidimensional Healing through online and offline sessions in Tamil and English."
+          "text": "Omsritara, operating under Anandat Bhavati Private Limited, offers Reiki Healing, Akashic Records Reading, Angelic Healing Therapy, Divine Guidance, Spiritual Counseling, Numerology Consultation, Shamanic Healing, Chakra Balancing, Aura Cleansing, Quantum Healing, Crystal Healing, Meditation, Energy Healing and Multidimensional Healing through online and offline sessions in Tamil and English."
         }
       },
       {
         "@type": "Question",
-        "name": "Does Om Sritara offer online Reiki classes and certification courses?",
+        "name": "Does Omsritara offer online Reiki classes and certification courses?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Om Sritara offers online and offline Reiki certification courses including Reiki Level 1, Reiki Levels 2, 3 & 4, Lama Fera Healing, Amadeus Healing, Angel Reiki, Shamballa Reiki, Akashic Records, Crystal Healing, Chakra Healing, Quantum Healing, Sujok Therapy, Green Tara Healing, Goddess Fortuna Healing, Ho'oponopono, Thanthrigam (Tantra) and many other certified spiritual healing programs."
+          "text": "Yes. Omsritara offers online and offline Reiki certification courses including Reiki Level 1, Reiki Levels 2, 3 & 4, Lama Fera Healing, Amadeus Healing, Angel Reiki, Shamballa Reiki, Akashic Records, Crystal Healing, Chakra Healing, Quantum Healing, Sujok Therapy, Green Tara Healing, Goddess Fortuna Healing, Ho'oponopono, Thanthrigam (Tantra) and many other certified spiritual healing programs."
         }
       },
       {
         "@type": "Question",
-        "name": "Are Om Sritara's products authentic and spiritually energized?",
+        "name": "Are Omsritara's products authentic and spiritually energized?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Every product offered by Om Sritara is carefully selected, ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching customers. This includes healing crystals, crystal bracelets, crystal rings, pendants, Rudraksha malas, meditation accessories, spiritual tools and sacred wellness products prepared to support healing, protection, positivity, abundance, meditation, chakra balancing and holistic well-being."
+          "text": "Yes. Every product offered by Omsritara is carefully selected, ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching customers. This includes healing crystals, crystal bracelets, crystal rings, pendants, Rudraksha malas, meditation accessories, spiritual tools and sacred wellness products prepared to support healing, protection, positivity, abundance, meditation, chakra balancing and holistic well-being."
         }
       },
       {
         "@type": "Question",
-        "name": "Who can join Om Sritara's spiritual courses?",
+        "name": "Who can join Omsritara's spiritual courses?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Our spiritual courses are suitable for beginners, students, working professionals, yoga practitioners, Reiki healers, therapists, meditation practitioners, wellness coaches and anyone interested in spiritual healing, energy work, self-discovery, consciousness expansion and personal transformation. Most beginner courses require no previous experience."
@@ -79,18 +79,18 @@ const AboutUs = () => {
       },
       {
         "@type": "Question",
-        "name": "Who leads Om Sritara's spiritual teachings and healing programs?",
+        "name": "Who leads Omsritara's spiritual teachings and healing programs?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Om Sritara is guided by Guru Matha, a respected Ambal Upasaki, Reiki Master, Spiritual Healer and Divine Guide. Under Guru Matha's guidance, authentic healing sessions, spiritual counseling, certification courses and sacred healing practices are conducted. Every spiritual product offered by Om Sritara is also personally energized and blessed by Guru Matha before reaching customers."
+          "text": "Omsritara is guided by Guru Matha, a respected Ambal Upasaki, Reiki Master, Spiritual Healer and Divine Guide. Under Guru Matha's guidance, authentic healing sessions, spiritual counseling, certification courses and sacred healing practices are conducted. Every spiritual product offered by Omsritara is also personally energized and blessed by Guru Matha before reaching customers."
         }
       },
       {
         "@type": "Question",
-        "name": "Where is Om Sritara located and do you provide services worldwide?",
+        "name": "Where is Omsritara located and do you provide services worldwide?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Om Sritara is located in Chennai, Tamil Nadu, India. We provide offline spiritual healing sessions, Reiki training, certification courses, meditation classes and spiritual counseling in Chennai while offering online spiritual healing services, certification programs and spiritually energized products to students and spiritual seekers across India and worldwide."
+          "text": "Omsritara is located in Chennai, Tamil Nadu, India. We provide offline spiritual healing sessions, Reiki training, certification courses, meditation classes and spiritual counseling in Chennai while offering online spiritual healing services, certification programs and spiritually energized products to students and spiritual seekers across India and worldwide."
         }
       }
 
@@ -101,16 +101,16 @@ const AboutUs = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://www.omsritara.in/#organization",
-    "name": "Om Sritara",
+    "name": "Omsritara",
     "legalName": "Anandat Bhavati Private Limited",
     "alternateName": [
-      "Om Sritara Foundation",
-      "Om Sritara Satsang"
+      "Omsritara Foundation",
+      "Omsritara Satsang"
     ],
     "url": "https://www.omsritara.in/",
     "logo": "https://www.omsritara.in/_next/static/media/logo.b7ef93ea.png",
     "image": "https://www.omsritara.in/img/omsritara_about.webp",
-    "description": "Om Sritara, operating under Anandat Bhavati Private Limited, is a trusted spiritual healing and holistic wellness organization dedicated to guiding individuals toward spiritual awakening, emotional healing, energetic balance and inner transformation. Founded under the divine guidance of Guru Matha, we offer authentic Reiki training, spiritual healing services, Akashic Records Reading, Angelic Healing Therapy, Crystal Healing, Quantum Healing, Shamanic Healing, meditation, spiritual counseling, certification courses and holistic wellness programs. Every product offered by Om Sritara is spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching customers.",
+    "description": "Omsritara, operating under Anandat Bhavati Private Limited, is a trusted spiritual healing and holistic wellness organization dedicated to guiding individuals toward spiritual awakening, emotional healing, energetic balance and inner transformation. Founded under the divine guidance of Guru Matha, we offer authentic Reiki training, spiritual healing services, Akashic Records Reading, Angelic Healing Therapy, Crystal Healing, Quantum Healing, Shamanic Healing, meditation, spiritual counseling, certification courses and holistic wellness programs. Every product offered by Omsritara is spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching customers.",
     "slogan": "Discover. Heal. Transform. Awaken.",
     "founder": {
       "@type": "Person",
@@ -159,7 +159,7 @@ const AboutUs = () => {
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Om Sritara Spiritual Offerings",
+      "name": "Omsritara Spiritual Offerings",
       "itemListElement": [
         {
           "@type": "Offer",
@@ -203,13 +203,13 @@ const AboutUs = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://www.omsritara.in/#website",
-    "name": "Om Sritara",
+    "name": "Omsritara",
     "alternateName": [
-      "Om Sritara Spiritual Healing",
-      "Om Sritara Foundation",
-      "Om Sritara Satsang"
+      "Omsritara Spiritual Healing",
+      "Omsritara Foundation",
+      "Omsritara Satsang"
     ],
-    "description": "Om Sritara, operating under Anandat Bhavati Private Limited, offers authentic spiritual healing services, Reiki certification courses, spiritually energized products, holistic wellness programs, healing crystals, meditation, Akashic Records Reading, spiritual counseling and online & offline spiritual education. Every product is spiritually cleansed, energized through sacred rituals, and personally energized and blessed by Guru Matha before reaching customers.",
+    "description": "Omsritara, operating under Anandat Bhavati Private Limited, offers authentic spiritual healing services, Reiki certification courses, spiritually energized products, holistic wellness programs, healing crystals, meditation, Akashic Records Reading, spiritual counseling and online & offline spiritual education. Every product is spiritually cleansed, energized through sacred rituals, and personally energized and blessed by Guru Matha before reaching customers.",
     "publisher": {
       "@id": "https://www.omsritara.in/#organization"
     },
@@ -241,12 +241,12 @@ const AboutUs = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://www.omsritara.in/#localbusiness",
-    "name": "Om Sritara",
+    "name": "Omsritara",
     "url": "https://www.omsritara.in/",
     "image": "https://www.omsritara.in/img/omsritara_about.webp",
     "logo": "https://www.omsritara.in/_next/static/media/logo.b7ef93ea.png",
     "description":
-      "Om Sritara is a trusted spiritual healing centre in Chennai operating under Anandat Bhavati Private Limited. Guided by Guru Matha, we offer Reiki training, spiritual healing services, Akashic Records Reading, Angelic Healing Therapy, meditation, crystal healing, holistic wellness courses and spiritually energized products.",
+      "Omsritara is a trusted spiritual healing centre in Chennai operating under Anandat Bhavati Private Limited. Guided by Guru Matha, we offer Reiki training, spiritual healing services, Akashic Records Reading, Angelic Healing Therapy, meditation, crystal healing, holistic wellness courses and spiritually energized products.",
     "priceRange": "₹₹",
     "telephone": "+91-7092372555",
     "email": "info@omsritara.in",
@@ -294,12 +294,12 @@ const AboutUs = () => {
     "@type": "AboutPage",
     "@id": "https://www.omsritara.in/about",
     "url": "https://www.omsritara.in/about",
-    "name": "About Om Sritara",
+    "name": "About Omsritara",
     "headline":
-      "About Om Sritara – Trusted Spiritual Healing Centre, Reiki Training, Holistic Wellness & Spiritually Energized Products",
+      "About Omsritara – Trusted Spiritual Healing Centre, Reiki Training, Holistic Wellness & Spiritually Energized Products",
 
     "description":
-      "Learn about Om Sritara, operating under Anandat Bhavati Private Limited and guided by Guru Matha. Discover authentic spiritual healing services, Reiki certification courses, spiritually energized products, healing crystals, holistic wellness programs, meditation, Akashic Records and online & offline spiritual education.",
+      "Learn about Omsritara, operating under Anandat Bhavati Private Limited and guided by Guru Matha. Discover authentic spiritual healing services, Reiki certification courses, spiritually energized products, healing crystals, holistic wellness programs, meditation, Akashic Records and online & offline spiritual education.",
 
     "isPartOf": {
       "@id": "https://www.omsritara.in/#website"
@@ -321,7 +321,7 @@ const AboutUs = () => {
     "inLanguage": ["en", "ta"],
 
     "keywords": [
-      "About Om Sritara",
+      "About Omsritara",
       "Guru Matha",
       "Spiritual Healing",
       "Reiki Training",
@@ -349,7 +349,7 @@ const AboutUs = () => {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "About Om Sritara",
+        "name": "About Omsritara",
         "item": "https://www.omsritara.in/about"
       }
     ]
@@ -359,17 +359,17 @@ const AboutUs = () => {
     <>
       <Head>
         <title>
-          About Om Sritara | Spiritual Healing, Reiki & Holistic Wellness
+          About Omsritara | Spiritual Healing, Reiki & Holistic Wellness
         </title>
 
         <meta
           name="description"
-          content="Learn about Om Sritara, a trusted spiritual healing centre under Anandat Bhavati Private Limited offering Reiki training, healing services and spiritually energized products personally energized and blessed by Guru Matha with online & offline certification courses and holistic wellness."
+          content="Learn about Omsritara, a trusted spiritual healing centre under Anandat Bhavati Private Limited offering Reiki training, healing services and spiritually energized products personally energized and blessed by Guru Matha with online & offline certification courses and holistic wellness."
         />
 
         <meta
           name="keywords"
-          content="Om Sritara, About Om Sritara, Anandat Bhavati Private Limited, Guru Matha, Spiritually Energized Products, Blessed by Guru Matha, Spiritual Healing, Spiritual Healing Centre, Reiki Training, Reiki Courses, Online Reiki Classes, Reiki Course Chennai, Energy Healing, Holistic Healing, Holistic Wellness, Crystal Healing, Healing Crystals, Energized Healing Crystals, Crystal Bracelets, Crystal Rings, Rudraksha Mala, Sacred Spiritual Products, Ethically Sourced Crystals, Akashic Records, Angelic Healing, Shamanic Healing, Quantum Healing, Divine Guidance, Spiritual Counseling, Meditation Classes, Chakra Healing, Aura Cleansing, Spiritual Courses India, Online Spiritual Courses, Tamil Reiki Classes, Spiritual Wellness"
+          content="Omsritara, About Omsritara, Anandat Bhavati Private Limited, Guru Matha, Spiritually Energized Products, Blessed by Guru Matha, Spiritual Healing, Spiritual Healing Centre, Reiki Training, Reiki Courses, Online Reiki Classes, Reiki Course Chennai, Energy Healing, Holistic Healing, Holistic Wellness, Crystal Healing, Healing Crystals, Energized Healing Crystals, Crystal Bracelets, Crystal Rings, Rudraksha Mala, Sacred Spiritual Products, Ethically Sourced Crystals, Akashic Records, Angelic Healing, Shamanic Healing, Quantum Healing, Divine Guidance, Spiritual Counseling, Meditation Classes, Chakra Healing, Aura Cleansing, Spiritual Courses India, Online Spiritual Courses, Tamil Reiki Classes, Spiritual Wellness"
         />
 
         <link
@@ -381,11 +381,11 @@ const AboutUs = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="About Om Sritara | Spiritual Healing, Reiki & Holistic Wellness"
+          content="About Omsritara | Spiritual Healing, Reiki & Holistic Wellness"
         />
         <meta
           property="og:description"
-          content="Discover Om Sritara's authentic spiritual healing services, Reiki training and spiritually energized products personally energized and blessed by Guru Matha, along with holistic wellness courses and sacred healing traditions."
+          content="Discover Omsritara's authentic spiritual healing services, Reiki training and spiritually energized products personally energized and blessed by Guru Matha, along with holistic wellness courses and sacred healing traditions."
         />
         <meta
           property="og:url"
@@ -395,7 +395,7 @@ const AboutUs = () => {
           property="og:image"
           content="https://www.omsritara.in/img/omsritara_about.webp"
         />
-        <meta property="og:site_name" content="Om Sritara" />
+        <meta property="og:site_name" content="Omsritara" />
         <meta property="og:locale" content="en_IN" />
 
         {/* Twitter */}
@@ -405,11 +405,11 @@ const AboutUs = () => {
         />
         <meta
           name="twitter:title"
-          content="About Om Sritara | Spiritual Healing & Reiki Training"
+          content="About Omsritara | Spiritual Healing & Reiki Training"
         />
         <meta
           name="twitter:description"
-          content="Explore Om Sritara's authentic spiritual healing services, Reiki certification courses, and spiritually energized products personally energized and blessed by Guru Matha."
+          content="Explore Omsritara's authentic spiritual healing services, Reiki certification courses, and spiritually energized products personally energized and blessed by Guru Matha."
         />
         <meta
           name="twitter:image"
@@ -438,20 +438,20 @@ const AboutUs = () => {
           <div className="mx-auto max-w-5xl">
 
             <h1 className="mb-6 text-xl font-bold leading-tight text-[#a5291b] md:text-3xl">
-              About Om Sritara – Trusted Spiritual Healing Centre, Reiki Training,
+              About Omsritara – Trusted Spiritual Healing Centre, Reiki Training,
               Holistic Wellness & Spiritually Energized Products
             </h1>
 
             <div className="space-y-6 text-base leading-8 text-gray-700 md:text-lg">
               <p>
-                At Om Sritara, operating under Anandat Bhavati Private Limited, we are
+                At Omsritara, operating under Anandat Bhavati Private Limited, we are
                 dedicated to guiding individuals toward spiritual awakening,
                 emotional healing, energetic balance and inner transformation through
                 authentic ancient wisdom, sacred energy practices and holistic wellness.
               </p>
 
               <p>
-                Founded under the divine guidance of Guru Matha, Om Sritara serves as
+                Founded under the divine guidance of Guru Matha, Omsritara serves as
                 a trusted spiritual sanctuary where traditional healing sciences are
                 thoughtfully integrated into modern life. Our mission is to help
                 seekers reconnect with their higher consciousness, restore energetic
@@ -468,7 +468,7 @@ const AboutUs = () => {
 
               <p>
                 Whether you are beginning your spiritual journey or seeking advanced
-                healing knowledge, Om Sritara provides online and offline
+                healing knowledge, Omsritara provides online and offline
                 certification courses in Tamil and English, making authentic
                 spiritual education accessible to students across Chennai, Tamil Nadu,
                 India and around the world.
@@ -490,7 +490,7 @@ const AboutUs = () => {
 
               <div className="space-y-6 text-base leading-8 text-gray-700 md:text-lg">
                 <p>
-                  Om Sritara is deeply rooted in timeless spiritual traditions inspired
+                  Omsritara is deeply rooted in timeless spiritual traditions inspired
                   by the compassionate and transformative divine energies of Green Tara,
                   Kwan Yin, Isis and Goddess Fortuna. These sacred traditions guide
                   every healing session, spiritual practice, certification course and
@@ -573,7 +573,7 @@ const AboutUs = () => {
 
               <div className="space-y-6 text-base leading-8 text-gray-700 md:text-lg">
                 <p>
-                  Om Sritara provides a complete ecosystem for spiritual learning,
+                  Omsritara provides a complete ecosystem for spiritual learning,
                   healing, holistic wellness, and personal transformation through
                   healing services, spiritually energized products, certification
                   courses and ongoing guidance.
@@ -677,7 +677,7 @@ const AboutUs = () => {
                 </div>
 
                 <p>
-                  Every product offered by Om Sritara is ethically sourced,
+                  Every product offered by Omsritara is ethically sourced,
                   carefully selected, spiritually cleansed, energized through sacred
                   rituals and personally energized and blessed by Guru Matha before
                   reaching you. Each product is prepared with sacred intention to
@@ -803,15 +803,15 @@ const AboutUs = () => {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-6xl space-y-16">
 
-            {/* Why Choose Om Sritara */}
+            {/* Why Choose Omsritara */}
             <div>
               <h2 className="mb-6 text-3xl font-bold text-[#a5291b] md:text-4xl">
-                Why Choose Om Sritara?
+                Why Choose Omsritara?
               </h2>
 
               <div className="space-y-6 text-base leading-8 text-gray-700 md:text-lg">
                 <p>
-                  Thousands of spiritual seekers trust Om Sritara because we combine
+                  Thousands of spiritual seekers trust Omsritara because we combine
                   authentic spiritual traditions, compassionate guidance and practical
                   learning experiences that support lifelong personal transformation.
                 </p>
@@ -901,7 +901,7 @@ const AboutUs = () => {
             {/* Crystal Promise */}
             <div>
               <h2 className="mb-6 text-3xl font-bold text-[#a5291b] md:text-4xl">
-                The Om Sritara Crystal Promise
+                The Omsritara Crystal Promise
               </h2>
 
               <div className="space-y-6 text-base leading-8 text-gray-700 md:text-lg">
@@ -955,7 +955,7 @@ const AboutUs = () => {
 
               <div className="space-y-6 text-base leading-8 text-gray-700 md:text-lg">
                 <p>
-                  Om Sritara proudly serves students through offline training in
+                  Omsritara proudly serves students through offline training in
                   Chennai, Tamil Nadu, while also providing online learning and
                   spiritual guidance worldwide.
                 </p>
@@ -1034,7 +1034,7 @@ const AboutUs = () => {
                 <p>
                   Every service, product, certification course and healing session is
                   offered with sincerity, authenticity, and sacred intention. Every
-                  product available at Om Sritara is spiritually cleansed, energized
+                  product available at Omsritara is spiritually cleansed, energized
                   through sacred rituals, and personally energized and blessed by
                   Guru Matha before reaching you, ensuring genuine spiritual energy,
                   positive vibrations, protection, abundance, healing and holistic
@@ -1105,21 +1105,21 @@ const AboutUs = () => {
 
                 <p>
                   Whether you prefer learning from home or attending in person
-                  sessions, Om Sritara provides a complete, authentic and immersive
+                  sessions, Omsritara provides a complete, authentic and immersive
                   spiritual learning experience.
                 </p>
               </div>
             </div>
 
-            {/* Om Sritara Promise */}
+            {/* Omsritara Promise */}
             <div>
               <h2 className="mb-6 text-3xl font-bold text-[#a5291b] md:text-4xl">
-                The Om Sritara Promise
+                The Omsritara Promise
               </h2>
 
               <div className="space-y-6 text-base leading-8 text-gray-700 md:text-lg">
                 <p>
-                  What makes Om Sritara unique is our unwavering commitment to
+                  What makes Omsritara unique is our unwavering commitment to
                   authenticity, spiritual integrity, compassionate guidance and
                   personalized healing.
                 </p>
@@ -1130,7 +1130,7 @@ const AboutUs = () => {
                 </p>
 
                 <p>
-                  Every product offered by Om Sritara is spiritually cleansed,
+                  Every product offered by Omsritara is spiritually cleansed,
                   energized through sacred rituals and personally energized and
                   blessed by Guru Matha before it reaches you. This sacred process
                   ensures every product carries positive spiritual vibrations that
@@ -1149,7 +1149,7 @@ const AboutUs = () => {
             {/* Begin Your Spiritual Journey */}
             <div className="rounded-3xl bg-[#a5291b] p-8 text-white md:p-12">
               <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-                Begin Your Spiritual Journey with Om Sritara
+                Begin Your Spiritual Journey with Omsritara
               </h2>
 
               <div className="space-y-6 text-base leading-8 md:text-lg">
@@ -1163,7 +1163,7 @@ const AboutUs = () => {
                   certification courses, Akashic Records training, crystal healing
                   courses, chakra balancing, meditation programs, holistic wellness
                   education, spiritual counseling or spiritually energized healing
-                  products personally energized by Guru Matha, Om Sritara offers
+                  products personally energized by Guru Matha, Omsritara offers
                   trusted solutions for every stage of your spiritual path.
                 </p>
 

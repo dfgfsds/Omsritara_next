@@ -24,11 +24,11 @@ export default function FloatingAppQR() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block p-1 bg-white rounded-lg hover:opacity-95 transition-transform duration-200 hover:scale-105"
-                title="Scan to Download Om Sritara App"
+                title="Scan to Download Omsritara App"
               >
                 <Image
                   src="/omsritara_google_play_qr.png"
-                  alt="Om Sritara Mobile App QR"
+                  alt="Omsritara Mobile App QR"
                   width={115}
                   height={115}
                   className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain"

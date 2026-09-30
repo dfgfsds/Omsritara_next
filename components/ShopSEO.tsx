@@ -13,9 +13,9 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
     "@type": "CollectionPage",
     "@id": "https://www.omsritara.in/shop/#collectionpage",
     "url": "https://www.omsritara.in/shop",
-    "name": "Buy Spiritually Energized Healing Crystals & Spiritual Products | Om Sritara",
+    "name": "Buy Spiritually Energized Healing Crystals & Spiritual Products | Omsritara",
     "headline": "Shop Spiritually Energized Healing Crystals, Crystal Jewellery, Reiki Tools & Spiritual Products",
-    "description": "Explore Om Sritara's collection of spiritually energized healing crystals, crystal bracelets, rings, pendants, Rudraksha malas, pendulums, yantras, pyramids, Reiki tools, healing stones, meditation accessories and holistic wellness products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching customers.",
+    "description": "Explore Omsritara's collection of spiritually energized healing crystals, crystal bracelets, rings, pendants, Rudraksha malas, pendulums, yantras, pyramids, Reiki tools, healing stones, meditation accessories and holistic wellness products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching customers.",
     "inLanguage": [
       "en",
       "ta"
@@ -35,11 +35,11 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
     },
     "mainEntity": {
       "@type": "ItemList",
-      "name": "Om Sritara Spiritual Product Categories",
+      "name": "Omsritara Spiritual Product Categories",
       "numberOfItems": 16
     },
     "keywords": [
-      "Om Sritara",
+      "Omsritara",
       "Spiritually Energized Healing Crystals",
       "Healing Crystals Online",
       "Crystal Shop India",
@@ -104,9 +104,9 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
     "@type": "WebPage",
     "@id": "https://www.omsritara.in/shop/#webpage",
     "url": "https://www.omsritara.in/shop",
-    "name": "Buy Spiritually Energized Healing Crystals & Spiritual Products | Om Sritara",
+    "name": "Buy Spiritually Energized Healing Crystals & Spiritual Products | Omsritara",
     "headline": "Shop Authentic Spiritually Energized Spiritual Products Online",
-    "description": "Shop spiritually energized healing crystals, crystal jewellery, Reiki tools, Rudraksha malas, pendulums, yantras, healing stones, meditation accessories, and authentic spiritual products at Om Sritara. Every product is spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha.",
+    "description": "Shop spiritually energized healing crystals, crystal jewellery, Reiki tools, Rudraksha malas, pendulums, yantras, healing stones, meditation accessories, and authentic spiritual products at Omsritara. Every product is spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha.",
     "isPartOf": {
       "@id": "https://www.omsritara.in/#website"
     },
@@ -206,7 +206,7 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": "https://www.omsritara.in/shop/#itemlist",
-    "name": "Om Sritara Spiritual Product Categories",
+    "name": "Omsritara Spiritual Product Categories",
     "description": "Browse spiritually energized healing crystals, crystal jewellery, Reiki tools, meditation accessories, sacred spiritual products and holistic wellness collections. Every product is spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha.",
     "numberOfItems": 16,
     "itemListOrder": "https://schema.org/ItemListOrderAscending",
@@ -314,8 +314,8 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
     "@id": "https://www.omsritara.in/shop/#catalog",
-    "name": "Om Sritara Spiritually Energized Spiritual Products",
-    "description": "Explore Om Sritara's complete collection of spiritually energized healing crystals, crystal jewellery, Reiki tools, meditation accessories, sacred spiritual products and holistic wellness items. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha.",
+    "name": "Omsritara Spiritually Energized Spiritual Products",
+    "description": "Explore Omsritara's complete collection of spiritually energized healing crystals, crystal jewellery, Reiki tools, meditation accessories, sacred spiritual products and holistic wellness items. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha.",
     "provider": {
       "@id": "https://www.omsritara.in/#organization"
     },
@@ -387,7 +387,7 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
     "@context": "https://schema.org",
     "@type": "ProductCollection",
     "@id": "https://www.omsritara.in/shop/#products",
-    "name": "Om Sritara Spiritually Energized Spiritual Products",
+    "name": "Omsritara Spiritually Energized Spiritual Products",
     "alternateName": [
       "Healing Crystal Collection",
       "Spiritual Products Collection",
@@ -396,7 +396,7 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
     ],
     "url": "https://www.omsritara.in/shop",
     "image": "https://www.omsritara.in/images/shop-banner.jpg",
-    "description": "Explore Om Sritara's complete collection of spiritually energized healing crystals, crystal bracelets, crystal rings, crystal pendants, Rudraksha malas, pendulums, healing stones, pyramids, yantras, angels, spiritual statues, meditation accessories, Reiki tools and holistic wellness products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching customers.",
+    "description": "Explore Omsritara's complete collection of spiritually energized healing crystals, crystal bracelets, crystal rings, crystal pendants, Rudraksha malas, pendulums, healing stones, pyramids, yantras, angels, spiritual statues, meditation accessories, Reiki tools and holistic wellness products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals and personally energized and blessed by Guru Matha before reaching customers.",
     "brand": {
       "@id": "https://www.omsritara.in/#organization"
     },
@@ -514,18 +514,18 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
   return (
     <Head>
       {/* Primary Meta Tags */}
-      <title>Buy Spiritually Energized Healing Crystals | Om Sritara</title>
+      <title>Buy Spiritually Energized Healing Crystals | Omsritara</title>
       <meta
         name="description"
         content="Shop spiritually energized healing crystals, crystal jewellery, Reiki tools, Rudraksha malas, pendulums, yantras and authentic spiritual products personally blessed by Guru Matha."
       />
       <meta
         name="keywords"
-        content="Om Sritara, Spiritually Energized Healing Crystals, Healing Crystals Online, Crystal Shop India, Spiritual Products, Crystal Bracelets, Crystal Rings, Crystal Pendants, Healing Stones, Reiki Tools, Reiki Products, Spiritual Store Chennai, Natural Healing Crystals, Ethically Sourced Crystals, Guru Matha, Blessed Spiritual Products, Energized Crystals, Crystal Jewellery, Rudraksha Mala, Healing Mala, Pendulums, Yantras, Pyramids, Spiritual Statues, Angels, Healing Sticks, Crystal Bowls, Feng Shui Products, Meditation Accessories, Holistic Wellness Products, Chakra Healing Products, Positive Energy Products, Protection Crystals, Prosperity Crystals, Love Crystals, Spiritual Gifts India"
+        content="Omsritara, Spiritually Energized Healing Crystals, Healing Crystals Online, Crystal Shop India, Spiritual Products, Crystal Bracelets, Crystal Rings, Crystal Pendants, Healing Stones, Reiki Tools, Reiki Products, Spiritual Store Chennai, Natural Healing Crystals, Ethically Sourced Crystals, Guru Matha, Blessed Spiritual Products, Energized Crystals, Crystal Jewellery, Rudraksha Mala, Healing Mala, Pendulums, Yantras, Pyramids, Spiritual Statues, Angels, Healing Sticks, Crystal Bowls, Feng Shui Products, Meditation Accessories, Holistic Wellness Products, Chakra Healing Products, Positive Energy Products, Protection Crystals, Prosperity Crystals, Love Crystals, Spiritual Gifts India"
       />
 
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="author" content="Om Sritara" />
+      <meta name="author" content="Omsritara" />
       <meta name="publisher" content="Anandat Bhavati Private Limited" />
       <meta http-equiv="content-language" content="en-IN" />
       <meta name="theme-color" content="#a5291b" />
@@ -534,18 +534,18 @@ export default function ShopSEO({ ogImage }: { ogImage: string }) {
       <link rel="canonical" href="https://www.omsritara.in/shop/" />
 
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Buy Spiritually Energized Healing Crystals & Spiritual Products | Om Sritara" />
+      <meta property="og:title" content="Buy Spiritually Energized Healing Crystals & Spiritual Products | Omsritara" />
       <meta property="og:description" content="Discover spiritually energized healing crystals, Reiki tools, crystal jewellery, Rudraksha malas and authentic spiritual products. Every product is personally energized and blessed by Guru Matha." />
       <meta property="og:url" content="https://www.omsritara.in/shop" />
       <meta property="og:image" content={finalOgImage} />
-      <meta property="og:image:alt" content="Om Sritara Spiritually Energized Healing Crystals & Spiritual Products" />
-      <meta property="og:site_name" content="Om Sritara" />
+      <meta property="og:image:alt" content="Omsritara Spiritually Energized Healing Crystals & Spiritual Products" />
+      <meta property="og:site_name" content="Omsritara" />
       <meta property="og:locale" content="en_IN" />
 
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Buy Spiritually Energized Healing Crystals & Spiritual Products | Om Sritara" />
-      <meta name="twitter:description" content="Shop spiritually energized healing crystals, Reiki tools, crystal jewellery, Rudraksha malas and blessed spiritual products from Om Sritara." />
+      <meta name="twitter:title" content="Buy Spiritually Energized Healing Crystals & Spiritual Products | Omsritara" />
+      <meta name="twitter:description" content="Shop spiritually energized healing crystals, Reiki tools, crystal jewellery, Rudraksha malas and blessed spiritual products from Omsritara." />
       <meta name="twitter:image" content={finalOgImage} />
 
       <script
