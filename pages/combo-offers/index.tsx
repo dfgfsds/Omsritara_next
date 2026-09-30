@@ -264,7 +264,7 @@ export default function ComboOffers() {
                     <div className="max-w-4xl mx-auto">
                         {/* Heading */}
                         <h1 className="text-3xl md:text-5xl font-bold text-red-800 mb-4">
-                            Welcome to <span className="text-red-600">Om Sritara</span>
+                            Welcome to <span className="text-red-600">Omsritara</span>
                         </h1>
 
                         {/* Subheading */}
@@ -440,17 +440,17 @@ export default function ComboOffers() {
 
                 <section className="bg-gradient-to-b from-orange-50 via-white to-red-50 py-20 px-6 md:px-16">
                     <div className="max-w-6xl mx-auto text-center">
-                        {/* About Om Sritara */}
+                        {/* About Omsritara */}
                         <div className="mb-20">
                             <h2 className="text-3xl md:text-5xl font-bold text-red-800 mb-6 transition-all duration-500">
-                                About <span className="text-red-600">Om Sritara</span>
+                                About <span className="text-red-600">Omsritara</span>
                             </h2>
                             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-red-50 max-w-4xl mx-auto text-left relative overflow-hidden">
                                 <div className="absolute top-0 right-0 p-8 opacity-10">
                                     <Sparkles size={120} className="text-red-500" />
                                 </div>
                                 <p className="text-gray-700 text-lg leading-relaxed mb-6 relative z-10">
-                                    <span className="font-semibold text-red-800">Om Sritara</span> is a sanctuary for spiritual seekers, providing authentic, ethically-sourced healing crystals, spiritual tools, and energetic guidance. Born from a profound dedication to holistic well-being, we bridge ancient wisdom with modern living.
+                                    <span className="font-semibold text-red-800">Omsritara</span> is a sanctuary for spiritual seekers, providing authentic, ethically-sourced healing crystals, spiritual tools, and energetic guidance. Born from a profound dedication to holistic well-being, we bridge ancient wisdom with modern living.
                                 </p>
                                 <p className="text-gray-700 text-lg leading-relaxed relative z-10">
                                     Whether you are looking to attract abundance, heal emotional wounds, or protect your aura, our hand-selected products are spiritually cleansed, energized with powerful mantras, and curated specifically to support your soul's journey. We don't just sell products; we offer <span className="font-semibold text-red-700">transformative energy</span>.
@@ -458,14 +458,14 @@ export default function ComboOffers() {
                             </div>
                         </div>
 
-                        {/* Why Choose Om Sritara Header */}
+                        {/* Why Choose Omsritara Header */}
                         <h2 className="text-3xl md:text-5xl font-bold text-red-800 mb-6 transition-all duration-500">
-                            Why Choose <span className="text-red-600">Om Sritara</span>
+                            Why Choose <span className="text-red-600">Omsritara</span>
                         </h2>
 
                         <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-12">
-                            Join a thriving spiritual community trusted by thousands across the globe. 
-                            Every Om Sritara product is treated as a sacred tool—handled with utmost respect, cleansed of stagnant energies, and activated with powerful intentions before it reaches your hands.
+                            Join a thriving spiritual community trusted by thousands across the globe.
+                            Every Omsritara product is treated as a sacred tool—handled with utmost respect, cleansed of stagnant energies, and activated with powerful intentions before it reaches your hands.
                         </p>
 
                         {/* Features */}

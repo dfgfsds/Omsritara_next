@@ -49,7 +49,7 @@ const AppDownloadPopup = () => {
 
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Download Our App!</h2>
                     <p className="text-gray-600 mb-6">
-                        Get the best experience, exclusive offers, and seamless shopping by downloading the Om Sritara mobile app.
+                        Get the best experience, exclusive offers, and seamless shopping by downloading the Omsritara mobile app.
                     </p>
 
                     <a

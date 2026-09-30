@@ -25,12 +25,12 @@ function CancellationPolicy() {
   return (
     <>
 
-    <Head>
+      <Head>
         {/* SEO Meta Tags */}
-        <title>Cancellation Policy | Om Sritara – Order Cancellation</title>
+        <title>Cancellation Policy | Omsritara – Order Cancellation</title>
         <meta
           name="description"
-          content="Understand Om Sritara’s cancellation policy for spiritual products. Learn how and when orders can be cancelled."
+          content="Understand Omsritara’s cancellation policy for spiritual products. Learn how and when orders can be cancelled."
         />
 
         {/* Canonical URL */}

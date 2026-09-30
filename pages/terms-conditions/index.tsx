@@ -25,10 +25,10 @@ function TermsAndConditions() {
     <>
       <Head>
         {/* SEO Meta Tags */}
-        <title>Terms and Conditions | Om Sritara</title>
+        <title>Terms and Conditions | Omsritara</title>
         <meta
           name="description"
-          content="View Om Sritara’s terms and conditions for website usage, purchases, payments and user responsibilities."
+          content="View Omsritara’s terms and conditions for website usage, purchases, payments and user responsibilities."
         />
 
         {/* Canonical URL */}

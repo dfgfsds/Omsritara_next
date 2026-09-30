@@ -94,7 +94,7 @@ export default function EnquiryModal({ isOpen, onClose, stone, currentFormat, se
                         <div className="w-10 h-1 bg-[#B8860B] mb-5 rounded-full"></div>
                         <h3 className="text-3xl font-serif font-bold mb-3 text-[#e6d5b8] leading-tight">Gemstones</h3>
                         <p className="text-gray-300 mb-4 text-xs leading-relaxed font-light">Discover carefully selected gemstones chosen for their quality, beauty, and spiritual significance.</p>
-                        <p className="text-gray-300 text-xs leading-relaxed font-light">All Om Sritara gemstones are quality checked and energized with the divine blessings of Guru Matha Sri Tara Amma before being recommended.</p>
+                        <p className="text-gray-300 text-xs leading-relaxed font-light">All Omsritara gemstones are quality checked and energized with the divine blessings of Guru Matha Sri Tara Amma before being recommended.</p>
                     </div>
                 </div>
 

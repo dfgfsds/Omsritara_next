@@ -7,7 +7,7 @@ import { Star } from "lucide-react";
 const testimonials = [
     {
         name: "Kirti",
-        review: "Guru Matha is kind, compassionate, and patiently answered every question during the class. I'm truly grateful to have learned from her and highly recommend Om Sritara to anyone interested in spiritual healing",
+        review: "Guru Matha is kind, compassionate, and patiently answered every question during the class. I'm truly grateful to have learned from her and highly recommend Omsritara to anyone interested in spiritual healing",
         rating: 5,
     },
     {
@@ -22,7 +22,7 @@ const testimonials = [
     },
     {
         name: "Suganya Manojkumar",
-        review: "The session was genuine, informative, and exceeded my expectations. Thank you to the Om Sritara team for such a valuable experience.",
+        review: "The session was genuine, informative, and exceeded my expectations. Thank you to the Omsritara team for such a valuable experience.",
         rating: 5,
     },
     {
@@ -52,7 +52,7 @@ const testimonials = [
     },
     {
         name: "Vijay Anand",
-        review: "A wonderful place to find clarity, positive energy, and personal healing. I had a great experience at Om Sritara.",
+        review: "A wonderful place to find clarity, positive energy, and personal healing. I had a great experience at Omsritara.",
         rating: 5,
     },
 ];
@@ -61,9 +61,9 @@ const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": "https://www.omsritara.in/#testimonials",
-    "name": "Om Sritara Customer Reviews",
+    "name": "Omsritara Customer Reviews",
     "description":
-        "Verified customer experiences with Om Sritara's Reiki classes, healing crystals, spiritual products and holistic wellness services.",
+        "Verified customer experiences with Omsritara's Reiki classes, healing crystals, spiritual products and holistic wellness services.",
     "numberOfItems": 10,
     "itemListOrder": "https://schema.org/ItemListOrderAscending",
     "itemListElement": [
@@ -134,7 +134,7 @@ const reviewSchema = {
                 "ratingValue": "5",
                 "bestRating": "5"
             },
-            "reviewBody": "A genuine and informative session. Thank you to the Om Sritara team for such a valuable experience."
+            "reviewBody": "A genuine and informative session. Thank you to the Omsritara team for such a valuable experience."
         },
         {
             "@type": "Review",

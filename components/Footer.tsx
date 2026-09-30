@@ -128,7 +128,7 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-300 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
-                <p>© {new Date().getFullYear()} Anandat Bhavati Private Limited | Om Sritara. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Anandat Bhavati Private Limited | Omsritara. All rights reserved.</p>
                 <p>
                     Developed by{' '}
                     <a
