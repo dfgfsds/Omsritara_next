@@ -11,7 +11,7 @@ export default function ConnectTamilPage() {
   const jsonLdOrganization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Om Sritara",
+    "name": "Omsritara",
     "url": "https://omsritara.in",
     "logo": "https://omsritara.in/logo.png",
     "email": "info@omsritara.com",
@@ -29,7 +29,7 @@ export default function ConnectTamilPage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://omsritara.in/#organization",
-    "name": "Om Sritara",
+    "name": "Omsritara",
     "url": "https://omsritara.in",
     "image": "https://omsritara.in/logo.png",
     "logo": "https://omsritara.in/logo.png",
@@ -73,13 +73,13 @@ export default function ConnectTamilPage() {
   const jsonLdWebPage = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Om Sritara Tamil",
-    "description": "Official Tamil Connect page for Om Sritara.",
+    "name": "Omsritara Tamil",
+    "description": "Official Tamil Connect page for Omsritara.",
     "url": "https://omsritara.in/connect/ta",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "name": "Om Sritara",
+      "name": "Omsritara",
       "url": "https://omsritara.in"
     }
   };
@@ -98,10 +98,10 @@ export default function ConnectTamilPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "What is Om Sritara Tamil?", "acceptedAnswer": { "@type": "Answer", "text": "Om Sritara Tamil provides Reiki Healing, Crystal Healing, Spiritual Courses and holistic wellness resources for Tamil-speaking audiences." } },
-      { "@type": "Question", "name": "Where is Om Sritara located?", "acceptedAnswer": { "@type": "Answer", "text": "Om Sritara is located at 46, Giri Road, Satyamurthy Nagar, T Nagar, Chennai, Tamil Nadu 600017." } },
-      { "@type": "Question", "name": "Does Om Sritara provide Reiki courses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Om Sritara offers certified Reiki courses for beginners and advanced practitioners." } },
-      { "@type": "Question", "name": "How can I contact Om Sritara?", "acceptedAnswer": { "@type": "Answer", "text": "You can contact Om Sritara via WhatsApp at +91 7092372555 or email info@omsritara.com." } }
+      { "@type": "Question", "name": "What is Omsritara Tamil?", "acceptedAnswer": { "@type": "Answer", "text": "Omsritara Tamil provides Reiki Healing, Crystal Healing, Spiritual Courses and holistic wellness resources for Tamil-speaking audiences." } },
+      { "@type": "Question", "name": "Where is Omsritara located?", "acceptedAnswer": { "@type": "Answer", "text": "Omsritara is located at 46, Giri Road, Satyamurthy Nagar, T Nagar, Chennai, Tamil Nadu 600017." } },
+      { "@type": "Question", "name": "Does Omsritara provide Reiki courses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Omsritara offers certified Reiki courses for beginners and advanced practitioners." } },
+      { "@type": "Question", "name": "How can I contact Omsritara?", "acceptedAnswer": { "@type": "Answer", "text": "You can contact Omsritara via WhatsApp at +91 7092372555 or email info@omsritara.com." } }
     ]
   };
 
@@ -137,15 +137,15 @@ export default function ConnectTamilPage() {
 
       <main className="min-h-screen bg-orange-50 font-sans text-gray-800">
         <header className="bg-white py-12 px-6 shadow-sm text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-700 mb-4 tracking-tight">Om Sritara Tamil</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-orange-700 mb-4 tracking-tight">Omsritara Tamil</h1>
           <p className="text-lg md:text-xl font-medium text-gray-600">Reiki Healing, Spiritual Courses & Crystal Healing</p>
         </header>
 
         <section className="max-w-4xl mx-auto py-12 px-6">
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-orange-200 pb-2 inline-block">Welcome to the official Om Sritara Tamil Connect page</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-orange-200 pb-2 inline-block">Welcome to the official Omsritara Tamil Connect page</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Whether you&apos;re looking for Reiki Healing, Crystal Healing, spiritual guidance, healing crystals, certified Reiki courses, or authentic spiritual products, this page helps you connect with all of Om Sritara&apos;s Tamil platforms in one place.
+              Whether you&apos;re looking for Reiki Healing, Crystal Healing, spiritual guidance, healing crystals, certified Reiki courses, or authentic spiritual products, this page helps you connect with all of Omsritara&apos;s Tamil platforms in one place.
             </p>
             <p className="text-gray-700 leading-relaxed">
               Join our growing Tamil spiritual community to explore healing knowledge, practical guidance, meditation techniques, spiritual education, and holistic wellness through videos, social media, WhatsApp support, and our spiritual centre in Chennai.
@@ -186,7 +186,7 @@ export default function ConnectTamilPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center"><FaMapMarkerAlt className="mr-3 text-orange-500" /> Visit Our Centre</h3>
               <p className="text-gray-600 mb-4">Experience authentic spiritual healing and personalized guidance at our Chennai centre.</p>
               <address className="not-italic text-gray-800 font-medium leading-loose bg-orange-50 p-4 rounded-lg">
-                Om Sritara<br />
+                Omsritara<br />
                 46, Giri Road, Satyamurthy Nagar<br />
                 T. Nagar, Chennai – 600017<br />
                 Tamil Nadu, India
@@ -221,7 +221,7 @@ export default function ConnectTamilPage() {
           </div>
 
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center text-orange-800 mb-8">Who Can Benefit From Om Sritara?</h2>
+            <h2 className="text-3xl font-bold text-center text-orange-800 mb-8">Who Can Benefit From Omsritara?</h2>
             <div className="bg-white p-8 rounded-2xl shadow-md">
               <p className="text-gray-700 font-medium mb-6">Our Tamil community serves people interested in:</p>
               <div className="flex flex-wrap gap-3 mb-6">
@@ -230,7 +230,7 @@ export default function ConnectTamilPage() {
                 ))}
               </div>
               <p className="text-gray-700">
-                Whether you&apos;re just beginning your spiritual journey or looking to deepen your practice, Om Sritara offers authentic guidance, quality learning, and spiritually energized products to support your path.
+                Whether you&apos;re just beginning your spiritual journey or looking to deepen your practice, Omsritara offers authentic guidance, quality learning, and spiritually energized products to support your path.
               </p>
             </div>
           </div>
@@ -239,11 +239,11 @@ export default function ConnectTamilPage() {
             <h2 className="text-3xl font-bold text-center text-orange-800 mb-8">FAQ</h2>
             <div className="space-y-4">
               {[
-                { q: 'What is Om Sritara Tamil?', a: 'Om Sritara Tamil is the Tamil-language community of Om Sritara, offering Reiki healing, crystal healing, spiritual guidance, certified courses, and holistic wellness content for Tamil-speaking audiences.' },
-                { q: 'Where is Om Sritara located?', a: 'Om Sritara is located at 46, Giri Road, Satyamurthy Nagar, T. Nagar, Chennai, Tamil Nadu 600017.' },
-                { q: 'Does Om Sritara offer Reiki courses in Tamil?', a: 'Yes. Om Sritara provides Reiki certification courses and spiritual training in Tamil for beginners and advanced learners.' },
-                { q: 'Can I contact Om Sritara through WhatsApp?', a: 'Yes. Tamil support is available on WhatsApp at +91 7092372555 during business hours.' },
-                { q: 'What services does Om Sritara provide?', a: 'Om Sritara offers Reiki healing, crystal healing, chakra healing, meditation guidance, spiritual counselling, certified spiritual courses, and spiritually energized healing products.' }
+                { q: 'What is Omsritara Tamil?', a: 'Omsritara Tamil is the Tamil-language community of Omsritara, offering Reiki healing, crystal healing, spiritual guidance, certified courses, and holistic wellness content for Tamil-speaking audiences.' },
+                { q: 'Where is Omsritara located?', a: 'Omsritara is located at 46, Giri Road, Satyamurthy Nagar, T. Nagar, Chennai, Tamil Nadu 600017.' },
+                { q: 'Does Omsritara offer Reiki courses in Tamil?', a: 'Yes. Omsritara provides Reiki certification courses and spiritual training in Tamil for beginners and advanced learners.' },
+                { q: 'Can I contact Omsritara through WhatsApp?', a: 'Yes. Tamil support is available on WhatsApp at +91 7092372555 during business hours.' },
+                { q: 'What services does Omsritara provide?', a: 'Omsritara offers Reiki healing, crystal healing, chakra healing, meditation guidance, spiritual counselling, certified spiritual courses, and spiritually energized healing products.' }
               ].map((faq, idx) => (
                 <div key={idx} className="bg-white rounded-xl shadow-sm p-6 border border-orange-100">
                   <h3 className="font-bold text-lg text-gray-900 mb-2">{faq.q}</h3>
@@ -256,7 +256,7 @@ export default function ConnectTamilPage() {
           <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-3xl p-10 text-white text-center shadow-xl">
             <h2 className="text-3xl font-bold mb-4">Begin Your Spiritual Journey Today</h2>
             <p className="text-orange-100 mb-8 max-w-2xl mx-auto text-lg">
-              Follow Om Sritara Tamil across our official social media channels, join our spiritual community, and stay updated with Reiki courses, crystal healing insights, meditation guidance, workshops, and holistic wellness resources.
+              Follow Omsritara Tamil across our official social media channels, join our spiritual community, and stay updated with Reiki courses, crystal healing insights, meditation guidance, workshops, and holistic wellness resources.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="https://wa.me/917092372555" className="bg-white text-orange-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-orange-50 transition-colors flex items-center justify-center">

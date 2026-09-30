@@ -5,8 +5,8 @@ export default function BuyingGuidePage() {
     return (
         <>
             <Head>
-                <title>Gemstone & Crystal Buying Guide | Om Sritara</title>
-                <meta name="description" content="Discover how to choose the perfect gemstone or crystal based on your intentions, zodiac, or chakras with Om Sritara's comprehensive buying guide." />
+                <title>Gemstone & Crystal Buying Guide | Omsritara</title>
+                <meta name="description" content="Discover how to choose the perfect gemstone or crystal based on your intentions, zodiac, or chakras with Omsritara's comprehensive buying guide." />
             </Head>
             {/* Premium Banner Section */}
             <div className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden bg-[#0a192f]">

@@ -25,10 +25,10 @@ function RefundPolicy() {
     <>
       <Head>
         {/* SEO Meta Tags */}
-        <title>Refund Policy | Om Sritara – Easy Returns & Refunds</title>
+        <title>Refund Policy | Omsritara – Easy Returns & Refunds</title>
         <meta
           name="description"
-          content="Read Om Sritara’s refund policy for spiritual products. Know about return eligibility, refund timelines and replacement conditions."
+          content="Read Omsritara’s refund policy for spiritual products. Know about return eligibility, refund timelines and replacement conditions."
         />
 
         {/* Canonical URL */}

@@ -26,10 +26,10 @@ function ShippingPolicy() {
     <>
       <Head>
         {/* SEO Meta Tags */}
-        <title>Shipping Policy | Om Sritara – Delivery Information India</title>
+        <title>Shipping Policy | Omsritara – Delivery Information India</title>
         <meta
           name="description"
-          content="Check Om Sritara’s shipping policy for delivery timelines, courier partners and shipping charges across India."
+          content="Check Omsritara’s shipping policy for delivery timelines, courier partners and shipping charges across India."
         />
 
         {/* Canonical URL */}

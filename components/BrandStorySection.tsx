@@ -12,11 +12,11 @@ export default function BrandStorySection() {
           }`}
       >
         <h2 className="mb-4 text-3xl font-bold text-[#a5291b]">
-          Why Choose Om Sritara?
+          Why Choose Omsritara?
         </h2>
 
         <p className="mb-4">
-          Choosing the right spiritual guide and authentic products is an important part of your healing journey. At Om Sritara, we combine traditional wisdom with practical learning to provide a trusted and meaningful experience.
+          Choosing the right spiritual guide and authentic products is an important part of your healing journey. At Omsritara, we combine traditional wisdom with practical learning to provide a trusted and meaningful experience.
         </p>
 
         <p className="mb-4">
@@ -37,7 +37,7 @@ export default function BrandStorySection() {
         </ul>
 
         <p className="mb-6">
-          Whether you're looking for emotional balance, spiritual protection, abundance, confidence, meditation support, or personal transformation, Om Sritara provides authentic solutions tailored to your spiritual needs.
+          Whether you're looking for emotional balance, spiritual protection, abundance, confidence, meditation support, or personal transformation, Omsritara provides authentic solutions tailored to your spiritual needs.
         </p>
 
         <h2 className="mb-4 text-3xl font-bold text-[#a5291b]">
@@ -45,7 +45,7 @@ export default function BrandStorySection() {
         </h2>
 
         <p className="mb-4">
-          Om Sritara was founded with a vision to create a trusted space where people can experience the true essence of spiritual healing. Inspired by timeless healing traditions and guided by the wisdom of Guru Matha, we have built a community that values authenticity, compassion, and holistic well-being.
+          Omsritara was founded with a vision to create a trusted space where people can experience the true essence of spiritual healing. Inspired by timeless healing traditions and guided by the wisdom of Guru Matha, we have built a community that values authenticity, compassion, and holistic well-being.
         </p>
 
         <p className="mb-4">
@@ -53,7 +53,7 @@ export default function BrandStorySection() {
         </p>
 
         <p className="mb-4">
-          Today, Om Sritara has become more than a spiritual wellness brand. It is a place where individuals can discover authentic healing products, gain practical spiritual knowledge, learn powerful healing techniques, and receive compassionate guidance on their path toward inner peace and self-discovery.
+          Today, Omsritara has become more than a spiritual wellness brand. It is a place where individuals can discover authentic healing products, gain practical spiritual knowledge, learn powerful healing techniques, and receive compassionate guidance on their path toward inner peace and self-discovery.
         </p>
 
         <p className="mb-4">
@@ -61,7 +61,7 @@ export default function BrandStorySection() {
         </p>
 
         <p>
-          Begin your journey with Om Sritara and experience healing, balance, and spiritual growth through authentic wisdom and sacred traditions.
+          Begin your journey with Omsritara and experience healing, balance, and spiritual growth through authentic wisdom and sacred traditions.
         </p>
         <div className="mt-12 space-y-8">
 
@@ -75,7 +75,7 @@ export default function BrandStorySection() {
 
             <div className="p-6 md:p-8">
               <p className="leading-8 text-gray-700">
-                At Om Sritara, every product is chosen with care to support your
+                At Omsritara, every product is chosen with care to support your
                 spiritual and personal well-being. Our collection includes healing
                 crystals, crystal bracelets, rings, pendants, Rudraksha malas,
                 pendulums, spiritual statues, Reiki tools, chakra healing products,
@@ -106,7 +106,7 @@ export default function BrandStorySection() {
 
             <div className="p-6 md:p-8">
               <p className="leading-8 text-gray-700">
-                One of the qualities that makes Om Sritara unique is our Sacred
+                One of the qualities that makes Omsritara unique is our Sacred
                 Three-Day Energizing Process. Before any product is delivered, it goes
                 through a carefully followed spiritual preparation designed to preserve
                 its natural energy and enhance its spiritual purpose.
@@ -176,7 +176,7 @@ export default function BrandStorySection() {
             <div className="p-6 md:p-8">
               <p className="mb-6 leading-8 text-gray-700">
                 Healing is a journey of restoring balance to the mind, body, and spirit.
-                At Om Sritara, we offer a range of spiritual healing services designed to
+                At Omsritara, we offer a range of spiritual healing services designed to
                 support emotional well-being, personal transformation, and inner harmony
                 through traditional healing practices.
               </p>
@@ -219,7 +219,7 @@ export default function BrandStorySection() {
 
             <div className="p-6 md:p-8">
               <p className="mb-6 leading-8 text-gray-700">
-                Learning spiritual healing is a lifelong journey, and Om Sritara makes
+                Learning spiritual healing is a lifelong journey, and Omsritara makes
                 that journey accessible through online and offline classes in Tamil and
                 English. Whether you're a beginner or an experienced practitioner, our
                 programs combine traditional wisdom with practical learning to help you
@@ -268,14 +268,14 @@ export default function BrandStorySection() {
             </div>
           </div>
 
-          {/* Why Thousands Trust Om Sritara */}
+          {/* Why Thousands Trust Omsritara */}
           <div className="rounded-3xl border border-[#a5291b]/15 bg-gradient-to-br from-[#fff8f7] to-white p-6 md:p-8 shadow-sm">
             <h2 className="mb-6 text-2xl font-bold text-[#a5291b]">
-              Why Thousands Trust Om Sritara
+              Why Thousands Trust Omsritara
             </h2>
 
             <p className="mb-5 leading-8 text-gray-700">
-              At Om Sritara, trust is built through authenticity, quality, and genuine
+              At Omsritara, trust is built through authenticity, quality, and genuine
               care for every individual who chooses us. We believe that true spiritual
               healing begins with the right guidance, sincere intentions, and products
               prepared with respect for ancient traditions. Every service we provide and
@@ -287,7 +287,7 @@ export default function BrandStorySection() {
               Our healing crystals and spiritual products are not simply selected for
               their appearance. Every product is ethically sourced, spiritually
               cleansed, energized through sacred rituals, and personally energized by
-              Guru Matha before reaching you. This sacred preparation makes Om Sritara a
+              Guru Matha before reaching you. This sacred preparation makes Omsritara a
               trusted choice for people seeking authentic spiritual products and
               holistic healing solutions.
             </p>
@@ -297,7 +297,7 @@ export default function BrandStorySection() {
               guidance, practical learning, and supportive healing experiences for
               beginners and experienced practitioners alike. Whether you're searching
               for emotional balance, protection, meditation support, prosperity, or
-              personal transformation, Om Sritara is here to support your journey with
+              personal transformation, Omsritara is here to support your journey with
               authenticity and compassion.
             </p>
           </div>
@@ -312,7 +312,7 @@ export default function BrandStorySection() {
 
             <div className="p-6 md:p-8">
               <p className="mb-6 leading-8 text-gray-700">
-                Om Sritara brings together traditional spiritual sciences and modern
+                Omsritara brings together traditional spiritual sciences and modern
                 holistic practices to help individuals achieve balance, clarity, and
                 personal growth.
               </p>
@@ -364,7 +364,7 @@ export default function BrandStorySection() {
 
             <div className="p-6 md:p-8">
               <p className="mb-5 leading-8 text-gray-700">
-                Learning should be flexible and accessible. That's why Om Sritara
+                Learning should be flexible and accessible. That's why Omsritara
                 offers online and offline spiritual classes and certification courses
                 to suit your schedule and learning style.
               </p>
@@ -395,7 +395,7 @@ export default function BrandStorySection() {
 
             <div className="px-6 pb-8">
               <p className="mb-5 leading-8 text-gray-700">
-                Om Sritara proudly serves customers and students across Chennai,
+                Omsritara proudly serves customers and students across Chennai,
                 Tamil Nadu, India, while offering online products, spiritual healing
                 services, and certification courses to people around the world.
               </p>
@@ -473,14 +473,14 @@ export default function BrandStorySection() {
           {/* Begin Your Spiritual Journey */}
           <div className="rounded-3xl bg-[#a5291b] p-8 text-white shadow-lg">
             <h2 className="mb-5 text-3xl font-bold">
-              Begin Your Spiritual Journey with Om Sritara
+              Begin Your Spiritual Journey with Omsritara
             </h2>
 
             <p className="mb-5 leading-8 text-white/90">
               Every journey begins with a single step, and we're here to walk that path
               with you. Whether you're looking for healing crystals, spiritual products,
               Reiki training, holistic healing, meditation, or certified spiritual
-              courses, Om Sritara offers trusted guidance and authentic solutions for
+              courses, Omsritara offers trusted guidance and authentic solutions for
               every stage of your journey.
             </p>
 
@@ -493,7 +493,7 @@ export default function BrandStorySection() {
             </p>
 
             <p className="text-lg font-semibold tracking-wide">
-              Discover. Heal. Transform. Grow with Om Sritara.
+              Discover. Heal. Transform. Grow with Omsritara.
             </p>
           </div>
 

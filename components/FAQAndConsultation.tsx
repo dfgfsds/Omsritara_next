@@ -35,7 +35,7 @@ export default function FAQAndConsultation() {
 
             <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid gap-16 lg:grid-cols-12 lg:gap-8">
-                    
+
                     {/* Left Column: FAQs */}
                     <div className="lg:col-span-6 lg:pr-8">
                         <div className="mb-10">
@@ -51,11 +51,10 @@ export default function FAQAndConsultation() {
                             {faqs.map((faq, index) => {
                                 const isOpen = openIndex === index;
                                 return (
-                                    <div 
+                                    <div
                                         key={index}
-                                        className={`group rounded-2xl border transition-all duration-300 ${
-                                            isOpen ? "border-amber-200 bg-white shadow-[0_10px_30px_rgba(251,191,36,0.05)]" : "border-gray-100 bg-white/50 hover:bg-white hover:border-amber-100"
-                                        }`}
+                                        className={`group rounded-2xl border transition-all duration-300 ${isOpen ? "border-amber-200 bg-white shadow-[0_10px_30px_rgba(251,191,36,0.05)]" : "border-gray-100 bg-white/50 hover:bg-white hover:border-amber-100"
+                                            }`}
                                     >
                                         <button
                                             onClick={() => setOpenIndex(isOpen ? null : index)}
@@ -68,11 +67,10 @@ export default function FAQAndConsultation() {
                                                 <ChevronDown size={18} strokeWidth={2} />
                                             </div>
                                         </button>
-                                        
-                                        <div 
-                                            className={`grid transition-all duration-500 ease-in-out ${
-                                                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                                            }`}
+
+                                        <div
+                                            className={`grid transition-all duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                                                }`}
                                         >
                                             <div className="overflow-hidden">
                                                 <p className="px-6 pb-6 text-gray-600 font-light leading-relaxed">
@@ -89,7 +87,7 @@ export default function FAQAndConsultation() {
                     {/* Right Column: CTA Consultation Card */}
                     <div className="lg:col-span-6">
                         <div className="relative h-full w-full overflow-hidden rounded-3xl sm:rounded-[2.5rem] bg-gray-900 p-6 sm:p-10 md:p-12 shadow-2xl group">
-                            
+
                             {/* Animated Background */}
                             <div className="absolute inset-0 z-0">
                                 <div className="absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-amber-500/20 to-rose-500/20 blur-[80px] group-hover:bg-gradient-to-br group-hover:from-amber-500/30 group-hover:to-orange-500/30 transition-all duration-700" />
@@ -115,7 +113,7 @@ export default function FAQAndConsultation() {
                                     </h3>
 
                                     <p className="mb-8 text-base sm:text-lg text-gray-300 font-light leading-relaxed">
-                                        Still unsure which gemstone is right for you? Share your details with Om Sritara, and our team will provide expert guidance to align with your spiritual journey.
+                                        Still unsure which gemstone is right for you? Share your details with Omsritara, and our team will provide expert guidance to align with your spiritual journey.
                                     </p>
 
                                     {/* Little checklist showing what they need to provide */}

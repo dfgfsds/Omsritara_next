@@ -252,7 +252,7 @@ export default function ComboOffersMoney() {
                     <div className="max-w-4xl mx-auto">
                         {/* Heading */}
                         <h1 className="text-3xl md:text-5xl font-bold text-amber-800 mb-4">
-                            Welcome to <span className="text-amber-600">Om Sritara</span>
+                            Welcome to <span className="text-amber-600">Omsritara</span>
                         </h1>
 
                         {/* Subheading */}
@@ -430,12 +430,12 @@ export default function ComboOffersMoney() {
                     <div className="max-w-6xl mx-auto text-center">
                         {/* Header */}
                         <h2 className="text-3xl md:text-5xl font-bold text-amber-800 mb-4 transition-all duration-500">
-                            Why Choose <span className="text-amber-600">Om Sritara</span>
+                            Why Choose <span className="text-amber-600">Omsritara</span>
                         </h2>
 
                         <p className="text-gray-600 max-w-3xl mx-auto mb-10">
                             Join our growing spiritual family trusted by thousands across India.
-                            Every Om Sritara product is created with care, intention, and mindful
+                            Every Omsritara product is created with care, intention, and mindful
                             energy preparation.
                         </p>
 

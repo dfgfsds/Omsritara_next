@@ -39,7 +39,7 @@ const BuyingGuide = () => {
                             </p>
                             <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-100 border-l-4 border-l-amber-500 mb-8">
                                 <p className="text-gray-800 font-medium text-lg italic">
-                                    "Om Sritara helps you make an informed choice with personalized recommendations."
+                                    "Omsritara helps you make an informed choice with personalized recommendations."
                                 </p>
                             </div>
 

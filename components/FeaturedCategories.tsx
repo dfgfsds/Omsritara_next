@@ -52,7 +52,7 @@ export default function FeaturedCategories() {
         </div>
 
         <p className="text-black p-2 md:p-4 md:mx-24 mx-2 my-4 text-center">
-          Explore our wide range of authentic crystal jewelry and energy stones. From healing pendants and gemstone bracelets to chakra pendulums and raw crystals - Om Sritara brings you the best online crystal shop experience with handpicked, Reiki-energised products.
+          Explore our wide range of authentic crystal jewelry and energy stones. From healing pendants and gemstone bracelets to chakra pendulums and raw crystals - Omsritara brings you the best online crystal shop experience with handpicked, Reiki-energised products.
         </p>
 
         {/* CAROUSEL */}

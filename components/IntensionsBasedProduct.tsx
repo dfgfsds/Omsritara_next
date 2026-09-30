@@ -115,7 +115,7 @@ export default function IntensionsBasedProduct() {
                 <meta property="og:title" content={seo?.ogTitle || seo?.title} />
                 <meta property="og:description" content={seo?.ogDescription || seo?.description} />
                 <meta property="og:url" content={seo?.url} />
-                <meta property="og:site_name" content="Om Sritara" />
+                <meta property="og:site_name" content="Omsritara" />
                 <meta property="og:image" content={firstProductImage || seo?.ogImage || seo?.image} />
                 <meta property="og:image:alt" content={seo?.ogImageAlt || seo?.title} />
                 <meta property="og:locale" content="en_IN" />

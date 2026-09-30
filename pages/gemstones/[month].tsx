@@ -192,7 +192,7 @@ export default function BirthstonePage({ monthData, month, redirectUrl }: Births
                                 <div className="flex flex-col gap-2">
                                     <h4 className="text-xl font-bold text-[#8b0000] font-serif m-0">Omsritara Quality & Spiritual Trust</h4>
                                     <p className="text-base md:text-lg text-[#4a5568] italic font-serif leading-relaxed">
-                                        All Om Sritara gemstones are carefully selected, quality checked, and energized with the divine blessings of <strong className="text-[#8b0000] font-bold not-italic">Guru Matha Sri Tara Amma</strong> before being recommended.
+                                        All Omsritara gemstones are carefully selected, quality checked, and energized with the divine blessings of <strong className="text-[#8b0000] font-bold not-italic">Guru Matha Sri Tara Amma</strong> before being recommended.
                                     </p>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@ export default function BirthstonePage({ monthData, month, redirectUrl }: Births
                         {monthData.help?.description || "Every individual is unique, and the most suitable gemstone may vary based on birth details and spiritual guidance. Share your "}
                         {(!monthData.help?.description && !monthData.help?.highlightText) && <span className="font-semibold text-yellow-400">Name, Date of Birth, Rashi, Preferred Gemstone Format, and Contact Number</span>}
                         {monthData.help?.highlightText && <span className="font-semibold text-yellow-400">{monthData.help.highlightText}</span>}
-                        {(!monthData.help?.description) && " with Om Sritara."}
+                        {(!monthData.help?.description) && " with Omsritara."}
                     </p>
 
                     <div className="bg-white/10 p-5 rounded-xl inline-block backdrop-blur-md relative z-10 mb-8 border border-white/10">

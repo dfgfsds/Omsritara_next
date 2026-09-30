@@ -9,7 +9,7 @@ const ContactUs = () => {
         "@context": "https://schema.org",
         "@type": "Organization",
         "@id": "https://www.omsritara.in/#organization",
-        "name": "Om Sritara",
+        "name": "Omsritara",
         "legalName": "Anandat Bhavati Private Limited",
         "url": "https://www.omsritara.in/",
         "logo": {
@@ -20,12 +20,12 @@ const ContactUs = () => {
             "height": 512
         },
         "image": "https://www.omsritara.in/images/contact-banner.jpg",
-        "description": "Om Sritara is a trusted spiritual healing and holistic wellness organization offering Reiki certification courses, healing crystals, spiritually energized products, meditation, Akashic Records, crystal healing and holistic guidance under Guru Matha.",
+        "description": "Omsritara is a trusted spiritual healing and holistic wellness organization offering Reiki certification courses, healing crystals, spiritually energized products, meditation, Akashic Records, crystal healing and holistic guidance under Guru Matha.",
         "founder": {
             "@type": "Person",
             "name": "Guru Matha",
             "jobTitle": "Ambal Upasaki, Reiki Master & Spiritual Healer",
-            "description": "Guru Matha guides Om Sritara through authentic spiritual teachings, Reiki, meditation and holistic healing practices."
+            "description": "Guru Matha guides Omsritara through authentic spiritual teachings, Reiki, meditation and holistic healing practices."
         },
         "foundingLocation": {
             "@type": "Place",
@@ -33,7 +33,7 @@ const ContactUs = () => {
         },
         "brand": {
             "@type": "Brand",
-            "name": "Om Sritara"
+            "name": "Omsritara"
         },
         "email": "info@omsritara.in",
         "telephone": "+91-7092372555",
@@ -89,7 +89,7 @@ const ContactUs = () => {
         "@type": "WebSite",
         "@id": "https://www.omsritara.in/#website",
         "url": "https://www.omsritara.in/",
-        "name": "Om Sritara",
+        "name": "Omsritara",
         "publisher": {
             "@id": "https://www.omsritara.in/#organization"
         },
@@ -99,7 +99,7 @@ const ContactUs = () => {
         "copyrightHolder": {
             "@id": "https://www.omsritara.in/#organization"
         },
-        "description": "Om Sritara is a trusted destination for authentic healing crystals, Reiki certification courses, spiritual healing services, holistic wellness education and spiritually energized products.",
+        "description": "Omsritara is a trusted destination for authentic healing crystals, Reiki certification courses, spiritual healing services, holistic wellness education and spiritually energized products.",
         "image": {
             "@type": "ImageObject",
             "url": "https://www.omsritara.in/images/contact-banner.jpg"
@@ -133,9 +133,9 @@ const ContactUs = () => {
         "@type": "ContactPage",
         "@id": "https://www.omsritara.in/contact-us#contactpage",
         "url": "https://www.omsritara.in/contact-us",
-        "name": "Contact Om Sritara",
-        "headline": "Contact Om Sritara | Spiritual Healing & Reiki Support",
-        "description": "Contact Om Sritara for healing crystals, Reiki certification courses, spiritual healing services, holistic wellness guidance, product support and course enquiries. Visit our Chennai centre or connect online from anywhere in the world.",
+        "name": "Contact Omsritara",
+        "headline": "Contact Omsritara | Spiritual Healing & Reiki Support",
+        "description": "Contact Omsritara for healing crystals, Reiki certification courses, spiritual healing services, holistic wellness guidance, product support and course enquiries. Visit our Chennai centre or connect online from anywhere in the world.",
         "isPartOf": {
             "@id": "https://www.omsritara.in/#website"
         },
@@ -165,9 +165,9 @@ const ContactUs = () => {
         "@type": "WebPage",
         "@id": "https://www.omsritara.in/contact-us#webpage",
         "url": "https://www.omsritara.in/contact-us",
-        "name": "Contact Om Sritara | Spiritual Healing & Reiki in Chennai",
-        "headline": "Contact Om Sritara",
-        "description": "Get in touch with Om Sritara for healing crystals, Reiki courses, spiritual healing, Akashic Records, holistic wellness guidance and spiritually energized products. Our team is available to assist you in English and Tamil.",
+        "name": "Contact Omsritara | Spiritual Healing & Reiki in Chennai",
+        "headline": "Contact Omsritara",
+        "description": "Get in touch with Omsritara for healing crystals, Reiki courses, spiritual healing, Akashic Records, holistic wellness guidance and spiritually energized products. Our team is available to assist you in English and Tamil.",
         "isPartOf": {
             "@id": "https://www.omsritara.in/#website"
         },
@@ -189,7 +189,7 @@ const ContactUs = () => {
         },
         "inLanguage": "en-IN",
         "keywords": [
-            "Contact Om Sritara",
+            "Contact Omsritara",
             "Healing Crystals Chennai",
             "Reiki Courses Chennai",
             "Spiritual Healing",
@@ -221,7 +221,7 @@ const ContactUs = () => {
         },
         "potentialAction": {
             "@type": "CommunicateAction",
-            "name": "Contact Om Sritara",
+            "name": "Contact Omsritara",
             "target": "https://www.omsritara.in/contact-us"
         },
         "mentions": [
@@ -254,11 +254,11 @@ const ContactUs = () => {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": "https://www.omsritara.in/#localbusiness",
-        "name": "Om Sritara",
+        "name": "Omsritara",
         "url": "https://www.omsritara.in/",
         "logo": "https://www.omsritara.in/logo.png",
         "image": "https://www.omsritara.in/images/contact-banner.jpg",
-        "description": "Om Sritara is a trusted spiritual healing and holistic wellness centre in Chennai offering healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records and holistic wellness guidance.",
+        "description": "Omsritara is a trusted spiritual healing and holistic wellness centre in Chennai offering healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records and holistic wellness guidance.",
         "telephone": "+91-7092372555",
         "email": "info@omsritara.in",
         "priceRange": "₹₹",
@@ -408,21 +408,21 @@ const ContactUs = () => {
             <Head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Contact Om Sritara | Spiritual Healing & Reiki in Chennai</title>
-                <meta name="description" content="Contact Om Sritara for authentic healing crystals, Reiki certification courses, spiritual healing services, holistic wellness guidance and spiritually energized products. Visit our Chennai centre or connect with us online worldwide." />
-                <meta name="keywords" content="Contact Om Sritara, Spiritual Healing Chennai, Reiki Centre Chennai, Healing Crystals India, Reiki Courses Chennai, Crystal Healing, Chakra Healing, Akashic Records, Meditation, Guru Matha, Holistic Wellness, Spiritual Products, Online Reiki Course" />
+                <title>Contact Omsritara | Spiritual Healing & Reiki in Chennai</title>
+                <meta name="description" content="Contact Omsritara for authentic healing crystals, Reiki certification courses, spiritual healing services, holistic wellness guidance and spiritually energized products. Visit our Chennai centre or connect with us online worldwide." />
+                <meta name="keywords" content="Contact Omsritara, Spiritual Healing Chennai, Reiki Centre Chennai, Healing Crystals India, Reiki Courses Chennai, Crystal Healing, Chakra Healing, Akashic Records, Meditation, Guru Matha, Holistic Wellness, Spiritual Products, Online Reiki Course" />
                 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
                 <link rel="canonical" href="https://www.omsritara.in/contact-us" />
-                <meta name="author" content="Om Sritara" />
+                <meta name="author" content="Omsritara" />
                 <meta name="publisher" content="Anandat Bhavati Private Limited" />
-                <meta name="copyright" content="© 2026 Om Sritara" />
+                <meta name="copyright" content="© 2026 Omsritara" />
                 <meta httpEquiv="content-language" content="en-IN" />
                 <meta name="theme-color" content="#6B2E8F" />
                 <meta name="referrer" content="strict-origin-when-cross-origin" />
                 <meta name="format-detection" content="telephone=no" />
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="Om Sritara" />
+                <meta name="apple-mobile-web-app-title" content="Omsritara" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
                 <meta name="contact" content="info@omsritara.in" />
                 <meta name="reply-to" content="info@omsritara.in" />
@@ -430,20 +430,20 @@ const ContactUs = () => {
                 <meta name="geo.region" content="IN-TN" />
                 <meta name="geo.placename" content="Chennai, Tamil Nadu" />
                 <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Om Sritara" />
-                <meta property="og:title" content="Contact Om Sritara | Spiritual Healing & Reiki in Chennai" />
-                <meta property="og:description" content="Have questions about healing crystals, Reiki courses or spiritual healing? Contact Om Sritara for authentic guidance, product support and holistic wellness assistance." />
+                <meta property="og:site_name" content="Omsritara" />
+                <meta property="og:title" content="Contact Omsritara | Spiritual Healing & Reiki in Chennai" />
+                <meta property="og:description" content="Have questions about healing crystals, Reiki courses or spiritual healing? Contact Omsritara for authentic guidance, product support and holistic wellness assistance." />
                 <meta property="og:url" content="https://www.omsritara.in/contact-us" />
                 <meta property="og:image" content="https://www.omsritara.in/images/contact-banner.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:image:alt" content="Contact Om Sritara - Spiritual Healing & Reiki Centre" />
+                <meta property="og:image:alt" content="Contact Omsritara - Spiritual Healing & Reiki Centre" />
                 <meta property="og:locale" content="en_IN" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Contact Om Sritara | Spiritual Healing & Reiki" />
-                <meta name="twitter:description" content="Connect with Om Sritara for Reiki certification, healing crystals, spiritual healing services and holistic wellness guidance." />
+                <meta name="twitter:title" content="Contact Omsritara | Spiritual Healing & Reiki" />
+                <meta name="twitter:description" content="Connect with Omsritara for Reiki certification, healing crystals, spiritual healing services and holistic wellness guidance." />
                 <meta name="twitter:image" content="https://www.omsritara.in/images/contact-banner.jpg" />
-                <meta name="twitter:image:alt" content="Contact Om Sritara" />
+                <meta name="twitter:image:alt" content="Contact Omsritara" />
                 <meta name="twitter:site" content="@omsritara" />
 
                 {/* JSON-LD Structured Data */}
@@ -465,10 +465,10 @@ const ContactUs = () => {
 
                             <div>
                                 <h1 className="text-lg font-bold text-gray-900 mb-2">
-                                    Contact Om Sritara | We're Here to Support Your Spiritual Journey
+                                    Contact Omsritara | We're Here to Support Your Spiritual Journey
                                 </h1>
                                 <div>
-                                    Have a question about our healing crystals, spiritual products, Reiki courses, or healing services? We'd love to help. Contact Om Sritara for guidance, product support, or course enquiries. Visit our Chennai center or connect with us online from anywhere in the world.
+                                    Have a question about our healing crystals, spiritual products, Reiki courses, or healing services? We'd love to help. Contact Omsritara for guidance, product support, or course enquiries. Visit our Chennai center or connect with us online from anywhere in the world.
                                 </div>
 
                             </div>
@@ -503,7 +503,7 @@ const ContactUs = () => {
                                     STORE LOCATOR
                                 </h3>
                                 <a href="https://maps.app.goo.gl/BBbFX45PUgf757ua8" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-purple-700 transition-colors inline-block">
-                                    Om Sritara <br />
+                                    Omsritara <br />
                                     46, Giri Rd, Satyamurthy Nagar,<br />
                                     T. Nagar, Chennai,<br />
                                     Tamil Nadu 600017

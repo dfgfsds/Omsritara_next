@@ -10,19 +10,19 @@ const AboutSection: React.FC = () => {
             <div className="mx-auto max-w-5xl rounded-3xl border border-[#a5291b]/20 bg-gradient-to-b from-[#fff8f7] to-white p-6 md:p-10 shadow-sm">
 
                 <h1 className="mb-6 text-3xl font-bold leading-tight text-[#a5291b] md:text-4xl">
-                    Buy Spiritually Energized Healing Crystals, Spiritual Products &amp; Reiki Courses | Om Sritara
+                    Buy Spiritually Energized Healing Crystals, Spiritual Products &amp; Reiki Courses | Omsritara
                 </h1>
 
                 <p className="mb-5 text-gray-700 leading-8">
-                    Welcome to <span className="font-semibold text-[#a5291b]">Om Sritara</span>, a trusted destination for authentic spiritual healing, healing crystals, Reiki training, holistic wellness, and certified spiritual courses. Operating under Anandat Bhavati Private Limited, we are committed to helping individuals experience emotional healing, inner peace, spiritual growth, and positive transformation through ancient healing traditions and modern holistic practices.
+                    Welcome to <span className="font-semibold text-[#a5291b]">Omsritara</span>, a trusted destination for authentic spiritual healing, healing crystals, Reiki training, holistic wellness, and certified spiritual courses. Operating under Anandat Bhavati Private Limited, we are committed to helping individuals experience emotional healing, inner peace, spiritual growth, and positive transformation through ancient healing traditions and modern holistic practices.
                 </p>
 
                 <p className="mb-5 text-gray-700 leading-8">
-                    Founded under the divine guidance of <span className="font-semibold text-[#a5291b]">Guru Matha</span>, an Ambal Upasaki, Reiki Master, and Spiritual Healer, Om Sritara was created with a simple mission—to make genuine spiritual knowledge, healing practices, and sacred energy tools accessible to everyone. Whether you are taking your first step into spirituality or expanding your healing journey, we provide the guidance, products, and education you need to move forward with confidence.
+                    Founded under the divine guidance of <span className="font-semibold text-[#a5291b]">Guru Matha</span>, an Ambal Upasaki, Reiki Master, and Spiritual Healer, Omsritara was created with a simple mission—to make genuine spiritual knowledge, healing practices, and sacred energy tools accessible to everyone. Whether you are taking your first step into spirituality or expanding your healing journey, we provide the guidance, products, and education you need to move forward with confidence.
                 </p>
 
                 <p className="mb-5 text-gray-700 leading-8">
-                    At Om Sritara, spirituality is more than a practice—it's a way of living with balance, awareness, and purpose. Our carefully selected collection of healing crystals, crystal bracelets, rings, pendants, Rudraksha malas, pendulums, spiritual statues, Reiki tools, chakra healing products, and meditation accessories is designed to support every stage of your spiritual journey.
+                    At Omsritara, spirituality is more than a practice—it's a way of living with balance, awareness, and purpose. Our carefully selected collection of healing crystals, crystal bracelets, rings, pendants, Rudraksha malas, pendulums, spiritual statues, Reiki tools, chakra healing products, and meditation accessories is designed to support every stage of your spiritual journey.
                 </p>
 
                 <p className="mb-5 text-gray-700 leading-8">
@@ -30,7 +30,7 @@ const AboutSection: React.FC = () => {
                 </p>
 
                 <p className="text-gray-700 leading-8">
-                    In addition to spiritually energized products, Om Sritara offers online and offline Reiki training, spiritual healing sessions, meditation guidance, Akashic Records, chakra healing, energy healing, spiritual counseling, and more than 24 certified spiritual courses. Our programs are available in Tamil and English, making spiritual learning accessible to students across India and around the world.
+                    In addition to spiritually energized products, Omsritara offers online and offline Reiki training, spiritual healing sessions, meditation guidance, Akashic Records, chakra healing, energy healing, spiritual counseling, and more than 24 certified spiritual courses. Our programs are available in Tamil and English, making spiritual learning accessible to students across India and around the world.
                 </p>
 
             </div>

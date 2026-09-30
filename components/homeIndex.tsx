@@ -6,7 +6,7 @@ export default function HomeIndex() {
         "@context": "https://schema.org",
         "@type": "Organization",
         "@id": "https://www.omsritara.in/#organization",
-        "name": "Om Sritara",
+        "name": "Omsritara",
         "legalName": "Anandat Bhavati Private Limited",
         "url": "https://www.omsritara.in/",
         "logo": {
@@ -14,7 +14,7 @@ export default function HomeIndex() {
             "url": "https://www.omsritara.in/logo.png"
         },
         "image": "https://www.omsritara.in/images/home-banner.jpg",
-        "description": "Om Sritara is a trusted spiritual healing and holistic wellness organization offering spiritually energized healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records, crystal healing and holistic education under the guidance of Guru Matha.",
+        "description": "Omsritara is a trusted spiritual healing and holistic wellness organization offering spiritually energized healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records, crystal healing and holistic education under the guidance of Guru Matha.",
         "foundingLocation": {
             "@type": "Place",
             "name": "Chennai, Tamil Nadu, India"
@@ -23,11 +23,11 @@ export default function HomeIndex() {
             "@type": "Person",
             "name": "Guru Matha",
             "jobTitle": "Ambal Upasaki, Reiki Master & Spiritual Healer",
-            "description": "Guru Matha guides Om Sritara through authentic spiritual teachings, Reiki, meditation and holistic healing practices."
+            "description": "Guru Matha guides Omsritara through authentic spiritual teachings, Reiki, meditation and holistic healing practices."
         },
         "brand": {
             "@type": "Brand",
-            "name": "Om Sritara"
+            "name": "Omsritara"
         },
         "email": "info@omsritara.in",
         "telephone": "+91-7092372555",
@@ -74,11 +74,11 @@ export default function HomeIndex() {
         "@type": "WebSite",
         "@id": "https://www.omsritara.in/#website",
         "url": "https://www.omsritara.in/",
-        "name": "Om Sritara",
+        "name": "Omsritara",
         "publisher": {
             "@id": "https://www.omsritara.in/#organization"
         },
-        "description": "Om Sritara offers authentic healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records, crystal healing, holistic wellness education and spiritually energized products for individuals seeking personal growth and inner transformation.",
+        "description": "Omsritara offers authentic healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records, crystal healing, holistic wellness education and spiritually energized products for individuals seeking personal growth and inner transformation.",
         "inLanguage": [
             "en",
             "ta"
@@ -119,9 +119,9 @@ export default function HomeIndex() {
         "@type": "WebPage",
         "@id": "https://www.omsritara.in/#webpage",
         "url": "https://www.omsritara.in/",
-        "name": "Om Sritara | Healing Crystals, Reiki Courses & Spiritual Healing",
+        "name": "Omsritara | Healing Crystals, Reiki Courses & Spiritual Healing",
         "headline": "Healing Crystals, Reiki Courses & Spiritual Healing in Chennai",
-        "description": "Discover authentic healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records, crystal healing and holistic wellness programs from Om Sritara under the guidance of Guru Matha.",
+        "description": "Discover authentic healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records, crystal healing and holistic wellness programs from Omsritara under the guidance of Guru Matha.",
         "isPartOf": {
             "@id": "https://www.omsritara.in/#website"
         },
@@ -181,14 +181,14 @@ export default function HomeIndex() {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": "https://www.omsritara.in/#localbusiness",
-        "name": "Om Sritara",
+        "name": "Omsritara",
         "image": "https://www.omsritara.in/images/home-banner.jpg",
         "logo": "https://www.omsritara.in/logo.png",
         "url": "https://www.omsritara.in/",
         "telephone": "+91-7092372555",
         "email": "info@omsritara.in",
         "priceRange": "₹₹",
-        "description": "Om Sritara is a spiritual healing and holistic wellness centre in Chennai offering Reiki courses, healing crystals, spiritual healing services, meditation, Akashic Records, crystal healing and holistic wellness programs.",
+        "description": "Omsritara is a spiritual healing and holistic wellness centre in Chennai offering Reiki courses, healing crystals, spiritual healing services, meditation, Akashic Records, crystal healing and holistic wellness programs.",
         "parentOrganization": {
             "@id": "https://www.omsritara.in/#organization"
         },
@@ -295,8 +295,8 @@ export default function HomeIndex() {
         "@context": "https://schema.org",
         "@type": "Service",
         "@id": "https://www.omsritara.in/#service",
-        "name": "Om Sritara Spiritual Healing Services",
-        "description": "Om Sritara offers authentic spiritual healing services, Reiki certification courses, meditation, Akashic Records, crystal healing, chakra balancing, holistic wellness programs and spiritual guidance under Guru Matha.",
+        "name": "Omsritara Spiritual Healing Services",
+        "description": "Omsritara offers authentic spiritual healing services, Reiki certification courses, meditation, Akashic Records, crystal healing, chakra balancing, holistic wellness programs and spiritual guidance under Guru Matha.",
         "provider": {
             "@id": "https://www.omsritara.in/#organization"
         },
@@ -388,10 +388,10 @@ export default function HomeIndex() {
         "@context": "https://schema.org",
         "@type": "ProductCollection",
         "@id": "https://www.omsritara.in/#products",
-        "name": "Om Sritara Spiritual Products",
+        "name": "Omsritara Spiritual Products",
         "url": "https://www.omsritara.in/shop",
         "image": "https://www.omsritara.in/images/home-banner.jpg",
-        "description": "Explore Om Sritara's collection of healing crystals, crystal bracelets, crystal rings, pendants, Rudraksha malas, meditation accessories and spiritually energized products prepared under the guidance of Guru Matha.",
+        "description": "Explore Omsritara's collection of healing crystals, crystal bracelets, crystal rings, pendants, Rudraksha malas, meditation accessories and spiritually energized products prepared under the guidance of Guru Matha.",
         "brand": {
             "@id": "https://www.omsritara.in/#organization"
         },
@@ -467,24 +467,24 @@ export default function HomeIndex() {
         <>
             <Head>
                 {/* Primary Meta */}
-                <title>Om Sritara | Healing Crystals, Reiki Courses & Spiritual Healing in Chennai</title>
+                <title>Omsritara | Healing Crystals, Reiki Courses & Spiritual Healing in Chennai</title>
                 <meta
                     name="description"
-                    content="Discover authentic healing crystals, Reiki certification courses, spiritual healing services, crystal jewellery and holistic wellness programs at Om Sritara. Spiritually energized by Guru Matha. Online & Offline learning available worldwide."
+                    content="Discover authentic healing crystals, Reiki certification courses, spiritual healing services, crystal jewellery and holistic wellness programs at Omsritara. Spiritually energized by Guru Matha. Online & Offline learning available worldwide."
                 />
                 <meta
                     name="keywords"
-                    content="Om Sritara, Healing Crystals, Reiki Course, Reiki Training, Spiritual Healing, Crystal Healing, Guru Matha, Chakra Healing, Akashic Records, Holistic Wellness, Meditation, Reiki Certification, Crystal Bracelets, Crystal Rings, Spiritual Products Chennai, Online Spiritual Courses"
+                    content="Omsritara, Healing Crystals, Reiki Course, Reiki Training, Spiritual Healing, Crystal Healing, Guru Matha, Chakra Healing, Akashic Records, Holistic Wellness, Meditation, Reiki Certification, Crystal Bracelets, Crystal Rings, Spiritual Products Chennai, Online Spiritual Courses"
                 />
                 <meta name="robots" content="index, follow" />
-                {/* Author: Om Sritara */}
-                <meta name="author" content="Om Sritara" />
+                {/* Author: Omsritara */}
+                <meta name="author" content="Omsritara" />
 
                 {/* Publisher - */}
                 <meta name="publisher" content="Anandat Bhavati Private Limited" />
 
                 {/* Copyright */}
-                <meta name="copyright" content="© 2026 Om Sritara" />
+                <meta name="copyright" content="© 2026 Omsritara" />
 
                 {/* Language */}
                 <meta http-equiv="content-language" content="en-IN" />
@@ -501,28 +501,28 @@ export default function HomeIndex() {
 
                 {/* Mobile Optimization  */}
                 <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="Om Sritara" />
+                <meta name="apple-mobile-web-app-title" content="Omsritara" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
                 <meta name="mobile-web-app-capable" content="yes" />
 
                 {/* Open Graph  */}
                 <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Om Sritara" />
-                <meta property="og:title" content="Om Sritara | Healing Crystals, Reiki Courses & Spiritual Healing" />
+                <meta property="og:site_name" content="Omsritara" />
+                <meta property="og:title" content="Omsritara | Healing Crystals, Reiki Courses & Spiritual Healing" />
                 <meta property="og:description" content="Explore spiritually energized healing crystals, Reiki certification courses, crystal jewellery, meditation, Akashic Records, and holistic healing services guided by Guru Matha." />
                 <meta property="og:url" content="https://www.omsritara.in/" />
                 <meta property="og:image" content="https://www.omsritara.in/images/home-banner.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:image:alt" content="Om Sritara Healing Crystals, Reiki Courses and Spiritual Healing" />
+                <meta property="og:image:alt" content="Omsritara Healing Crystals, Reiki Courses and Spiritual Healing" />
                 <meta property="og:locale" content="en_IN" />
 
                 {/* Twitter Card  */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Om Sritara | Healing Crystals, Reiki Courses & Spiritual Healing" />
-                <meta name="twitter:description" content="Authentic healing crystals, Reiki certification, spiritual healing services, crystal jewellery and holistic wellness programs from Om Sritara." />
+                <meta name="twitter:title" content="Omsritara | Healing Crystals, Reiki Courses & Spiritual Healing" />
+                <meta name="twitter:description" content="Authentic healing crystals, Reiki certification, spiritual healing services, crystal jewellery and holistic wellness programs from Omsritara." />
                 <meta name="twitter:image" content="https://www.omsritara.in/images/home-banner.jpg" />
-                <meta name="twitter:image:alt" content="Om Sritara Spiritual Healing" />
+                <meta name="twitter:image:alt" content="Omsritara Spiritual Healing" />
 
                 {/* Contact */}
 

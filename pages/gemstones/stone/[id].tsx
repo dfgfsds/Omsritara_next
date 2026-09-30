@@ -71,7 +71,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
     return (
         <div className="bg-gray-50 min-h-screen pb-16 pt-8">
             <Head>
-                <title>{`${stone.name} - Om Sritara`}</title>
+                <title>{`${stone.name} - Omsritara`}</title>
                 <meta name="description" content={stone.description} />
             </Head>
 
@@ -420,7 +420,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                                 <div className="flex flex-col gap-2">
                                     <h4 className="text-xl font-bold text-[#8b0000] font-serif m-0">Omsritara Quality & Spiritual Trust</h4>
                                     <p className="text-base md:text-lg text-[#4a5568] italic font-serif leading-relaxed">
-                                        All Om Sritara gemstones are carefully selected, quality checked, and energized with the divine blessings of <strong className="text-[#8b0000] font-bold not-italic">Guru Matha Sri Tara Amma</strong> before being recommended.
+                                        All Omsritara gemstones are carefully selected, quality checked, and energized with the divine blessings of <strong className="text-[#8b0000] font-bold not-italic">Guru Matha Sri Tara Amma</strong> before being recommended.
                                     </p>
                                 </div>
                             </div>
@@ -434,7 +434,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-12">
                 <div className="text-center mb-10">
                     <h2 className="text-3xl md:text-4xl font-semibold text-[#2c3e50] font-serif mb-4 tracking-wide">
-                        The Om Sritara Promise
+                        The Omsritara Promise
                     </h2>
                     <div className="flex items-center justify-center gap-3">
                         <div className="w-12 h-[1px] bg-[#d4af37]"></div>
@@ -496,7 +496,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
                         {monthData?.help?.description || "Every individual is unique, and the most suitable gemstone may vary based on birth details and spiritual guidance. Share your "}
                         {(!monthData?.help?.description && !monthData?.help?.highlightText) && <span className="font-semibold text-yellow-400">Name, Date of Birth, Rashi, Preferred Gemstone Format, and Contact Number</span>}
                         {monthData?.help?.highlightText && <span className="font-semibold text-yellow-400">{monthData.help.highlightText}</span>}
-                        {(!monthData?.help?.description) && " with Om Sritara."}
+                        {(!monthData?.help?.description) && " with Omsritara."}
                     </p>
 
                     <div className="bg-white/10 p-5 rounded-xl inline-block backdrop-blur-md relative z-10 mb-8 border border-white/10">
@@ -530,7 +530,7 @@ export default function StonePage({ stone, monthKey }: StonePageProps) {
             >
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent opacity-0 group-active:opacity-100 transition-opacity"></div>
-                
+
                 <div className="relative z-10 flex flex-col items-center gap-3">
                     <div className="bg-gradient-to-br from-[#d4af37] to-[#b8860b] p-1.5 rounded-full shadow-inner relative">
                         <MessageSquare size={14} className="text-white relative z-10" />

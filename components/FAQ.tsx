@@ -11,33 +11,33 @@ type FaqItem = {
 const defaultFaqs: FaqItem[] = [
     {
         id: 1,
-        question: "Why choose Om Sritara for spiritual healing and Reiki training?",
+        question: "Why choose Omsritara for spiritual healing and Reiki training?",
         answer:
-            "Om Sritara, operating under Anandat Bhavati Private Limited, is a trusted spiritual wellness centre guided by Guru Matha. We offer authentic spiritual healing services, Reiki certification courses, holistic wellness programs, and spiritually energized products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha before reaching our customers.",
+            "Omsritara, operating under Anandat Bhavati Private Limited, is a trusted spiritual wellness centre guided by Guru Matha. We offer authentic spiritual healing services, Reiki certification courses, holistic wellness programs, and spiritually energized products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha before reaching our customers.",
     },
     {
         id: 2,
-        question: "Are all products at Om Sritara personally energized by Guru Matha?",
+        question: "Are all products at Omsritara personally energized by Guru Matha?",
         answer:
             "Yes. Every healing crystal, bracelet, ring, pendant, Rudraksha mala, pendulum, Yantra, and spiritual product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha before dispatch.",
     },
     {
         id: 3,
-        question: "What spiritual healing services and courses does Om Sritara offer?",
+        question: "What spiritual healing services and courses does Omsritara offer?",
         answer:
-            "Om Sritara offers Reiki Healing, Reiki certification, Crystal Healing, Chakra Healing, Akashic Records, Angel Reiki, Shamballa Reiki, Lama Fera, Quantum Healing, Pendulum Dowsing, Sujok Therapy, Numerology, Meditation, Spiritual Counseling, Aura Cleansing, Energy Healing, Thanthrigam (Tantra), Shamanism, and more than 24 certified spiritual courses in Tamil and English.",
+            "Omsritara offers Reiki Healing, Reiki certification, Crystal Healing, Chakra Healing, Akashic Records, Angel Reiki, Shamballa Reiki, Lama Fera, Quantum Healing, Pendulum Dowsing, Sujok Therapy, Numerology, Meditation, Spiritual Counseling, Aura Cleansing, Energy Healing, Thanthrigam (Tantra), Shamanism, and more than 24 certified spiritual courses in Tamil and English.",
     },
     {
         id: 4,
         question: "Can I learn Reiki and spiritual healing online from anywhere?",
         answer:
-            "Yes. Om Sritara offers online Reiki certification, spiritual healing courses, and holistic wellness programs for students across India and worldwide through guided lessons, practical demonstrations, study materials, and certification.",
+            "Yes. Omsritara offers online Reiki certification, spiritual healing courses, and holistic wellness programs for students across India and worldwide through guided lessons, practical demonstrations, study materials, and certification.",
     },
     {
         id: 5,
-        question: "What makes Om Sritara different from other spiritual wellness centres?",
+        question: "What makes Omsritara different from other spiritual wellness centres?",
         answer:
-            "Om Sritara combines authentic spiritual traditions with practical learning under the guidance of Guru Matha. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha. We also offer 24+ certified courses, online and offline learning, personalized guidance, and holistic wellness services.",
+            "Omsritara combines authentic spiritual traditions with practical learning under the guidance of Guru Matha. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha. We also offer 24+ certified courses, online and offline learning, personalized guidance, and holistic wellness services.",
     }
 ];
 
@@ -48,15 +48,15 @@ const faqSchema = {
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "Why choose Om Sritara for spiritual healing and Reiki training?",
+            "name": "Why choose Omsritara for spiritual healing and Reiki training?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Om Sritara, operating under Anandat Bhavati Private Limited, is a trusted spiritual wellness centre guided by Guru Matha. We offer authentic spiritual healing services, Reiki certification courses, holistic wellness programs, and spiritually energized products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha before reaching our customers."
+                "text": "Omsritara, operating under Anandat Bhavati Private Limited, is a trusted spiritual wellness centre guided by Guru Matha. We offer authentic spiritual healing services, Reiki certification courses, holistic wellness programs, and spiritually energized products. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha before reaching our customers."
             }
         },
         {
             "@type": "Question",
-            "name": "Are all products at Om Sritara personally energized by Guru Matha?",
+            "name": "Are all products at Omsritara personally energized by Guru Matha?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes. Every healing crystal, bracelet, ring, pendant, Rudraksha mala, pendulum, Yantra, and spiritual product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha before dispatch."
@@ -64,10 +64,10 @@ const faqSchema = {
         },
         {
             "@type": "Question",
-            "name": "What spiritual healing services and courses does Om Sritara offer?",
+            "name": "What spiritual healing services and courses does Omsritara offer?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Om Sritara offers Reiki Healing, Reiki certification, Crystal Healing, Chakra Healing, Akashic Records, Angel Reiki, Shamballa Reiki, Lama Fera, Quantum Healing, Pendulum Dowsing, Sujok Therapy, Numerology, Meditation, Spiritual Counseling, Aura Cleansing, Energy Healing, Thanthrigam (Tantra), Shamanism, and more than 24 certified spiritual courses in Tamil and English."
+                "text": "Omsritara offers Reiki Healing, Reiki certification, Crystal Healing, Chakra Healing, Akashic Records, Angel Reiki, Shamballa Reiki, Lama Fera, Quantum Healing, Pendulum Dowsing, Sujok Therapy, Numerology, Meditation, Spiritual Counseling, Aura Cleansing, Energy Healing, Thanthrigam (Tantra), Shamanism, and more than 24 certified spiritual courses in Tamil and English."
             }
         },
         {
@@ -75,15 +75,15 @@ const faqSchema = {
             "name": "Can I learn Reiki and spiritual healing online from anywhere?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Om Sritara offers online Reiki certification, spiritual healing courses, and holistic wellness programs for students across India and worldwide through guided lessons, practical demonstrations, study materials, and certification."
+                "text": "Yes. Omsritara offers online Reiki certification, spiritual healing courses, and holistic wellness programs for students across India and worldwide through guided lessons, practical demonstrations, study materials, and certification."
             }
         },
         {
             "@type": "Question",
-            "name": "What makes Om Sritara different from other spiritual wellness centres?",
+            "name": "What makes Omsritara different from other spiritual wellness centres?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Om Sritara combines authentic spiritual traditions with practical learning under the guidance of Guru Matha. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha. We also offer 24+ certified courses, online and offline learning, personalized guidance, and holistic wellness services."
+                "text": "Omsritara combines authentic spiritual traditions with practical learning under the guidance of Guru Matha. Every product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha. We also offer 24+ certified courses, online and offline learning, personalized guidance, and holistic wellness services."
             }
         }
     ]
