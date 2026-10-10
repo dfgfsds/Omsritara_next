@@ -341,10 +341,10 @@ export default function HomeIndex() {
         <>
             <Head>
                 {/* Primary Meta */}
-                <title>Omsritara | Healing Crystals, Reiki Courses & Spiritual Healing in Chennai</title>
+                <title>Reiki Courses, Crystal Healing & Spiritual Healing in Chennai</title>
                 <meta
                     name="description"
-                    content="Discover authentic healing crystals, Reiki certification courses, spiritual healing services, crystal jewellery and holistic wellness programs at Omsritara. Spiritually energized by Guru Matha. Online & Offline learning available worldwide."
+                    content="Explore Reiki courses, crystal healing and spiritual healing in Chennai. Learn practical healing techniques and discover a holistic path to inner wellness"
                 />
                 <meta name="keywords" content="Omsritara, Om Sri Tara, spiritual healing, healing crystals, Reiki healing, Reiki training, Reiki courses, Reiki classes Chennai, spiritual wellness, holistic wellness, energy healing, crystal healing, chakra healing, spiritual courses, spiritual products, healing crystals online, Reiki certification, spiritual healing Chennai, holistic healing Chennai, meditation, spiritual guidance, Guru Matha" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
