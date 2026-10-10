@@ -75,43 +75,11 @@ export default function HomeIndex() {
         "@id": "https://www.omsritara.in/#website",
         "url": "https://www.omsritara.in/",
         "name": "Omsritara",
+        "alternateName": "Om Sri Tara",
+        "description": "Omsritara offers healing crystals, spiritual products, Reiki training, spiritual healing services, holistic wellness programs and certified spiritual courses.",
+        "inLanguage": "en-IN",
         "publisher": {
             "@id": "https://www.omsritara.in/#organization"
-        },
-        "description": "Omsritara offers authentic healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records, crystal healing, holistic wellness education and spiritually energized products for individuals seeking personal growth and inner transformation.",
-        "inLanguage": [
-            "en",
-            "ta"
-        ],
-        "keywords": [
-            "Healing Crystals",
-            "Reiki Courses",
-            "Spiritual Healing",
-            "Crystal Healing",
-            "Meditation",
-            "Akashic Records",
-            "Holistic Wellness",
-            "Spiritually Energized Products",
-            "Guru Matha",
-            "Online Spiritual Courses"
-        ],
-        "about": {
-            "@id": "https://www.omsritara.in/#organization"
-        },
-        "copyrightHolder": {
-            "@id": "https://www.omsritara.in/#organization"
-        },
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://www.omsritara.in/images/home-banner.jpg"
-        },
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://www.omsritara.in/?s={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
         }
     };
     const webpageSchema = {
@@ -119,9 +87,9 @@ export default function HomeIndex() {
         "@type": "WebPage",
         "@id": "https://www.omsritara.in/#webpage",
         "url": "https://www.omsritara.in/",
-        "name": "Omsritara | Healing Crystals, Reiki Courses & Spiritual Healing",
-        "headline": "Healing Crystals, Reiki Courses & Spiritual Healing in Chennai",
-        "description": "Discover authentic healing crystals, Reiki certification courses, spiritual healing services, meditation, Akashic Records, crystal healing and holistic wellness programs from Omsritara under the guidance of Guru Matha.",
+        "name": "Reiki Courses, Crystal Healing & Spiritual Healing in Chennai",
+        "headline": "Explore Spiritual Products, Healing Crystals & Reiki Courses Online",
+        "description": "Explore Reiki courses, crystal healing and spiritual healing in Chennai. Learn practical healing techniques and discover a holistic path to inner wellness.",
         "isPartOf": {
             "@id": "https://www.omsritara.in/#website"
         },
@@ -131,74 +99,22 @@ export default function HomeIndex() {
         "publisher": {
             "@id": "https://www.omsritara.in/#organization"
         },
-        "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://www.omsritara.in/images/home-banner.jpg"
-        },
-        "breadcrumb": {
-            "@id": "https://www.omsritara.in/#breadcrumb"
-        },
-        "inLanguage": "en-IN",
-        "keywords": [
-            "Healing Crystals",
-            "Reiki Courses",
-            "Spiritual Healing",
-            "Crystal Healing",
-            "Guru Matha",
-            "Holistic Wellness",
-            "Meditation",
-            "Akashic Records"
-        ],
-        "mainEntity": {
-            "@id": "https://www.omsritara.in/#organization"
-        },
-        "audience": {
-            "@type": "Audience",
-            "audienceType": [
-                "Spiritual Seekers",
-                "Students",
-                "Reiki Practitioners",
-                "Meditation Practitioners",
-                "Energy Healers",
-                "Holistic Wellness Enthusiasts"
-            ]
-        },
-        "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": [
-                "h1",
-                ".hero-content",
-                ".about-section",
-                ".services-section",
-                ".faq-section"
-            ]
-        },
-        "datePublished": "2026-07-06",
-        "dateModified": "2026-07-06"
+        "inLanguage": "en-IN"
     };
 
     const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": "https://www.omsritara.in/#localbusiness",
-        "name": "Omsritara",
-        "image": "https://www.omsritara.in/images/home-banner.jpg",
-        "logo": "https://www.omsritara.in/logo.png",
+        "name": "OMSRITARA",
+        "alternateName": "Omsritara",
         "url": "https://www.omsritara.in/",
-        "telephone": "+91-7092372555",
-        "email": "info@omsritara.in",
-        "priceRange": "₹₹",
-        "description": "Omsritara is a spiritual healing and holistic wellness centre in Chennai offering Reiki courses, healing crystals, spiritual healing services, meditation, Akashic Records, crystal healing and holistic wellness programs.",
-        "parentOrganization": {
-            "@id": "https://www.omsritara.in/#organization"
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Guru Matha"
-        },
+        "email": "info@omsritara.com",
+        "telephone": "+91 7092973555",
+        "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "46, Giri Road, T. Nagar",
+            "streetAddress": "1st Floor, 46, Giri Rd, Satyamurthy Nagar, T. Nagar",
             "addressLocality": "Chennai",
             "addressRegion": "Tamil Nadu",
             "postalCode": "600017",
@@ -206,8 +122,8 @@ export default function HomeIndex() {
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 13.0409,
-            "longitude": 80.2337
+            "latitude": "13.0418",
+            "longitude": "80.2341"
         },
         "openingHoursSpecification": [
             {
@@ -218,62 +134,20 @@ export default function HomeIndex() {
                     "Wednesday",
                     "Thursday",
                     "Friday",
-                    "Saturday",
-                    "Sunday"
+                    "Saturday"
                 ],
-                "opens": "09:00",
-                "closes": "20:00"
+                "opens": "10:00",
+                "closes": "19:00"
             }
         ],
-        "currenciesAccepted": "INR",
-        "paymentAccepted": [
-            "Cash",
-            "Credit Card",
-            "Debit Card",
-            "UPI",
-            "Net Banking"
-        ],
-        "areaServed": [
-            {
-                "@type": "City",
-                "name": "Chennai"
-            },
-            {
-                "@type": "State",
-                "name": "Tamil Nadu"
-            },
-            {
-                "@type": "Country",
-                "name": "India"
-            },
-            {
-                "@type": "Place",
-                "name": "Worldwide"
-            }
-        ],
-        "availableLanguage": [
-            "English",
-            "Tamil"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Support",
-            "telephone": "+91-7092372555",
-            "email": "info@omsritara.in",
-            "availableLanguage": [
-                "English",
-                "Tamil"
-            ]
-        },
         "sameAs": [
             "https://www.facebook.com/omsritarafoundation/",
             "https://www.facebook.com/omsritaraenglish",
-            "https://www.instagram.com/omsritara",
+            "https://www.instagram.com/omsritara/",
             "https://www.instagram.com/om_sritara_satsang",
+            "https://x.com/Omsritara",
             "https://www.youtube.com/@OMSRITARA_",
-            "https://www.youtube.com/@OmsritaraSatsang",
-            "https://www.linkedin.com/company/omsritara-satsang/about/",
-            "https://x.com/omsritara"
+            "https://www.youtube.com/@OmsritaraSatsang"
         ]
     };
 
@@ -472,11 +346,8 @@ export default function HomeIndex() {
                     name="description"
                     content="Discover authentic healing crystals, Reiki certification courses, spiritual healing services, crystal jewellery and holistic wellness programs at Omsritara. Spiritually energized by Guru Matha. Online & Offline learning available worldwide."
                 />
-                <meta
-                    name="keywords"
-                    content="Omsritara, Healing Crystals, Reiki Course, Reiki Training, Spiritual Healing, Crystal Healing, Guru Matha, Chakra Healing, Akashic Records, Holistic Wellness, Meditation, Reiki Certification, Crystal Bracelets, Crystal Rings, Spiritual Products Chennai, Online Spiritual Courses"
-                />
-                <meta name="robots" content="index, follow" />
+                <meta name="keywords" content="Omsritara, Om Sri Tara, spiritual healing, healing crystals, Reiki healing, Reiki training, Reiki courses, Reiki classes Chennai, spiritual wellness, holistic wellness, energy healing, crystal healing, chakra healing, spiritual courses, spiritual products, healing crystals online, Reiki certification, spiritual healing Chennai, holistic healing Chennai, meditation, spiritual guidance, Guru Matha" />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
                 {/* Author: Omsritara */}
                 <meta name="author" content="Omsritara" />
 
@@ -508,21 +379,21 @@ export default function HomeIndex() {
                 {/* Open Graph  */}
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Omsritara" />
-                <meta property="og:title" content="Omsritara | Healing Crystals, Reiki Courses & Spiritual Healing" />
+                <meta property="og:title" content="Reiki Courses, Crystal Healing & Spiritual Healing in Chennai" />
                 <meta property="og:description" content="Explore spiritually energized healing crystals, Reiki certification courses, crystal jewellery, meditation, Akashic Records, and holistic healing services guided by Guru Matha." />
                 <meta property="og:url" content="https://www.omsritara.in/" />
                 <meta property="og:image" content="https://www.omsritara.in/images/home-banner.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:image:alt" content="Omsritara Healing Crystals, Reiki Courses and Spiritual Healing" />
+                <meta property="og:image:alt" content="Omsritara healing crystals, spiritual healing and Reiki training" />
                 <meta property="og:locale" content="en_IN" />
 
                 {/* Twitter Card  */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Omsritara | Healing Crystals, Reiki Courses & Spiritual Healing" />
+                <meta name="twitter:title" content="Reiki Courses, Crystal Healing & Spiritual Healing in Chennai" />
                 <meta name="twitter:description" content="Authentic healing crystals, Reiki certification, spiritual healing services, crystal jewellery and holistic wellness programs from Omsritara." />
                 <meta name="twitter:image" content="https://www.omsritara.in/images/home-banner.jpg" />
-                <meta name="twitter:image:alt" content="Omsritara Spiritual Healing" />
+                <meta name="twitter:image:alt" content="Omsritara spiritual healing, healing crystals and Reiki training" />
 
                 {/* Contact */}
 
