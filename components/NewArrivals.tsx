@@ -75,7 +75,7 @@ export default function NewArrivals() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4">New Arrivals</h2>
           <p className="text-center text-black mb-8">
-            Discover new healing crystals online — freshly charged and added weekly. Buy healing crystals online that radiate pure positive energy and natural beauty
+            Discover new healing crystals online, freshly charged & thoughtfully added each week. Browse and buy healing crystals online that combine natural beauty with pure positive energy.
           </p>
 
           {/* Slider */}

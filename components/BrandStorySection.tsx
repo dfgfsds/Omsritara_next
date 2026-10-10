@@ -12,15 +12,15 @@ export default function BrandStorySection() {
           }`}
       >
         <h2 className="mb-4 text-3xl font-bold text-[#a5291b]">
-          Why Choose Omsritara?
+          Why Choose Omsritara for Healing & Spiritual Guidance?
         </h2>
 
         <p className="mb-4">
-          Choosing the right spiritual guide and authentic products is an important part of your healing journey. At Omsritara, we combine traditional wisdom with practical learning to provide a trusted and meaningful experience.
+          Choosing the right spiritual guide and authentic products can make your healing journey more meaningful. At Omsritara, we bring together traditional wisdom, practical learning, and thoughtfully prepared spiritual resources to create a trusted experience for beginners and experienced spiritual seekers alike.
         </p>
 
         <p className="mb-4">
-          Why thousands of spiritual seekers choose us:
+          Why Thousands of Spiritual Seekers Choose Us
         </p>
 
         <ul className="mb-6 list-disc space-y-2 pl-6">
@@ -37,7 +37,7 @@ export default function BrandStorySection() {
         </ul>
 
         <p className="mb-6">
-          Whether you're looking for emotional balance, spiritual protection, abundance, confidence, meditation support, or personal transformation, Omsritara provides authentic solutions tailored to your spiritual needs.
+          Whether your goal is emotional balance, spiritual protection, abundance, confidence, meditation support, or personal transformation, Omsritara offers authentic solutions aligned with your individual spiritual needs. Connect with us today to explore the right healing service, course, or spiritual product for your journey.
         </p>
 
         <h2 className="mb-4 text-3xl font-bold text-[#a5291b]">
@@ -45,23 +45,23 @@ export default function BrandStorySection() {
         </h2>
 
         <p className="mb-4">
-          Omsritara was founded with a vision to create a trusted space where people can experience the true essence of spiritual healing. Inspired by timeless healing traditions and guided by the wisdom of Guru Matha, we have built a community that values authenticity, compassion, and holistic well-being.
+          Omsritara was founded with a vision to create a trusted space where people can explore the true essence of spiritual healing. Inspired by timeless healing traditions and guided by the wisdom of Guru Matha, we have built a community centered on authenticity, compassion, and holistic well-being.
         </p>
 
         <p className="mb-4">
-          Our spiritual foundation is inspired by the divine energies of Green Tara, Kwan Yin, Isis, and Goddess Fortuna, reflecting centuries of sacred wisdom that continue to guide and inspire seekers around the world.
+          Our spiritual foundation draws inspiration from the divine energies of Green Tara, Kwan Yin, Isis, and Goddess Fortuna, representing centuries of sacred wisdom that continue to inspire spiritual seekers around the world. These traditions form an important part of the values and spiritual approach we share at Omsritara.
         </p>
 
         <p className="mb-4">
-          Today, Omsritara has become more than a spiritual wellness brand. It is a place where individuals can discover authentic healing products, gain practical spiritual knowledge, learn powerful healing techniques, and receive compassionate guidance on their path toward inner peace and self-discovery.
+          Today, Omsritara is more than a spiritual wellness brand. It is a welcoming space where individuals can discover authentic healing products, gain practical spiritual knowledge, learn powerful healing techniques, and receive compassionate guidance as they explore inner peace and self-discovery.
         </p>
 
         <p className="mb-4">
-          Every product we offer and every course we teach is prepared with sincerity, sacred intention, and a commitment to helping you reconnect with your higher self. Whether you visit our center in Chennai or join us online from anywhere in the world, our goal remains the same—to support your journey with genuine spiritual guidance, authentic healing practices, and products that are personally energized by Guru Matha.
+          Every product we offer and every course we teach is prepared with sincerity, sacred intention, and a genuine commitment to supporting your spiritual path. Whether you visit our center in Chennai or connect with us online from anywhere in the world, our purpose remains the same—to provide genuine spiritual guidance, authentic healing practices, and meaningful learning experiences.
         </p>
 
         <p>
-          Begin your journey with Omsritara and experience healing, balance, and spiritual growth through authentic wisdom and sacred traditions.
+          Begin your journey with Omsritara and explore healing, balance, and spiritual growth through authentic wisdom, sacred traditions, and practices that can become a meaningful part of your everyday life.
         </p>
         <div className="mt-12 space-y-8">
 
@@ -69,29 +69,21 @@ export default function BrandStorySection() {
           <div className="overflow-hidden rounded-3xl border border-[#a5291b]/15 bg-gradient-to-br from-[#fff8f7] via-white to-[#fff5f3] shadow-sm">
             <div className="border-b border-[#a5291b]/10 bg-[#a5291b] px-6 py-4">
               <h2 className="text-2xl font-bold text-white">
-                Spiritually Energized Products
+                Buy Healing Crystals & spiritual products online
               </h2>
             </div>
 
             <div className="p-6 md:p-8">
               <p className="leading-8 text-gray-700">
-                At Omsritara, every product is chosen with care to support your
-                spiritual and personal well-being. Our collection includes healing
-                crystals, crystal bracelets, rings, pendants, Rudraksha malas,
-                pendulums, spiritual statues, Reiki tools, chakra healing products,
-                meditation accessories, and sacred energy tools for people seeking
-                balance, protection, prosperity, and inner peace.
+                At Omsritara, every product is thoughtfully chosen to support your spiritual and personal well-being. Explore healing crystals, crystal bracelets, rings, pendants, Rudraksha malas, pendulums, spiritual statues, Reiki tools, chakra healing products, meditation accessories, and sacred energy tools for balance, protection, prosperity, and inner peace.
               </p>
 
               <p className="mt-5 leading-8 text-gray-700">
-                We believe that a spiritual product should offer more than beauty—it
-                should carry positive energy and sacred intention. That's why every
-                product is ethically sourced, spiritually cleansed, energized through
-                sacred rituals, and personally energized by Guru Matha before it
-                reaches you. Whether you're beginning your spiritual journey or already
-                practicing healing techniques, you'll find authentic products that
-                support meditation, chakra balancing, emotional healing, and spiritual
-                growth.
+                If you're looking to buy healing crystals online, our online crystal shop offers a carefully selected range for different spiritual practices and personal needs. Each product is ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha before reaching you.
+              </p>
+              
+              <p className="mt-5 leading-8 text-gray-700">
+                Whether you are beginning your spiritual journey or practicing healing techniques, these authentic products can complement meditation, chakra balancing, emotional healing, and spiritual growth with meaningful sacred intention.
               </p>
             </div>
           </div>
@@ -106,10 +98,7 @@ export default function BrandStorySection() {
 
             <div className="p-6 md:p-8">
               <p className="leading-8 text-gray-700">
-                One of the qualities that makes Omsritara unique is our Sacred
-                Three-Day Energizing Process. Before any product is delivered, it goes
-                through a carefully followed spiritual preparation designed to preserve
-                its natural energy and enhance its spiritual purpose.
+                A distinctive part of the Omsritara experience is our Sacred Three-Day Energizing Process. Before any product is delivered, it follows a carefully maintained spiritual preparation intended to preserve its natural energy and strengthen its spiritual purpose.
               </p>
 
               <div className="mt-8">
@@ -120,7 +109,7 @@ export default function BrandStorySection() {
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="rounded-2xl bg-[#fff8f7] p-4">
                     <p className="font-medium text-gray-800">
-                      ✨ Products are spiritually cleansed to remove unwanted energies.
+                      ✨ Products are spiritually cleansed to help remove unwanted energies.
                     </p>
                   </div>
 
@@ -132,22 +121,19 @@ export default function BrandStorySection() {
 
                   <div className="rounded-2xl bg-[#fff8f7] p-4">
                     <p className="font-medium text-gray-800">
-                      ✨ Healing vibrations are infused through traditional spiritual
-                      practices.
+                      ✨ Healing vibrations are infused through traditional spiritual practices.
                     </p>
                   </div>
 
                   <div className="rounded-2xl bg-[#fff8f7] p-4">
                     <p className="font-medium text-gray-800">
-                      ✨ Divine blessings are invoked for protection, healing, peace,
-                      and abundance.
+                      ✨ Divine blessings are invoked for protection, healing, peace, and abundance.
                     </p>
                   </div>
 
                   <div className="rounded-2xl bg-[#fff8f7] p-4 md:col-span-2">
                     <p className="font-medium text-gray-800">
-                      ✨ Every product is personally energized and blessed by Guru
-                      Matha before being carefully packed and shipped.
+                      ✨ Each product is personally energized and blessed by Guru Matha before being carefully packed and shipped.
                     </p>
                   </div>
                 </div>
@@ -155,8 +141,7 @@ export default function BrandStorySection() {
 
               <div className="mt-8 rounded-2xl border-l-4 border-[#a5291b] bg-[#fff8f7] p-5">
                 <p className="leading-8 text-gray-700">
-                  This sacred process reflects our commitment to authenticity and
-                  ensures every product reaches you with positive spiritual energy.
+                  This meaningful process reflects Omsritara commitment to authenticity and careful preparation, helping every product reach you with positive spiritual energy and sacred intention.
                 </p>
               </div>
             </div>
@@ -169,16 +154,13 @@ export default function BrandStorySection() {
           <div className="overflow-hidden rounded-3xl border border-[#a5291b]/15 bg-white shadow-sm">
             <div className="bg-[#a5291b] px-6 py-4">
               <h2 className="text-2xl font-bold text-white">
-                Spiritual Healing Services
+                Spiritual Healing Services in Chennai
               </h2>
             </div>
 
             <div className="p-6 md:p-8">
               <p className="mb-6 leading-8 text-gray-700">
-                Healing is a journey of restoring balance to the mind, body, and spirit.
-                At Omsritara, we offer a range of spiritual healing services designed to
-                support emotional well-being, personal transformation, and inner harmony
-                through traditional healing practices.
+                Healing is a personal journey toward greater balance, awareness, and inner harmony. At Omsritara, our spiritual healing services bring together traditional healing practices and personalized guidance to support emotional well-being, personal transformation, and a deeper connection with yourself.
               </p>
 
               <h3 className="mb-4 text-lg font-semibold text-[#a5291b]">
@@ -202,9 +184,7 @@ export default function BrandStorySection() {
               </div>
 
               <p className="mt-6 leading-8 text-gray-700">
-                Each session is offered with compassion, personalized guidance, and
-                sacred intention to help you overcome emotional and energetic blockages
-                while creating greater clarity, confidence, and spiritual awareness.
+                Each session is approached with compassion, personalized guidance, and sacred intention. Our services are designed to help you explore emotional and energetic blockages, gain greater clarity and confidence, and develop a stronger sense of spiritual awareness at your own pace.
               </p>
             </div>
           </div>
@@ -213,17 +193,13 @@ export default function BrandStorySection() {
           <div className="overflow-hidden rounded-3xl border border-[#a5291b]/15 bg-white shadow-sm">
             <div className="bg-[#a5291b] px-6 py-4">
               <h2 className="text-2xl font-bold text-white">
-                Spiritual Classes & Certified Courses
+                Spiritual Classes & Certified Courses Online & Offline
               </h2>
             </div>
 
             <div className="p-6 md:p-8">
               <p className="mb-6 leading-8 text-gray-700">
-                Learning spiritual healing is a lifelong journey, and Omsritara makes
-                that journey accessible through online and offline classes in Tamil and
-                English. Whether you're a beginner or an experienced practitioner, our
-                programs combine traditional wisdom with practical learning to help you
-                build confidence and real-world healing skills.
+                Learning spiritual healing is a continuous journey, and Omsritara offers accessible online and offline classes in Tamil and English. From beginners to experienced practitioners, our courses combine traditional wisdom with practical learning to help you develop confidence and useful healing skills.
               </p>
 
               <h3 className="mb-4 text-lg font-semibold text-[#a5291b]">
@@ -258,12 +234,7 @@ export default function BrandStorySection() {
               </div>
 
               <p className="mt-6 leading-8 text-gray-700">
-                Every course includes structured learning, practical demonstrations,
-                study materials, and certification to help you confidently apply
-                spiritual healing in your personal and professional life. Whether you
-                choose to learn online from anywhere in the world or attend our training
-                centre in Chennai, you'll receive authentic guidance rooted in sacred
-                traditions and supported by the blessings of Guru Matha.
+                Each course includes structured learning, practical demonstrations, study materials, and certification. Learn online from anywhere in the world or attend our training centre in Chennai with authentic guidance rooted in sacred traditions and the blessings of Guru Matha.
               </p>
             </div>
           </div>
@@ -271,34 +242,19 @@ export default function BrandStorySection() {
           {/* Why Thousands Trust Omsritara */}
           <div className="rounded-3xl border border-[#a5291b]/15 bg-gradient-to-br from-[#fff8f7] to-white p-6 md:p-8 shadow-sm">
             <h2 className="mb-6 text-2xl font-bold text-[#a5291b]">
-              Why Thousands Trust Omsritara
+              Why Thousands Trust Omsritara for Spiritual Healing & Wellness
             </h2>
 
             <p className="mb-5 leading-8 text-gray-700">
-              At Omsritara, trust is built through authenticity, quality, and genuine
-              care for every individual who chooses us. We believe that true spiritual
-              healing begins with the right guidance, sincere intentions, and products
-              prepared with respect for ancient traditions. Every service we provide and
-              every product we offer reflects our commitment to helping people
-              experience meaningful spiritual growth.
+              At Omsritara, trust comes from authenticity, quality, and genuine care. We believe meaningful spiritual healing begins with sincere intentions, trusted guidance, and respect for ancient traditions. Every service and product reflects our commitment to supporting your spiritual growth.
             </p>
 
             <p className="mb-5 leading-8 text-gray-700">
-              Our healing crystals and spiritual products are not simply selected for
-              their appearance. Every product is ethically sourced, spiritually
-              cleansed, energized through sacred rituals, and personally energized by
-              Guru Matha before reaching you. This sacred preparation makes Omsritara a
-              trusted choice for people seeking authentic spiritual products and
-              holistic healing solutions.
+              Our healing crystals and spiritual products are carefully selected with purpose. They are ethically sourced, spiritually cleansed, energized through sacred rituals, and personally energized by Guru Matha, making Omsritara a trusted choice for authentic spiritual products and holistic healing solutions.
             </p>
 
             <p className="leading-8 text-gray-700">
-              Along with spiritually prepared products, we provide personalized
-              guidance, practical learning, and supportive healing experiences for
-              beginners and experienced practitioners alike. Whether you're searching
-              for emotional balance, protection, meditation support, prosperity, or
-              personal transformation, Omsritara is here to support your journey with
-              authenticity and compassion.
+              We also offer personalized guidance, practical learning, and supportive healing experiences for beginners and experienced practitioners. Whether you seek emotional balance, protection, meditation support, prosperity, or personal transformation, Omsritara supports your journey with authenticity and compassion.
             </p>
           </div>
 
@@ -306,15 +262,13 @@ export default function BrandStorySection() {
           <div className="overflow-hidden rounded-3xl border border-[#a5291b]/15 bg-white shadow-sm">
             <div className="bg-[#a5291b] px-6 py-4">
               <h2 className="text-2xl font-bold text-white">
-                Our Areas of Expertise
+                Discover Our Spiritual Healing & Personal Growth Practices
               </h2>
             </div>
 
             <div className="p-6 md:p-8">
               <p className="mb-6 leading-8 text-gray-700">
-                Omsritara brings together traditional spiritual sciences and modern
-                holistic practices to help individuals achieve balance, clarity, and
-                personal growth.
+                Omsritara brings together traditional spiritual sciences and modern holistic practices to support balance, clarity, self-awareness, and personal growth. Our expertise covers a wide range of approaches for different spiritual and personal needs.
               </p>
 
               <h3 className="mb-4 text-lg font-semibold text-[#a5291b]">
@@ -343,9 +297,7 @@ export default function BrandStorySection() {
               </div>
 
               <p className="mt-6 leading-8 text-gray-700">
-                Every service and course is designed to provide practical knowledge
-                while encouraging self-awareness, emotional well-being, and spiritual
-                development.
+                Our services and courses focus on practical knowledge, emotional well-being, self-awareness, and spiritual development, helping you explore practices that align with your individual journey.
               </p>
             </div>
           </div>
@@ -358,29 +310,21 @@ export default function BrandStorySection() {
           <div className="overflow-hidden rounded-3xl border border-[#a5291b]/15 bg-white shadow-sm">
             <div className="bg-[#a5291b] px-6 py-4">
               <h2 className="text-2xl font-bold text-white">
-                Learn Online or Offline
+                Online & Offline Spiritual Courses in Chennai
               </h2>
             </div>
 
             <div className="p-6 md:p-8">
               <p className="mb-5 leading-8 text-gray-700">
-                Learning should be flexible and accessible. That's why Omsritara
-                offers online and offline spiritual classes and certification courses
-                to suit your schedule and learning style.
+                Learning should fit your schedule and preferred way of studying. Omsritara offers flexible online and offline spiritual classes and certification courses for learners at different stages of their spiritual journey.
               </p>
 
               <p className="mb-5 leading-8 text-gray-700">
-                Our online programs allow students from anywhere in the world to learn
-                through structured lessons, guided practice, study materials, and
-                certification. If you prefer hands-on learning, our offline training
-                sessions in Chennai provide live demonstrations, practical exercises,
-                personal guidance, and interactive learning in a supportive
-                environment.
+                Our online programs let students from anywhere in the world learn through structured lessons, guided practice, study materials, and certification. For those who prefer hands-on learning, our offline training sessions in Chennai include live demonstrations, practical exercises, personal guidance, and interactive learning in a supportive environment.
               </p>
 
               <p className="leading-8 text-gray-700">
-                All classes are available in Tamil and English, making spiritual
-                education accessible to a wider community of learners.
+                All classes are available in Tamil and English, making spiritual education accessible to a wider community of learners.
               </p>
             </div>
           </div>
@@ -389,27 +333,21 @@ export default function BrandStorySection() {
           <div className="overflow-hidden rounded-3xl border border-[#a5291b]/15 bg-gradient-to-br from-[#fff8f7] to-white shadow-sm">
             <div className="px-6 py-5">
               <h2 className="text-2xl font-bold text-[#a5291b]">
-                Serving India & Spiritual Seekers Worldwide
+                Spiritual Products & Healing Services Across India & Worldwide
               </h2>
             </div>
 
             <div className="px-6 pb-8">
               <p className="mb-5 leading-8 text-gray-700">
-                Omsritara proudly serves customers and students across Chennai,
-                Tamil Nadu, India, while offering online products, spiritual healing
-                services, and certification courses to people around the world.
+                Omsritara proudly serves customers and students across Chennai, Tamil Nadu, and India, while making our online products, spiritual healing services, and certification courses accessible to people around the world.
               </p>
 
               <p className="mb-5 leading-8 text-gray-700">
-                Whether you're in India, Singapore, Malaysia, the United Arab Emirates,
-                Australia, Canada, the United Kingdom, the United States, or anywhere
-                else, you can access our spiritually energized products, healing
-                services, and learning programs from wherever you are.
+                Whether you are in India, Singapore, Malaysia, the United Arab Emirates, Australia, Canada, the United Kingdom, the United States, or elsewhere, you can explore our spiritually energized products, healing services, and learning programs from wherever you are.
               </p>
 
               <p className="leading-8 text-gray-700">
-                Our goal is to make authentic spiritual knowledge and holistic healing
-                available to everyone, regardless of location.
+                Our goal is to make authentic spiritual knowledge and holistic healing more accessible, helping spiritual seekers connect with meaningful guidance and practices regardless of location.
               </p>
             </div>
           </div>
@@ -418,16 +356,13 @@ export default function BrandStorySection() {
           <div className="overflow-hidden rounded-3xl border border-[#a5291b]/15 bg-white shadow-sm">
             <div className="bg-[#a5291b] px-6 py-4">
               <h2 className="text-2xl font-bold text-white">
-                Our Commitment to Authenticity
+                Authentic Spiritual Knowledge, Products & Healing Practices
               </h2>
             </div>
 
             <div className="p-6 md:p-8">
               <p className="mb-5 leading-8 text-gray-700">
-                Authenticity is at the heart of everything we do. From sourcing our
-                healing crystals to designing our courses, we remain committed to
-                preserving the integrity of traditional spiritual practices while
-                making them accessible to modern seekers.
+                Authenticity guides everything we do at Omsritara. From sourcing our healing crystals to creating our courses, we respect traditional spiritual practices while presenting them in a practical and accessible way for today’s seekers.
               </p>
 
               <h3 className="mb-4 text-lg font-semibold text-[#a5291b]">
@@ -462,10 +397,7 @@ export default function BrandStorySection() {
               </div>
 
               <p className="mt-6 leading-8 text-gray-700">
-                Every product and service reflects our promise to deliver quality,
-                trust, and spiritual integrity. By combining sacred traditions with
-                thoughtful guidance, we help individuals build a deeper connection
-                with themselves and their spiritual path.
+                Every product and service reflects our commitment to quality, trust, and spiritual integrity. Through a thoughtful blend of sacred traditions and practical guidance, we support individuals in developing a deeper connection with themselves and their spiritual path.
               </p>
             </div>
           </div>
@@ -473,23 +405,19 @@ export default function BrandStorySection() {
           {/* Begin Your Spiritual Journey */}
           <div className="rounded-3xl bg-[#a5291b] p-8 text-white shadow-lg">
             <h2 className="mb-5 text-3xl font-bold">
-              Begin Your Spiritual Journey with Omsritara
+              Begin Your Spiritual Journey with Authentic Healing & Guidance
             </h2>
 
             <p className="mb-5 leading-8 text-white/90">
-              Every journey begins with a single step, and we're here to walk that path
-              with you. Whether you're looking for healing crystals, spiritual products,
-              Reiki training, holistic healing, meditation, or certified spiritual
-              courses, Omsritara offers trusted guidance and authentic solutions for
-              every stage of your journey.
+              Every spiritual journey begins with a meaningful first step. Whether you're looking for healing crystals, spiritual products, Reiki training, holistic healing, meditation, or certified spiritual courses, Omsritara offers trusted guidance and authentic solutions to support you along the way.
             </p>
 
             <p className="mb-5 leading-8 text-white/90">
-              Explore our collection of spiritually energized products, join our online
-              or offline courses, and experience healing practices rooted in ancient
-              wisdom. With the guidance of Guru Matha, you'll receive authentic support
-              designed to help you find balance, inner peace, and lasting spiritual
-              growth.
+              Explore our spiritually energized products, join our online or offline courses, and discover healing practices rooted in ancient wisdom. With the guidance of Guru Matha, you can access authentic support focused on balance, inner peace, and lasting spiritual growth.
+            </p>
+            
+            <p className="mb-5 leading-8 text-white/90">
+              Ready to begin your journey? Connect with Omsritara today and take your first step toward spiritual growth.
             </p>
 
             <p className="text-lg font-semibold tracking-wide">
