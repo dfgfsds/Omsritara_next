@@ -3,7 +3,9 @@ import axios from "axios";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "next/router";
-import Head from "next/head"; // ✅ Import Head for meta tags
+import Head from "next/head";
+import type { GetStaticPaths, GetStaticProps } from "next";
+import { slugify } from "@/lib/utils";
 
 interface Blog {
     id: number;
@@ -19,13 +21,21 @@ interface Blog {
     url_description?: string;
     og_tags?: string | any;
     twitter_tags?: string | any;
-    image_src_tags?: string;
+    image_src_tags?: string | any;
     schema?: string | any;
     url_slug?: string;
 }
 
 export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
     const router = useRouter();
+
+    if (router.isFallback) {
+        return (
+            <div className="max-w-4xl mx-auto py-20 text-center">
+                <p className="text-gray-500">Loading blog...</p>
+            </div>
+        );
+    }
 
     if (!blog) {
         return (
@@ -34,7 +44,7 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
                     <title>Blog Not Found | Omsritara</title>
                     <meta
                         name="description"
-                        content="Sorry, the blog you’re looking for doesn’t exist. Explore more inspiring stories on Pengalulagam."
+                        content="Sorry, the blog you’re looking for doesn’t exist. Explore more inspiring stories on Omsritara."
                     />
                 </Head>
 
@@ -46,65 +56,86 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
         );
     }
 
+    const currentSlug = blog.url_slug || slugify(blog.title || "");
+    const canonicalUrl = blog.canonical_tag || `https://www.omsritara.in/blog/${currentSlug}`;
+
+    const imageSrc =
+        typeof blog.image_src_tags === "string" && blog.image_src_tags.trim().length > 0
+            ? blog.image_src_tags
+            : blog.banner_url || "https://www.omsritara.in/images/blog-banner.jpg";
+
+    const metaTitle =
+        (typeof blog.meta_title === "string" && blog.meta_title.trim().length > 0)
+            ? blog.meta_title
+            : `${blog.title} | Omsritara Blog`;
+
+    const cleanContentSnippet = blog.content ? blog.content.replace(/<[^>]*>/g, "").slice(0, 160) : "";
+    const metaDescription =
+        (typeof blog.meta_description === "string" && blog.meta_description.trim().length > 0)
+            ? blog.meta_description
+            : blog.description?.slice(0, 160) || cleanContentSnippet;
+
+    const hasCustomSchema =
+        blog.schema &&
+        (typeof blog.schema === "string"
+            ? blog.schema.trim().length > 0 && blog.schema.trim() !== "{}"
+            : Object.keys(blog.schema).length > 0);
+
+    const defaultSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": blog.title,
+        "description": metaDescription,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Omsritara"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Omsritara",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.omsritara.in/logo.png"
+            }
+        },
+        "image": imageSrc,
+        "url": canonicalUrl,
+        "datePublished": blog.created_at
+    };
+
     return (
         <div className="max-w-4xl mx-auto py-12 px-4">
             {/* ✅ Dynamic SEO Meta Tags */}
             <Head>
-                <title>{blog.meta_title || `${blog.title} | Omsritara Blog`}</title>
-                <meta
-                    name="description"
-                    content={blog.meta_description || blog.description?.slice(0, 160) || blog.content.slice(0, 160)}
-                />
+                <title>{metaTitle}</title>
+                <meta name="description" content={metaDescription} />
                 <meta name="robots" content={blog.robots_tag || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
                 {blog.url_description && <meta name="url_description" content={blog.url_description} />}
 
-                <meta property="og:title" content={blog.meta_title || blog.title} />
-                <meta
-                    property="og:description"
-                    content={blog.meta_description || blog.description?.slice(0, 160) || blog.content.slice(0, 160)}
-                />
-                <meta property="og:image" content={blog.image_src_tags || blog.banner_url} />
+                <meta property="og:title" content={metaTitle} />
+                <meta property="og:description" content={metaDescription} />
+                <meta property="og:image" content={imageSrc} />
                 <meta property="og:type" content="article" />
                 <meta property="og:site_name" content="omsritara" />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={blog.meta_title || blog.title} />
-                <meta name="twitter:description" content={blog.meta_description || blog.description?.slice(0, 160) || blog.content.slice(0, 160)} />
-                <meta name="twitter:image" content={blog.image_src_tags || blog.banner_url} />
+                <meta name="twitter:title" content={metaTitle} />
+                <meta name="twitter:description" content={metaDescription} />
+                <meta name="twitter:image" content={imageSrc} />
 
-                <link rel="canonical" href={blog.canonical_tag || `https://www.omsritara.in/blog/${blog.url_slug || router.query.title}`} />
-                <link rel="image_src" href={blog.image_src_tags || blog.banner_url} />
+                <link rel="canonical" href={canonicalUrl} />
+                <link rel="image_src" href={imageSrc} />
 
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: blog.schema
+                        __html: hasCustomSchema
                             ? (typeof blog.schema === "string" ? blog.schema : JSON.stringify(blog.schema))
-                            : JSON.stringify({
-                                "@context": "https://schema.org",
-                                "@type": "BlogPosting",
-                                "headline": blog.title,
-                                "description": blog.description || blog.content.slice(0, 160),
-                                "mainEntityOfPage": {
-                                    "@type": "WebPage",
-                                    "@id": `https://www.omsritara.in/blog/${blog.url_slug || router.query.title}`
-                                },
-                                "author": {
-                                    "@type": "Organization",
-                                    "name": "Omsritara"
-                                },
-                                "publisher": {
-                                    "@type": "Organization",
-                                    "name": "Omsritara",
-                                    "logo": {
-                                        "@type": "ImageObject",
-                                        "url": "https://www.omsritara.in/logo.png"
-                                    }
-                                },
-                                "image": blog.banner_url,
-                                "url": `https://www.omsritara.in/blog/${blog.url_slug || router.query.title}`,
-                                "datePublished": blog.created_at
-                            })
+                            : JSON.stringify(defaultSchema)
                     }}
                 />
             </Head>
@@ -149,39 +180,98 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
     );
 }
 
-// ✅ Server-Side Rendering
-export async function getServerSideProps(context: any) {
-    const { title } = context.params;
-
-    const slugify = (text: string) =>
-        text
-            .toLowerCase()
-            .trim()
-            .replace(/[^\w\s-]/g, "")
-            .replace(/\s+/g, "-");
-
+// ✅ SSG Paths: Pre-renders all blog pages at build time
+export const getStaticPaths: GetStaticPaths = async () => {
     try {
-        const vendorId = 63; // fallback vendor id
+        const vendorId = 63;
+        const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || baseUrl;
         const res = await axios.get(
-            `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog/?vendor_id=${vendorId}`,
-            { headers: { "Cache-Control": "no-cache" } }
+            `${apiBase}/blog/?vendor_id=${vendorId}`
         );
 
-        const blogs = res.data?.blogs || [];
-        const matched = blogs.find((item: Blog) => {
-            if (item.url_slug) {
-                return item.url_slug === title;
+        const blogs: Blog[] = res.data?.blogs || [];
+        const paths: { params: { title: string } }[] = [];
+        const seenSlugs = new Set<string>();
+
+        blogs.forEach((item) => {
+            if (item.url_slug && item.url_slug.trim()) {
+                const slug = item.url_slug.trim();
+                if (!seenSlugs.has(slug)) {
+                    seenSlugs.add(slug);
+                    paths.push({ params: { title: slug } });
+                }
             }
-            return slugify(item.title) === title;
+            if (item.title && item.title.trim()) {
+                const slug = slugify(item.title);
+                if (slug && !seenSlugs.has(slug)) {
+                    seenSlugs.add(slug);
+                    paths.push({ params: { title: slug } });
+                }
+            }
         });
 
         return {
-            props: {
-                blog: matched || null,
-            },
+            paths,
+            fallback: "blocking",
         };
     } catch (error) {
-        console.error("SSR Blog fetch error:", error);
-        return { props: { blog: null } };
+        console.error("SSG getStaticPaths Blog fetch error:", error);
+        return {
+            paths: [],
+            fallback: "blocking",
+        };
     }
-}
+};
+
+// ✅ SSG Data Fetching with Incremental Static Regeneration (ISR)
+export const getStaticProps: GetStaticProps = async (context) => {
+    const rawTitle = context.params?.title;
+
+    if (!rawTitle || typeof rawTitle !== "string") {
+        return {
+            notFound: true,
+            revalidate: 60,
+        };
+    }
+
+    const titleParam = decodeURIComponent(rawTitle).trim().toLowerCase();
+
+    try {
+        const vendorId = 63;
+        const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || baseUrl;
+        const res = await axios.get(
+            `${apiBase}/blog/?vendor_id=${vendorId}`
+        );
+
+        const blogs: Blog[] = res.data?.blogs || [];
+        const matched = blogs.find((item: Blog) => {
+            if (item.url_slug && item.url_slug.trim().toLowerCase() === titleParam) {
+                return true;
+            }
+            if (item.title && slugify(item.title).toLowerCase() === titleParam) {
+                return true;
+            }
+            return false;
+        });
+
+        if (!matched) {
+            return {
+                notFound: true,
+                revalidate: 60,
+            };
+        }
+
+        return {
+            props: {
+                blog: matched,
+            },
+            revalidate: 60,
+        };
+    } catch (error) {
+        console.error("SSG getStaticProps Blog fetch error:", error);
+        return {
+            notFound: true,
+            revalidate: 60,
+        };
+    }
+};

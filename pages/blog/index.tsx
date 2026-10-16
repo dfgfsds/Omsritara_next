@@ -2,6 +2,7 @@ import Head from "next/head";
 import { baseUrl } from "@/api-endpoints/ApiUrls";
 import axios from "axios";
 import BlogAllPages from "@/components/BlogAllPages";
+import type { GetStaticProps } from "next";
 
 export default function BlogPage({ blogs }: { blogs: any[] }) {
 
@@ -452,29 +453,32 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
                 />
             </Head>
 
-            <BlogAllPages blogs={blogs} />;
+            <BlogAllPages blogs={blogs} />
         </>
-    )
+    );
 }
 
-// SSR function
-export async function getServerSideProps() {
+// ✅ SSG Data Fetching with Incremental Static Regeneration (ISR)
+export const getStaticProps: GetStaticProps = async () => {
     try {
         const vendorId = 63;
-        const blogAPI = `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog/?vendor_id=${vendorId}`;
+        const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || baseUrl;
+        const blogAPI = `${apiBase}/blog/?vendor_id=${vendorId}`;
         const res = await axios.get(blogAPI);
 
         return {
             props: {
                 blogs: res.data?.blogs || [],
             },
+            revalidate: 60, // ISR: regenerate list in background every 60 seconds
         };
     } catch (error) {
-        console.error(error);
+        console.error("SSG Blog index getStaticProps error:", error);
         return {
             props: {
                 blogs: [],
             },
+            revalidate: 60,
         };
     }
-}
+};
