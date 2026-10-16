@@ -39,16 +39,6 @@ const nextConfig = {
                 permanent: true,
             },
             {
-                source: "/blog/:title",
-                destination: "/blog",
-                permanent: true,
-            },
-            {
-                source: "/blog/the-confidence-stone-how-a-carnelian-ring-uplifts-your-mood",
-                destination: "/blog",
-                permanent: true,
-            },
-            {
                 source: "/shopByIntention/Feng Shui",
                 destination: "/shopByIntention",
                 permanent: true,
