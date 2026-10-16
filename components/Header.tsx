@@ -481,7 +481,7 @@ const Header: React.FC = () => {
                                         intentions.map((cat: any) => (
                                             <Fragment key={cat.id}>
                                                 <Link
-                                                    href={`/shopByIntention/${cat.name}`}
+                                                    href={`/shopByIntention/${cat.name.toLowerCase().replace(/\s+/g, '-')}`}
                                                     className="block px-4 py-2 hover:bg-gray-100"
                                                     onClick={() => setIsIntentionOpen(false)}
                                                 >
