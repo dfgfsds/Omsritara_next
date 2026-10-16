@@ -47,8 +47,47 @@ const nextConfig = {
                 source: "/categories/terms-conditions",
                 destination: "/categories",
                 permanent: true,
-            }
-
+            },
+            {
+                source: "/index.html",
+                destination: "/",
+                permanent: true,
+            },
+            {
+                source: "/categories/cancellation-policy",
+                destination: "/cancellation-policy",
+                permanent: true,
+            },
+            {
+                source: "/categories/432",
+                destination: "/categories",
+                permanent: true,
+            },
+            {
+                source: "/egyptian-cartouche-course",
+                destination: "/courses/egyptian-cartouche-course",
+                permanent: true,
+            },
+            {
+                source: "/contactUs",
+                destination: "/contact-us",
+                permanent: true,
+            },
+            {
+                source: "/akashic-records-course",
+                destination: "/courses/akashic-records-course",
+                permanent: true,
+            },
+            {
+                source: "/akashic-records-course",
+                destination: "/courses/akashic-records-course",
+                permanent: true,
+            },
+            {
+                source: "/gemstones/november",
+                destination: "/gemstones/stone/yellow-topaz",
+                permanent: true,
+            },
         ];
     },
 };

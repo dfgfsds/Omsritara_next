@@ -22,7 +22,11 @@ export default function ShopByIntentionPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {intentions?.map((category: any) => (
                         <Link
-                            href={`/shopByIntention/${category?.name}`}
+                            href={`/shopByIntention/${category?.name
+                                ?.toLowerCase()
+                                .trim()
+                                .replace(/[^a-z0-9\s-]/g, '')
+                                .replace(/\s+/g, '-')}`}
                             key={category?.id}
                             className="relative group overflow-hidden rounded-md shadow hover:shadow-lg transition"
                         >

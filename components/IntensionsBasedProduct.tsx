@@ -36,6 +36,13 @@ export default function IntensionsBasedProduct() {
     const [currentPage, setCurrentPage] = useState(1);
     const ITEMS_PER_PAGE = 12;
 
+    const categoryName = typeof name === "string"
+        ? name
+            .split("-")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ")
+        : "";
+
     useEffect(() => {
         const storedUserId = localStorage.getItem('userId');
         const storedCartId = localStorage.getItem('cartId');
@@ -48,13 +55,13 @@ export default function IntensionsBasedProduct() {
 
     // Find the category name by ID
     const intention = intentions?.find(
-        (cat: any) => cat.name?.toString() === name
+        (cat: any) => cat.name?.toString() === categoryName
     );
 
     const filteredProducts = products?.data
         ?.filter(
             (product: any) =>
-                product.subcategory_name?.toString() === name &&
+                product.subcategory_name?.toString() === categoryName &&
                 (product.status === true ||
                     product.status === 1 ||
                     product.status === '1' ||
@@ -143,7 +150,7 @@ export default function IntensionsBasedProduct() {
                     <ArrowLeft onClick={() => router.back()} className='text-gray-400 cursor-pointer' />
                     <div className="text-md text-gray-400 flex mt-0.5 gap-1">
                         <span>
-                            Home</span><span className='cursor-pointer flex' onClick={() => router.back()}>/ {name}</span>  <span className='text-[#a5291b]'>/ Shop</span></div>
+                            Home</span><span className='cursor-pointer flex' onClick={() => router.back()}>/ {categoryName}</span>  <span className='text-[#a5291b]'>/ Shop</span></div>
                 </div>
                 {/* <Image src={intention?.banner_image !== null ? intention?.banner_image : img} alt='banner image' className='w-full h-32 md:h-72 px-2 md:m-2 rounded-md' height={100} width={300} /> */}
 
@@ -151,7 +158,7 @@ export default function IntensionsBasedProduct() {
                     <div className='' dangerouslySetInnerHTML={{ __html: intention?.description2 }} />
                 </div>
                 <h1 className="text-3xl font-bold  text-[#a5291b] mb-6 mt-6 text-center">
-                    {name} Products
+                    {categoryName} Products
                 </h1>
                 {isLoading ? (
                     <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
