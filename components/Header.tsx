@@ -156,11 +156,25 @@ const Header: React.FC = () => {
                 !gemstonesRef.current.contains(e.target as Node)
             )
                 setIsGemstonesOpen(false);
+
+            if (
+                isIntentionOpen &&
+                intentionRef.current &&
+                !intentionRef.current.contains(e.target as Node)
+            )
+                setIsIntentionOpen(false);
+
+            if (
+                isOffersOpen &&
+                offersRef.current &&
+                !offersRef.current.contains(e.target as Node)
+            )
+                setIsOffersOpen(false);
         }
 
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, [isCurrencyOpen, isUserMenuOpen, isCategoriesOpen, isGemstonesOpen]);
+    }, [isCurrencyOpen, isUserMenuOpen, isCategoriesOpen, isGemstonesOpen, isIntentionOpen, isOffersOpen]);
 
     /* ---------- helpers ---------- */
     const router = useRouter();
@@ -499,12 +513,12 @@ const Header: React.FC = () => {
                         {/* Offers hover menu */}
                         <div
                             className="relative"
-                            ref={intentionRef}
+                            ref={offersRef}
                             onMouseEnter={() => setIsOffersOpen(true)}
                             onMouseLeave={() => setIsOffersOpen(false)}
                         >
                             <button
-                                onClick={() => { if (pathname !== "/combo-offers") router.push("/combo-offers"); }}
+                                onClick={() => setIsOffersOpen((prev) => !prev)}
                                 className={`nav-item relative flex items-center gap-1 ${pathname.startsWith("/combo-offers") ? "underline" : ""}`}
                                 type="button"
                             >
@@ -514,13 +528,12 @@ const Header: React.FC = () => {
 
                             {isOffersOpen && (
                                 <div className="absolute left-0 w-52 bg-white border text-black rounded-md shadow text-sm z-50 max-h-80 overflow-y-auto no-scrollbar">
-
                                     {offersPage.map((cat: any) => (
-                                        <Fragment key={cat.id}>
+                                        <Fragment key={cat.name}>
                                             <Link
-                                                href={`/${cat.url}`}
+                                                href={cat.url}
                                                 className="block px-4 py-2 hover:bg-gray-100"
-                                                onClick={() => setIsIntentionOpen(false)}
+                                                onClick={() => setIsOffersOpen(false)}
                                             >
                                                 {cat.name}
                                             </Link>
@@ -715,7 +728,7 @@ const Header: React.FC = () => {
                                 <Link
                                     href="/combo-offers-money"
                                     onClick={closeMobileMenu}
-                                    className={`relative pb-1 ${pathname === "/combo-offers" ? "underline" : ""}`}
+                                    className={`relative pb-1 ${pathname === "/combo-offers-money" ? "underline" : ""}`}
                                 >
                                     Money Combo
                                 </Link>
