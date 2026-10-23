@@ -15,6 +15,7 @@ import { slugConvert } from '@/lib/utils';
 import toast from 'react-hot-toast';
 import LoginModal from '@/pages/LoginModal/page';
 import RudrakshaHero from '@/components/RudrakshaHero';
+import { addToGuestCart } from '@/lib/cartUtils';
 import {
     Sparkles,
     CheckCircle2,
@@ -774,13 +775,29 @@ export default function RudrakshaUtsavPage() {
     const handleAddToCart = async (item: any, redirectNow = false) => {
         const storedCartId = typeof window !== 'undefined' ? localStorage.getItem('cartId') : cartId;
         const storedUserId = typeof window !== 'undefined' ? localStorage.getItem('userId') : userId;
+        const qty = quantities[item.actualApiId] || 1;
 
         if (!storedCartId && !storedUserId) {
-            setSignInModal(true);
+            addToGuestCart({
+                id: item.actualApiId,
+                name: item.displayMukhi || item.name,
+                price: item.price,
+                image_urls: item.image ? [item.image] : [],
+                ...item
+            }, qty);
+            toast.success(`${item.displayMukhi || 'Item'} added to your sacred cart!`, {
+                icon: '🔱',
+                style: {
+                    borderRadius: '10px',
+                    background: '#333',
+                    color: '#fff'
+                }
+            });
+            if (redirectNow) {
+                router.push('/cart');
+            }
             return;
         }
-
-        const qty = quantities[item.actualApiId] || 1;
         setIsSubmitting((prev) => ({ ...prev, [item.actualApiId]: true }));
 
         const payload = {

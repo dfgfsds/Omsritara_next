@@ -8,6 +8,7 @@ import { InvalidateQueryFilters, useQueryClient } from "@tanstack/react-query";
 import { deleteCartitemsApi, updateCartitemsApi } from "@/api-endpoints/CartsApi";
 import { formatPrice } from "@/lib/utils";
 import { useCurrency } from "@/context/CurrencyContext";
+import { useCartItem } from "@/context/CartItemContext";
 
 interface CartItemProps {
   product: any;
@@ -57,14 +58,33 @@ const productOptions = [
 // ✅ Allowed IDs that should show dropdown
 const allowedProductIds = [19647, 19646, 19645, 19644, 19643, 19642, 19641, 19640, 19639, 19638, 19637, 19636, 19635, 19634, 19633]; // you can add more later
 
-
 export default function CartItem({ product, quantity: initialQuantity, selectedProduct, onSelectProduct }: CartItemProps) {
   const queryClient = useQueryClient();
   const { convertPrice } = useCurrency();
+  const { updateGuestCartQty, removeFromGuestCart } = useCartItem();
 
   const handleUpdateCart = async (id: any, type: any, qty: any) => {
+    const isGuest = typeof window !== 'undefined' && (!localStorage.getItem("userId") || String(id).startsWith("guest_"));
+    if (isGuest) {
+      const prodId = product?.id || product?.product;
+      const currentQty = Number(product?.cartQty || qty || 1);
+      if (type === "decrease") {
+        if (currentQty <= 1) {
+          removeFromGuestCart(prodId);
+          toast.success("Product removed!");
+        } else {
+          updateGuestCartQty(prodId, currentQty - 1);
+          toast.success("Product updated in cart!");
+        }
+      } else {
+        updateGuestCartQty(prodId, currentQty + 1);
+        toast.success("Product updated in cart!");
+      }
+      return;
+    }
+
     try {
-      if (qty === 1) {
+      if (qty === 1 && type === "decrease") {
         const updateApi = await deleteCartitemsApi(`${id}`);
         if (updateApi) {
           toast.success("Product removed!");
@@ -81,6 +101,14 @@ export default function CartItem({ product, quantity: initialQuantity, selectedP
   };
 
   const handleRemoveItem = async (id: any) => {
+    const isGuest = typeof window !== 'undefined' && (!localStorage.getItem("userId") || String(id).startsWith("guest_"));
+    if (isGuest) {
+      const prodId = product?.id || product?.product;
+      removeFromGuestCart(prodId);
+      toast.success("Product removed!");
+      return;
+    }
+
     try {
       const updateApi = await deleteCartitemsApi(`${id}`);
       if (updateApi) {
@@ -104,9 +132,11 @@ export default function CartItem({ product, quantity: initialQuantity, selectedP
           src={
             product?.image_urls?.[0] ||
             product?.product_variant_image_urls?.[0] ||
+            (Array.isArray(product?.image) ? product?.image[0] : product?.image) ||
+            product?.product_image ||
             "https://semantic-ui.com/images/wireframe/image.png"
           }
-          alt={product.name}
+          alt={product?.name || "Product"}
           className="w-full h-full object-cover"
           width={100}
           height={100}

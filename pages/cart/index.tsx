@@ -41,12 +41,14 @@ export default function CartPage() {
   // });
 
   const matchingProductsArray = cartItem?.data?.map((item: any, index: number) => {
-    const matchingProduct = products?.data?.find((product: any) => product.id === item.product);
+    const matchingProduct = products?.data?.find((product: any) => Number(product.id) === Number(item.product));
 
     return {
       Aid: index,
       cartId: item?.id,
       cartQty: item?.quantity,
+      id: item?.product,
+      ...(item?.product_details || {}),
       ...matchingProduct,
     };
   });
@@ -104,7 +106,7 @@ export default function CartPage() {
               <div className=" rounded-xl overflow-hidden">
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-xl font-semibold">Cart Items {cartItem?.length}</h2>
+                    <h2 className="text-xl font-semibold">Cart Items ({matchingProductsArray?.length || 0})</h2>
                     <Link href="/shop" className="text-[#a5291b] font-bold hover:underline text-sm flex items-center">
                       Continue Shopping
                       <ArrowRight className="ml-1 h-4 w-4" />
