@@ -123,6 +123,7 @@ const Header: React.FC = () => {
     const { categories, isLoading } = useCategories();
     const { intentions, isIntentionsLoading }: any = useIntentions();
     const offersPage = [
+        { name: "Rudraksha", url: '/rudraksha' },
         { name: "Combo Offers", url: '/combo-offers' },
         { name: "Money Combo", url: '/combo-offers-money' },
         { name: "Relationship Combo", url: '/combo-offers-love' },
