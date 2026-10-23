@@ -40,14 +40,9 @@ export default function CartControls({
                     <button
                         className="h-10 w-10 border rounded-l flex items-center justify-center disabled:opacity-50"
                         onClick={() => {
-                            if (userId) {
-                                handleUpdateCart(cartItemId, "decrease", totalQty);
-                            } else {
-                                setSignInModal(true);
-                            }
+                            handleUpdateCart(cartItemId || productId, "decrease", totalQty);
                         }}
-                        // disabled={!totalQty}
-                        disabled={!cartItemId || totalQty == 0}
+                        disabled={totalQty == 0}
                     >
                         <Minus className="h-4 w-4" />
                     </button>
@@ -61,11 +56,7 @@ export default function CartControls({
                     <button
                         className="h-10 w-10 border rounded-r flex items-center justify-center"
                         onClick={() => {
-                            if (userId) {
-                                handleUpdateCart(cartItemId, "increase", '');
-                            } else {
-                                setSignInModal(true);
-                            }
+                            handleUpdateCart(cartItemId || productId, "increase", totalQty);
                         }}
                     >
                         <Plus className="h-4 w-4" />
@@ -77,11 +68,7 @@ export default function CartControls({
             <button
                 className="bg-[#a5291b] text-white px-5 py-2 rounded hover:bg-red-700 flex items-center gap-2"
                 onClick={() => {
-                    if (userId) {
-                        handleAddCart(productId);
-                    } else {
-                        setSignInModal(true);
-                    }
+                    handleAddCart(productId);
                 }}
             >
                 <ShoppingCart size={18} /> Add to Cart

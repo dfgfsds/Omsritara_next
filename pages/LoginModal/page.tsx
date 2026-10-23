@@ -5,7 +5,8 @@ import { createPortal } from 'react-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Eye, EyeOff, Lock, Mail, Smartphone, KeyRound, X, Loader } from 'lucide-react';
-import { getCartApi } from '@/api-endpoints/CartsApi';
+import { getCartApi, postCartCreateApi } from '@/api-endpoints/CartsApi';
+import { syncGuestCartToApi } from '@/lib/cartUtils';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
 import { postSendSmsOtpUserApi, postVerifySmsOtpApi, getUserAPi } from '@/api-endpoints/authendication';
@@ -106,13 +107,31 @@ function LoginModal({ open, handleClose, vendorId }: any) {
       const userId = res?.data?.user_id;
       if (userId) {
         localStorage.setItem('userId', userId);
-        const cartRes = await getCartApi(`user/${userId}`);
-        if (cartRes) {
-          localStorage.setItem('cartId', cartRes.data[0]?.id);
-          handleClose();
-          setLoading(false);
-          window.location.reload();
+        let cartRes: any = null;
+        try {
+          cartRes = await getCartApi(`user/${userId}`);
+        } catch (e) {}
+
+        let cId = cartRes?.data?.[0]?.id;
+        if (!cId) {
+          try {
+            const createRes = await postCartCreateApi('', {
+              user: userId,
+              vendor: vendorId || 63,
+              created_by: 'user'
+            });
+            cId = createRes?.data?.id;
+          } catch (e) {}
         }
+
+        if (cId) {
+          localStorage.setItem('cartId', String(cId));
+          await syncGuestCartToApi(cId, userId, vendorId || 63);
+        }
+
+        handleClose();
+        setLoading(false);
+        window.location.reload();
       }
     } catch (err: any) {
       setLoading(false);
@@ -130,10 +149,30 @@ function LoginModal({ open, handleClose, vendorId }: any) {
 
       if (response?.data?.user_id) {
         toast.success('Login successful!');
-        localStorage.setItem('userId', response?.data?.user_id);
+        const userId = response?.data?.user_id;
+        localStorage.setItem('userId', userId);
 
-        const updateApi = await getCartApi(`user/${response?.data?.user_id}`);
-        localStorage.setItem('cartId', updateApi?.data[0]?.id);
+        let updateApi: any = null;
+        try {
+          updateApi = await getCartApi(`user/${userId}`);
+        } catch (e) {}
+
+        let cId = updateApi?.data?.[0]?.id;
+        if (!cId) {
+          try {
+            const createRes = await postCartCreateApi('', {
+              user: userId,
+              vendor: vendorId || 63,
+              created_by: 'user'
+            });
+            cId = createRes?.data?.id;
+          } catch (e) {}
+        }
+
+        if (cId) {
+          localStorage.setItem('cartId', String(cId));
+          await syncGuestCartToApi(cId, userId, vendorId || 63);
+        }
 
         handleClose();
         window.location.reload();
@@ -203,8 +242,18 @@ function LoginModal({ open, handleClose, vendorId }: any) {
 
           try {
             const updateApi = await getCartApi(`user/${uid}`);
-            if (updateApi?.data?.[0]?.id) {
-              localStorage.setItem('cartId', updateApi.data[0].id);
+            let cId = updateApi?.data?.[0]?.id;
+            if (!cId) {
+              const createRes = await postCartCreateApi('', {
+                user: uid,
+                vendor: vendorId || 63,
+                created_by: 'user'
+              });
+              cId = createRes?.data?.id;
+            }
+            if (cId) {
+              localStorage.setItem('cartId', String(cId));
+              await syncGuestCartToApi(cId, uid, vendorId || 63);
             }
           } catch (cartErr) {
             console.error("Error syncing cart on google login:", cartErr);
@@ -213,7 +262,9 @@ function LoginModal({ open, handleClose, vendorId }: any) {
 
         handleClose();
         
-        if (contactNumber) {
+        if (typeof window !== "undefined" && window.location.pathname.includes('/cart')) {
+          window.location.reload();
+        } else if (contactNumber) {
           window.location.href = '/';
         } else {
           localStorage.setItem('showPhoneToast', 'true');

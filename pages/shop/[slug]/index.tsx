@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import { postCartitemApi, updateCartitemsApi, deleteCartitemsApi } from "@/api-endpoints/CartsApi";
 import { baseUrl } from "@/api-endpoints/ApiUrls";
 import { useCartItem } from "@/context/CartItemContext";
+import { addToGuestCart, updateGuestCartQty, removeFromGuestCart } from "@/lib/cartUtils";
 import { InvalidateQueryFilters, useQueryClient } from "@tanstack/react-query";
 import { useVendor } from "@/context/VendorContext";
 import { useRouter } from "next/router";
@@ -67,7 +68,7 @@ export default function SingleProductView({
 
     const matchingData = cartItem?.data?.map((item: any, index: number) => {
         const product = productDetails;
-        const isProductMatch = product?.id === item?.product;
+        const isProductMatch = Number(product?.id) === Number(item?.product);
 
         if (isProductMatch) {
             return {
@@ -86,7 +87,8 @@ export default function SingleProductView({
     // === Cart handlers ===
     const handleAddCart = async (id: any) => {
         if (!getUserId) {
-            setSignInModal(true);
+            addToGuestCart(productDetails, 1);
+            toast.success("Product added in cart!");
             return;
         }
 
@@ -112,8 +114,20 @@ export default function SingleProductView({
     };
 
     const handleUpdateCart = async (cartId: string, type: "increase" | "decrease", qty: number) => {
-        if (!getUserId) {
-            setSignInModal(true);
+        if (!getUserId || String(cartId).startsWith("guest_")) {
+            const currentQty = totalQty || qty || 0;
+            if (type === "decrease") {
+                if (currentQty <= 1) {
+                    removeFromGuestCart(productDetails?.id);
+                    toast.success("Product removed!");
+                } else {
+                    updateGuestCartQty(productDetails?.id, currentQty - 1);
+                    toast.success("Product updated in cart!");
+                }
+            } else {
+                updateGuestCartQty(productDetails?.id, currentQty + 1);
+                toast.success("Product updated in cart!");
+            }
             return;
         }
 
@@ -122,7 +136,7 @@ export default function SingleProductView({
                 const res = await deleteCartitemsApi(`${cartId}`);
                 if (res) {
                     toast.success("Product removed!");
-
+                    queryClient.invalidateQueries(['getCartitemsData'] as InvalidateQueryFilters);
                 }
             } else {
                 if (qty) {

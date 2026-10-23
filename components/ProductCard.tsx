@@ -3,6 +3,7 @@ import { deleteWishListApi, postWishListApi } from '@/api-endpoints/products';
 import { useCurrency } from '@/context/CurrencyContext';
 import { useVendor } from '@/context/VendorContext';
 import LoginModal from '@/pages/LoginModal/page';
+import { addToGuestCart } from '@/lib/cartUtils';
 import { InvalidateQueryFilters, useQueryClient } from '@tanstack/react-query';
 import { Heart, ShoppingCart, Eye, Check, Star } from 'lucide-react';
 import Image from 'next/image';
@@ -52,6 +53,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
     }, []);
 
     const handleAddCart = async (id: any, qty: any) => {
+        if (!getUserId) {
+            addToGuestCart(product, qty || 1);
+            toast.success('Product added in cart!');
+            return;
+        }
+
         const payload = {
             cart: getCartId,
             product: id,
@@ -65,6 +72,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             if (response) {
                 toast.success('Product added in cart!')
                 queryClient.invalidateQueries(['getProductData'] as InvalidateQueryFilters);
+                queryClient.invalidateQueries(['getCartitemsData'] as InvalidateQueryFilters);
             }
         } catch (error) {
 
@@ -164,11 +172,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
-                                if (getUserId) {
-                                    handleAddCart(product.id, 1);
-                                } else {
-                                    setSignInModal(true);
-                                }
+                                handleAddCart(product.id, 1);
                             }}
                             className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 bg-green-400  text-white rounded-full flex items-center justify-center shadow hover:bg-green-600 hover:text-white transition z-10 "
                         >
@@ -178,11 +182,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
-                                if (getUserId) {
-                                    handleAddCart(product.id, 1);
-                                } else {
-                                    setSignInModal(true);
-                                }
+                                handleAddCart(product.id, 1);
                             }}
                             className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 bg-gray-200 border-[3px] border-white rounded-full flex items-center justify-center shadow hover:bg-[#991b1b] hover:text-white transition z-10 "
                         >
