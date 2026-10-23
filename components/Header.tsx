@@ -718,6 +718,13 @@ const Header: React.FC = () => {
                                 >
                                     Shop by Intention
                                 </Link>
+                                <Link
+                                    href="/rudraksha"
+                                    onClick={closeMobileMenu}
+                                    className={`relative pb-1 ${pathname === "/rudraksha" ? "underline" : ""}`}
+                                >
+                                    Rudraksha
+                                </Link>
 
                                 <Link
                                     href="/combo-offers"
