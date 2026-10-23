@@ -9,6 +9,7 @@ import { useVendor } from "@/context/VendorContext";
 import { deleteCartitemsApi, postCartitemApi, postNewCartitemWithQtyApi, updateCartitemsApi } from "@/api-endpoints/CartsApi";
 import { InvalidateQueryFilters, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
+import { addToGuestCart } from "@/lib/cartUtils";
 
 import Script from "next/script";
 import { CheckCircle, Sparkles } from "lucide-react";
@@ -72,8 +73,14 @@ export default function ComboOffers() {
         setUserName(storedUserName);
     }, []);
 
-    const handleAddCart = async (productId: any) => {
+    const handleAddCart = async (productId: any, productObj?: any) => {
         const quantity = quantities[productId] || 1;
+        if (!getUserId) {
+            addToGuestCart(productObj || { id: productId }, quantity);
+            toast.success("Product added to cart!");
+            return;
+        }
+
         const payload = {
             cart: getCartId,
             product: productId,
@@ -421,12 +428,7 @@ export default function ComboOffers() {
                                                 if (typeof window !== "undefined" && (window as any).fbq) {
                                                     (window as any).fbq("track", "Lead");
                                                 }
-                                                // 👇 Your existing Add to Cart logic
-                                                if (getUserId) {
-                                                    handleAddCart(product?.id);
-                                                } else {
-                                                    setSignInModal(true);
-                                                }
+                                                handleAddCart(product?.id, product);
                                             }}
                                         >
                                             <ShoppingCart size={18} /> Add to Cart

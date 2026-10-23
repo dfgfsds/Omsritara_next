@@ -1,6 +1,6 @@
 "use client";
 
-import { getDeliveryChargeApi, getVendorDeliveryDetailsApi, patchUserSelectAddressAPi } from '@/api-endpoints/authendication';
+import { getDeliveryChargeApi, getVendorDeliveryDetailsApi, patchUserSelectAddressAPi, updateUserAPi } from '@/api-endpoints/authendication';
 import { deleteCouponApi, getAddressApi, getAppliedCouponDataApi, getCartApi, postApplyCouponApi, postCODPaymentApi, postDtdcChargeApi, postPaymentApi, removeCartCoupon } from '@/api-endpoints/CartsApi';
 // import { Button } from '@/components/ui/button';
 // import { Input } from '@/components/ui/input';
@@ -9,14 +9,17 @@ import { useUser } from '@/context/UserContext';
 import { useVendor } from '@/context/VendorContext';
 // import { formatPrice } from '@/lib/utils';
 import { InvalidateQueryFilters, useQuery, useQueryClient } from '@tanstack/react-query';
-import { Loader2, MapPin } from 'lucide-react';
+import { Loader2, MapPin, Phone, X } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import OrderSuccessModal from './OrderSucessModal';
 import { formatPrice } from '@/lib/utils';
 import { useCurrency } from '@/context/CurrencyContext';
 import Image from 'next/image';
+import LoginModal from '@/pages/LoginModal/page';
+import { syncGuestCartToApi } from '@/lib/cartUtils';
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
@@ -27,6 +30,10 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
 
   const [userId, setUserId] = useState<string | null>(null);
   const [getCartId, setCartId] = useState<string | null>(null);
+  const [signInModal, setSignInModal] = useState(false);
+  const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
+  const [phoneNumberInput, setPhoneNumberInput] = useState('');
+  const [isUpdatingPhone, setIsUpdatingPhone] = useState(false);
   const [cartItems, setCartItem] = useState()
   const [DeliveryChargeValue, setDeliveryChargeValue] = useState<any>()
   const { user }: any = useUser();
@@ -111,6 +118,7 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
   }
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    if (!userId) return;
     setError('');
     setIsChecking(true);
 
@@ -133,42 +141,55 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
     }
   };
 
-
   useEffect(() => {
-    try {
-      const storedUserId = localStorage.getItem('userId');
-      const storedCartId = localStorage.getItem('cartId');
+    const updateAuth = () => {
+      try {
+        const storedUserId = localStorage.getItem('userId');
+        const storedCartId = localStorage.getItem('cartId');
+        const storedUserName = localStorage.getItem('userName');
 
-      setUserId(storedUserId);
-      setCartId(storedCartId);
-      setUserId(storedUserId);
-
-    } catch (e) {
-      console.error("Failed to access localStorage", e);
-    }
+        setUserId(storedUserId);
+        setCartId(storedCartId);
+        setUserName(storedUserName);
+      } catch (e) {
+        console.error("Failed to access localStorage", e);
+      }
+    };
+    updateAuth();
+    window.addEventListener('storage', updateAuth);
+    return () => window.removeEventListener('storage', updateAuth);
   }, []);
 
-  const handleCheckout = async () => {
+  const handleCheckout = async (overridePhone?: string | any) => {
+    const phoneToUse = (typeof overridePhone === "string" && overridePhone.trim() !== "")
+      ? overridePhone.trim()
+      : (user?.data?.contact_number || user?.data?.phone || (typeof window !== "undefined" ? localStorage.getItem('contact_number') : "") || "");
+
+    if (!phoneToUse || phoneToUse.trim() === "") {
+      setPhoneNumberInput(user?.data?.contact_number || "");
+      setIsPhoneModalOpen(true);
+      return;
+    }
+
     setLoading(true);
-    setErrorMessage('')
+    setErrorMessage('');
     try {
       if (paymentValue === 'cod') {
         const updateApi = await postCODPaymentApi("",
           {
-            customer_phone: user?.data?.contact_number,
+            customer_phone: phoneToUse,
             vendor_id: vendorId,
-            user_id: user?.data?.id,
+            user_id: user?.data?.id || Number(userId),
           }
         );
         if (updateApi) {
           setPaymentSuccess(true);
-
         }
       } else {
         const paymentAPi = await postPaymentApi('', {
-          customer_phone: user?.data?.contact_number,
+          customer_phone: phoneToUse,
           vendor_id: vendorId,
-          user_id: user?.data?.id,
+          user_id: user?.data?.id || Number(userId),
         });
 
         if (paymentAPi) {
@@ -187,7 +208,7 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
             prefill: {
               name: user?.data?.name,
               email: user?.data?.email,
-              contact: user?.data?.contact_number,
+              contact: phoneToUse,
             },
             notes: {
               address: "Selected Address",
@@ -199,18 +220,71 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
               color: "#a5291b",
             },
           };
-          // toast.success("created successfully!");
           const razor = new (window as any).Razorpay(options);
           razor.open();
         }
       }
     } catch (error: any) {
-      setErrorMessage(error?.response?.data?.error || "Failed to initiate payment. Please try again.");
+      const errorMsg = error?.response?.data?.message || error?.response?.data?.error || error?.message || "";
+      if (
+        typeof errorMsg === "string" &&
+        (errorMsg.includes("customer_phone") ||
+          errorMsg.includes("Missing required fields") ||
+          errorMsg.toLowerCase().includes("phone"))
+      ) {
+        setPhoneNumberInput(user?.data?.contact_number || "");
+        setIsPhoneModalOpen(true);
+        return;
+      }
+      setErrorMessage(errorMsg || "Failed to initiate payment. Please try again.");
     } finally {
       setLoading(false);
     }
   };
+
+  const handleUpdatePhoneAndProceed = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const cleanPhone = phoneNumberInput.trim();
+    if (!cleanPhone || cleanPhone === '') {
+      toast.error("Mobile number is required");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(cleanPhone)) {
+      toast.error("Mobile number must be exactly 10 digits");
+      return;
+    }
+
+    setIsUpdatingPhone(true);
+    try {
+      const response = await updateUserAPi(`/${user?.data?.id || userId}`, {
+        ...(user?.data || {}),
+        contact_number: cleanPhone,
+        updated_by: user?.data?.name || "user",
+        role: 3,
+        vendor: vendorId,
+      });
+
+      if (response) {
+        if (typeof window !== "undefined") {
+          localStorage.setItem('contact_number', cleanPhone);
+        }
+        queryClient.invalidateQueries(["gerUserData"] as InvalidateQueryFilters);
+        queryClient.invalidateQueries(["getAddressData"] as InvalidateQueryFilters);
+        toast.success("Profile updated successfully");
+        setIsPhoneModalOpen(false);
+        // Recall checkout API with the newly saved phone number
+        await handleCheckout(cleanPhone);
+      }
+    } catch (error: any) {
+      console.error("Update failed:", error);
+      toast.error(error?.response?.data?.error || error?.response?.data?.message || "Failed to update profile, please try again.");
+    } finally {
+      setIsUpdatingPhone(false);
+    }
+  };
   const fetchCartAndDeliveryCharge = async () => {
+    if (!userId || !getCartId) return;
     try {
       // 1. Fetch cart data
       const cartResponse: any = await getCartApi(getCartId);
@@ -273,8 +347,7 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
   }, [paymentSuccess]);
 
   useEffect(() => {
-
-    if (getCartId) {
+    if (getCartId && userId) {
       fetchCartAndDeliveryCharge();
     }
   }, [getCartId, userId, vendorId, user?.data?.contact_number, paymentValue, totalAmount]);
@@ -288,94 +361,86 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
     }
   }, [data]);
 
-  // user_id: Number(userId),
-  //       coupon_code: 'FREEDELIVERY',
-  //       vendor_id: vendorId,
-  //       updated_by: getUserName || 'user'
-
   useEffect(() => {
-    handleSubmit({ preventDefault: () => { } });
-  }, [userId, vendorId, getUserName])
+    if (userId) {
+      handleSubmit({ preventDefault: () => { } });
+    }
+  }, [userId, vendorId, getUserName]);
 
   return (
     <>
-      {data?.data?.length ? (
-        <div className="space-y-3 mb-3">
-          <div className="flex items-center justify-between">
-            <h3 className="text-md font-bold text-black">Delivery Address</h3>
-            <Link
-              href="/profile?tab=addresses"
-              className="text-sm text-[#a5291b] font-bold  hover:text-red-700"
-            // onClick={() => {onClose(),setOpenMoadl(!openModal)}}
+      {userId ? (
+        data?.data?.length ? (
+          <div className="space-y-3 mb-3">
+            <div className="flex items-center justify-between">
+              <h3 className="text-md font-bold text-black">Delivery Address</h3>
+              <Link
+                href="/profile?tab=addresses"
+                className="text-sm text-[#a5291b] font-bold hover:text-red-700"
+              >
+                Manage addresses
+              </Link>
+            </div>
+
+            <div className="space-y-2">
+              {data?.data
+                ?.slice()
+                .sort((a: any, b: any) => a.created_at.localeCompare(b.created_at))
+                .map((address: any) => (
+                  <label
+                    key={address.id}
+                    className={`flex items-start p-2 rounded-lg border cursor-pointer
+          ${selectedAddressId === String(address.id) ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'}`}
+                  >
+                    <input
+                      type="radio"
+                      name="deliveryAddress"
+                      value={address.id}
+                      checked={selectedAddressId === String(address.id)}
+                      onChange={() => { handleSelectAddress(address) }}
+                      className="mt-1 h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                    />
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-gray-900">
+                        {address.street}
+                        {address.isDefault && (
+                          <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                            Default
+                          </span>
+                        )}
+                      </p>
+                      <h3>{address?.address_type}</h3>
+                      <span className="text-sm font-semibold text-gray-500">
+                        {address.customer_name}
+                      </span>
+                      <p className="text-sm text-gray-500">
+                        {address.email_address} | {address.contact_number}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {address.city}, {address.state} - {address.postal_code}
+                      </p>
+                      <p className="text-sm text-gray-500 capitalize">{address.country}</p>
+                    </div>
+                  </label>
+                ))}
+            </div>
+          </div>
+        ) : (
+          <div className="text-center p-4 bg-gray-50 rounded-lg mb-3">
+            <MapPin className="mx-auto h-8 w-8 text-gray-400" />
+            <p className="mt-2 text-sm text-gray-600">No delivery address found</p>
+            <p className="mt-2 inline-block text-sm text-[#a5291b] hover:text-red-700 font-bold cursor-pointer"
+              onClick={() => {
+                router.push('/profile?tab=addresses')
+              }}
             >
-              Manage addresses
-            </Link>
+              Add a delivery address
+            </p>
           </div>
-
-          <div className="space-y-2">
-
-            {data?.data
-              ?.slice() // Create a shallow copy to avoid mutating original data
-              .sort((a: any, b: any) => a.created_at.localeCompare(b.created_at))
-              .map((address: any) => (
-                <label
-                  key={address.id}
-                  className={`flex items-start p-2 rounded-lg border cursor-pointer
-        ${selectedAddressId === address.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'}`}
-                >
-                  <input
-                    type="radio"
-                    name="deliveryAddress"
-                    value={address.id}
-                    checked={selectedAddressId === String(address.id)}
-                    onChange={() => { handleSelectAddress(address) }}
-                    className="mt-1 h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
-                  />
-                  <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-900">
-                      {address.street}
-                      {address.isDefault && (
-                        <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
-                          Default
-                        </span>
-                      )}
-                    </p>
-                    <h3>{address?.address_type}</h3>
-                    <span className="text-sm font-semibold text-gray-500">
-                      {address.customer_name}
-                    </span>
-                    <p className="text-sm text-gray-500">
-                      {address.email_address} | {address.contact_number}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      {address.city}, {address.state} - {address.postal_code}
-                    </p>
-                    <p className="text-sm text-gray-500 capitalize">{address.country}</p>
-                  </div>
-                </label>
-              ))}
-          </div>
-
-        </div>
-      ) : (
-        <div className="text-center p-4 bg-gray-50 rounded-lg mb-3">
-          <MapPin className="mx-auto h-8 w-8 text-gray-400" />
-          <p className="mt-2 text-sm text-gray-600">No delivery address found</p>
-          <p className="mt-2 inline-block text-sm text-[#a5291b] hover:text-red-700 font-bold cursor-pointer"
-            onClick={() => {
-              router.push('/profile?tab=addresses')
-            }
-              //  setOpenMoadl(!openModal)
-            }
-          >
-            Add a delivery address
-          </p>
-        </div>
-      )}
-
+        )
+      ) : null}
 
       <div className="bg-[#F8F7F2] rounded-xl p-3">
-
         <h2 className="text-xl font-semibold mb-6">Order Summary</h2>
 
         <div className="space-y-4 font-bold !text-gray-600">
@@ -384,102 +449,70 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
             <span>{convertPrice(Number(totalAmount))}</span>
           </div>
         </div>
-        {
-          addressError ?
-            <span className='mt-4 p-2 text-red-500'>{addressError}</span>
-            :
-            <>
-              <div className="space-y-4 font-bold !text-gray-600 mt-1">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Deliver Charge (incl transaction charges)</span>
-                  <span>{convertPrice(Number(DeliveryChargeValue?.final_delivery_charge))}</span>
-                </div >
-              </div >
 
-              <div className="space-y-4 font-bold !text-gray-600 mt-1">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Total</span>
-                  <span>{convertPrice(Number(DeliveryChargeValue?.final_price_including_delivery))}</span>
-                </div>
+        {!userId ? (
+          <div className="space-y-4 font-bold !text-gray-600 mt-1">
+            <div className="flex justify-between">
+              <span className="text-muted-foreground">Total</span>
+              <span>{convertPrice(Number(totalAmount))}</span>
+            </div>
+          </div>
+        ) : addressError ? (
+          <span className='mt-4 p-2 text-red-500 block'>{addressError}</span>
+        ) : (
+          <>
+            <div className="space-y-4 font-bold !text-gray-600 mt-1">
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Deliver Charge (incl transaction charges)</span>
+                <span>{convertPrice(Number(DeliveryChargeValue?.final_delivery_charge || 0))}</span>
               </div>
-            </>
+            </div>
 
-        }
+            <div className="space-y-4 font-bold !text-gray-600 mt-1">
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Total</span>
+                <span>{convertPrice(Number(DeliveryChargeValue?.final_price_including_delivery || totalAmount))}</span>
+              </div>
+            </div>
+          </>
+        )}
 
-
-        {/* final_delivery_charge */}
         <div className="mt-6 space-y-4">
-          {getAppliedCouponData?.data?.data?.applied_coupons?.length ? (
-            <>
-              {/* <div className="bg-green-50 p-4 rounded-lg space-y-2 flex justify-between">
-              <div className=''>
-                 <p className="text-sm text-green-700 font-bold mb-2">
-                  Applied Coupon: {getAppliedCouponData?.data?.data?.data[0]?.code}
-                </p>
-
-                <p className="text-sm text-green-700 font-bold">
-                  Discount Amount: ₹{getAppliedCouponData?.data?.data?.applied_coupons[0]?.discount || 0}
-                </p>
-              </div>
-              <button
-                onClick={handleRemoveCoupon}
-                className="text-[#a5291b] border-red-300 hover:bg-red-50"
-              >
-                Remove Coupon
-              </button> 
-            </div> */}
-            </>
-          ) : (
+          {userId && (
             <div>
-              {/* <h2 className="text-lg font-semibold mb-1">Coupon</h2>
-              <div className="flex items-center gap-2 mb-2">
-                <input
-                  type="text"
-                  placeholder="Discount code"
-                  className="bg-white w-full p-2"
-                  value={code}
-                  onChange={(e: any) => setCode(e.target.value.toUpperCase())}
-                />
-                <button disabled={!code || isChecking} onClick={handleSubmit} className="whitespace-nowrap bg-[#a5291b] p-2 rounded-md text-white font-bold hover:bg-red-700">
-                  
-                  {isChecking ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  ) : (
-                    'Apply'
-                  )}
-                </button>
-              </div>
-              {error && (
-                <p className="text-sm text-[#a5291b]">{error}</p>
-              )} */}
+              <label className='text-xl font-semibold mb-6'>Payment Method</label>
+              {paymentMethod?.map((item: any) => (
+                <label
+                  key={item?.value}
+                  className={`flex items-start mt-2 mb-2 p-3 rounded-lg border cursor-pointer
+            ${paymentValue === item?.value ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'}`}
+                >
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value={item?.value}
+                    checked={paymentValue === String(item?.value)}
+                    onChange={() => { handlePaymentMethod(item?.value) }}
+                    className="mt-1 h-4 w-4 text-[#a5291b] border-gray-300 focus:ring-red-700"
+                  />
+                  <div className="ml-3">
+                    <p className="text-sm text-black font-bold">
+                      {item?.label}
+                    </p>
+                  </div>
+                </label>
+              ))}
             </div>
           )}
 
-          <div>
-            <label className='text-xl font-semibold mb-6'>Payment Method</label>
-            {paymentMethod?.map((item: any) => (
-              <label
-                className={`flex items-start mt-2 mb-2 p-3 rounded-lg border cursor-pointer
-          ${paymentValue === item?.value ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'}`}
-              >
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value={item?.value}
-                  checked={paymentValue === String(item?.value)}
-                  onChange={() => { handlePaymentMethod(item?.value) }}
-                  className="mt-1 h-4 w-4 text-[#a5291b] border-gray-300 focus:ring-red-700"
-                />
-                <div className="ml-3">
-                  <p className="text-sm  text-black font-bold">
-                    {item?.label}
-                  </p>
-                </div>
-              </label>
-            ))}
-          </div>
-
-          {!data?.data?.length ? (
+          {!userId ? (
+            <button
+              className="w-full p-2.5 bg-[#a5291b] cursor-pointer hover:bg-red-700 text-white font-bold rounded-lg transition uppercase tracking-wider text-sm flex items-center justify-center gap-2"
+              onClick={() => setSignInModal(true)}
+            >
+              Proceed to Checkout
+            </button>
+          ) : !data?.data?.length ? (
             <button className="w-full p-2 bg-[#a5291b] cursor-pointer hover:bg-red-700 text-white font-bold"
               onClick={() => {
                 router.push('/profile?tab=addresses')
@@ -490,7 +523,7 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
           ) : (
             <>
               <button className="w-full p-2 flex gap-2 justify-center bg-[#a5291b] cursor-pointer hover:bg-red-700 text-white font-bold"
-                onClick={handleCheckout}
+                onClick={() => handleCheckout()}
                 disabled={!selectedAddressId || loading}
               >
                 {loading ? 'Processing...' : 'Proceed to Checkout'}
@@ -503,6 +536,7 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
               )}
             </>
           )}
+
           <div className="text-center text-sm text-muted-foreground">
             <p>We accept:</p>
             <div className="flex justify-center gap-2 mt-2">
@@ -513,9 +547,102 @@ export default function CartSummary({ totalAmount, selectedProducts }: any) {
             </div>
           </div>
         </div>
-      </div >
+      </div>
+
+      {signInModal && (
+        <LoginModal
+          open={signInModal}
+          handleClose={async () => {
+            setSignInModal(false);
+            const storedId = localStorage.getItem('userId');
+            const storedCart = localStorage.getItem('cartId');
+            if (storedId) {
+              setUserId(storedId);
+              setCartId(storedCart);
+              if (storedCart) {
+                await syncGuestCartToApi(storedCart, storedId, vendorId || 63);
+              }
+              queryClient.invalidateQueries(['getAddressData'] as InvalidateQueryFilters);
+              queryClient.invalidateQueries(['getCartitemsData'] as InvalidateQueryFilters);
+            }
+          }}
+          vendorId={vendorId}
+        />
+      )}
+
       {paymentSuccess && <OrderSuccessModal />}
 
+      {/* PHONE NUMBER MODAL */}
+      {isPhoneModalOpen && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
+          onClick={() => !isUpdatingPhone && setIsPhoneModalOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-md bg-white rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden border border-gray-100"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Top Accent Line */}
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#a5291b]" />
+
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={() => !isUpdatingPhone && setIsPhoneModalOpen(false)}
+              disabled={isUpdatingPhone}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 rounded-full p-1 transition disabled:opacity-50"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Header */}
+            <div className="text-center mb-6">
+              <div className="w-14 h-14 bg-red-50 text-[#a5291b] rounded-full flex items-center justify-center mx-auto mb-3 border border-red-100">
+                <Phone size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">
+                Phone Number Required
+              </h3>
+              <p className="text-xs text-gray-500">
+                Please enter your 10-digit mobile number to proceed with your order.
+              </p>
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleUpdatePhoneAndProceed}>
+              <div className="mb-5">
+                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                  Mobile Number
+                </label>
+                <div className="flex rounded-lg border border-gray-300 overflow-hidden focus-within:border-[#a5291b] focus-within:ring-1 focus-within:ring-[#a5291b]">
+                  <span className="inline-flex items-center px-3 text-sm font-semibold text-gray-600 bg-gray-50 border-r border-gray-300">
+                    +91
+                  </span>
+                  <input
+                    type="tel"
+                    autoFocus
+                    placeholder="Enter 10-digit number"
+                    value={phoneNumberInput}
+                    onChange={(e) => setPhoneNumberInput(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                    disabled={isUpdatingPhone}
+                    className="w-full px-3 py-2.5 text-sm text-gray-900 focus:outline-none"
+                    maxLength={10}
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isUpdatingPhone || phoneNumberInput.length !== 10}
+                className="w-full py-3 px-4 bg-[#a5291b] hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold rounded-lg transition uppercase tracking-wider text-xs flex items-center justify-center gap-2 shadow"
+              >
+                {isUpdatingPhone && <Loader2 className="h-4 w-4 animate-spin" />}
+                {isUpdatingPhone ? 'Saving & Proceeding...' : 'Continue to Checkout'}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }
