@@ -164,7 +164,7 @@ export default function RudrakshaHero({ onExploreClick, onSelectMukhi }: Rudraks
                     </div>
 
                     {/* Right Column: Hero Visual Artwork with glowing aura */}
-                    <div className="lg:col-span-5 flex justify-center">
+                    <div className="hidden lg:flex lg:col-span-5 justify-center">
                         <div className="relative w-full max-w-md sm:max-w-lg">
                             {/* Radial Aura Glow behind the image */}
                             <div className="absolute -inset-2 bg-gradient-to-r from-amber-500/30 via-yellow-500/20 to-amber-600/30 rounded-3xl blur-2xl opacity-75 animate-pulse" />
@@ -283,7 +283,7 @@ export default function RudrakshaHero({ onExploreClick, onSelectMukhi }: Rudraks
                             </span>
                             <div className="flex items-center gap-2">
                                 <a
-                                    href="https://wa.me/919940022222?text=Hello%20Om%20Sritara,%20I%20need%20guidance%20for%20choosing%20the%20right%20Rudraksha"
+                                    href="https://wa.me/917448899396?text=Hello%20Om%20Sritara,%20I%20need%20guidance%20for%20choosing%20the%20right%20Rudraksha"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg transition"
