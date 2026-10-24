@@ -447,6 +447,24 @@ function RudrakshaCardImageSlider({
     );
 }
 
+// 🧹 Helper to thoroughly clean HTML tags and decode HTML entities from API descriptions
+function cleanHtmlDescription(raw: string = ''): string {
+    if (!raw) return '';
+    return raw
+        .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+        .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&apos;/g, "'")
+        .replace(/&nbsp;/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
 // 📿 Dynamic Spiritual Attribute Extractors for API Products
 function getDeityForProduct(name: string, mukhi: number): string {
     const n = (name || '').toLowerCase();
@@ -591,6 +609,188 @@ function getDisplayBadge(name: string): string {
     return 'Authentic Rudraksha';
 }
 
+// 📜 Structured Data (Schema.org) for Rudraksha Collection
+const rudrakshaItemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://www.omsritara.in/rudraksha#product-list",
+    "name": "OMSRITARA Rudraksha Collection",
+    "url": "https://www.omsritara.in/rudraksha",
+    "numberOfItems": 14,
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@type": "Product",
+                "name": "1 Mukhi Rudraksha with Silver Cap",
+                "description": "Sacred Rudraksha with a silver cap, traditionally associated with Lord Shiva and spiritual practices such as meditation and self-awareness."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@type": "Product",
+                "name": "2 Mukhi Rudraksha",
+                "description": "Traditionally associated with Ardhanarishvara and symbolic of unity, harmony and emotional balance."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@type": "Product",
+                "name": "3 Mukhi Rudraksha",
+                "description": "Traditionally associated with Agni Dev and symbolic of courage, renewal and inner transformation."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+                "@type": "Product",
+                "name": "4 Mukhi Rudraksha",
+                "description": "Traditionally associated with Lord Brahma and symbolic of wisdom, knowledge, creativity and intellectual growth."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+                "@type": "Product",
+                "name": "5 Mukhi Rudraksha",
+                "description": "Traditionally associated with Lord Shiva and symbolic of peace, protection and spiritual balance."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+                "@type": "Product",
+                "name": "6 Mukhi Rudraksha",
+                "description": "Traditionally associated with Lord Kartikeya and symbolic of courage, confidence and determination."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+                "@type": "Product",
+                "name": "7 Mukhi Rudraksha",
+                "description": "Traditionally associated with Mahalakshmi and symbolic of wealth, abundance and prosperity."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+                "@type": "Product",
+                "name": "8 Mukhi Rudraksha",
+                "description": "Traditionally associated with Lord Ganesha and symbolic of wisdom, success and overcoming obstacles."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+                "@type": "Product",
+                "name": "9 Mukhi Rudraksha",
+                "description": "Traditionally associated with Maa Durga and symbolic of power, protection and courage."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+                "@type": "Product",
+                "name": "10 Mukhi Rudraksha",
+                "description": "Traditionally associated with Lord Vishnu and symbolic of peace, protection and universal harmony."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 11,
+            "item": {
+                "@type": "Product",
+                "name": "11 Mukhi Rudraksha",
+                "description": "Traditionally associated with the 11 Rudras and Lord Hanuman, symbolizing courage, protection and vitality."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 12,
+            "item": {
+                "@type": "Product",
+                "name": "12 Mukhi Rudraksha",
+                "description": "Traditionally associated with Surya Dev and symbolic of radiance, vitality, confidence and leadership."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 13,
+            "item": {
+                "@type": "Product",
+                "name": "13 Mukhi Rudraksha",
+                "description": "Traditionally associated with Lord Kamadeva and symbolic of attraction, charm, fulfilment and confidence."
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 14,
+            "item": {
+                "@type": "Product",
+                "name": "14 Mukhi Rudraksha",
+                "description": "Traditionally associated with Lord Shiva, Hanuman and Shani Dev, symbolizing protection, courage and discipline."
+            }
+        }
+    ]
+};
+
+const rudrakshaOfferSchema = {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "@id": "https://www.omsritara.in/rudraksha#offer",
+    "url": "https://www.omsritara.in/rudraksha",
+    "priceCurrency": "INR",
+    "seller": {
+        "@type": "Organization",
+        "@id": "https://www.omsritara.in/#organization",
+        "name": "OMSRITARA",
+        "url": "https://www.omsritara.in/",
+        "email": "info@omsritara.com",
+        "telephone": "+91-7092973555",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1st Floor, 46 Giri Road, Satyamurthy Nagar, T. Nagar",
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "postalCode": "600017",
+            "addressCountry": "IN"
+        }
+    }
+};
+
+const rudrakshaWebPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.omsritara.in/rudraksha#webpage",
+    "url": "https://www.omsritara.in/rudraksha",
+    "name": "Buy Rudraksha Online India | Sacred Beads & Malas",
+    "headline": "Explore Sacred Rudraksha Beads and Traditional Malas",
+    "description": "Explore Rudraksha beads and malas at OMSRITARA for meditation, prayer and spiritual practices.",
+    "inLanguage": "en-IN",
+    "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.omsritara.in/#website",
+        "url": "https://www.omsritara.in/",
+        "name": "OMSRITARA"
+    },
+    "breadcrumb": {
+        "@id": "https://www.omsritara.in/rudraksha#breadcrumb"
+    }
+};
+
 export default function RudrakshaUtsavPage() {
     const router = useRouter();
     const { products, isLoading: isProductsLoading }: any = useProducts();
@@ -623,6 +823,15 @@ export default function RudrakshaUtsavPage() {
     const [modalProduct, setModalProduct] = useState<any | null>(null);
     const [modalActiveImg, setModalActiveImg] = useState<number>(0);
     const [isSubmitting, setIsSubmitting] = useState<Record<number, boolean>>({});
+    // Read more / full description toggle per card
+    const [expandedDescriptions, setExpandedDescriptions] = useState<Record<number, boolean>>({});
+
+    const toggleDescription = (id: number) => {
+        setExpandedDescriptions((prev) => ({
+            ...prev,
+            [id]: !prev[id]
+        }));
+    };
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -647,13 +856,16 @@ export default function RudrakshaUtsavPage() {
 
     // 2. Aggregate raw products from context or direct query
     const allProducts = useMemo(() => {
-        if (Array.isArray(products?.data) && products.data.length > 0) {
-            return products.data;
-        }
-        if (Array.isArray(directProductsData?.data) && directProductsData.data.length > 0) {
-            return directProductsData.data;
-        }
-        return [];
+        const prodList = Array.isArray(products?.data)
+            ? products.data
+            : Array.isArray(products)
+                ? products
+                : Array.isArray(directProductsData?.data)
+                    ? directProductsData.data
+                    : Array.isArray(directProductsData)
+                        ? directProductsData
+                        : [];
+        return prodList;
     }, [products, directProductsData]);
 
     // 3. Filter products matching Rudraksha Category & active status (same logic as CategoriesBasedProduct)
@@ -707,8 +919,13 @@ export default function RudrakshaUtsavPage() {
                     ? foundInApi.image_urls
                     : ['https://www.omsritara.in/banner2.jpg'];
 
-            const rawDesc = foundInApi?.description_2 || foundInApi?.description || config.description;
-            const cleanDesc = rawDesc.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+            // 🎯 API Description Priority:
+            // 1. Live `description` from API (entered via admin dashboard)
+            // 2. Live `description_2` from API (fallback summary)
+            // 3. Static fallback config description
+            const apiDesc = foundInApi?.description ? cleanHtmlDescription(foundInApi.description) : '';
+            const apiDesc2 = foundInApi?.description_2 ? cleanHtmlDescription(foundInApi.description_2) : '';
+            const cleanDesc = apiDesc || apiDesc2 || config.description;
 
             return {
                 ...config,
@@ -719,6 +936,7 @@ export default function RudrakshaUtsavPage() {
                 discountPrice: discountNum,
                 imageUrls: apiImages,
                 description: cleanDesc,
+                rawDescription: foundInApi?.description || foundInApi?.description_2 || config.description,
                 productSlug: foundInApi?.slug || config.slug,
                 inStock: foundInApi?.in_stock !== false
             };
@@ -838,22 +1056,58 @@ export default function RudrakshaUtsavPage() {
     return (
         <>
             <Head>
-                <title>OM SRITARA RUDRAKSHA UTSAV 2026 | Wear the Divine, Experience the Energy</title>
+                {/* Primary Meta Tags */}
+                <title>Buy Rudraksha Online India | Sacred Beads & Malas</title>
                 <meta
                     name="description"
-                    content="Experience the Divine Consecrated Rudraksha Utsav 2026 at Omsritara. Sacred 1 to 14 Mukhi authentic Nepali Rudrakshas blessed with Prana Pratishtha rituals by Guru Matha."
+                    content="Explore Rudraksha beads and malas at OMSRITARA. Discover sacred spiritual accessories for meditation, prayer and personal spiritual practices."
                 />
-                <meta
-                    name="keywords"
-                    content="rudraksha utsav 2026, 1 mukhi to 14 mukhi rudraksha, certified nepali rudraksha, energized rudraksha mala, om sritara rudraksha"
-                />
+                <meta name="keywords" content="" />
                 <link rel="canonical" href="https://www.omsritara.in/rudraksha" />
-                <meta property="og:title" content="OM SRITARA RUDRAKSHA UTSAV 2026 | Wear the Divine" />
+                <meta
+                    name="robots"
+                    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+                />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Buy Rudraksha Online India | Sacred Beads & Malas" />
                 <meta
                     property="og:description"
-                    content="Wear the Divine, Experience the Energy. Authentic lab-certified 1 to 14 Mukhi Rudrakshas energized by Guru Matha."
+                    content="Explore Rudraksha beads and malas at OMSRITARA for meditation, prayer and spiritual practices."
                 />
+                <meta property="og:url" content="https://www.omsritara.in/rudraksha" />
+                <meta property="og:site_name" content="OMSRITARA" />
+                <meta property="og:locale" content="en_IN" />
                 <meta property="og:image" content="https://www.omsritara.in/rudraksha-hero.jpg" />
+                <meta property="og:image:alt" content="Rudraksha beads and sacred prayer malas from OMSRITARA" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Buy Rudraksha Online India | Sacred Beads & Malas" />
+                <meta
+                    name="twitter:description"
+                    content="Discover Rudraksha beads and prayer malas at OMSRITARA for meditation and spiritual practices."
+                />
+                <meta name="twitter:image" content="https://www.omsritara.in/rudraksha-hero.jpg" />
+                <meta name="twitter:image:alt" content="Rudraksha beads and sacred prayer malas from OMSRITARA" />
+
+                {/* Image_Src Tag */}
+                <link rel="image_src" href="https://www.omsritara.in/rudraksha-hero.jpg" />
+
+                {/* Structured Data (Schema.org) */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(rudrakshaItemListSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(rudrakshaOfferSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(rudrakshaWebPageSchema) }}
+                />
 
                 {/* Facebook Meta Pixel */}
                 <script
@@ -938,45 +1192,7 @@ export default function RudrakshaUtsavPage() {
                         </div>
                     </div>
 
-                    {/* Filter Category Tabs */}
-                    <div className="flex flex-wrap items-center gap-2 mb-8">
-                        <button
-                            onClick={() => setSelectedGroup('all')}
-                            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${selectedGroup === 'all'
-                                ? 'bg-[#8d1b1b] text-white shadow-md'
-                                : 'bg-white text-stone-600 hover:bg-stone-100 border border-stone-200'
-                                }`}
-                        >
-                            All 14 Mukhis ({mergedRudrakshaList.length})
-                        </button>
-                        <button
-                            onClick={() => setSelectedGroup('shiva')}
-                            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${selectedGroup === 'shiva'
-                                ? 'bg-[#8d1b1b] text-white shadow-md'
-                                : 'bg-white text-stone-600 hover:bg-stone-100 border border-stone-200'
-                                }`}
-                        >
-                            Lord Shiva & Protection (1, 5, 11, 14 Mukhi)
-                        </button>
-                        <button
-                            onClick={() => setSelectedGroup('wealth')}
-                            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${selectedGroup === 'wealth'
-                                ? 'bg-[#8d1b1b] text-white shadow-md'
-                                : 'bg-white text-stone-600 hover:bg-stone-100 border border-stone-200'
-                                }`}
-                        >
-                            Wealth & Abundance (7, 8, 12, 13 Mukhi)
-                        </button>
-                        <button
-                            onClick={() => setSelectedGroup('peace')}
-                            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${selectedGroup === 'peace'
-                                ? 'bg-[#8d1b1b] text-white shadow-md'
-                                : 'bg-white text-stone-600 hover:bg-stone-100 border border-stone-200'
-                                }`}
-                        >
-                            Peace & Harmony (1, 2, 3, 4, 10 Mukhi)
-                        </button>
-                    </div>
+
 
                     {/* Products Grid */}
                     {filteredItems.length === 0 ? (
@@ -1002,6 +1218,7 @@ export default function RudrakshaUtsavPage() {
                                 const activeImgIdx = activeImageIndexes[item.actualApiId] || 0;
                                 const isAdding = !!isSubmitting[item.actualApiId];
                                 const currentQty = quantities[item.actualApiId] || 1;
+                                const isExpanded = !!expandedDescriptions[item.actualApiId];
                                 const discountPercent =
                                     item.discountPrice > item.price
                                         ? Math.round(((item.discountPrice - item.price) / item.discountPrice) * 100)
@@ -1047,20 +1264,26 @@ export default function RudrakshaUtsavPage() {
                                                     <h3 className="text-lg sm:text-xl font-serif font-black text-[#5c0d0d] group-hover:text-[#8d1b1b] transition-colors leading-tight">
                                                         {item.title}
                                                     </h3>
-                                                    <p className="text-xs text-stone-600 mt-1 leading-relaxed line-clamp-2">
+                                                    <p className={`text-xs text-stone-600 mt-1 leading-relaxed transition-all duration-300 ${isExpanded ? '' : 'line-clamp-2'}`}>
                                                         {item.description}
                                                     </p>
+                                                    {item.description && item.description.length > 70 && (
+                                                        <button
+                                                            type="button"
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                toggleDescription(item.actualApiId);
+                                                            }}
+                                                            className="text-[11px] font-bold text-[#8d1b1b] hover:text-[#5c0d0d] hover:underline mt-1 inline-flex items-center gap-1 cursor-pointer transition-colors"
+                                                        >
+                                                            <span>{isExpanded ? 'Read Less' : 'Read More...'}</span>
+                                                        </button>
+                                                    )}
                                                 </div>
 
                                                 {/* 📜 Sacred Beej Mantra Chanting Scroll */}
                                                 <div className="p-2.5 rounded-xl bg-gradient-to-r from-amber-100/90 via-yellow-50 to-amber-100/90 border border-amber-300 shadow-sm">
-                                                    <div className="flex items-center justify-between text-[10px] text-amber-950 font-extrabold uppercase tracking-wider mb-0.5">
-                                                        <span className="flex items-center gap-1">
 
-                                                            Sacred Beej Mantra
-                                                        </span>
-                                                        <span className="text-amber-800 font-semibold">Chant 108 Times</span>
-                                                    </div>
                                                     <p className="text-xs sm:text-sm font-serif font-bold text-stone-900 italic text-center tracking-wide py-0.5">
                                                         &ldquo;{item.mantra}&rdquo;
                                                     </p>
@@ -1071,9 +1294,6 @@ export default function RudrakshaUtsavPage() {
                                                     <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider">
                                                         <span className="flex items-center gap-1 text-[#7a1414]">
                                                             Divine Blessings:
-                                                        </span>
-                                                        <span className="text-[10px] text-emerald-800 font-bold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                                                            Consecrated
                                                         </span>
                                                     </div>
                                                     <div className="space-y-1.5">
@@ -1167,6 +1387,793 @@ export default function RudrakshaUtsavPage() {
                         </div>
                     )}
                 </main>
+
+                {/* 🪷 SACRED ABOUT OM SRI TARA SECTION — ROYAL SANCTUARY EXPERIENCE */}
+                <section className="relative overflow-hidden bg-gradient-to-b from-[#140202] via-[#240404] to-[#0d0101] text-stone-100 py-12 sm:py-20 lg:py-28 border-t-2 border-amber-500/50">
+                    {/* Golden Temple Top Shimmer Line */}
+                    <div className="absolute top-0 inset-x-0 h-1 sm:h-1.5 bg-gradient-to-r from-amber-600 via-yellow-300 via-amber-400 to-amber-700 shadow-[0_0_25px_rgba(245,158,11,0.6)]" />
+
+                    {/* Cosmic Ambient Radial Glows */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[700px] h-[350px] bg-[radial-gradient(ellipse_at_top,rgba(245,158,11,0.22),transparent_70%)] blur-2xl pointer-events-none" />
+                    <div className="absolute bottom-10 left-10 w-72 sm:w-96 h-72 sm:h-96 bg-[radial-gradient(circle,rgba(180,83,9,0.15),transparent_70%)] blur-3xl pointer-events-none" />
+                    <div className="absolute bottom-10 right-10 w-72 sm:w-96 h-72 sm:h-96 bg-[radial-gradient(circle,rgba(245,158,11,0.12),transparent_70%)] blur-3xl pointer-events-none" />
+
+                    <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10 space-y-10 sm:space-y-16 lg:space-y-24">
+
+                        {/* 🔱 PART 1: THE DIVINE INVOCATION (WELCOME TO OM SRI TARA) */}
+                        <div className="text-center max-w-5xl mx-auto space-y-5 sm:space-y-6">
+                            {/* Glowing Om Medallion */}
+                            <div className="inline-flex flex-col items-center justify-center">
+                                <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700 p-0.5 shadow-[0_0_40px_rgba(245,158,11,0.55)] animate-pulse">
+                                    <div className="w-full h-full rounded-full bg-[#1e0303] flex items-center justify-center border border-amber-300/40">
+                                        <span className="text-xl sm:text-3xl font-serif font-black text-amber-300 select-none">
+                                            ॐ
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="inline-flex items-center gap-2 mt-3 sm:mt-4 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest backdrop-blur-md shadow-sm">
+                                    <Sparkles size={12} className="text-amber-300 animate-spin flex-shrink-0" style={{ animationDuration: '6s' }} />
+                                    <span>Sacred Energy & Spiritual Awakening</span>
+                                </div>
+                            </div>
+
+                            {/* Main Welcome Headline */}
+                            <div className="space-y-2 pt-1">
+                                <h2 className="text-2xl sm:text-4xl lg:text-6xl font-serif font-black tracking-tight text-white drop-shadow-md break-words">
+                                    <span className="bg-gradient-to-r from-amber-100 via-amber-200 via-yellow-100 to-amber-300 bg-clip-text text-transparent">
+                                        Welcome to Om Sri Tara
+                                    </span>
+                                </h2>
+                                <div className="flex items-center justify-center gap-2 sm:gap-3 pt-1">
+                                    <div className="h-px w-8 sm:w-20 bg-gradient-to-r from-transparent to-amber-400/80" />
+                                    <p className="text-sm sm:text-xl lg:text-2xl font-serif italic font-semibold text-amber-300/90 tracking-wide">
+                                        Your Path to Divine Energy Begins Here
+                                    </p>
+                                    <div className="h-px w-8 sm:w-20 bg-gradient-to-l from-transparent to-amber-400/80" />
+                                </div>
+                            </div>
+
+                            {/* Narrative Glowing Glass Tablet */}
+                            <div className="relative p-4 sm:p-7 lg:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-white/[0.08] via-white/[0.03] to-transparent border border-amber-400/30 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                                <div className="absolute top-2 left-2.5 sm:left-3 text-amber-400/40 text-2xl sm:text-3xl font-serif leading-none select-none">&ldquo;</div>
+                                <p className="text-xs sm:text-base lg:text-lg text-amber-100/95 font-serif leading-relaxed px-2 sm:px-6">
+                                    Discover crystals, energy tools, and divine healing products to attract abundance, balance your aura, and align your energy with the cosmic power.
+                                </p>
+                                <div className="absolute bottom-1 right-2.5 sm:right-3 text-amber-400/40 text-2xl sm:text-3xl font-serif leading-none select-none">&rdquo;</div>
+                            </div>
+
+                            {/* 3 Interactive Sacred Energy Spheres */}
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-5 pt-2 sm:pt-4 text-left">
+                                {/* Sphere 1: Attract Abundance */}
+                                <div className="group relative p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-[#340707]/80 to-[#1e0303]/90 border border-amber-400/30 hover:border-amber-400/80 transition-all duration-300 hover:-translate-y-1.5 shadow-lg hover:shadow-[0_15px_35px_rgba(245,158,11,0.25)]">
+                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-400/40 flex items-center justify-center text-amber-300 mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-amber-500/30 transition-all">
+                                        <Flame size={20} className="text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                                    </div>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400/90 block mb-1">
+                                        Divine Abundance
+                                    </span>
+                                    <h4 className="text-base sm:text-lg font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                        Attract Abundance
+                                    </h4>
+                                    <p className="text-xs text-stone-300/85 mt-1.5 leading-relaxed">
+                                        Channel auspicious cosmic wealth, prosperity, and positive vibrations through sacred energized sacred tools.
+                                    </p>
+                                </div>
+
+                                {/* Sphere 2: Balance Your Aura */}
+                                <div className="group relative p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-[#340707]/80 to-[#1e0303]/90 border border-amber-400/30 hover:border-amber-400/80 transition-all duration-300 hover:-translate-y-1.5 shadow-lg hover:shadow-[0_15px_35px_rgba(245,158,11,0.25)]">
+                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-400/40 flex items-center justify-center text-amber-300 mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-amber-500/30 transition-all">
+                                        <Zap size={20} className="text-amber-300 drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                                    </div>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400/90 block mb-1">
+                                        Energetic Purity
+                                    </span>
+                                    <h4 className="text-base sm:text-lg font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                        Balance Your Aura
+                                    </h4>
+                                    <p className="text-xs text-stone-300/85 mt-1.5 leading-relaxed">
+                                        Purify energy channels, dispel negative vibrations, and shield your spiritual presence with harmonic tranquility.
+                                    </p>
+                                </div>
+
+                                {/* Sphere 3: Align Cosmic Power */}
+                                <div className="group relative p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-[#340707]/80 to-[#1e0303]/90 border border-amber-400/30 hover:border-amber-400/80 transition-all duration-300 hover:-translate-y-1.5 shadow-lg hover:shadow-[0_15px_35px_rgba(245,158,11,0.25)]">
+                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-400/40 flex items-center justify-center text-amber-300 mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-amber-500/30 transition-all">
+                                        <Sparkles size={20} className="text-amber-300 drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                                    </div>
+                                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400/90 block mb-1">
+                                        Universal Harmony
+                                    </span>
+                                    <h4 className="text-base sm:text-lg font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                        Align With Cosmic Power
+                                    </h4>
+                                    <p className="text-xs text-stone-300/85 mt-1.5 leading-relaxed">
+                                        Connect directly with the 7 Chakras and ruling planetary Devatas through genuine energized sacred beads.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 📿 PART 6: THE SACRED STORY (ABOUT OM SRI TARA GRAND PAVILION) */}
+                        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#2a0606]/95 via-[#1a0303]/95 to-[#100101]/95 border-2 border-amber-400/50 p-4 sm:p-8 lg:p-16 shadow-[0_25px_60px_rgba(0,0,0,0.7)] backdrop-blur-xl overflow-hidden space-y-6 sm:space-y-10">
+                            {/* Decorative Ornate Filigree Corner Accents */}
+                            <div className="absolute top-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-24 lg:h-24 border-t-2 border-l-2 border-amber-400/60 rounded-tl-xl sm:rounded-tl-3xl pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-24 lg:h-24 border-t-2 border-r-2 border-amber-400/60 rounded-tr-xl sm:rounded-tr-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-24 lg:h-24 border-b-2 border-l-2 border-amber-400/60 rounded-bl-xl sm:rounded-bl-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-24 lg:h-24 border-b-2 border-r-2 border-amber-400/60 rounded-br-xl sm:rounded-br-3xl pointer-events-none" />
+
+                            <div className="space-y-6 sm:space-y-10 relative z-10">
+                                {/* Pavilion Header */}
+                                <div className="text-center space-y-2.5 sm:space-y-3">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+                                        <HeartHandshake size={13} className="text-amber-400 flex-shrink-0" />
+                                        <span>Traditional Wisdom & Sacred Devotion</span>
+                                    </div>
+                                    <h3 className="text-xl sm:text-3xl lg:text-5xl font-serif font-black text-amber-100 tracking-tight break-words">
+                                        About Om Sri Tara
+                                    </h3>
+                                    <div className="flex items-center justify-center gap-2 pt-1">
+                                        <div className="w-8 h-0.5 bg-amber-400/40 rounded-full" />
+                                        <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                                        <div className="w-8 h-0.5 bg-amber-400/40 rounded-full" />
+                                    </div>
+                                </div>
+
+                                {/* Two-Column Sacred Reading Experience */}
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+                                    {/* Left Column: Traditional Wisdom & Rudraksha Collection */}
+                                    <div className="space-y-4 sm:space-y-5">
+                                        <div className="p-4 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-amber-400/25 backdrop-blur-md space-y-3 sm:space-y-4">
+                                            <div className="flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-wider">
+
+                                                <span>Our Sacred Heritage</span>
+                                            </div>
+                                            <p className="text-xs sm:text-sm lg:text-base text-stone-200 leading-relaxed font-serif">
+                                                <span className="text-2xl sm:text-4xl font-serif font-black text-amber-300 float-left mr-2 sm:mr-3 leading-none drop-shadow">
+                                                    O
+                                                </span>
+                                                m Sri Tara is dedicated to offering meaningful spiritual products that connect traditional wisdom with everyday spiritual practices. Our Rudraksha collection includes individual Mukhi beads, sacred malas, and special combinations such as Gowri Shankar and Ganesh Rudraksha, each carrying its own traditional significance and symbolism.
+                                            </p>
+                                        </div>
+
+                                        {/* Sacred Collection Badges */}
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
+                                            <div className="p-2.5 sm:p-3 rounded-xl bg-amber-950/40 border border-amber-400/20 flex items-center gap-2.5">
+                                                <CheckCircle2 size={15} className="text-amber-400 flex-shrink-0" />
+                                                <span className="text-xs font-medium text-amber-100">Individual 1 to 14 Mukhis</span>
+                                            </div>
+                                            <div className="p-2.5 sm:p-3 rounded-xl bg-amber-950/40 border border-amber-400/20 flex items-center gap-2.5">
+                                                <CheckCircle2 size={15} className="text-amber-400 flex-shrink-0" />
+                                                <span className="text-xs font-medium text-amber-100">Sacred 108 Beads Malas</span>
+                                            </div>
+                                            <div className="p-2.5 sm:p-3 rounded-xl bg-amber-950/40 border border-amber-400/20 flex items-center gap-2.5">
+                                                <CheckCircle2 size={15} className="text-amber-400 flex-shrink-0" />
+                                                <span className="text-xs font-medium text-amber-100">Gowri Shankar Combinations</span>
+                                            </div>
+                                            <div className="p-2.5 sm:p-3 rounded-xl bg-amber-950/40 border border-amber-400/20 flex items-center gap-2.5">
+                                                <CheckCircle2 size={15} className="text-amber-400 flex-shrink-0" />
+                                                <span className="text-xs font-medium text-amber-100">Ganesh & Special Kavatch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Right Column: Devotion, Intentions & Inner Awareness */}
+                                    <div className="space-y-4 sm:space-y-5">
+                                        <div className="p-4 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl bg-gradient-to-b from-amber-500/10 via-amber-900/10 to-transparent border border-amber-400/30 backdrop-blur-md relative overflow-hidden space-y-3 sm:space-y-4">
+                                            <div className="flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-wider">
+
+                                                <span>Devotion & Intentions</span>
+                                            </div>
+                                            <p className="text-xs sm:text-sm lg:text-base text-stone-200 leading-relaxed font-serif italic">
+                                                &ldquo;We believe spiritual accessories can serve as meaningful reminders of devotion, positive intentions, and inner awareness. Whether you are beginning your spiritual journey or deepening an established practice, Om Sri Tara helps you explore sacred products that resonate with your personal beliefs and intentions.&rdquo;
+                                            </p>
+                                        </div>
+
+                                        {/* Authenticity Pledge Card */}
+                                        <div className="p-3.5 sm:p-5 rounded-xl sm:rounded-2xl bg-black/40 border border-amber-400/20 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-3 text-center sm:text-left">
+                                            <div className="flex items-center gap-3">
+
+                                                <div className="text-left">
+                                                    <p className="text-xs sm:text-sm font-bold text-amber-200">Sacred Vedic Consecration</p>
+                                                    <p className="text-[11px] text-stone-400">Energized with authentic Prana Pratishtha rituals</p>
+                                                </div>
+                                            </div>
+                                            <span className="px-2.5 py-1 rounded-full bg-amber-400/20 text-amber-300 text-[10px] font-bold uppercase tracking-wider border border-amber-400/40 flex-shrink-0">
+                                                Verified Purity
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Pavilion Footer CTA */}
+                                <div className="pt-6 sm:pt-8 border-t border-amber-400/20 flex flex-col sm:flex-row items-center justify-between gap-3.5 sm:gap-4 text-center sm:text-left">
+                                    <p className="text-xs sm:text-sm text-stone-400 font-serif italic">
+                                        Deepen your spiritual journey with the authentic sacred presence of Om Sri Tara.
+                                    </p>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            const el = document.getElementById('rudraksha-collection');
+                                            if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                        }}
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 text-xs sm:text-sm font-bold transition-all shadow-[0_4px_20px_rgba(245,158,11,0.4)] hover:shadow-[0_6px_25px_rgba(245,158,11,0.6)] hover:scale-105 active:scale-95 cursor-pointer font-serif tracking-wide"
+                                    >
+                                        <span>Explore Sacred Collection</span>
+                                        <ArrowRight size={14} />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 🌟 PART 2: WHY CHOOSE OM SRI TARA RUDRAKSHA */}
+                        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#250505]/90 via-[#1c0303]/90 to-[#120101]/95 border-2 border-amber-400/40 p-4 sm:p-8 lg:p-14 shadow-2xl backdrop-blur-xl space-y-6 sm:space-y-10 overflow-hidden">
+                            {/* Golden Corner Accents */}
+                            <div className="absolute top-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-t-2 border-l-2 border-amber-400/50 rounded-tl-xl sm:rounded-tl-3xl pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-t-2 border-r-2 border-amber-400/50 rounded-tr-xl sm:rounded-tr-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-b-2 border-l-2 border-amber-400/50 rounded-bl-xl sm:rounded-bl-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-b-2 border-r-2 border-amber-400/50 rounded-br-xl sm:rounded-br-3xl pointer-events-none" />
+
+                            {/* Header */}
+                            <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 relative z-10">
+
+                                <h3 className="text-xl sm:text-3xl lg:text-5xl font-serif font-black text-amber-100 tracking-tight break-words">
+                                    Why Choose Om Sri Tara Rudraksha?
+                                </h3>
+                                <p className="text-xs sm:text-sm lg:text-base text-stone-300 font-serif leading-relaxed max-w-2xl mx-auto">
+                                    Discover sacred Rudraksha beads rooted in traditional spiritual practices, thoughtfully selected to complement your journey towards peace, awareness, and personal growth.
+                                </p>
+                            </div>
+
+                            {/* 3 Pillars Grid */}
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6 relative z-10">
+                                {/* Pillar 1 */}
+                                <div className="p-4 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/[0.07] to-white/[0.02] border border-amber-400/25 hover:border-amber-400/60 transition-all duration-300 hover:-translate-y-1 shadow-md space-y-2.5 sm:space-y-3.5">
+                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-sm">
+                                        <Sparkles size={20} className="text-amber-300" />
+                                    </div>
+                                    <h4 className="text-base sm:text-lg font-serif font-bold text-amber-100">
+                                        Traditional Mukhi Varieties
+                                    </h4>
+                                    <p className="text-xs sm:text-sm text-stone-300/90 leading-relaxed font-serif">
+                                        Explore 1 to 14 Mukhi Rudraksha beads with unique traditional associations and spiritual significance.
+                                    </p>
+                                </div>
+
+                                {/* Pillar 2 */}
+                                <div className="p-4 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/[0.07] to-white/[0.02] border border-amber-400/25 hover:border-amber-400/60 transition-all duration-300 hover:-translate-y-1 shadow-md space-y-2.5 sm:space-y-3.5">
+                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-sm">
+                                        <HeartHandshake size={20} className="text-amber-300" />
+                                    </div>
+                                    <h4 className="text-base sm:text-lg font-serif font-bold text-amber-100">
+                                        Spiritual Symbolism
+                                    </h4>
+                                    <p className="text-xs sm:text-sm text-stone-300/90 leading-relaxed font-serif">
+                                        Discover Rudraksha beads associated with Hindu deities, devotion, and sacred traditions.
+                                    </p>
+                                </div>
+
+                                {/* Pillar 3 */}
+                                <div className="p-4 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/[0.07] to-white/[0.02] border border-amber-400/25 hover:border-amber-400/60 transition-all duration-300 hover:-translate-y-1 shadow-md space-y-2.5 sm:space-y-3.5">
+                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-sm">
+                                        <ShieldCheck size={20} className="text-amber-300" />
+                                    </div>
+                                    <h4 className="text-base sm:text-lg font-serif font-bold text-amber-100">
+                                        For Daily Spiritual Practice
+                                    </h4>
+                                    <p className="text-xs sm:text-sm text-stone-300/90 leading-relaxed font-serif">
+                                        Find meaningful accessories for meditation, prayer, chanting, and mindful living.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Concluding Sacred Inscription */}
+                            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-amber-500/15 via-amber-400/10 to-amber-500/15 border border-amber-400/35 text-center shadow-inner relative z-10">
+                                <p className="text-xs sm:text-sm lg:text-base text-amber-200 font-serif italic font-medium leading-relaxed">
+                                    &ldquo;Every Rudraksha has its own traditional significance, offering a meaningful way to connect with your spiritual intentions and daily practices.&rdquo;
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* 📿 PART 3: EXPLORE OUR RUDRAKSHA COLLECTION */}
+                        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#250505]/95 via-[#1c0303]/95 to-[#120101]/95 border-2 border-amber-400/40 p-4 sm:p-8 lg:p-14 shadow-2xl backdrop-blur-xl space-y-6 sm:space-y-10 overflow-hidden">
+                            {/* Golden Corner Ornaments */}
+                            <div className="absolute top-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-t-2 border-l-2 border-amber-400/50 rounded-tl-xl sm:rounded-tl-3xl pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-t-2 border-r-2 border-amber-400/50 rounded-tr-xl sm:rounded-tr-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-b-2 border-l-2 border-amber-400/50 rounded-bl-xl sm:rounded-bl-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-b-2 border-r-2 border-amber-400/50 rounded-br-xl sm:rounded-br-3xl pointer-events-none" />
+
+                            {/* Ambient Glow */}
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[500px] h-48 bg-amber-500/10 blur-3xl pointer-events-none" />
+
+                            {/* Section Header */}
+                            <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 relative z-10">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/20 via-amber-400/10 to-amber-500/20 border border-amber-400/40 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                                    <Sparkles size={13} className="text-amber-300 animate-pulse flex-shrink-0" />
+                                    <span>Sacred Categories & Consecrated Beads</span>
+                                </div>
+                                <h3 className="text-xl sm:text-3xl lg:text-5xl font-serif font-black text-amber-100 tracking-tight break-words">
+                                    <span className="bg-gradient-to-r from-amber-100 via-yellow-200 to-amber-300 bg-clip-text text-transparent drop-shadow-sm">
+                                        Explore Our Rudraksha Collection
+                                    </span>
+                                </h3>
+                                <div className="flex items-center justify-center gap-2 pt-1">
+                                    <div className="w-8 h-0.5 bg-amber-400/40 rounded-full" />
+                                    <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                                    <div className="w-8 h-0.5 bg-amber-400/40 rounded-full" />
+                                </div>
+                                <p className="text-xs sm:text-sm text-stone-300 font-serif leading-relaxed max-w-xl mx-auto pt-1">
+                                    Explore authentic consecrated Rudraksha beads thoughtfully categorized to match your spiritual intentions, daily sadhana, and cosmic journey.
+                                </p>
+                            </div>
+
+                            {/* 3 Collection Pillars Grid */}
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6 relative z-10">
+                                {/* Pillar 1: 1–14 Mukhi Rudraksha */}
+                                <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#2e0808]/90 via-[#1e0303]/90 to-[#120101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
+                                    <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
+                                    <div className="absolute -bottom-3 -right-1 text-5xl sm:text-7xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
+                                        1-14
+                                    </div>
+                                    <div className="space-y-3 sm:space-y-4">
+
+                                        <div className="space-y-1.5 sm:space-y-2">
+                                            <h4 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                1–14 Mukhi Rudraksha
+                                            </h4>
+                                            <p className="text-xs sm:text-sm text-stone-300/90 font-serif leading-relaxed">
+                                                Discover individual Rudraksha beads traditionally associated with different deities, spiritual qualities, and symbolic meanings.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-3 sm:space-y-4 pt-3 sm:pt-4 border-t border-amber-400/15 mt-3 sm:mt-4">
+                                        <div className="flex flex-wrap gap-1.5">
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ Individual Beads
+                                            </span>
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ 1 to 14 Mukhis
+                                            </span>
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ Ruling Deities
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                {/* Pillar 2: Rudraksha Malas */}
+                                <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#2e0808]/90 via-[#1e0303]/90 to-[#120101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
+                                    <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
+                                    <div className="absolute -bottom-3 -right-1 text-5xl sm:text-7xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
+                                        108
+                                    </div>
+                                    <div className="space-y-3 sm:space-y-4">
+
+                                        <div className="space-y-1.5 sm:space-y-2">
+                                            <h4 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                Rudraksha Malas
+                                            </h4>
+                                            <p className="text-xs sm:text-sm text-stone-300/90 font-serif leading-relaxed">
+                                                Explore sacred malas for prayer, chanting, meditation, and everyday spiritual practices.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-3 sm:space-y-4 pt-3 sm:pt-4 border-t border-amber-400/15 mt-3 sm:mt-4">
+                                        <div className="flex flex-wrap gap-1.5">
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ 108 Sacred Beads
+                                            </span>
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ Japa Chanting
+                                            </span>
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ Daily Sadhana
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                {/* Pillar 3: Special Rudraksha Combinations */}
+                                <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#2e0808]/90 via-[#1e0303]/90 to-[#120101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
+                                    <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
+                                    <div className="absolute -bottom-3 -right-1 text-5xl sm:text-7xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
+                                        ॐ
+                                    </div>
+                                    <div className="space-y-3 sm:space-y-4">
+
+                                        <div className="space-y-1.5 sm:space-y-2">
+                                            <h4 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                Special Combinations
+                                            </h4>
+                                            <p className="text-xs sm:text-sm text-stone-300/90 font-serif leading-relaxed">
+                                                Discover meaningful combinations, including Gowri Shankar and Ganesh Rudraksha, representing harmony, wisdom, devotion, and spiritual growth.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-3 sm:space-y-4 pt-3 sm:pt-4 border-t border-amber-400/15 mt-3 sm:mt-4">
+                                        <div className="flex flex-wrap gap-1.5">
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ Gowri Shankar
+                                            </span>
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ Ganesh Rudraksha
+                                            </span>
+                                            <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                ✦ Divine Harmony
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 🪷 PART 4: BENEFITS OF RUDRAKSHA & FIND YOUR SPIRITUAL JOURNEY */}
+                        <div className="space-y-10 sm:space-y-16">
+                            {/* SECTION A: BENEFITS OF RUDRAKSHA */}
+                            <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#250505]/95 via-[#1c0303]/95 to-[#120101]/95 border-2 border-amber-400/40 p-4 sm:p-8 lg:p-14 shadow-2xl backdrop-blur-xl space-y-6 sm:space-y-10 overflow-hidden">
+                                {/* Golden Corner Ornaments */}
+                                <div className="absolute top-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-t-2 border-l-2 border-amber-400/50 rounded-tl-xl sm:rounded-tl-3xl pointer-events-none" />
+                                <div className="absolute top-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-t-2 border-r-2 border-amber-400/50 rounded-tr-xl sm:rounded-tr-3xl pointer-events-none" />
+                                <div className="absolute bottom-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-b-2 border-l-2 border-amber-400/50 rounded-bl-xl sm:rounded-bl-3xl pointer-events-none" />
+                                <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-b-2 border-r-2 border-amber-400/50 rounded-br-xl sm:rounded-br-3xl pointer-events-none" />
+
+                                {/* Ambient Spotlight */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[500px] h-48 bg-amber-500/10 blur-3xl pointer-events-none" />
+
+                                <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 relative z-10">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/20 via-amber-400/10 to-amber-500/20 border border-amber-400/40 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                                        <Sparkles size={13} className="text-amber-300 animate-pulse flex-shrink-0" />
+                                        <span>Spiritual Awakening & Divine Energy</span>
+                                    </div>
+                                    <h3 className="text-xl sm:text-3xl lg:text-5xl font-serif font-black text-amber-100 tracking-tight break-words">
+                                        <span className="bg-gradient-to-r from-amber-100 via-yellow-200 to-amber-300 bg-clip-text text-transparent drop-shadow-sm">
+                                            Benefits of Rudraksha
+                                        </span>
+                                    </h3>
+                                    <div className="flex items-center justify-center gap-2 pt-1">
+                                        <div className="w-8 h-0.5 bg-amber-400/40 rounded-full" />
+                                        <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                                        <div className="w-8 h-0.5 bg-amber-400/40 rounded-full" />
+                                    </div>
+                                    <p className="text-xs sm:text-sm text-stone-300 font-serif leading-relaxed max-w-xl mx-auto pt-1">
+                                        Channeling cosmic consciousness, spiritual tranquility, and Vedic harmony through sacred consecrated beads.
+                                    </p>
+                                </div>
+
+                                {/* 5 Sacred Benefits Cards - Harmonious 2 + 3 Bento Grid (100% Balanced, No Empty Slots) */}
+                                <div className="space-y-3.5 sm:space-y-6 relative z-10">
+                                    {/* Row 1: 2 Grand Feature Cards */}
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5 sm:gap-6">
+                                        {/* Card 1: Inner Peace and Harmony */}
+                                        <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#2e0808]/90 via-[#1e0303]/90 to-[#120101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
+                                            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
+                                            <div className="absolute -bottom-3 -right-1 text-5xl sm:text-7xl lg:text-8xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
+                                                I
+                                            </div>
+                                            <div className="space-y-3 sm:space-y-4">
+                                                <div className="flex items-center justify-between gap-3">
+                                                    <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-500/25 to-amber-700/10 border border-amber-400/50 flex items-center justify-center text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.25)] group-hover:scale-110 group-hover:border-amber-300 transition-all duration-300 flex-shrink-0">
+                                                        <ShieldCheck size={22} className="text-amber-300" />
+                                                    </div>
+
+                                                </div>
+                                                <div className="space-y-1.5 sm:space-y-2">
+                                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                        Inner Peace and Harmony
+                                                    </h4>
+                                                    <p className="text-xs sm:text-sm lg:text-base text-stone-300/90 font-serif leading-relaxed">
+                                                        Symbolizes calmness, balance, and spiritual awareness.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-3 sm:pt-5 border-t border-amber-400/15 mt-3 sm:mt-4">
+                                                <span className="text-[10px] sm:text-[11px] font-serif px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Calmness
+                                                </span>
+                                                <span className="text-[10px] sm:text-[11px] font-serif px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Emotional Balance
+                                                </span>
+                                                <span className="text-[10px] sm:text-[11px] font-serif px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Spiritual Awareness
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        {/* Card 2: Focus and Mindfulness */}
+                                        <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#2e0808]/90 via-[#1e0303]/90 to-[#120101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
+                                            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
+                                            <div className="absolute -bottom-3 -right-1 text-5xl sm:text-7xl lg:text-8xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
+                                                II
+                                            </div>
+                                            <div className="space-y-3 sm:space-y-4">
+                                                <div className="flex items-center justify-between gap-3">
+                                                    <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-500/25 to-amber-700/10 border border-amber-400/50 flex items-center justify-center text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.25)] group-hover:scale-110 group-hover:border-amber-300 transition-all duration-300 flex-shrink-0">
+                                                        <Zap size={22} className="text-amber-300" />
+                                                    </div>
+
+                                                </div>
+                                                <div className="space-y-1.5 sm:space-y-2">
+                                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                        Focus and Mindfulness
+                                                    </h4>
+                                                    <p className="text-xs sm:text-sm lg:text-base text-stone-300/90 font-serif leading-relaxed">
+                                                        Complements meditation, prayer, and spiritual discipline.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-3 sm:pt-5 border-t border-amber-400/15 mt-3 sm:mt-4">
+                                                <span className="text-[10px] sm:text-[11px] font-serif px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Meditation
+                                                </span>
+                                                <span className="text-[10px] sm:text-[11px] font-serif px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Prayer Alignment
+                                                </span>
+                                                <span className="text-[10px] sm:text-[11px] font-serif px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Spiritual Discipline
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Row 2: 3 Balanced Cards */}
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6">
+                                        {/* Card 3: Courage and Personal Growth */}
+                                        <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#280707]/90 via-[#1b0303]/90 to-[#100101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-7 flex flex-col justify-between">
+                                            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
+                                            <div className="absolute -bottom-3 -right-1 text-4xl sm:text-6xl lg:text-7xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
+                                                III
+                                            </div>
+                                            <div className="space-y-3 sm:space-y-4">
+                                                <div className="flex items-center justify-between gap-3">
+                                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500/25 to-amber-700/10 border border-amber-400/50 flex items-center justify-center text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.2)] group-hover:scale-110 group-hover:border-amber-300 transition-all flex-shrink-0">
+                                                        <Award size={20} className="text-amber-300" />
+                                                    </div>
+
+                                                </div>
+                                                <div className="space-y-1 sm:space-y-2">
+                                                    <h4 className="text-base sm:text-lg lg:text-xl font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                        Courage and Personal Growth
+                                                    </h4>
+                                                    <p className="text-xs sm:text-sm text-stone-300/90 font-serif leading-relaxed">
+                                                        Represents inner strength, wisdom, confidence, and positive intentions.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap gap-1.5 pt-3 sm:pt-4 border-t border-amber-400/15 mt-3 sm:mt-4">
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Strength
+                                                </span>
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Wisdom
+                                                </span>
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Confidence
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        {/* Card 4: Devotion and Spiritual Connection */}
+                                        <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#280707]/90 via-[#1b0303]/90 to-[#100101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-7 flex flex-col justify-between">
+                                            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
+                                            <div className="absolute -bottom-3 -right-1 text-4xl sm:text-6xl lg:text-7xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
+                                                IV
+                                            </div>
+                                            <div className="space-y-3 sm:space-y-4">
+                                                <div className="flex items-center justify-between gap-3">
+                                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500/25 to-amber-700/10 border border-amber-400/50 flex items-center justify-center text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.2)] group-hover:scale-110 group-hover:border-amber-300 transition-all flex-shrink-0">
+                                                        <HeartHandshake size={20} className="text-amber-300" />
+                                                    </div>
+
+                                                </div>
+                                                <div className="space-y-1 sm:space-y-2">
+                                                    <h4 className="text-base sm:text-lg lg:text-xl font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                        Devotion and Spiritual Connection
+                                                    </h4>
+                                                    <p className="text-xs sm:text-sm text-stone-300/90 font-serif leading-relaxed">
+                                                        Supports a meaningful connection with traditional spiritual practices.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap gap-1.5 pt-3 sm:pt-4 border-t border-amber-400/15 mt-3 sm:mt-4">
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Sacred Devotion
+                                                </span>
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Bhakti
+                                                </span>
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Vedic Traditions
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        {/* Card 5: Prosperity and Abundance */}
+                                        <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#280707]/90 via-[#1b0303]/90 to-[#100101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-7 flex flex-col justify-between">
+                                            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
+                                            <div className="absolute -bottom-3 -right-1 text-4xl sm:text-6xl lg:text-7xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
+                                                V
+                                            </div>
+                                            <div className="space-y-3 sm:space-y-4">
+                                                <div className="flex items-center justify-between gap-3">
+                                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500/25 to-amber-700/10 border border-amber-400/50 flex items-center justify-center text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.2)] group-hover:scale-110 group-hover:border-amber-300 transition-all flex-shrink-0">
+                                                        <Flame size={20} className="text-amber-300" />
+                                                    </div>
+
+                                                </div>
+                                                <div className="space-y-1 sm:space-y-2">
+                                                    <h4 className="text-base sm:text-lg lg:text-xl font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                        Prosperity and Abundance
+                                                    </h4>
+                                                    <p className="text-xs sm:text-sm text-stone-300/90 font-serif leading-relaxed">
+                                                        Certain Mukhi varieties are traditionally associated with prosperity, stability, and abundance.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap gap-1.5 pt-3 sm:pt-4 border-t border-amber-400/15 mt-3 sm:mt-4">
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Abundance
+                                                </span>
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Stability
+                                                </span>
+                                                <span className="text-[10px] font-serif px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-200">
+                                                    ✦ Fortune
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Auspicious Vedic Footer Inscription Bar */}
+                                <div className="p-3.5 sm:p-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/15 to-amber-500/10 border border-amber-400/30 flex flex-col sm:flex-row items-center justify-between gap-3.5 sm:gap-4 text-center sm:text-left relative z-10 shadow-inner">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 flex-shrink-0 shadow-sm">
+                                            <Sparkles size={18} className="text-amber-300" />
+                                        </div>
+                                        <div className="text-left">
+                                            <p className="text-xs sm:text-sm font-serif font-bold text-amber-200">
+                                                Blessed by Vedic Traditions & Divine Prana Pratishtha
+                                            </p>
+                                            <p className="text-[11px] sm:text-xs text-stone-300/80 font-serif">
+                                                Each Rudraksha bead carries sacred cosmic frequencies aligned with your soul&apos;s intentions.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            const el = document.getElementById('rudraksha-collection');
+                                            if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                        }}
+                                        className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-serif font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all flex items-center justify-center gap-2 flex-shrink-0 cursor-pointer"
+                                    >
+                                        <span>Explore Sacred Beads</span>
+                                        <ArrowRight size={14} />
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* SECTION B: FIND THE RUDRAKSHA FOR YOUR SPIRITUAL JOURNEY */}
+                            <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#2a0606]/95 via-[#1c0303]/95 to-[#100101]/95 border-2 border-amber-400/40 p-4 sm:p-8 lg:p-14 shadow-2xl backdrop-blur-xl space-y-6 sm:space-y-10">
+                                <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+                                        <Star size={13} className="text-amber-300 flex-shrink-0" />
+                                        <span>Sacred Intention & Cosmic Paths</span>
+                                    </div>
+                                    <h3 className="text-xl sm:text-3xl lg:text-5xl font-serif font-black text-amber-100 tracking-tight break-words">
+                                        Find the Rudraksha for Your Spiritual Journey
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-amber-200/80 font-serif italic max-w-xl mx-auto">
+                                        Select your spiritual intention to explore the consecrated Rudraksha beads aligned with your path
+                                    </p>
+                                </div>
+
+                                {/* 6 Sacred Journey Paths */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
+                                    {[
+                                        { title: 'Peace and Mindfulness', icon: '🕊️', query: 'Peace' },
+                                        { title: 'Harmony and Relationships', icon: '💖', query: 'Harmony' },
+                                        { title: 'Wisdom and Focus', icon: '👁️', query: 'Wisdom' },
+                                        { title: 'Courage and Confidence', icon: '🦁', query: 'Courage' },
+                                        { title: 'Prosperity and Abundance', icon: '👑', query: 'Abundance' },
+                                        { title: 'Protection and Spiritual Growth', icon: '🛡️', query: 'Protection' }
+                                    ].map((journey, jIdx) => (
+                                        <button
+                                            key={jIdx}
+                                            type="button"
+                                            onClick={() => {
+                                                setSearchQuery(journey.query);
+                                                const el = document.getElementById('rudraksha-collection');
+                                                if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                            }}
+                                            className="group relative p-3.5 sm:p-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-white/[0.08] via-white/[0.04] to-transparent border border-amber-400/30 hover:border-amber-400/80 hover:bg-amber-500/15 transition-all duration-300 text-left flex items-center justify-between gap-3 shadow-md hover:shadow-[0_10px_25px_rgba(245,158,11,0.25)] hover:-translate-y-1 cursor-pointer"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-xl sm:text-2xl group-hover:scale-125 transition-transform flex-shrink-0">
+                                                    {journey.icon}
+                                                </span>
+                                                <span className="text-xs sm:text-sm lg:text-base font-serif font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                                                    {journey.title}
+                                                </span>
+                                            </div>
+                                            <ArrowRight size={14} className="text-amber-400/60 group-hover:text-amber-300 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        {/* 🪷 PART 7: A MEANINGFUL PART OF YOUR SPIRITUAL PRACTICE (GRAND SACRED FINALE) */}
+                        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#320707]/95 via-[#1e0303]/95 to-[#100101]/95 border-2 border-amber-400/50 p-4 sm:p-8 lg:p-14 shadow-2xl backdrop-blur-xl overflow-hidden text-center space-y-6 sm:space-y-8">
+                            {/* Golden Temple Corner Filigree */}
+                            <div className="absolute top-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-24 lg:h-24 border-t-2 border-l-2 border-amber-400/60 rounded-tl-xl sm:rounded-tl-3xl pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-24 lg:h-24 border-t-2 border-r-2 border-amber-400/60 rounded-tr-xl sm:rounded-tr-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 left-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-24 lg:h-24 border-b-2 border-l-2 border-amber-400/60 rounded-bl-xl sm:rounded-bl-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-16 sm:h-16 lg:w-24 lg:h-24 border-b-2 border-r-2 border-amber-400/60 rounded-br-xl sm:rounded-br-3xl pointer-events-none" />
+
+                            {/* Center Cosmic Radiance */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-[300px] bg-[radial-gradient(ellipse,rgba(245,158,11,0.18),transparent_70%)] blur-2xl pointer-events-none" />
+
+                            <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 relative z-10">
+                                {/* Sacred Medallion */}
+
+
+                                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest backdrop-blur-md shadow-sm">
+                                    <Sparkles size={12} className="text-amber-300 animate-spin flex-shrink-0" style={{ animationDuration: '6s' }} />
+                                    <span>Devotion • Intention • Mindfulness</span>
+                                </div>
+
+                                {/* Headline */}
+                                <h3 className="text-xl sm:text-3xl lg:text-5xl font-serif font-black tracking-tight text-white drop-shadow-md break-words">
+                                    <span className="bg-gradient-to-r from-amber-100 via-yellow-200 to-amber-300 bg-clip-text text-transparent">
+                                        A Meaningful Part of Your Spiritual Practice
+                                    </span>
+                                </h3>
+
+                                <div className="flex items-center justify-center gap-2 pt-1">
+                                    <div className="w-8 h-0.5 bg-amber-400/40 rounded-full" />
+                                    <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                                    <div className="w-8 h-0.5 bg-amber-400/40 rounded-full" />
+                                </div>
+
+                                {/* Main Narrative */}
+                                <p className="text-xs sm:text-base lg:text-lg text-amber-100/90 font-serif leading-relaxed max-w-2xl mx-auto">
+                                    Explore the Rudraksha collection at Om Sri Tara and choose a sacred accessory that resonates with your spiritual interests, personal intentions, and daily practices.
+                                </p>
+
+                                {/* Sacred Closing Inscription Tablet */}
+                                <div className="p-4 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl bg-gradient-to-r from-amber-500/15 via-amber-400/10 to-amber-500/15 border border-amber-400/35 max-w-2xl mx-auto shadow-inner relative">
+                                    <div className="absolute top-2 left-3 sm:left-4 text-amber-400/40 text-2xl sm:text-3xl font-serif leading-none select-none">&ldquo;</div>
+                                    <p className="text-xs sm:text-base lg:text-lg text-amber-200 font-serif italic font-semibold leading-relaxed px-2 sm:px-4">
+                                        Your spiritual journey begins with intention, devotion, and mindful practice.
+                                    </p>
+                                    <div className="absolute bottom-1.5 right-3 sm:right-4 text-amber-400/40 text-2xl sm:text-3xl font-serif leading-none select-none">&rdquo;</div>
+                                </div>
+
+                                {/* Grand Interactive Action */}
+                                <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            const el = document.getElementById('rudraksha-collection');
+                                            if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                        }}
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 text-xs sm:text-base font-bold transition-all shadow-[0_4px_25px_rgba(245,158,11,0.5)] hover:shadow-[0_6px_30px_rgba(245,158,11,0.7)] hover:scale-105 active:scale-95 cursor-pointer font-serif tracking-wide"
+                                    >
+                                        <Sparkles size={15} />
+                                        <span>Choose Your Sacred Rudraksha</span>
+                                        <ArrowRight size={15} />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
 
 
                 {modalProduct && (
