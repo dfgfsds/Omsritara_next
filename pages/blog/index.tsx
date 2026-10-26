@@ -1,10 +1,33 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import { baseUrl } from "@/api-endpoints/ApiUrls";
 import axios from "axios";
 import BlogAllPages from "@/components/BlogAllPages";
 import type { GetStaticProps } from "next";
 
-export default function BlogPage({ blogs }: { blogs: any[] }) {
+export default function BlogPage({ blogs = [] }: { blogs?: any[] }) {
+    const [blogList, setBlogList] = useState<any[]>(Array.isArray(blogs) ? blogs : []);
+
+    useEffect(() => {
+        if (blogs && blogs.length > 0) {
+            setBlogList(blogs);
+        } else {
+            const fetchBlogs = async () => {
+                try {
+                    const rawEnv = process.env.NEXT_PUBLIC_API_BASE_URL;
+                    const isEnvValid = rawEnv && !rawEnv.includes("justvy.in");
+                    const apiBase = (isEnvValid ? rawEnv : null) || baseUrl || "https://ecomapi.ftdigitalsolutions.org";
+                    const res = await axios.get(`${apiBase}/blog/?vendor_id=63`);
+                    if (res.data?.blogs && Array.isArray(res.data.blogs)) {
+                        setBlogList(res.data.blogs);
+                    }
+                } catch (e) {
+                    console.error("Client fallback blog fetch failed:", e);
+                }
+            };
+            fetchBlogs();
+        }
+    }, [blogs]);
 
     const organizationSchema = {
         "@context": "https://schema.org",
@@ -453,7 +476,7 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
                 />
             </Head>
 
-            <BlogAllPages blogs={blogs} />
+            <BlogAllPages blogs={blogList} />
         </>
     );
 }
@@ -462,9 +485,18 @@ export default function BlogPage({ blogs }: { blogs: any[] }) {
 export const getStaticProps: GetStaticProps = async () => {
     try {
         const vendorId = 63;
-        const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || baseUrl;
+        const rawEnv = process.env.NEXT_PUBLIC_API_BASE_URL;
+        const isEnvValid = rawEnv && !rawEnv.includes("justvy.in");
+        const apiBase = (isEnvValid ? rawEnv : null) || baseUrl || "https://ecomapi.ftdigitalsolutions.org";
         const blogAPI = `${apiBase}/blog/?vendor_id=${vendorId}`;
-        const res = await axios.get(blogAPI);
+
+        const headers = {
+            Origin: process.env.NEXT_PUBLIC_FRONTEND_URL || "https://omsritara.in",
+            Referer: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "https://omsritara.in"}/`,
+            Accept: "application/json",
+        };
+
+        const res = await axios.get(blogAPI, { headers });
 
         return {
             props: {
