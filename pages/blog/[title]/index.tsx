@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { baseUrl } from "@/api-endpoints/ApiUrls";
 import axios from "axios";
 import Image from "next/image";
@@ -5,7 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import type { GetStaticPaths, GetStaticProps } from "next";
-import { slugify } from "@/lib/utils";
+import { slugify, slugConvert } from "@/lib/utils";
 
 interface Blog {
     id: number;
@@ -28,6 +29,41 @@ interface Blog {
 
 export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
     const router = useRouter();
+    const [currentBlog, setCurrentBlog] = useState<Blog | null>(blog);
+
+    useEffect(() => {
+        if (blog) {
+            setCurrentBlog(blog);
+        } else {
+            const rawSlug = router.query.title as string;
+            if (rawSlug) {
+                const fetchBlog = async () => {
+                    try {
+                        const rawEnv = process.env.NEXT_PUBLIC_API_BASE_URL;
+                        const isEnvValid = rawEnv && !rawEnv.includes("justvy.in");
+                        const apiBase = (isEnvValid ? rawEnv : null) || baseUrl || "https://ecomapi.ftdigitalsolutions.org";
+                        const res = await axios.get(`${apiBase}/blog/?vendor_id=63`);
+                        const blogs: Blog[] = res.data?.blogs || [];
+                        const target = decodeURIComponent(rawSlug).trim().toLowerCase();
+                        const matched = blogs.find((item: Blog) => {
+                            const matchId = String(item.id) === target;
+                            const matchUrlSlug = item.url_slug && item.url_slug.trim().toLowerCase() === target;
+                            const matchSlugify = item.title && slugify(item.title).toLowerCase() === target;
+                            const matchSlugConvert = item.title && slugConvert(item.title).toLowerCase() === target;
+                            const matchNormalized = item.title && slugify(item.title).replace(/--+/g, "-").toLowerCase() === target.replace(/--+/g, "-");
+                            return matchId || matchUrlSlug || matchSlugify || matchSlugConvert || matchNormalized;
+                        });
+                        if (matched) {
+                            setCurrentBlog(matched);
+                        }
+                    } catch (e) {
+                        console.error("Client fallback single blog fetch error:", e);
+                    }
+                };
+                fetchBlog();
+            }
+        }
+    }, [blog, router.query.title]);
 
     if (router.isFallback) {
         return (
@@ -37,7 +73,7 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
         );
     }
 
-    if (!blog) {
+    if (!currentBlog) {
         return (
             <div className="max-w-4xl mx-auto py-20 text-center">
                 <Head>
@@ -56,35 +92,35 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
         );
     }
 
-    const currentSlug = blog.url_slug || slugify(blog.title || "");
-    const canonicalUrl = blog.canonical_tag || `https://www.omsritara.in/blog/${currentSlug}`;
+    const currentSlug = currentBlog.url_slug || slugify(currentBlog.title || "");
+    const canonicalUrl = currentBlog.canonical_tag || `https://www.omsritara.in/blog/${currentSlug}`;
 
     const imageSrc =
-        typeof blog.image_src_tags === "string" && blog.image_src_tags.trim().length > 0
-            ? blog.image_src_tags
-            : blog.banner_url || "https://www.omsritara.in/images/blog-banner.jpg";
+        typeof currentBlog.image_src_tags === "string" && currentBlog.image_src_tags.trim().length > 0
+            ? currentBlog.image_src_tags
+            : currentBlog.banner_url || "https://www.omsritara.in/images/blog-banner.jpg";
 
     const metaTitle =
-        (typeof blog.meta_title === "string" && blog.meta_title.trim().length > 0)
-            ? blog.meta_title
-            : `${blog.title} | Omsritara Blog`;
+        (typeof currentBlog.meta_title === "string" && currentBlog.meta_title.trim().length > 0)
+            ? currentBlog.meta_title
+            : `${currentBlog.title} | Omsritara Blog`;
 
-    const cleanContentSnippet = blog.content ? blog.content.replace(/<[^>]*>/g, "").slice(0, 160) : "";
+    const cleanContentSnippet = currentBlog.content ? currentBlog.content.replace(/<[^>]*>/g, "").slice(0, 160) : "";
     const metaDescription =
-        (typeof blog.meta_description === "string" && blog.meta_description.trim().length > 0)
-            ? blog.meta_description
-            : blog.description?.slice(0, 160) || cleanContentSnippet;
+        (typeof currentBlog.meta_description === "string" && currentBlog.meta_description.trim().length > 0)
+            ? currentBlog.meta_description
+            : currentBlog.description?.slice(0, 160) || cleanContentSnippet;
 
     const hasCustomSchema =
-        blog.schema &&
-        (typeof blog.schema === "string"
-            ? blog.schema.trim().length > 0 && blog.schema.trim() !== "{}"
-            : Object.keys(blog.schema).length > 0);
+        currentBlog.schema &&
+        (typeof currentBlog.schema === "string"
+            ? currentBlog.schema.trim().length > 0 && currentBlog.schema.trim() !== "{}"
+            : Object.keys(currentBlog.schema).length > 0);
 
     const defaultSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": blog.title,
+        "headline": currentBlog.title,
         "description": metaDescription,
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -104,7 +140,7 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
         },
         "image": imageSrc,
         "url": canonicalUrl,
-        "datePublished": blog.created_at
+        "datePublished": currentBlog.created_at
     };
 
     return (
@@ -113,8 +149,8 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
             <Head>
                 <title>{metaTitle}</title>
                 <meta name="description" content={metaDescription} />
-                <meta name="robots" content={blog.robots_tag || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
-                {blog.url_description && <meta name="url_description" content={blog.url_description} />}
+                <meta name="robots" content={currentBlog.robots_tag || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+                {currentBlog.url_description && <meta name="url_description" content={currentBlog.url_description} />}
 
                 <meta property="og:title" content={metaTitle} />
                 <meta property="og:description" content={metaDescription} />
@@ -134,7 +170,7 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
                         __html: hasCustomSchema
-                            ? (typeof blog.schema === "string" ? blog.schema : JSON.stringify(blog.schema))
+                            ? (typeof currentBlog.schema === "string" ? currentBlog.schema : JSON.stringify(currentBlog.schema))
                             : JSON.stringify(defaultSchema)
                     }}
                 />
@@ -150,11 +186,11 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
             </button>
 
             {/* Blog Image */}
-            {blog.banner_url && (
+            {currentBlog.banner_url && (
                 <div className="relative w-full h-96 rounded-lg overflow-hidden mb-8">
                     <Image
-                        src={blog.banner_url}
-                        alt={blog.title}
+                        src={currentBlog.banner_url}
+                        alt={currentBlog.title}
                         height={500}
                         width={800}
                         className="object-cover"
@@ -163,11 +199,11 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
             )}
 
             {/* Blog Title */}
-            <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
+            <h1 className="text-3xl font-bold mb-4">{currentBlog.title}</h1>
 
             {/* Blog Date */}
             <p className="text-gray-500 text-sm mb-8">
-                {new Date(blog.created_at).toLocaleDateString("en-US", {
+                {new Date(currentBlog.created_at).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -175,7 +211,7 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
             </p>
 
             {/* Blog Content */}
-            <div dangerouslySetInnerHTML={{ __html: blog?.content }} className="quill-content" />
+            <div dangerouslySetInnerHTML={{ __html: currentBlog?.content || "" }} className="quill-content" />
         </div>
     );
 }
@@ -184,9 +220,19 @@ export default function SingleBlogPage({ blog }: { blog: Blog | null }) {
 export const getStaticPaths: GetStaticPaths = async () => {
     try {
         const vendorId = 63;
-        const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || baseUrl;
+        const rawEnv = process.env.NEXT_PUBLIC_API_BASE_URL;
+        const isEnvValid = rawEnv && !rawEnv.includes("justvy.in");
+        const apiBase = (isEnvValid ? rawEnv : null) || baseUrl || "https://ecomapi.ftdigitalsolutions.org";
+
+        const headers = {
+            Origin: process.env.NEXT_PUBLIC_FRONTEND_URL || "https://omsritara.in",
+            Referer: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "https://omsritara.in"}/`,
+            Accept: "application/json",
+        };
+
         const res = await axios.get(
-            `${apiBase}/blog/?vendor_id=${vendorId}`
+            `${apiBase}/blog/?vendor_id=${vendorId}`,
+            { headers }
         );
 
         const blogs: Blog[] = res.data?.blogs || [];
@@ -206,6 +252,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
                 if (slug && !seenSlugs.has(slug)) {
                     seenSlugs.add(slug);
                     paths.push({ params: { title: slug } });
+                }
+                const slug2 = slugConvert(item.title);
+                if (slug2 && !seenSlugs.has(slug2)) {
+                    seenSlugs.add(slug2);
+                    paths.push({ params: { title: slug2 } });
                 }
             }
         });
@@ -238,20 +289,29 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     try {
         const vendorId = 63;
-        const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || baseUrl;
+        const rawEnv = process.env.NEXT_PUBLIC_API_BASE_URL;
+        const isEnvValid = rawEnv && !rawEnv.includes("justvy.in");
+        const apiBase = (isEnvValid ? rawEnv : null) || baseUrl || "https://ecomapi.ftdigitalsolutions.org";
+
+        const headers = {
+            Origin: process.env.NEXT_PUBLIC_FRONTEND_URL || "https://omsritara.in",
+            Referer: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "https://omsritara.in"}/`,
+            Accept: "application/json",
+        };
+
         const res = await axios.get(
-            `${apiBase}/blog/?vendor_id=${vendorId}`
+            `${apiBase}/blog/?vendor_id=${vendorId}`,
+            { headers }
         );
 
         const blogs: Blog[] = res.data?.blogs || [];
         const matched = blogs.find((item: Blog) => {
-            if (item.url_slug && item.url_slug.trim().toLowerCase() === titleParam) {
-                return true;
-            }
-            if (item.title && slugify(item.title).toLowerCase() === titleParam) {
-                return true;
-            }
-            return false;
+            const matchId = String(item.id) === titleParam;
+            const matchUrlSlug = item.url_slug && item.url_slug.trim().toLowerCase() === titleParam;
+            const matchSlugify = item.title && slugify(item.title).toLowerCase() === titleParam;
+            const matchSlugConvert = item.title && slugConvert(item.title).toLowerCase() === titleParam;
+            const matchNormalized = item.title && slugify(item.title).replace(/--+/g, "-").toLowerCase() === titleParam.replace(/--+/g, "-");
+            return matchId || matchUrlSlug || matchSlugify || matchSlugConvert || matchNormalized;
         });
 
         if (!matched) {
