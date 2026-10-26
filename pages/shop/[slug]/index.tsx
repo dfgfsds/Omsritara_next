@@ -164,7 +164,7 @@ export default function SingleProductView({
 
             <div className="container mx-auto px-4 py-12">
                 <div className="grid md:grid-cols-2 gap-8">
-                    <ProductGallery images={productDetails?.image_urls} name={productDetails?.name} />
+                    <ProductGallery images={productDetails?.image_urls || []} name={productDetails?.name || ""} />
 
                     <div>
                         <h1 className="text-2xl font-semibold border-b-2 border-gray-500 capitalize mb-5">
@@ -183,7 +183,7 @@ export default function SingleProductView({
                                 )}
                         </div>
 
-                        <div dangerouslySetInnerHTML={{ __html: productDetails?.description }} className="quill-content" />
+                        <div dangerouslySetInnerHTML={{ __html: productDetails?.description || "" }} className="quill-content" />
 
                         {/* Cart Controls */}
                         <CartControls
@@ -223,8 +223,8 @@ export default function SingleProductView({
                         {relatedProducts?.map((product, idx) => (
                             <ProductCard
                                 key={idx}
-                                image={product?.image_urls[0] || ""}
-                                hoverImage={product?.image_urls[1] || ""}
+                                image={product?.image_urls?.[0] || ""}
+                                hoverImage={product?.image_urls?.[1] || ""}
                                 title={product?.name}
                                 price={product?.price}
                                 onAddToCart={() => alert(`Add to cart: ${product?.name}`)}
@@ -242,48 +242,106 @@ export default function SingleProductView({
 }
 
 // Helper
-function slugConvert(name: string) {
+function slugConvert(name?: string) {
+    if (!name) return "";
     return name.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
 }
 
 // SSR Data Fetching
 export const getServerSideProps: GetServerSideProps = async (context) => {
-    const { slug } = context.params as { slug: string };
+    const rawSlug = context.params?.slug;
 
-    const res: any = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/products/?vendor_id=63`);
-    const products = await res.json();
-
-    const productDetails = products?.find((p: any) => slugConvert(p.name) === slug) || null;
-
-    if (!productDetails) {
+    if (!rawSlug || typeof rawSlug !== "string") {
         return { notFound: true };
     }
 
-    const relatedProducts = products.filter(
-        (p: any) => p.category === productDetails.category && p.id !== productDetails.id
-    ).slice(0, 4);
+    const decodedSlug = decodeURIComponent(rawSlug).trim();
 
-    const schemaData = {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        name: productDetails?.name,
-        image: productDetails?.image_urls || [],
-        description: productDetails?.description_2 || productDetails?.name,
-        brand: { "@type": "Brand", name: "Omsritara" },
-        offers: {
-            "@type": "Offer",
-            priceCurrency: "INR",
-            price: productDetails?.discount > 0 ? productDetails.discount : productDetails?.price,
-            availability: productDetails?.stock_quantity === 0 ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
-            itemCondition: "https://schema.org/NewCondition",
-        },
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: productDetails?.ratingValue || "4.8",
-            bestRating: "5",
-            ratingCount: productDetails?.ratingCount || "6",
-        },
+    // Determine healthy API base URL
+    const rawEnvBase = process.env.NEXT_PUBLIC_API_BASE_URL;
+    const isEnvHealthy = rawEnvBase && !rawEnvBase.includes("justvy.in");
+    const apiBase = (isEnvHealthy ? rawEnvBase : null) || baseUrl || "https://ecomapi.ftdigitalsolutions.org";
+
+    const requestHeaders: HeadersInit = {
+        "Origin": process.env.NEXT_PUBLIC_FRONTEND_URL || "https://omsritara.in",
+        "Referer": `${process.env.NEXT_PUBLIC_FRONTEND_URL || "https://omsritara.in"}/`,
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
     };
 
-    return { props: { productDetails, relatedProducts, schemaData } };
+    try {
+        const res = await fetch(`${apiBase}/api/products/?vendor_id=63`, {
+            headers: requestHeaders,
+        });
+
+        let products: any[] = [];
+        if (res.ok) {
+            const data = await res.json();
+            if (Array.isArray(data)) {
+                products = data;
+            }
+        }
+
+        // Match by Product ID, URL slug, or slug_name
+        let productDetails = products.find((p: any) => {
+            const matchId = String(p?.id) === decodedSlug;
+            const matchSlug = slugConvert(p?.name) === decodedSlug.toLowerCase();
+            const matchSlugName = p?.slug_name && String(p?.slug_name).toLowerCase() === decodedSlug.toLowerCase();
+            return matchId || matchSlug || matchSlugName;
+        }) || null;
+
+        // Fallback: If not found in the vendor list, try querying single product endpoint directly
+        if (!productDetails && decodedSlug) {
+            try {
+                const singleRes = await fetch(`${apiBase}/api/products/${decodedSlug}/`, {
+                    headers: requestHeaders,
+                });
+                if (singleRes.ok) {
+                    const singleData = await singleRes.json();
+                    if (singleData && singleData.id) {
+                        productDetails = singleData;
+                    }
+                }
+            } catch (singleErr) {
+                console.error("Single product API fallback fetch error:", singleErr);
+            }
+        }
+
+        if (!productDetails || !productDetails.id) {
+            return { notFound: true };
+        }
+
+        const relatedProducts = Array.isArray(products)
+            ? products.filter(
+                (p: any) => p?.category === productDetails?.category && p?.id !== productDetails?.id
+              ).slice(0, 4)
+            : [];
+
+        const schemaData = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            name: productDetails?.name || "Product",
+            image: productDetails?.image_urls || [],
+            description: productDetails?.description_2 || productDetails?.name || "",
+            brand: { "@type": "Brand", name: "Omsritara" },
+            offers: {
+                "@type": "Offer",
+                priceCurrency: "INR",
+                price: productDetails?.discount && productDetails.discount > 0 ? productDetails.discount : (productDetails?.price || 0),
+                availability: productDetails?.stock_quantity === 0 ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+                itemCondition: "https://schema.org/NewCondition",
+            },
+            aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: productDetails?.ratingValue || "4.8",
+                bestRating: "5",
+                ratingCount: productDetails?.ratingCount || "6",
+            },
+        };
+
+        return { props: { productDetails, relatedProducts, schemaData } };
+    } catch (err) {
+        console.error("getServerSideProps error in shop [slug]:", err);
+        return { notFound: true };
+    }
 };

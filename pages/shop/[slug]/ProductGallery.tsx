@@ -4,24 +4,23 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 
-export default function ProductGallery({ images = [], name }: { images: string[]; name: string }) {
+export default function ProductGallery({ images = [], name }: { images?: string[]; name?: string }) {
+  const safeImages = Array.isArray(images) && images.length > 0 ? images : ['https://semantic-ui.com/images/wireframe/image.png'];
   const [activeIndex, setActiveIndex] = useState(0);
 
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
 
   useEffect(() => {
-    if (images.length > 0) {
-      setActiveIndex(0);
-    }
+    setActiveIndex(0);
   }, [images]);
 
   const prevImage = () => {
-    setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setActiveIndex((prev) => (prev === 0 ? safeImages.length - 1 : prev - 1));
   };
 
   const nextImage = () => {
-    setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setActiveIndex((prev) => (prev === safeImages.length - 1 ? 0 : prev + 1));
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -40,7 +39,7 @@ export default function ProductGallery({ images = [], name }: { images: string[]
     }
   };
 
-  const activeImage = images[activeIndex];
+  const activeImage = safeImages[activeIndex] || safeImages[0];
 
   return (
     <div className='relative'>
@@ -54,7 +53,7 @@ export default function ProductGallery({ images = [], name }: { images: string[]
           <div className=''></div>
           <Image
             src={activeImage || 'https://semantic-ui.com/images/wireframe/image.png'}
-            alt={name}
+            alt={name || 'Product'}
             fill
             className="h-full w-full object-cover transition-all duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -76,7 +75,7 @@ export default function ProductGallery({ images = [], name }: { images: string[]
         </div>
 
         <div className="grid grid-cols-3 gap-4">
-          {images.map((img, idx) => (
+          {safeImages.map((img, idx) => (
             <button
               key={idx}
               className={`aspect-square rounded-lg overflow-hidden border-2 ${activeIndex === idx
