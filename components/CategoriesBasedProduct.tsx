@@ -18,7 +18,7 @@ import img from "../public/catAb.jpg"
 import ProductCardSkeleton from './ProductCardSkeleton';
 import { slugConvert } from '@/lib/utils';
 
-export default function CategoriesBasedProduct() {
+export default function CategoriesBasedProduct({ hideDescription = false }: { hideDescription?: boolean } = {}) {
     const topRef = useRef<HTMLDivElement>(null);
     const { id } = useParams() ?? {};
     const [getUserId, setUserId] = useState<string | null>(null);
@@ -170,12 +170,16 @@ export default function CategoriesBasedProduct() {
                 <LoginModal open={signInmodal} handleClose={() => setSignInModal(false)} vendorId={vendorId} />
             )}
 
-            <h2 className='m-2 font-bold text-2xl text-center text-[#a5291b]'>
-                {categoryName}
-            </h2>
-            <div className='m-2'>
-                <div className='quill-content' dangerouslySetInnerHTML={{ __html: category?.description2 }} />
-            </div>
+            {!hideDescription && category?.description2 && slugConvert(category?.name) !== 'rings' && (
+                <>
+                    <h2 className='m-2 font-bold text-2xl text-center text-[#a5291b]'>
+                        {categoryName}
+                    </h2>
+                    <div className='m-2'>
+                        <div className='quill-content' dangerouslySetInnerHTML={{ __html: category?.description2 }} />
+                    </div>
+                </>
+            )}
         </div>
     );
 }

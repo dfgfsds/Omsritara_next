@@ -73,54 +73,78 @@ export default function CategoriesProduct({ category }) {
 
                 <meta
                     name="robots"
-                    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+                    content={category.robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
                 />
 
-                <link rel="canonical" href={url} />
+                <link rel="canonical" href={category.canonical_url || url} />
 
                 <link
                     rel="image_src"
-                    href={category.category_image}
+                    href={category.image_src || category.category_image}
                 />
 
                 {/* Open Graph */}
-                <meta property="og:title" content={category.seo_title} />
-                <meta property="og:description" content={category.seo_description} />
-                <meta property="og:image" content={category.category_image} />
-                <meta property="og:url" content={url} />
-                <meta property="og:type" content="website" />
+                <meta property="og:type" content={category.og_type || "website"} />
+                {category.og_site_name && (
+                    <meta property="og:site_name" content={category.og_site_name} />
+                )}
+                <meta property="og:title" content={category.og_title || category.seo_title} />
+                <meta property="og:description" content={category.og_description || category.seo_description} />
+                <meta property="og:image" content={category.og_image || category.category_image} />
+                {category.og_image_alt && (
+                    <meta property="og:image:alt" content={category.og_image_alt} />
+                )}
+                <meta property="og:url" content={category.og_url || url} />
+                {category.og_locale && (
+                    <meta property="og:locale" content={category.og_locale} />
+                )}
 
                 {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={category.seo_title} />
-                <meta name="twitter:description" content={category.seo_description} />
-                <meta name="twitter:image" content={category.category_image} />
+                <meta name="twitter:card" content={category.twitter_card || "summary_large_image"} />
+                <meta name="twitter:title" content={category.twitter_title || category.seo_title} />
+                <meta name="twitter:description" content={category.twitter_description || category.seo_description} />
+                <meta name="twitter:image" content={category.twitter_image || category.category_image} />
+                {category.twitter_image_alt && (
+                    <meta name="twitter:image:alt" content={category.twitter_image_alt} />
+                )}
 
                 {/* Schema */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "CollectionPage",
-                            "name": category.schema?.name,
-                            "description": category.schema?.description,
-                            "url": url,
-                            "image": category.category_image,
-                            "mainEntity": {
-                                "@type": "ItemList",
-                                "name": category.schema?.itemListName,
-                                "itemListOrder": "https://schema.org/ItemListOrderAscending",
-                                "itemListElement":
-                                    category.schema?.items?.map((item, index) => ({
-                                        "@type": "ListItem",
-                                        "position": index + 1,
-                                        "name": item,
-                                    })) || [],
-                            },
-                        }),
-                    }}
-                />
+                {category.schemas && Array.isArray(category.schemas) ? (
+                    category.schemas.map((sch, idx) => (
+                        <script
+                            key={idx}
+                            type="application/ld+json"
+                            dangerouslySetInnerHTML={{
+                                __html: JSON.stringify(sch),
+                            }}
+                        />
+                    ))
+                ) : (
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "CollectionPage",
+                                "name": category.schema?.name,
+                                "description": category.schema?.description,
+                                "url": url,
+                                "image": category.category_image,
+                                "mainEntity": {
+                                    "@type": "ItemList",
+                                    "name": category.schema?.itemListName,
+                                    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+                                    "itemListElement":
+                                        category.schema?.items?.map((item, index) => ({
+                                            "@type": "ListItem",
+                                            "position": index + 1,
+                                            "name": item,
+                                        })) || [],
+                                },
+                            }),
+                        }}
+                    />
+                )}
 
                 {/* Meta Pixel Code for Rudraksha Category */}
                 {isRudraksha && (
@@ -155,13 +179,25 @@ export default function CategoriesProduct({ category }) {
                 </noscript>
             )}
 
-            {category.pageTitle && (
-                <h1 className="text-3xl font-bold text-center mt-2">
-                    {category.pageTitle}
-                </h1>
-            )}
 
-            <CategoriesBasedProduct />
+
+            <CategoriesBasedProduct hideDescription={!!category?.content_html} />
+            <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 mt-6 mb-12 border-t border-gray-100">
+                {category.pageTitle && (
+                    <h1 className="text-3xl font-bold text-center mt-2">
+                        {category.pageTitle}
+                    </h1>
+                )}
+
+                {category.content_html && (
+                    <section className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+                        <div
+                            className="quill-content"
+                            dangerouslySetInnerHTML={{ __html: category.content_html }}
+                        />
+                    </section>
+                )}
+            </div>
         </>
     );
 }
