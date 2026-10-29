@@ -58,6 +58,38 @@ html {
   margin-bottom: 0.5rem;
 }
 
+.quill-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.quill-content h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.quill-content h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.quill-content a {
+  color: #a5291b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.quill-content a:hover {
+  color: #7f1d1d;
+}
+
 .quill-content p {
 
   line-height: 1.75rem;

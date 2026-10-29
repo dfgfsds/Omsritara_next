@@ -1708,7 +1708,7 @@ export default function RudrakshaUtsavPage() {
 
                             {/* 3 Collection Pillars Grid */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6 relative z-10">
-                                {/* Pillar 1: 1–14 Mukhi Rudraksha */}
+
                                 <div className="relative group overflow-hidden rounded-xl sm:rounded-3xl bg-gradient-to-br from-[#2e0808]/90 via-[#1e0303]/90 to-[#120101]/95 border border-amber-400/35 hover:border-amber-400/90 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_45px_rgba(245,158,11,0.25)] p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
                                     <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent group-hover:via-amber-300 transition-all duration-500" />
                                     <div className="absolute -bottom-3 -right-1 text-5xl sm:text-7xl font-serif font-black text-amber-400/[0.04] group-hover:text-amber-400/[0.1] transition-colors select-none pointer-events-none">
