@@ -463,7 +463,7 @@ const AboutUs = () => {
                 We offer a comprehensive range of spiritual healing services, Reiki
                 training, holistic wellness courses, meditation programs, healing
                 crystals, spiritually energized products, and sacred spiritual tools
-                that support physical, emotional, mental and spiritual well-being.
+                that support physical, emotional, mental and spiritual well-being
               </p>
 
               <p>
